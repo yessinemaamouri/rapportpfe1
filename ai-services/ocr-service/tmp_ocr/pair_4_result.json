@@ -1,0 +1,372 @@
+{
+  "recto_structured": {
+    "cin_number": "05570761",
+    "nom": "الفارس",
+    "prenom": "رؤوف",
+    "nom_complet": "بن محمد بن العجمي",
+    "date_naissance": "08 اكتوبر 19761",
+    "lieu_naissance": "الفراده النفيّضة"
+  },
+  "verso_structured": {
+    "nom_mere": "سمية الساسي",
+    "profession": "ضابط أمن",
+    "adresse": "السزا د النار",
+    "issue_date": "20167 جوان",
+    "print_id": "07852393"
+  },
+  "recto_detections": [
+    {
+      "cin_type": "recto",
+      "class": "header_text",
+      "yolo_score": 0.9094,
+      "position": {
+        "x1": 274,
+        "y1": 0,
+        "x2": 817,
+        "y2": 186
+      },
+      "crop_path": null,
+      "ocr_text": "الجمهورية التونسية ويي",
+      "ocr_score": 0.626,
+      "ocr_lines": [
+        {
+          "text": "الجمهورية التونسية",
+          "score": 0.9613
+        },
+        {
+          "text": "ويي",
+          "score": 0.2906
+        }
+      ]
+    },
+    {
+      "cin_type": "recto",
+      "class": "flag2",
+      "yolo_score": 0.9242,
+      "position": {
+        "x1": 840,
+        "y1": 12,
+        "x2": 986,
+        "y2": 183
+      },
+      "crop_path": null,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null
+    },
+    {
+      "cin_type": "recto",
+      "class": "flag1",
+      "yolo_score": 0.9223,
+      "position": {
+        "x1": 28,
+        "y1": 14,
+        "x2": 231,
+        "y2": 161
+      },
+      "crop_path": null,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null
+    },
+    {
+      "cin_type": "recto",
+      "class": "image",
+      "yolo_score": 0.945,
+      "position": {
+        "x1": 1,
+        "y1": 196,
+        "x2": 343,
+        "y2": 607
+      },
+      "crop_path": null,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null
+    },
+    {
+      "cin_type": "recto",
+      "class": "num_cin",
+      "yolo_score": 0.8924,
+      "position": {
+        "x1": 377,
+        "y1": 198,
+        "x2": 685,
+        "y2": 283
+      },
+      "crop_path": null,
+      "ocr_text": "05570761",
+      "ocr_score": 0.9998,
+      "ocr_lines": [
+        {
+          "text": "05570761",
+          "score": 0.9998
+        }
+      ]
+    },
+    {
+      "cin_type": "recto",
+      "class": "last_name",
+      "yolo_score": 0.687,
+      "position": {
+        "x1": 646,
+        "y1": 291,
+        "x2": 894,
+        "y2": 375
+      },
+      "crop_path": null,
+      "ocr_text": "الفارس",
+      "ocr_score": 0.9588,
+      "ocr_lines": [
+        {
+          "text": "الفارس",
+          "score": 0.9588
+        }
+      ]
+    },
+    {
+      "cin_type": "recto",
+      "class": "first_name",
+      "yolo_score": 0.9061,
+      "position": {
+        "x1": 724,
+        "y1": 360,
+        "x2": 905,
+        "y2": 430
+      },
+      "crop_path": null,
+      "ocr_text": "رؤوف",
+      "ocr_score": 0.995,
+      "ocr_lines": [
+        {
+          "text": "رؤوف",
+          "score": 0.995
+        }
+      ]
+    },
+    {
+      "cin_type": "recto",
+      "class": "full_name",
+      "yolo_score": 0.8371,
+      "position": {
+        "x1": 497,
+        "y1": 409,
+        "x2": 1000,
+        "y2": 496
+      },
+      "crop_path": null,
+      "ocr_text": "بن محمد بن العجمي",
+      "ocr_score": 0.9813,
+      "ocr_lines": [
+        {
+          "text": "بن محمد بن العجمي",
+          "score": 0.9813
+        }
+      ]
+    },
+    {
+      "cin_type": "recto",
+      "class": "dob",
+      "yolo_score": 0.8399,
+      "position": {
+        "x1": 426,
+        "y1": 469,
+        "x2": 825,
+        "y2": 552
+      },
+      "crop_path": null,
+      "ocr_text": "08 اكتوبر 19761",
+      "ocr_score": 0.8293,
+      "ocr_lines": [
+        {
+          "text": "08",
+          "score": 0.8293
+        },
+        {
+          "text": "اكتوبر",
+          "score": 0.8293
+        },
+        {
+          "text": "19761",
+          "score": 0.8293
+        }
+      ]
+    },
+    {
+      "cin_type": "recto",
+      "class": "pob",
+      "yolo_score": 0.8605,
+      "position": {
+        "x1": 423,
+        "y1": 523,
+        "x2": 914,
+        "y2": 607
+      },
+      "crop_path": null,
+      "ocr_text": "الفراده النفيّضة",
+      "ocr_score": 0.9192,
+      "ocr_lines": [
+        {
+          "text": "الفراده النفيّضة",
+          "score": 0.9192
+        }
+      ]
+    }
+  ],
+  "verso_detections": [
+    {
+      "cin_type": "verso",
+      "class": "mother_name",
+      "yolo_score": 0.876,
+      "position": {
+        "x1": 293,
+        "y1": 85,
+        "x2": 758,
+        "y2": 140
+      },
+      "crop_path": null,
+      "ocr_text": "سمية الساسي",
+      "ocr_score": 0.997,
+      "ocr_lines": [
+        {
+          "text": "سمية",
+          "score": 0.9964
+        },
+        {
+          "text": "الساسي",
+          "score": 0.9976
+        }
+      ]
+    },
+    {
+      "cin_type": "verso",
+      "class": "profession",
+      "yolo_score": 0.8946,
+      "position": {
+        "x1": 245,
+        "y1": 142,
+        "x2": 582,
+        "y2": 195
+      },
+      "crop_path": null,
+      "ocr_text": "ضابط أمن",
+      "ocr_score": 0.9816,
+      "ocr_lines": [
+        {
+          "text": "ضابط أمن",
+          "score": 0.9816
+        }
+      ]
+    },
+    {
+      "cin_type": "verso",
+      "class": "finger_print",
+      "yolo_score": 0.7837,
+      "position": {
+        "x1": 671,
+        "y1": 173,
+        "x2": 935,
+        "y2": 451
+      },
+      "crop_path": null,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null
+    },
+    {
+      "cin_type": "verso",
+      "class": "address",
+      "yolo_score": 0.9239,
+      "position": {
+        "x1": 70,
+        "y1": 208,
+        "x2": 665,
+        "y2": 330
+      },
+      "crop_path": null,
+      "ocr_text": "السزا د النار",
+      "ocr_score": 0.5105,
+      "ocr_lines": [
+        {
+          "text": "السزا د النار",
+          "score": 0.5105
+        }
+      ]
+    },
+    {
+      "cin_type": "verso",
+      "class": "issue_date",
+      "yolo_score": 0.9158,
+      "position": {
+        "x1": 38,
+        "y1": 331,
+        "x2": 325,
+        "y2": 397
+      },
+      "crop_path": null,
+      "ocr_text": "20167 جوان",
+      "ocr_score": 0.9232,
+      "ocr_lines": [
+        {
+          "text": "20167",
+          "score": 0.9232
+        },
+        {
+          "text": "جوان",
+          "score": 0.9232
+        }
+      ]
+    },
+    {
+      "cin_type": "verso",
+      "class": "flag3",
+      "yolo_score": 0.9304,
+      "position": {
+        "x1": 488,
+        "y1": 332,
+        "x2": 652,
+        "y2": 500
+      },
+      "crop_path": null,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null
+    },
+    {
+      "cin_type": "verso",
+      "class": "print_id",
+      "yolo_score": 0.356,
+      "position": {
+        "x1": 709,
+        "y1": 455,
+        "x2": 886,
+        "y2": 500
+      },
+      "crop_path": null,
+      "ocr_text": "07852393",
+      "ocr_score": 1.0,
+      "ocr_lines": [
+        {
+          "text": "07852393",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "cin_type": "verso",
+      "class": "barcode",
+      "yolo_score": 0.9272,
+      "position": {
+        "x1": 247,
+        "y1": 514,
+        "x2": 732,
+        "y2": 603
+      },
+      "crop_path": null,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null
+    }
+  ],
+  "confidence": 0.8935
+}

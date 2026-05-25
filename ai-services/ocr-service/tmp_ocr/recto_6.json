@@ -1,0 +1,199 @@
+[
+  {
+    "cin_type": "recto",
+    "class": "header_text",
+    "yolo_score": 0.8995,
+    "position": {
+      "x1": 234,
+      "y1": 0,
+      "x2": 713,
+      "y2": 169
+    },
+    "crop_path": null,
+    "ocr_text": "الجمهورية التونسية بطاقة التحريف الوطنية",
+    "ocr_score": 0.8908,
+    "ocr_lines": [
+      {
+        "text": "الجمهورية التونسية",
+        "score": 0.9594
+      },
+      {
+        "text": "بطاقة التحريف الوطنية",
+        "score": 0.8222
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "flag1",
+    "yolo_score": 0.921,
+    "position": {
+      "x1": 28,
+      "y1": 17,
+      "x2": 210,
+      "y2": 146
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "flag2",
+    "yolo_score": 0.93,
+    "position": {
+      "x1": 739,
+      "y1": 20,
+      "x2": 863,
+      "y2": 170
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "image",
+    "yolo_score": 0.9285,
+    "position": {
+      "x1": 0,
+      "y1": 168,
+      "x2": 306,
+      "y2": 541
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "num_cin",
+    "yolo_score": 0.8704,
+    "position": {
+      "x1": 323,
+      "y1": 180,
+      "x2": 600,
+      "y2": 251
+    },
+    "crop_path": null,
+    "ocr_text": "01587450",
+    "ocr_score": 0.9998,
+    "ocr_lines": [
+      {
+        "text": "01587450",
+        "score": 0.9998
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "last_name",
+    "yolo_score": 0.8937,
+    "position": {
+      "x1": 546,
+      "y1": 259,
+      "x2": 773,
+      "y2": 339
+    },
+    "crop_path": null,
+    "ocr_text": "العبيدي",
+    "ocr_score": 0.9966,
+    "ocr_lines": [
+      {
+        "text": "العبيدي",
+        "score": 0.9966
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "first_name",
+    "yolo_score": 0.9017,
+    "position": {
+      "x1": 652,
+      "y1": 326,
+      "x2": 782,
+      "y2": 382
+    },
+    "crop_path": null,
+    "ocr_text": "حميد",
+    "ocr_score": 0.9964,
+    "ocr_lines": [
+      {
+        "text": "حميد",
+        "score": 0.9964
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "full_name",
+    "yolo_score": 0.8463,
+    "position": {
+      "x1": 461,
+      "y1": 367,
+      "x2": 862,
+      "y2": 439
+    },
+    "crop_path": null,
+    "ocr_text": "بن حسن بن اعثمان",
+    "ocr_score": 0.9472,
+    "ocr_lines": [
+      {
+        "text": "بن حسن بن اعثمان",
+        "score": 0.9472
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "dob",
+    "yolo_score": 0.8357,
+    "position": {
+      "x1": 359,
+      "y1": 420,
+      "x2": 715,
+      "y2": 486
+    },
+    "crop_path": null,
+    "ocr_text": "04 اكتوبر 19671",
+    "ocr_score": 0.8544,
+    "ocr_lines": [
+      {
+        "text": "04",
+        "score": 0.8544
+      },
+      {
+        "text": "اكتوبر",
+        "score": 0.8544
+      },
+      {
+        "text": "19671",
+        "score": 0.8544
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "pob",
+    "yolo_score": 0.7748,
+    "position": {
+      "x1": 333,
+      "y1": 463,
+      "x2": 792,
+      "y2": 548
+    },
+    "crop_path": null,
+    "ocr_text": "منزل بورقيبة",
+    "ocr_score": 0.9756,
+    "ocr_lines": [
+      {
+        "text": "منزل بورقيبة",
+        "score": 0.9756
+      }
+    ]
+  }
+]

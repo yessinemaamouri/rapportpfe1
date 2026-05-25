@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "description": "Métriques validation YOLO CIN Verso"
+  },
+  "CIN_RECTO": {
+    "model": "/content/best.pt",
+    "curves_dir": "/content/drive/MyDrive/cinVerso_metrics/val/",
+    "global": {
+      "precision": 0.9842,
+      "recall": 0.9872,
+      "f1": 0.9857,
+      "map50": 0.9885,
+      "map50_95": 0.8904
+    },
+    "per_class": {
+      "address": {
+        "precision": 0.9877,
+        "recall": 0.9918,
+        "f1": 0.9897,
+        "map50": 0.9925
+      },
+      "barcode": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "map50": 0.995
+      },
+      "finger_print": {
+        "precision": 0.9876,
+        "recall": 0.9918,
+        "f1": 0.9897,
+        "map50": 0.9944
+      },
+      "flag3": {
+        "precision": 0.9918,
+        "recall": 0.9918,
+        "f1": 0.9918,
+        "map50": 0.9947
+      },
+      "issue_date": {
+        "precision": 0.9918,
+        "recall": 0.9898,
+        "f1": 0.9908,
+        "map50": 0.9942
+      },
+      "mother_name": {
+        "precision": 0.9519,
+        "recall": 0.959,
+        "f1": 0.9554,
+        "map50": 0.9605
+      },
+      "print_id": {
+        "precision": 0.9874,
+        "recall": 0.9837,
+        "f1": 0.9856,
+        "map50": 0.9843
+      },
+      "profession": {
+        "precision": 0.9756,
+        "recall": 0.9897,
+        "f1": 0.9826,
+        "map50": 0.9922
+      }
+    }
+  }
+
+      Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 1.9s/it 19.1s
+                   all        148        976      0.984      0.987      0.988       0.89
+               address        122        122      0.988      0.992      0.992      0.863
+               barcode        122        122          1          1      0.995      0.969
+          finger_print        122        122      0.988      0.992      0.994      0.976
+                 flag3        122        122      0.992      0.992      0.995      0.953
+            issue_date        122        122      0.992       0.99      0.994      0.928
+           mother_name        122        122      0.952      0.959      0.961      0.792
+              print_id        122        123      0.987      0.984      0.984      0.903
+            profession        121        121      0.976       0.99      0.992      0.738
+}

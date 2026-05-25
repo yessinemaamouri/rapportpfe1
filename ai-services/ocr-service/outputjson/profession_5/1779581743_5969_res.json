@@ -1,0 +1,130 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": true
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": true,
+            "use_doc_unwarping": true
+        },
+        "angle": 0
+    },
+    "dt_polys": [
+        [
+            [
+                186,
+                114
+            ],
+            [
+                322,
+                101
+            ],
+            [
+                329,
+                166
+            ],
+            [
+                193,
+                179
+            ]
+        ],
+        [
+            [
+                323,
+                116
+            ],
+            [
+                465,
+                113
+            ],
+            [
+                466,
+                166
+            ],
+            [
+                324,
+                169
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        0,
+        0
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "فلاحي",
+        "مهندس"
+    ],
+    "rec_scores": [
+        0.9862135052680969,
+        0.9767056703567505
+    ],
+    "rec_polys": [
+        [
+            [
+                186,
+                114
+            ],
+            [
+                322,
+                101
+            ],
+            [
+                329,
+                166
+            ],
+            [
+                193,
+                179
+            ]
+        ],
+        [
+            [
+                323,
+                116
+            ],
+            [
+                465,
+                113
+            ],
+            [
+                466,
+                166
+            ],
+            [
+                324,
+                169
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            186,
+            101,
+            329,
+            179
+        ],
+        [
+            323,
+            113,
+            466,
+            169
+        ]
+    ]
+}

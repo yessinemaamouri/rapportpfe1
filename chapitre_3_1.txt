@@ -1,0 +1,390 @@
+﻿Chapitre 3 : Incrément 1 — Intelligence Artificielle (CRISP-ML(Q))
+* 1 Business Understanding, Data Understanding & Collection
+   * pipeline métier (input -> IA -> output)
+   * Analyse des besoins : Documents requis par service.
+   * collection du dataset et ses proportions.
+* 2 Data Preparation (Ingénierie des données)
+   * Restauration & Anonymisation : Inpainting et traitement.
+   * Labellisation : Processus via Roboflow.
+   * Augmentation : Techniques utilisées (Scaling, flou, etc.).
+* 3 Modeling
+   * Architecture retenue : Pipeline hybride YOLO11m (détection) + PP-OCRv5 (extraction).
+   * Entraînement : Paramètres clés.
+* 4 Evaluation & Quality Assurance
+   * Métriques : mAP, Precision/Recall sur le jeu de test.
+   * Tests de robustesse : Analyse sur cas bruités/complexes.
+* 5 Deployment & Integration
+   * Pipeline global : Intégration dans ton backend (API FastAPI).
+* 6 Monitoring & Maintenance
+   * Vision future : Comment tu comptes surveiller la "dérive" du modèle (drift) si les documents changent un jour.
+
+
+
+
+
+
+CHAPITRE 3
+Incrément 1 : Intelligence Artificielle
+Méthodologie CRISP-ML(Q)
+Ce chapitre décrit la mise en œuvre du premier incrément du système, entièrement consacré à la composante Intelligence Artificielle. En suivant la méthodologie CRISP-ML(Q), il couvre l'ensemble du cycle de vie du modèle : de la compréhension du besoin métier et de la collecte des données, jusqu'à l'entraînement, l'évaluation, le déploiement et la surveillance en production. Chaque étape s'appuie sur les choix technologiques établis au chapitre précédent — YOLO11m et PP-OCRv5 — et les décline en décisions d'ingénierie concrètes, justifiées par les contraintes réelles du projet KYC.
+I. Business Understanding, Data Understanding & Collection
+
+
+1.1  Pipeline métier du système IA
+
+
+Le système KYC développé repose sur un pipeline intelligent permettant de transformer une image brute en données exploitables par le backend bancaire. Pour optimiser la latence et l'efficacité computationnelle, deux branches de traitement ont été définies selon la nature du document.
+
+
+  
+
+Documents structurés (CIN, Passeport) : une étape de détection d'objets (YOLO11m) précède l'extraction OCR. Cette approche en deux temps est nécessaire pour isoler avec précision les zones d'intérêt (données biométriques, numéro de série) sur des supports à géométrie variable.
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+Documents non structurés (attestations, fiches de paie) : l'extraction est réalisée directement par PP-OCRv5, sans étape de détection préalable. Cette rationalisation réduit sensiblement le temps d'inférence tout en maintenant une précision élevée sur des formats standardisés.
+
+
+1.2  Analyse des besoins documentaires
+
+
+Chaque service bancaire implique un ensemble spécifique de documents à vérifier. Le tableau ci-dessous synthétise ces exigences et le pipeline IA correspondant.
+
+
+Service métier
+	Documents requis
+	Pipeline IA
+	Ouverture de compte
+	CIN (recto/verso) ou Passeport
+	-YOLO11m + PP-OCRv5
+	Demande de crédit
+	CIN + Attestation de travail + Fiche de paie
+	-YOLO11m  + PP-OCRv5 (cin)
+
+
+-PP-OCRv5 (docs financiers)
+	Carte bancaire / Chéquier
+	Aucun document supplémentaire
+	Réutilisation des données KYC existantes
+	Tableau 3.2 — Matrice des documents requis par service et pipeline IA associé
+
+
+Il convient de noter que le service carte bancaire et chéquier ne requiert aucune vérification documentaire supplémentaire : il s'appuie exclusivement sur le profil KYC déjà validé lors de l'ouverture de compte, ce qui allège le processus tout en garantissant la cohérence des données.
+Cette cartographie des besoins documentaires oriente directement la stratégie de collecte et de constitution du dataset, présentée dans la section suivante.
+
+
+
+
+1.3  Collecte et composition du dataset
+
+
+La fiabilité d'une solution KYC bancaire ne repose pas sur la quantité brute de données, mais sur leur capacité à simuler l'imprévisibilité des conditions réelles : faible luminosité, arrière-plans complexes, captures mobiles en conditions non contrôlées. C'est sur ce principe qu'a été définie la stratégie de collecte.
+
+
+
+
+Stratégie de collecte hybride
+
+
+Afin de construire un dataset à la fois structuré et robuste, deux canaux de collecte complémentaires ont été exploités :
+
+
+* Open Source (Roboflow Universe) : extraction de jeux de données préexistants comprenant des passeports internationaux et des échantillons de CIN tunisiennes, capturés en conditions idéales.
+* Données réelles (réseaux sociaux) : collecte d'images de documents publiées en ligne (notamment des CIN déclarées perdues), présentant du bruit, des contre-jours et des masquages de confidentialité — contraintes critiques reproduisant l'usage réel de l'application mobile.
+
+
+Source
+	Avantage
+	Limite
+	Rôle dans le projet
+	Open Source (Roboflow Universe)
+	Données propres, pré-annotées
+	Faible niveau de bruit — peu représentatif du terrain
+	Pré-entraînement et apprentissage de la structure géométrique des documents
+	Données réelles (réseaux sociaux)
+	Conditions d'usage mobile réel : bruit, contre-jour, arrière-plans complexes
+	Masquages de confidentialité agressifs
+	Robustesse et invariance aux conditions non contrôlées
+	Tableau 3.3 — Analyse comparative des sources de données
+
+
+
+
+ la combinaison des deux sources compense leurs limites respectives — l'open source apporte la structure, les données réelles apportent la robustesse face à l'imprévisibilité du terrain. 
+
+
+
+
+Distribution des classes
+
+
+Le dataset final totalise 685 instances, réparties de manière équilibrée entre les quatre classes d'intérêt :
+
+
+Classe
+	Instances
+	Proportion
+	Type de traitement
+	cinRecto
+	200
+	29.2 %
+	YOLO11m + PP-OCRv5
+	cinVerso
+	202
+	29.5 %
+	YOLO11m + PP-OCRv5
+	passeport
+	152
+	22.2 %
+	YOLO11m + PP-OCRv5
+	Autre
+	131
+	19.1 %
+	PP-OCRv5 (direct)
+	Total
+	685
+	100 %
+	Hybride
+	Tableau 3.4 — Distribution du dataset par classe (source : Roboflow)
+
+
+La quasi-parité entre cinRecto (200) et cinVerso (202) reflète une attention particulière à la couverture des deux faces de la CIN tunisienne, les deux étant requises lors de l'ouverture de compte. La classe Autre (131 instances) regroupe des captures partielles, des documents dégradés ou des images non identifiables — utiles pour renforcer la robustesse du modèle face aux cas limites.
+
+
+Si le sourcing réel apporte le réalisme nécessaire, il introduit un obstacle majeur ,les données sont inexploitables en l'état à cause des masquages. Cela rend la phase suivante de Data Engineering (Restauration) non seulement utile, mais indispensable pour créer une vérité terrain supervisée
+
+
+
+
+
+
+
+
+2 Data Preparation (Ingénierie des données)
+Les données collectées sur les réseaux sociaux, bien que cruciales pour le réalisme, posent un défi majeur de supervision : les masques de confidentialité — traits de feutre, bandes noires, flous numériques — empêchent YOLO d'apprendre la structure complète et les points d'ancrage réels des documents. Pour transformer ces données inexploitables en une vérité terrain (Ground Truth) de haute précision, deux stratégies complémentaires ont été déployées, adaptées à la complexité de chaque face du document.
+2.1 Restauration et génération de données
+
+
+CIN Recto — Restauration par Deep Inpainting
+Pour le recto, l'enjeu était double : conserver l'authenticité visuelle de la photo d'identité et du fond, tout en rendant le numéro de carte exploitable par l'OCR. Le processus se déroule en trois phases :
+* Nettoyage Localisé : application d'algorithmes de Deep Inpainting (via ObjectRemover) sur la zone du numéro masqué. L'IA reconstruit les motifs de sécurité (guillochis) en analysant les pixels environnants.
+* Réinjection Typographique : superposition d'un numéro de remplacement dans la police OCR-B (norme ISO) via Figma, garantissant alignement et espacement identiques aux documents officiels.
+* Réalisme Contextuel : chaque insertion respecte la signature optique d'origine par Blur Matching (flou gaussien calibré sur le grain du capteur) et Glare Integration (fusion avec les zones de surexposition), éliminant toute "anomalie de perfection" qui trahirait l'origine synthétique de la donnée.
+  
+
+Figure X.3 – Processus de restauration CIN Recto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+FIGURE X : Simulation de contraintes optiques réelles
+
+
+
+
+ CIN Verso — Génération Automatisée par Data Factory Python
+Le verso, dont la densité textuelle est plus élevée, nécessitait une approche différente. Plutôt que de traiter chaque image individuellement, nous avons créé une matrice de génération à partir d'un document authentique :
+* Génération du Template de Base : Plutôt que de dessiner un fond artificiel, nous avons pris une image de CIN réelle dont nous avons intégralement effacé les mentions textuelles via ObjectRemover. Le résultat est un template nu qui conserve la texture physique authentique — grain numérique, ombres portées, irrégularités d'éclairage — d'un document téléversé par mobile.
+* Data Factory Python : un script automatise le remplissage des champs (Nom, Prénom du père, Mère, Adresse) en générant des identités aléatoires positionnées avec précision sur le template. Cette méthode produit des centaines de variantes parfaitement étiquetées sur un support qui "trompe" l'œil du modèle en lui faisant croire qu'il traite un document 100 % réel.
+  
+
+Figure X.4 – Pipeline de création du template Verso
+
+
+Une fois ce dataset restauré et enrichi, il convient de lui donner un sens mathématique pour l'IA. La phase de labellisation intervient alors pour définir précisément les zones d'intérêt, transformant les images brutes en données d'apprentissage supervisé.
+
+
+2.2 Labellisation : Construction de la Vérité Terrain
+Une fois le dataset restauré, il convient de lui donner un sens mathématique pour l'IA. La labellisation consiste à définir des Bounding Boxes autour de chaque champ critique, transformant les images brutes en données d'apprentissage supervisé.
+Ontologie des Classes
+Trois ontologies distinctes ont été définies selon le type de document :
+* CIN Recto : address, cin, dob, first_name, flag1, flag2, full_name, header_text, image, last_name, num_cin, pob.
+* CIN Verso : address, barcode, finger_print, flag3, issue_date, mother_name, print_id, profession.
+* Passeport: address, dob, first_name, image, last_name, num_cin, pob ,num_pass.
+
+
+
+
+ Méthodologie Hybride : du Gold Standard à l'Auto-Labeling
+Face au volume de données à annoter, une approche hybride en trois phases a été adoptée pour concilier efficacité et précision :
+1. Amorçage manuel (Gold Standard) : labellisation manuelle des 50 premières images de chaque catégorie sur Roboflow, constituant un jeu de référence de haute précision.
+2. Auto-labeling assisté : un modèle YOLO pré-entraîné sur ces 50 images suggère automatiquement les boîtes sur les images restantes, réduisant considérablement le temps d'annotation.
+3. Vérification humaine systématique : chaque boîte suggérée est ajustée manuellement pour que ses bords touchent exactement les caractères — condition critique pour la qualité de l'extraction OCR.
+ Contrainte des Tight Bounding Boxes
+Une règle stricte a été appliquée : la boîte doit englober le texte au pixel près sans inclure de bruit environnant. Une boîte trop large incorpore des éléments décoratifs qui perturbent l'OCR ; une boîte trop serrée coupe les jambages de certains caractères (tels que 'p' ou 'q'), dégradant la précision de la reconnaissance. Cette rigueur constitue la condition sine qua non d'une extraction OCR performante.
+  
+
+Figure X.5 – Interface Roboflow illustrant la précision des Tight Bounding Boxes sur une CIN
+
+
+Le dataset ainsi labellisé constitue une base d'apprentissage rigoureuse. Cependant, 685 instances restent insuffisantes pour garantir la robustesse du modèle face aux aléas d'une capture mobile réelle. La phase d'augmentation contrôlée répond à ce défi.
+
+
+2.3 Augmentation Contrôlée : Simulation de la Variabilité Réelle
+Plutôt qu'une augmentation aléatoire, nous avons appliqué une stratégie différenciée selon la complexité de chaque tâche  pour éviter le surapprentissage via la plateforme Roboflow, simulant les contraintes physiques du monde réel tout en évitant le surapprentissage.
+  Coefficients d'Augmentation Différenciés
+Le volume final a été calibré pour éviter le surapprentissage tout en assurant une couverture représentative des scénarios réels :
+
+
+Pipeline
+	Images Source
+(train set)
+	Coefficient
+	Total Final
+	Focus
+	Classification Globale
+	473
+	×10
+	4 730
+	Invariance contextuelle globale
+	CIN Recto 
+	712
+	×4
+	2884
+	Perspective et alignement YOLO
+	CIN Verso 
+	182
+	×4
+	728
+	Précision OCR et netteté
+	Passeport 
+	158
+	×4
+	644
+	Précision OCR et netteté
+	
+
+Tableau 3.4 — Coefficients d'augmentation par pipeline et volumes finaux obtenus
+
+
+
+
+  Paramètres d'Augmentation et Impacts Visuels
+Trois axes de transformation ont été retenus, chacun répondant à une contrainte physique identifiée :
+A. Invariance Spatiale (Géométrie & Perspective)
+Ces transformations compensent les erreurs de manipulation humaine. Un utilisateur ne tient jamais son smartphone parfaitement parallèle au document, ce qui crée des distorsions géométriques.
+  
+
+[ Figure 3.6 — Illustration de l'augmentation par rotation (−10°, 0°, +10°) ]
+* Rotation : Indispensable pour que YOLO détecte la carte même si elle est présentée de travers.
+
+
+B. Invariance Photométrique (Lumière & Couleur)
+L'objectif est de rendre l'extraction d'information indépendante de l'éclairage ambiant ou de la qualité du capteur.
+  
+
+[ Figure 3.7 — Illustration de l'augmentation photométrique : variations de luminosité et niveaux de gris ]
+* Luminosité : Reproduit les variations entre une pièce sombre et un éclairage direct (éblouissement par le flash).
+* Grayscale : Habitue le modèle à reconnaître la structure de la CIN même sur des captures en noir et blanc ou des photocopies de faible qualité.
+C. Résilience Optique (Flou & Bruit Capteur)
+
+
+
+
+  
+
+
+
+[ Figure 3.8 — Illustration de la résilience optique : bruit, flou et gain de caméra ]
+* Bruit : Ajout de grain pour simuler les capteurs de smartphones d'entrée de gamme en basse lumière.
+* Gain de caméra : Simule l'amplification ISO pour la robustesse à l'exposition.
+* Flou : Modélise les imprécisions de mise au point pour forcer l'extraction de traits robustes.
+Configurations Roboflow par Pipeline
+
+
+Paramètre
+	Classification (Global)
+	CIN Recto
+	Cin Verso
+	Passeport 
+	Sorties / exemple
+	3
+	4
+	
+
+	4
+	Rotation
+	±10°
+	±10°
+	±10°
+	±5°
+	Niveaux de gris
+	—
+	5 % images
+	5 % images
+	-
+	Luminosité
+	±25%
+	±10%
+	±10%
+	±15%
+	Flou simple
+	≤ 1px
+	≤ 0.5px
+	≤ 0.5px
+	≤ 0.4px
+	Bruit
+	≤ 0.69 %
+	≤ 0.3 %
+	≤ 0.3 %
+	≤ 0.3 %
+	gain de caméra
+	-
+	0.06%
+	0.06%
+	-
+	Total dataset final
+	4 932 images
+	3004 images
+	806 images
+	709 images
+	
+
+
+
+Cette stratégie d'augmentation a pour objectif d'enrichir notre base d'entraînement avec un volume de données diversifié, permettant ainsi au modèle d'affiner ses capacités d'apprentissage et d'améliorer sa précision globale. 
+
+
+
+
+
+
+
+
+Le dataset ainsi constitué — restauré, labellisé et augmenté — offre une base d'entraînement solide. La section suivante détaille l'architecture du pipeline IA retenu et les paramètres d'entraînement associés.
+III. Modélisation
+* Cette section présentera l'architecture retenue du pipeline hybride YOLO11m + PP-OCRv5, ainsi que les paramètres clés d'entraînement : taux d'apprentissage, nombre d'époques, stratégie de transfert learning et configuration matérielle utilisée.
+IV. Évaluation et Assurance Qualité
+* Cette section présentera les métriques d'évaluation retenues (mAP, Precision, Recall) sur le jeu de test, ainsi que les résultats des tests de robustesse conduits sur des cas bruités et complexes.
+V. Déploiement et Intégration
+* Cette section décrira l'intégration du pipeline IA dans le backend de l'application via une API FastAPI, en précisant les endpoints exposés, les formats d'échange et les contraintes de performance en production.
+* VI. Surveillance et Maintenance
+* Cette section abordera la stratégie de surveillance du modèle en production, notamment la détection de la dérive des données (model drift) en cas d'évolution des formats de documents, ainsi que le protocole de ré-entraînement prévu.
+
+
+Conclusion du chapitre — Ce chapitre a présenté la mise en œuvre complète du premier incrément IA, en suivant la méthodologie CRISP-ML(Q). La phase d'ingénierie des données — collecte hybride, restauration par Deep Inpainting, génération automatisée, labellisation rigoureuse et augmentation contrôlée — constitue le socle sur lequel repose la qualité du modèle. Les sections de modélisation, d'évaluation, de déploiement et de surveillance, à compléter, traduiront ces préparatifs en résultats concrets et en une solution opérationnelle intégrée.

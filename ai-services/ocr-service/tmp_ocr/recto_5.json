@@ -1,0 +1,175 @@
+[
+  {
+    "cin_type": "recto",
+    "class": "flag2",
+    "yolo_score": 0.9168,
+    "position": {
+      "x1": 867,
+      "y1": 0,
+      "x2": 992,
+      "y2": 146
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "flag1",
+    "yolo_score": 0.9099,
+    "position": {
+      "x1": 32,
+      "y1": 0,
+      "x2": 243,
+      "y2": 131
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "header_text",
+    "yolo_score": 0.7987,
+    "position": {
+      "x1": 281,
+      "y1": 0,
+      "x2": 835,
+      "y2": 155
+    },
+    "crop_path": null,
+    "ocr_text": "ا لي",
+    "ocr_score": 0.2946,
+    "ocr_lines": [
+      {
+        "text": "ا لي",
+        "score": 0.2946
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "image",
+    "yolo_score": 0.9358,
+    "position": {
+      "x1": 0,
+      "y1": 156,
+      "x2": 362,
+      "y2": 593
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "num_cin",
+    "yolo_score": 0.8721,
+    "position": {
+      "x1": 395,
+      "y1": 156,
+      "x2": 718,
+      "y2": 249
+    },
+    "crop_path": null,
+    "ocr_text": "00900790",
+    "ocr_score": 0.9998,
+    "ocr_lines": [
+      {
+        "text": "00900790",
+        "score": 0.9998
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "last_name",
+    "yolo_score": 0.6585,
+    "position": {
+      "x1": 661,
+      "y1": 246,
+      "x2": 916,
+      "y2": 345
+    },
+    "crop_path": null,
+    "ocr_text": "الرياحي",
+    "ocr_score": 0.9864,
+    "ocr_lines": [
+      {
+        "text": "الرياحي",
+        "score": 0.9864
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "first_name",
+    "yolo_score": 0.8182,
+    "position": {
+      "x1": 783,
+      "y1": 323,
+      "x2": 939,
+      "y2": 393
+    },
+    "crop_path": null,
+    "ocr_text": "محمد",
+    "ocr_score": 0.9969,
+    "ocr_lines": [
+      {
+        "text": "محمد",
+        "score": 0.9969
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "full_name",
+    "yolo_score": 0.7331,
+    "position": {
+      "x1": 402,
+      "y1": 369,
+      "x2": 1040,
+      "y2": 467
+    },
+    "crop_path": null,
+    "ocr_text": "بن عمار بن محمد",
+    "ocr_score": 0.8833,
+    "ocr_lines": [
+      {
+        "text": "بن عمار بن محمد",
+        "score": 0.8833
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "dob",
+    "yolo_score": 0.5507,
+    "position": {
+      "x1": 458,
+      "y1": 441,
+      "x2": 875,
+      "y2": 529
+    },
+    "crop_path": null,
+    "ocr_text": "28 افريل 1961",
+    "ocr_score": 0.8359,
+    "ocr_lines": [
+      {
+        "text": "28",
+        "score": 0.8359
+      },
+      {
+        "text": "افريل",
+        "score": 0.8359
+      },
+      {
+        "text": "1961",
+        "score": 0.8359
+      }
+    ]
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "cin_type": "verso",
+    "class": "mother_name",
+    "yolo_score": 0.9525,
+    "position": {
+      "x1": 529,
+      "y1": 34,
+      "x2": 796,
+      "y2": 121
+    },
+    "crop_path": null,
+    "ocr_text": "آمنة النفزا ي",
+    "ocr_score": 0.9372,
+    "ocr_lines": [
+      {
+        "text": "آمنة",
+        "score": 0.9996
+      },
+      {
+        "text": "النفزا",
+        "score": 0.8128
+      },
+      {
+        "text": "ي",
+        "score": 0.9992
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "profession",
+    "yolo_score": 0.9178,
+    "position": {
+      "x1": 269,
+      "y1": 107,
+      "x2": 594,
+      "y2": 197
+    },
+    "crop_path": null,
+    "ocr_text": "مستشا قانوني ر",
+    "ocr_score": 0.8896,
+    "ocr_lines": [
+      {
+        "text": "مستشا",
+        "score": 0.8477
+      },
+      {
+        "text": "قانوني",
+        "score": 0.8267
+      },
+      {
+        "text": "ر",
+        "score": 0.9945
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "finger_print",
+    "yolo_score": 0.9744,
+    "position": {
+      "x1": 681,
+      "y1": 121,
+      "x2": 1004,
+      "y2": 468
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "address",
+    "yolo_score": 0.9311,
+    "position": {
+      "x1": 80,
+      "y1": 150,
+      "x2": 681,
+      "y2": 354
+    },
+    "crop_path": null,
+    "ocr_text": "ي 25 نهج الزيتون لاليلي المياد ص سسسسم ي",
+    "ocr_score": 0.6502,
+    "ocr_lines": [
+      {
+        "text": "ي",
+        "score": 0.5463
+      },
+      {
+        "text": "25 نهج الزيتون",
+        "score": 0.9524
+      },
+      {
+        "text": "لاليلي",
+        "score": 0.5123
+      },
+      {
+        "text": "المياد",
+        "score": 0.5933
+      },
+      {
+        "text": "ص سسسسم",
+        "score": 0.5672
+      },
+      {
+        "text": "ي",
+        "score": 0.7298
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "flag3",
+    "yolo_score": 0.9643,
+    "position": {
+      "x1": 479,
+      "y1": 311,
+      "x2": 685,
+      "y2": 504
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "issue_date",
+    "yolo_score": 0.9029,
+    "position": {
+      "x1": 0,
+      "y1": 312,
+      "x2": 319,
+      "y2": 421
+    },
+    "crop_path": null,
+    "ocr_text": "12 سبتمبر 2022",
+    "ocr_score": 0.812,
+    "ocr_lines": [
+      {
+        "text": "12",
+        "score": 0.812
+      },
+      {
+        "text": "سبتمبر",
+        "score": 0.812
+      },
+      {
+        "text": "2022",
+        "score": 0.812
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "print_id",
+    "yolo_score": 0.9371,
+    "position": {
+      "x1": 738,
+      "y1": 449,
+      "x2": 949,
+      "y2": 515
+    },
+    "crop_path": null,
+    "ocr_text": "08675212",
+    "ocr_score": 1.0,
+    "ocr_lines": [
+      {
+        "text": "08675212",
+        "score": 1.0
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "barcode",
+    "yolo_score": 0.9272,
+    "position": {
+      "x1": 228,
+      "y1": 498,
+      "x2": 775,
+      "y2": 622
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  }
+]

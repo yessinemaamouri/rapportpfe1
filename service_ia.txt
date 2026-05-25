@@ -1,0 +1,702 @@
+
+
+
+
+3.2 Détection de présence du document — YOLOv8n
+Vue d'ensemble
+La plateforme eKYC intègre trois services de détection de présence, chacun dédié à un type de document ou à une étape du parcours utilisateur :
+
+Service	Port	Document ciblé	Modèle
+capture-cin	8001	Carte d'identité nationale (recto / verso)	cin_recto_best.pt / cin_verso_.pt
+capture-passport	8006	Passeport	passport_best.pt
+capture-face	8007	Visage (selfie)	Modèle dédié visage
+Ces trois services partagent la même architecture de traitement et le même principe de fonctionnement.
+
+Comment ça fonctionne
+1. Réception de la vidéo en temps réel
+
+Le navigateur de l'utilisateur envoie en continu des images issues de la caméra vers le serveur, environ toutes les 300 millisecondes. Chaque image est transmise sous forme de données encodées. Le service reçoit ces images, les décode, et les soumet au modèle de détection.
+
+2. Analyse par le modèle YOLOv8n
+
+Chaque image est analysée par un modèle d'intelligence artificielle de type YOLOv8n. Ce modèle cherche si le document (ou le visage) est présent dans l'image et, s'il le trouve, renvoie un rectangle délimitant sa position ainsi qu'un score de confiance entre 0 et 1. L'analyse se fait sur des images redimensionnées à 640 × 640 pixels.
+
+3. Vérification de la position dans le cadre guide
+
+L'interface affiche un cadre visuel (guide) que l'utilisateur doit aligner avec son document. Le service vérifie que le rectangle détecté par le modèle correspond bien à la zone du cadre guide affiché à l'écran. Une tolérance de 30 pixels est appliquée pour compenser les petits décalages. Si le document dépasse trop largement les bords du cadre, la détection est considérée comme invalide.
+
+4. Système de stabilisation (5 frames consécutives)
+
+Pour éviter les fausses captures dues à des mouvements brusques ou à un document mal positionné, un mécanisme de stabilisation est appliqué. La capture n'est déclenchée qu'après que cinq images consécutives ont toutes validé les deux conditions suivantes :
+
+le score de confiance est supérieur ou égal à 0,50 (seuil de validation métier),
+le document est bien positionné à l'intérieur du cadre guide.
+Dès qu'une image échoue, le compteur de stabilisation est remis à zéro.
+
+5. Capture et stockage
+
+Lorsque les cinq frames consécutives sont validées, la capture est déclenchée une seule fois automatiquement. Le service récupère alors l'image en haute résolution (distincte de l'image de détection, qui est volontairement réduite pour la rapidité), recadre précisément la zone du document, applique un agrandissement et un filtre de netteté pour faciliter la lecture ultérieure par l'OCR, puis stocke le résultat dans MinIO (stockage objet).
+
+Les trois états retournés au frontend
+À chaque image analysée, le service retourne l'un des trois états suivants :
+
+Statut	Signification
+ABSENT	Aucun document détecté dans l'image
+DETECTED	Document détecté, mais conditions pas encore validées (score insuffisant ou hors cadre)
+CONFIRMED	5 frames consécutives valides — capture automatique déclenchée
+Particularités par service
+CIN (carte d'identité nationale)
+Le service gère deux faces : le recto et le verso. Deux modèles distincts sont chargés en mémoire simultanément. Le frontend indique quel modèle utiliser selon l'étape en cours.
+
+Passeport
+Le format du cadre guide est portrait (ratio 3:4) car les passeports sont plus hauts que larges, contrairement aux cartes d'identité. Le fonctionnement est sinon identique à celui de la CIN.
+
+Visage (selfie)
+La détection du visage utilise un détecteur spécialisé. Le service vérifie la présence et la position du visage dans l'image, et lors de la capture recadre automatiquement la zone du visage avec une marge de 30 pixels.
+
+Paramètres clés
+Paramètre	Valeur	Rôle
+Seuil de détection YOLO	0,25	Seuil bas pour ne pas rater un document de qualité moyenne
+Seuil de validation	0,50	Seuil métier pour autoriser la confirmation
+Frames consécutives requises	5	Stabilité avant déclenchement de la capture
+Tolérance de position	30 px	Marge autorisée autour du cadre guide
+Taille d'inférence	640 × 640 px	Résolution d'entrée du modèle YOLO
+Qualité JPEG de stockage	97 %	Haute qualité pour l'OCR en aval
+
+3.3 Pipeline OCR — Extraction des données des documents
+Vue d'ensemble
+Le service OCR est le cœur du traitement documentaire de la plateforme. Il reçoit les images capturées lors des étapes précédentes (stockées dans MinIO), analyse leur contenu et retourne les informations structurées extraites. Il couvre deux types de documents : la carte d'identité nationale tunisienne (recto + verso) et le passeport tunisien.
+
+Le pipeline se déroule en quatre grandes étapes enchaînées : détection des zones → recadrage → lecture OCR → post-traitement.
+
+Étape 1 — Détection des zones par YOLOv11m
+L'image du document est d'abord analysée par un modèle de détection YOLOv11m. Ce modèle ne lit pas le texte : il repère et localise les différentes zones d'information présentes sur le document (nom, prénom, date de naissance, adresse, photo, etc.) et retourne pour chacune un rectangle de localisation accompagné d'un score de confiance.
+
+Les modèles utilisés sont :
+
+Document	Modèle	Résolution d'analyse
+CIN recto	modelYolo_11_fit_recto/best.pt	1280 × 1280 px
+CIN verso	modeleYolo11_verso_fit/best.pt	1280 × 1280 px
+Passeport	modelYolo_passport/best.pt	1280 × 1280 px
+Chaque zone détectée reçoit un label correspondant au champ qu'elle représente. Certains champs (la photo d'identité, les drapeaux, l'empreinte digitale, le code-barres) sont détectés mais ne passent pas par l'OCR — ils sont isolés et stockés directement.
+
+Étape 2 — Recadrage et préparation de chaque zone
+Pour chaque zone détectée, le service extrait une image rognée précisément autour du champ. Des ajustements fins sont appliqués selon le type de champ, car YOLO sous-détecte parfois légèrement les bords du texte :
+
+Pour certains champs du passeport (dates, profession, nom), le rectangle est élargi proportionnellement pour ne pas couper les extrémités du texte.
+Pour le champ adresse du verso CIN, le rectangle est élargi à gauche mais légèrement réduit à droite pour exclure le label imprimé « العنوان » que le document affiche.
+Pour le champ nom complet sur la CIN, seuls les trois quarts supérieurs de la zone sont conservés, car le quart inférieur contient la date de naissance du champ adjacent.
+Une fois le recadrage réalisé, une bordure blanche de 40 pixels est ajoutée autour de l'image pour donner de l'espace au moteur OCR et améliorer sa précision sur les bords.
+
+Si le texte du champ est trop petit (moins de 80 pixels de hauteur de ligne), l'image est agrandie automatiquement jusqu'à atteindre ce minimum, en utilisant un algorithme de haute qualité (Lanczos4) pour préserver la lisibilité.
+
+Étape 3 — Lecture OCR par PaddleOCR PP-OCRv5
+Chaque image recadrée est soumise au moteur PaddleOCR PP-OCRv5. Deux moteurs fonctionnent en parallèle :
+
+Un moteur arabe pour les champs en langue arabe (nom, adresse, profession…)
+Un moteur français/latin pour les champs numériques ou en chiffres (numéro CIN, dates sur le passeport…)
+La stratégie de lecture varie selon le type de champ :
+
+Type de champ	Moteur utilisé	Exemple
+Chiffres purs (CIN)	Latin uniquement	Numéro CIN, identifiant d'impression
+Champs arabes	Arabe uniquement	Nom, prénom, adresse, profession
+Dates CIN (jour + mois arabe + année)	Arabe + Latin simultanément	Date de naissance, date d'émission
+Dates passeport	Latin uniquement	Date de naissance, expiration
+Noms latins passeport	Latin uniquement	Nom, prénom, lieu de naissance
+Pour les champs situés sur un fond texturé (filigrane, fond grisé), une étape de binarisation adaptative est appliquée avant la lecture pour séparer le texte foncé du fond et améliorer la détection. Si le premier passage OCR donne un résultat de mauvaise qualité (score moyen inférieur à 0,5), le moteur tente automatiquement une seconde lecture sur l'image binarisée.
+
+Étape 4 — Post-traitement et normalisation
+Le texte brut retourné par PaddleOCR est ensuite corrigé et normalisé avant d'être livré.
+
+Pour la CIN :
+
+Les dates (date de naissance, date d'émission) sont reconstruites à partir des fragments arabes et latins récupérés séparément. Le système identifie le mois arabe (parmi les 12 mois du calendrier), le jour et l'année (en gérant les cas où l'OCR colle plusieurs chiffres ensemble), puis les assemble dans un format lisible.
+Le token العنوان (le mot « adresse » imprimé sur la carte) est retiré automatiquement du champ adresse pour ne conserver que la valeur.
+Les lettres arabes isolées parasites qui apparaissent parfois en début ou fin d'un fragment sont supprimées.
+Les champs multi-lignes en arabe (nom, adresse, nom de mère) sont triés de droite à gauche ligne par ligne pour respecter l'ordre naturel de lecture.
+Pour le passeport :
+
+Les dates en chiffres latins sont normalisées vers le format JJ/MM/AAAA, en gérant les cas collés (8 chiffres consécutifs), les séparateurs variés (tiret, point, espace), les années à 2 chiffres et le format ISO inversé (AAAA/MM/JJ).
+Le nom arabe complet est décomposé en prénom et nom de famille en repérant les particules de filiation (بن / بنت) et en ignorant la partie « حرم » pour les femmes mariées.
+Les champs arabes multi-fragments sont également triés spatialement par ligne de haut en bas, puis de droite à gauche dans chaque ligne.
+Résultat retourné
+À la fin du pipeline, le service retourne pour chaque document :
+
+Les données structurées post-traitées : chaque champ est nommé et directement utilisable (nom, prénom, numéro, date de naissance, adresse…)
+Le texte brut OCR avant corrections, conservé pour audit
+Les détections individuelles avec score YOLO, score OCR et position dans l'image
+Un score de confiance global, calculé comme la moyenne des scores OCR de tous les champs lisibles
+Le crop de la photo d'identité extrait du document et stocké dans MinIO pour les étapes de comparaison faciale
+Les durées d'exécution séparées pour YOLO et pour l'OCR
+Champs extraits par document
+CIN recto :
+Nom, prénom, nom complet (arabe), numéro CIN, date de naissance, lieu de naissance, photo d'identité
+
+CIN verso :
+Nom de la mère, profession, adresse, identifiant d'impression, date d'émission, code-barres, empreinte digitale
+
+Passeport :
+Nom (latin), prénom (latin), nom arabe complet, numéro de passeport, numéro CIN, date de naissance, lieu de naissance, date d'émission, date d'expiration, adresse, profession, photo d'identité
+
+
+les models yolo 11 m :
+cin_recto
+train:712 val:156 , test:70
+train augmenter :2848*4
+
+!pip install ultralytics
+from ultralytics import YOLO
+import os
+from google.colab import drive
+
+# 1. Monter le Drive (si ce n'est pas déjà fait)
+drive.mount('/content/drive')
+
+# 2. Définir le chemin de destination précis
+# On utilise le chemin complet vers ton dossier
+my_drive_path = "/content/drive/MyDrive/pfeKyc/cinRectoDet_V1_claude"
+
+# S'assurer que le dossier existe sur le Drive
+os.makedirs(my_drive_path, exist_ok=True)
+
+# 3. Charger le modèle
+model = YOLO('yolo11m.pt')
+
+# 4. Lancer l'entraînement avec Early Stopping
+results = model.train(
+    # === DATASET ===
+    data="/content/cin_recto_detection-2/data.yaml",
+    project=my_drive_path,
+    name="yolo11m_recto_1280_v1",
+
+    # === GÉNÉRAL ===
+    epochs=150,               # 2848 imgs → converge plus vite qu'un petit dataset
+    imgsz=1280,               # ✅ Correspond au nouvel export Roboflow 1280x1280
+    batch=8,                  # T4 16GB à 1280px → batch 8 max
+    device=0,
+    workers=4,
+    pretrained=True,
+    val=True,
+    save_period=10,
+    patience=40,
+
+    # === OPTIMISEUR & LR ===
+    optimizer="AdamW",
+    lr0=0.001,
+    lrf=0.01,
+    weight_decay=0.0003,      # Allégé : grand dataset régularise naturellement
+    warmup_epochs=3,
+    cos_lr=True,
+
+    # === AUGMENTATIONS YOLO ===
+    mosaic=0.0,               # Document structuré → toujours désactivé
+    mixup=0.0,
+    copy_paste=0.0,
+    fliplr=0.0,               # CIN retournée = invalide en production
+    flipud=0.0,
+    shear=0.0,                # Déforme le texte arabe
+    perspective=0.0,          # Document photographié de face
+
+    # Roboflow gère déjà : ±10° rotation, ±10% brightness, blur, noise, camera gain
+    degrees=2.0,              # Léger complément à Roboflow ±10°
+    scale=0.2,
+    translate=0.03,
+    hsv_h=0.01,
+    hsv_s=0.25,
+    hsv_v=0.15,                # Réduit : Roboflow + camera gain couvrent déjà la luminosité
+
+    close_mosaic=0,
+
+    # === LOSS WEIGHTS ===
+    box=7.5,
+    cls=0.5,
+    dfl=1.5,                  # Important pour la précision des bboxes sur petit texte
+
+    # === DIVERS ===
+    seed=42,
+    plots=True,
+    exist_ok=True,
+)
+
+cin_verso:
+
+train:532*4 val:148 , test:60
+train augmenter :532*4=2128
+# ============================================================
+# ENTRAÎNEMENT YOLO11m — Détection CIN Verso v1
+# 868 images originales → ×4 augmentation = 3472 images
+# Split : 95% train (3298) / 5% val (174) / 0% test
+# Augmentation Roboflow : rotation ±10°, brightness ±10%,
+#                         blur 0.5px, noise 0.3%, camera gain 0.06
+#                         grayscale 5%
+# ============================================================
+
+!pip install ultralytics -q
+from ultralytics import YOLO
+import os
+from google.colab import drive
+
+drive.mount('/content/drive')
+
+my_drive_path = "/content/drive/MyDrive/pfeKyc/cinVersoDet_V1_claude"
+os.makedirs(my_drive_path, exist_ok=True)
+
+model = YOLO('yolo11m.pt')
+
+results = model.train(
+    # ═══════════════════════════════════════════════════════
+    # DATASET
+    # 868 imgs × 4 = 3472 après augmentation Roboflow
+    # Pas de test set → évaluation uniquement sur val
+    # ⚠️ Recommandation : créer un test set de 50-80 images
+    #    originales pour la prochaine version
+    # ═══════════════════════════════════════════════════════
+    data="/content/detection-cinVerso-1/data.yaml",
+    project=my_drive_path,
+    name="yolo11m_verso_1280_v1",
+
+    # ═══════════════════════════════════════════════════════
+    # GÉNÉRAL
+    # 3472 imgs (après aug) ≈ 3004 du recto → paramètres proches
+    # Le verso contient moins de champs texte que le recto
+    # mais la zone adresse est plus dense
+    # ═══════════════════════════════════════════════════════
+    epochs=150,              # 3472 imgs → même ordre que recto (3004)
+                             # early stopping via patience si plateau avant
+    imgsz=1280,              # ✅ cohérent avec export Roboflow 1280×1280
+                             # verso contient MRZ + adresse → petit texte
+    batch=8,                 # T4 16GB + 1280px + yolo11m → batch 8 max
+    device=0,
+    workers=4,
+    pretrained=True,
+    val=True,
+    save_period=10,
+    patience=40,             # identique recto : dataset de taille similaire
+
+    # ═══════════════════════════════════════════════════════
+    # OPTIMISEUR & LR
+    # Même ordre de dataset que le recto → mêmes paramètres
+    # ═══════════════════════════════════════════════════════
+    optimizer="AdamW",
+    lr0=0.001,               # standard pretrained fine-tuning
+    lrf=0.01,                # lr final = 0.001 × 0.01 = 1e-5
+    weight_decay=0.0003,     # allégé : 3472 imgs régularise naturellement
+    warmup_epochs=3,
+    cos_lr=True,
+
+    # ═══════════════════════════════════════════════════════
+    # AUGMENTATIONS YOLO
+    # Roboflow gère déjà (identique au recto) :
+    #   - rotation ±10°
+    #   - brightness ±10%
+    #   - blur 0.5px
+    #   - noise 0.3%
+    #   - camera gain variance 0.06
+    #   - grayscale 5%
+    #
+    # Spécificités verso vs recto :
+    #   - MRZ (Machine Readable Zone) en bas → texte très petit
+    #     et régulier → scale réduit pour ne pas le couper
+    #   - Adresse = champ long multi-ligne → translate légèrement
+    #     augmenté pour capturer les variations de position
+    #   - Fond verso souvent plus uniforme (beige/blanc)
+    #     → hsv moins critique que le recto
+    # ═══════════════════════════════════════════════════════
+    mosaic=0.0,              # désactivé : document structuré
+    mixup=0.0,               # désactivé : superposition invalide
+    copy_paste=0.0,          # désactivé : pas de segmentation
+    fliplr=0.0,              # désactivé : verso retourné = invalide
+    flipud=0.0,              # désactivé : MRZ toujours en bas
+    shear=0.0,               # désactivé : déforme le texte arabe et MRZ
+    perspective=0.0,         # désactivé : document photographié de face
+
+    degrees=2.0,             # identique recto : Roboflow couvre ±10°
+                             # YOLO ajoute micro-variations résiduelles
+    scale=0.10,              # ⬇️ réduit vs recto (0.2)
+                             # MRZ en bas du verso = bande de texte très fine
+                             # scale >0.15 risque de la couper ou la déformer
+    translate=0.04,          # ⬆️ légèrement plus que recto (0.03)
+                             # adresse multi-ligne → position variable sur la photo
+    hsv_h=0.01,              # teinte : quasi nul (document beige uniforme)
+    hsv_s=0.2,               # saturation : camera gain 0.06 Roboflow
+                             # identique recto → cohérence
+    hsv_v=0.10,              # ⬇️ réduit vs recto (0.15)
+                             # Roboflow brightness ±10% + camera gain
+                             # couvrent déjà la luminosité → éviter redondance
+    close_mosaic=0,
+
+    # ═══════════════════════════════════════════════════════
+    # LOSS WEIGHTS
+    # Verso : MRZ = texte très petit et dense
+    #         → dfl encore plus important que le recto
+    #         adresse = champ large → box important
+    # ═══════════════════════════════════════════════════════
+    box=7.5,                 # localisation précise : adresse + 
+    cls=0.5,                 # discrimination inter-classes verso
+    dfl=1.5,                 # bords de bbox précis sur  petit texte
+                             # identique recto : déjà bien calibré
+
+    # ═══════════════════════════════════════════════════════
+    # DIVERS
+    # ═══════════════════════════════════════════════════════
+    seed=42,
+    plots=True,
+    exist_ok=True,
+)
+
+print(f"\n✅ Entraînement verso v1 terminé.")
+print(f"📁 Meilleur modèle : {my_drive_path}/yolo11m_verso_1280_v1/weights/best.pt")
+
+
+passportFieldsDet_V1:
+train:488*3 val:137 , test:50
+train augmenter :532*4=2128
+# ============================================================
+
+# ============================================================
+
+!pip install ultralytics -q
+from ultralytics import YOLO
+import os
+from google.colab import drive
+
+drive.mount('/content/drive')
+
+my_drive_path = "/content/drive/MyDrive/pfeKyc/passportFieldsDet_V1"
+os.makedirs(my_drive_path, exist_ok=True)
+
+model = YOLO('yolo11m.pt')
+
+results = model.train(
+    # ═══════════════════════════════════════════════════════
+    # DATASET
+    # 625 imgs originales × 3 = 1731 après augmentation
+    # ═══════════════════════════════════════════════════════
+    data="/content/detection-passeport-7/data.yaml",
+    project=my_drive_path,
+    name="yolo11m_passport_1280_v1",
+
+    # ═══════════════════════════════════════════════════════
+    # GÉNÉRAL
+    # ═══════════════════════════════════════════════════════
+    epochs=150,              # 1731 imgs → dataset moyen-petit
+                             # 150 epochs pour laisser converger sans risque
+                             # early stopping via patience si plateau avant
+    imgsz=1280,              # ✅ Texte petit (dates, numéros) → 1280 obligatoire
+                             # "09431976", "16-08-2019" → illisibles à 640px
+    batch=8,                 # T4 16GB + 1280px + yolo11m → batch 8 max
+                             # réduire à 4 si OOM avec accumulate=2
+    device=0,
+    workers=4,
+    pretrained=True,         # COCO → transfer learning utile même pour docs
+    val=True,
+    save_period=10,
+    patience=40,             # 1731 imgs → convergence plus lente que grand dataset
+                             # 40 epochs de tolérance avant early stop
+
+    # ═══════════════════════════════════════════════════════
+    # OPTIMISEUR & LR
+    # ═══════════════════════════════════════════════════════
+    optimizer="AdamW",
+    lr0=0.001,               # standard pretrained fine-tuning
+    lrf=0.01,                # lr final = 0.001 × 0.01 = 1e-5
+                             # descente agressive : dataset petit → évite overfitting tardif
+    weight_decay=0.0004,     # légèrement plus fort que CIN recto (0.0003)
+                             # 1731 < 2848 imgs → régularisation plus nécessaire
+    warmup_epochs=3,
+    cos_lr=True,             # descente cosinus → stable sur dataset moyen
+
+    # ═══════════════════════════════════════════════════════
+    # AUGMENTATIONS YOLO
+    # Passeport = document structuré photographié de face
+    # Roboflow gère déjà : ±15% brightness, blur 0.3px,
+    #                       noise 0.3%, camera gain 0.09
+    # ═══════════════════════════════════════════════════════
+    mosaic=0.0,              # désactivé : document structuré
+                             # mosaic mélange des passeports → champs hors contexte
+    mixup=0.0,               # désactivé : superposition = invalide sur document
+    copy_paste=0.0,          # désactivé : pas de segmentation
+    fliplr=0.0,              # désactivé : passeport retourné = invalide en production
+    flipud=0.0,              # désactivé : idem
+    shear=0.0,               # désactivé : déforme le texte arabe et latin
+    perspective=0.0,         # désactivé : passeport photographié de face
+
+    degrees=3.0,             # léger complément à Roboflow
+                             # photo mobile légèrement inclinée → ±3° réaliste
+                             # plus que CIN recto (2°) : passeport tenu à la main
+    scale=0.15,              # ⚠️ réduit vs CIN recto (0.2)
+                             # passeport occupe quasi toute la frame → scaling limité
+    translate=0.04,          # légèrement plus que CIN recto (0.03)
+                             # passeport peut être décentré dans la photo
+    hsv_h=0.01,              # teinte : variation minimale (document blanc/beige)
+    hsv_s=0.2,               # saturation : Roboflow couvre déjà brightness ±15%
+                             # + camera gain 0.09 → pas besoin de forcer
+    hsv_v=0.1,               # ⬇️ réduit vs CIN recto (0.15)
+                             # Roboflow ±15% brightness + camera gain 0.09
+                             # = couverture luminosité déjà forte → éviter redondance
+    close_mosaic=0,          # mosaic désactivé → paramètre sans effet ici
+
+    # ═══════════════════════════════════════════════════════
+    # LOSS WEIGHTS
+    # Passeport : beaucoup de champs petits (dates, numéros, MRZ)
+    # → précision des bboxes critique
+    # ═══════════════════════════════════════════════════════
+    box=7.5,                 # identique CIN recto : localisation précise importante
+    cls=0.4,                 # légèrement plus élevé que CIN recto (0.3) pour passeport
+                             # ~12 classes (surname, given_name, dob, pob, passport_no...)
+                             # → discrimination inter-classes plus complexe que CIN
+    dfl=1.5,                 # ✅ important : bboxes précises sur petit texte
+                             # "16-08-2019" et "09431976" → marges fines
+
+    # ═══════════════════════════════════════════════════════
+    # DIVERS
+    # ═══════════════════════════════════════════════════════
+    seed=42,
+    plots=True,
+    exist_ok=True,
+)
+
+print(f"\n✅ Entraînement terminé.")
+print(f"📁 Meilleur modèle : {my_drive_path}/yolo11m_passport_1280_v1/weights/best.pt")
+
+
+les metriques a mettre 
+sources Ultralytics
+Pour votre rapport sur la détection de zones de texte avec Ultralytics YOLO11, vous devez inclure les courbes générées automatiquement lors de la phase de validation. Ces courbes sont calculées sur le split de validation (val), et non sur les données d'entraînement.
+
+Voici les 3 graphiques essentiels à inclure :
+
+Confusion Matrix (confusion_matrix.png) : Crucial pour voir si le modèle confond des zones de texte avec l'arrière-plan (Background) ou d'autres classes. Détails sur la Confusion Matrix.
+Precision-Recall Curve (PR_curve.png) : Illustre l'équilibre entre la précision (qualité des détections) et le rappel (quantité de texte trouvé). Guide des métriques de performance.
+F1-Confidence Curve (F1_curve.png) : Indique le seuil de confiance optimal pour obtenir le meilleur compromis entre précision et rappel.
+Vous pouvez également ajouter la courbe results.png qui montre l'évolution de la mAP50 et des pertes (losses) au fil des époques. 
+
+
+Principaux éléments de la matrice
+La matrice elle-même est généralement divisée en quatre quadrants pour la classification binaire, mais elle s'étend pour les problèmes multi-classes tels que ceux traités par Ultralytics . Ces quatre composants représentent l' intersection entre ce que le modèle a prédit et ce qui existe réellement dans l'image.
+
+Vrais positifs (TP): le modèle prédit correctement la classe positive. Par exemple, dans une tâche de détection d'objets, le modèle réussit à dessiner un cadre autour d'une personne qui se trouve réellement dans le champ.
+Vrais négatifs (TN): le modèle prédit correctement la classe négative. Ceci est crucial dans des scénarios tels que la détection d'anomalies, où le système identifie correctement qu'une pièce fabriquée ne présente aucun défaut.
+Faux positifs (FP): le modèle prédit de manière incorrecte la classe positive. Souvent appelé « erreur de type I », ce phénomène se produit lorsque le système détecte un objet qui n'est pas présent, comme une caméra de sécurité signalant une ombre comme un intrus.
+Faux négatifs (FN): le modèle prédit de manière incorrecte la classe négative. Connue sous le nom d'« erreur de type II », cela se produit lorsque le modèle ne parvient pas à detect objet présent, « manquant » essentiellement la cible.
+Mesures dérivées et signification
+Les chiffres bruts d'une matrice de confusion sont utilisés pour calculer des mesures plus avancées qui décrivent les performances du modèle. La compréhension de ces dérivés est essentielle pour optimiser les réseaux neuronaux.
+
+Précision: calculée comme TP / (TP + FP), cette mesure révèle le degré d'exactitude des prédictions positives. Une précision élevée signifie moins de fausses alertes.
+Rappel (sensibilité): calculé comme TP / (TP + FN), il mesure la capacité du modèle à trouver tous les cas positifs. Un rappel élevé est essentiel lorsque la perte d' un objet a des conséquences graves.
+Score F1: moyenne harmonique de la précision et du rappel. Il fournit un score unique qui équilibre le compromis entre les deux, 
+
+cinRecto :
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+    111/150      8.58G     0.2757     0.1549     0.8265         40       1280: 100% ━━━━━━━━━━━━ 712/712 1.7it/s 6:58
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 20/20 2.5it/s 8.1s
+                   all        156       1267      0.939      0.939      0.915      0.667
+EarlyStopping: Training stopped early as no improvement observed in last 40 epochs. Best results observed at epoch 71, best model saved as best.pt.
+To update EarlyStopping(patience=40) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+
+43 epochs completed in 5.123 hours+ 4 heures, 59 minutes et 58 secondes+3h 57m 08s.
+Optimizer stripped from /content/drive/.shortcut-targets-by-id/1Thdylj-6NyBf9cuNhzvuti5nLNeKXHjt/cinRectoDet_V1_claude/yolo11m_recto_1280_v1/weights/last.pt, 40.7MB
+Optimizer stripped from /content/drive/.shortcut-targets-by-id/1Thdylj-6NyBf9cuNhzvuti5nLNeKXHjt/cinRectoDet_V1_claude/yolo11m_recto_1280_v1/weights/best.pt, 40.7MB
+
+Validating /content/drive/.shortcut-targets-by-id/1Thdylj-6NyBf9cuNhzvuti5nLNeKXHjt/cinRectoDet_V1_claude/yolo11m_recto_1280_v1/weights/best.pt...
+Ultralytics 8.4.39 🚀 Python-3.12.13 torch-2.10.0+cu128 CUDA:0 (Tesla T4, 14913MiB)
+YOLO11m summary (fused): 126 layers, 20,037,742 parameters, 0 gradients, 67.7 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 20/20 1.9it/s 10.3s
+                   all        156       1267       0.94      0.948      0.953      0.698
+                   dob        128        129      0.973      0.969      0.963      0.649
+            first_name        128        129       0.92      0.896      0.917      0.569
+                 flag1        125        125      0.951      0.984      0.983       0.82
+                 flag2        117        117      0.924       0.94      0.976      0.815
+             full_name        128        128      0.961      0.971       0.97      0.645
+           header_text        125        125       0.92       0.96      0.938      0.831
+                 image        126        126      0.919      0.944      0.924      0.769
+             last_name        128        130      0.946      0.937      0.952      0.626
+               num_cin        129        130      0.956      0.954      0.969      0.667
+                   pob        128        128      0.926      0.922      0.939      0.591
+Speed: 1.4ms preprocess, 42.9ms inference, 0.0ms loss, 7.0ms postprocess per image
+Results saved to /content/drive/.shortcut-targets-by-id/1Thdylj-6NyBf9cuNhzvuti5nLNeKXHjt/cinRectoDet_V1_claude/yolo11m_recto_1280_v1
+
+✅ mAP50-95 : 0.6981
+
+cinVerso:
+EarlyStopping: Training stopped early as no improvement observed in last 40 epochs. Best results observed at epoch 86, best model saved as best.pt.
+To update EarlyStopping(patience=40) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+
+56 epochs completed in 5.030 + 6 heures, 59 minutes et 57 secondes hours.
+Optimizer stripped from /content/drive/.shortcut-targets-by-id/1Xa9PQKpaAxsyxHRe4tHQ6k_MA8_xaEOu/pfeKyc/cinVersoDet_V1_claude/yolo11m_verso_1280_v1/weights/last.pt, 40.7MB
+Optimizer stripped from /content/drive/.shortcut-targets-by-id/1Xa9PQKpaAxsyxHRe4tHQ6k_MA8_xaEOu/pfeKyc/cinVersoDet_V1_claude/yolo11m_verso_1280_v1/weights/best.pt, 40.7MB
+
+Validating /content/drive/.shortcut-targets-by-id/1Xa9PQKpaAxsyxHRe4tHQ6k_MA8_xaEOu/pfeKyc/cinVersoDet_V1_claude/yolo11m_verso_1280_v1/weights/best.pt...
+Ultralytics 8.4.53 🚀 Python-3.12.13 torch-2.10.0+cu128 CUDA:0 (Tesla T4, 14913MiB)
+YOLO11m summary (fused): 126 layers, 20,036,200 parameters, 0 gradients, 67.7 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 19/19 2.0it/s 9.7s
+                   all        148        976      0.984      0.987      0.988       0.89
+               address        122        122      0.988      0.992      0.992      0.863
+               barcode        122        122          1          1      0.995      0.969
+          finger_print        122        122      0.988      0.992      0.994      0.975
+                 flag3        122        122      0.992      0.992      0.995      0.951
+            issue_date        122        122      0.992       0.99      0.994      0.932
+           mother_name        122        122      0.952      0.959       0.96      0.794
+              print_id        122        123      0.987      0.984      0.984      0.903
+            profession        121        121      0.976      0.989      0.992      0.737
+Speed: 1.4ms preprocess, 43.5ms inference, 0.1ms loss, 6.9ms postprocess per image
+Results saved to /content/drive/.shortcut-targets-by-id/1Xa9PQKpaAxsyxHRe4tHQ6k_MA8_xaEOu/pfeKyc/cinVersoDet_V1_claude/yolo11m_verso_1280_v1
+
+✅ mAP50-95 : 0.8904
+
+
+on refait la validation pour la cinVeso :
+{
+  "_meta": {
+    "description": "Métriques validation YOLO CIN Verso"
+  },
+  "CIN_RECTO": {
+    "model": "/content/best.pt",
+    "curves_dir": "/content/drive/MyDrive/cinVerso_metrics/val/",
+    "global": {
+      "precision": 0.9842,
+      "recall": 0.9872,
+      "f1": 0.9857,
+      "map50": 0.9885,
+      "map50_95": 0.8904
+    },
+    "per_class": {
+      "address": {
+        "precision": 0.9877,
+        "recall": 0.9918,
+        "f1": 0.9897,
+        "map50": 0.9925
+      },
+      "barcode": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "map50": 0.995
+      },
+      "finger_print": {
+        "precision": 0.9876,
+        "recall": 0.9918,
+        "f1": 0.9897,
+        "map50": 0.9944
+      },
+      "flag3": {
+        "precision": 0.9918,
+        "recall": 0.9918,
+        "f1": 0.9918,
+        "map50": 0.9947
+      },
+      "issue_date": {
+        "precision": 0.9918,
+        "recall": 0.9898,
+        "f1": 0.9908,
+        "map50": 0.9942
+      },
+      "mother_name": {
+        "precision": 0.9519,
+        "recall": 0.959,
+        "f1": 0.9554,
+        "map50": 0.9605
+      },
+      "print_id": {
+        "precision": 0.9874,
+        "recall": 0.9837,
+        "f1": 0.9856,
+        "map50": 0.9843
+      },
+      "profession": {
+        "precision": 0.9756,
+        "recall": 0.9897,
+        "f1": 0.9826,
+        "map50": 0.9922
+      }
+    }
+  }
+
+      Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 1.9s/it 19.1s
+                   all        148        976      0.984      0.987      0.988       0.89
+               address        122        122      0.988      0.992      0.992      0.863
+               barcode        122        122          1          1      0.995      0.969
+          finger_print        122        122      0.988      0.992      0.994      0.976
+                 flag3        122        122      0.992      0.992      0.995      0.953
+            issue_date        122        122      0.992       0.99      0.994      0.928
+           mother_name        122        122      0.952      0.959      0.961      0.792
+              print_id        122        123      0.987      0.984      0.984      0.903
+            profession        121        121      0.976       0.99      0.992      0.738
+}
+
+
+verif que tu change les comptes
+
+
+passversion2:
+Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+     96/200       8.6G     0.4559      0.171      1.003         45       1280: 100% ━━━━━━━━━━━━ 366/366 1.7it/s 3:38
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 18/18 2.6it/s 6.9s
+                   all        137       1423      0.968      0.967      0.966      0.558
+EarlyStopping: Training stopped early as no improvement observed in last 50 epochs. Best results observed at epoch 46, best model saved as best.pt.
+To update EarlyStopping(patience=50) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+
+56 epochs completed in 3.520 hours +1 heure, 30 minutes et 17 secondes..
+Optimizer stripped from /content/drive/.shortcut-targets-by-id/1Xa9PQKpaAxsyxHRe4tHQ6k_MA8_xaEOu/pfeKyc/passportFieldsDet_V2/yolo11m_passport_1280_v2/weights/last.pt, 40.7MB
+Optimizer stripped from /content/drive/.shortcut-targets-by-id/1Xa9PQKpaAxsyxHRe4tHQ6k_MA8_xaEOu/pfeKyc/passportFieldsDet_V2/yolo11m_passport_1280_v2/weights/best.pt, 40.7MB
+
+Validating /content/drive/.shortcut-targets-by-id/1Xa9PQKpaAxsyxHRe4tHQ6k_MA8_xaEOu/pfeKyc/passportFieldsDet_V2/yolo11m_passport_1280_v2/weights/best.pt...
+Ultralytics 8.4.51 🚀 Python-3.12.13 torch-2.10.0+cu128 CUDA:0 (Tesla T4, 14913MiB)
+YOLO11m summary (fused): 126 layers, 20,039,284 parameters, 0 gradients, 67.7 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 18/18 2.2it/s 8.3s
+                   all        137       1423      0.971      0.978      0.981      0.598
+               address        118        118      0.907      0.907      0.928      0.538
+                   dob        119        119      0.948      0.975      0.985      0.621
+           expiry_date        119        119      0.989          1      0.995      0.563
+            first_name        119        119      0.954      0.966      0.954      0.523
+             full_name        118        118      0.988      0.983      0.994      0.664
+                 image        117        118      0.963      0.992      0.992      0.817
+            issue_date        118        118      0.984          1      0.988      0.588
+             last_name        118        119      0.981      0.975      0.987      0.582
+               num_cin        118        118      0.989      0.992      0.991      0.598
+              num_pass        119        119      0.997      0.992      0.995      0.576
+                   pob        119        120      0.999      0.992      0.995      0.633
+            profession        118        118      0.955      0.958      0.964      0.473
+Speed: 0.9ms preprocess, 43.1ms inference, 0.0ms loss, 7.7ms postprocess per image
+Results saved to /content/drive/.shortcut-targets-by-id/1Xa9PQKpaAxsyxHRe4tHQ6k_MA8_xaEOu/pfeKyc/passportFieldsDet_V2/yolo11m_passport_1280_v2
+
+✅ mAP50-95 : 0.5981
+
+
+
+passv1:
+
+ Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+     62/150      8.55G     0.6219     0.2555      0.983         47       1280: 100% ━━━━━━━━━━━━ 366/366 1.6it/s 3:52
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 9/9 1.2it/s 7.5s
+                   all        137       1423      0.961      0.968      0.968      0.565
+EarlyStopping: Training stopped early as no improvement observed in last 40 epochs. Best results observed at epoch 22, best model saved as best.pt.
+To update EarlyStopping(patience=40) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+
+62 epochs completed in 4.177 hours.
+Optimizer stripped from /content/drive/MyDrive/pfeKyc/passportFieldsDet_V1/yolo11m_passport_1280_v1/weights/last.pt, 40.7MB
+Optimizer stripped from /content/drive/MyDrive/pfeKyc/passportFieldsDet_V1/yolo11m_passport_1280_v1/weights/best.pt, 40.7MB
+
+Validating /content/drive/MyDrive/pfeKyc/passportFieldsDet_V1/yolo11m_passport_1280_v1/weights/best.pt...
+Ultralytics 8.4.51 🚀 Python-3.12.13 torch-2.10.0+cu128 CUDA:0 (Tesla T4, 14913MiB)
+YOLO11m summary (fused): 126 layers, 20,039,284 parameters, 0 gradients, 67.7 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 9/9 1.2s/it 10.8s
+                   all        137       1423      0.968      0.971       0.98      0.592
+               address        118        118      0.936      0.856       0.95       0.54
+                   dob        119        119      0.963      0.975      0.982      0.599
+           expiry_date        119        119      0.992      0.995      0.995      0.583
+            first_name        119        119      0.974      0.963       0.95      0.512
+             full_name        118        118      0.976      0.975      0.989      0.664
+                 image        117        118      0.943      0.988      0.992       0.84
+            issue_date        118        118      0.975      0.983      0.971      0.565
+             last_name        118        119      0.958      0.983      0.976      0.569
+               num_cin        118        118      0.983      0.992      0.992      0.572
+              num_pass        119        119      0.999          1      0.995      0.544
+                   pob        119        120      0.997      0.992      0.995      0.609
+            profession        118        118      0.923      0.958      0.979      0.501
+Speed: 1.4ms preprocess, 48.2ms inference, 0.0ms loss, 11.1ms postprocess per image
+Results saved to /content/drive/MyDrive/pfeKyc/passportFieldsDet_V1/yolo11m_passport_1280_v1
+
+✅ Entraînement terminé.
+📁 Meilleur modèle : /content/drive/MyDrive/pfeKyc/passportFieldsDet_V1/yolo11m_passport_1280_v1/weights/best.pt

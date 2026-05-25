@@ -1,0 +1,130 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": true
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": true,
+            "use_doc_unwarping": true
+        },
+        "angle": 0
+    },
+    "dt_polys": [
+        [
+            [
+                119,
+                163
+            ],
+            [
+                285,
+                148
+            ],
+            [
+                291,
+                212
+            ],
+            [
+                125,
+                227
+            ]
+        ],
+        [
+            [
+                298,
+                166
+            ],
+            [
+                424,
+                169
+            ],
+            [
+                423,
+                204
+            ],
+            [
+                297,
+                200
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        0,
+        0
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "بنغازي",
+        "محمد"
+    ],
+    "rec_scores": [
+        0.987421989440918,
+        0.9901793003082275
+    ],
+    "rec_polys": [
+        [
+            [
+                119,
+                163
+            ],
+            [
+                285,
+                148
+            ],
+            [
+                291,
+                212
+            ],
+            [
+                125,
+                227
+            ]
+        ],
+        [
+            [
+                298,
+                166
+            ],
+            [
+                424,
+                169
+            ],
+            [
+                423,
+                204
+            ],
+            [
+                297,
+                200
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            119,
+            148,
+            291,
+            227
+        ],
+        [
+            297,
+            166,
+            424,
+            204
+        ]
+    ]
+}

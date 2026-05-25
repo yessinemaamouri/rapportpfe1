@@ -1,0 +1,130 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                35,
+                56
+            ],
+            [
+                201,
+                51
+            ],
+            [
+                203,
+                112
+            ],
+            [
+                37,
+                117
+            ]
+        ],
+        [
+            [
+                211,
+                48
+            ],
+            [
+                365,
+                48
+            ],
+            [
+                365,
+                125
+            ],
+            [
+                211,
+                125
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "أطفال",
+        "مربية"
+    ],
+    "rec_scores": [
+        0.9988819360733032,
+        0.9827781915664673
+    ],
+    "rec_polys": [
+        [
+            [
+                35,
+                56
+            ],
+            [
+                201,
+                51
+            ],
+            [
+                203,
+                112
+            ],
+            [
+                37,
+                117
+            ]
+        ],
+        [
+            [
+                211,
+                48
+            ],
+            [
+                365,
+                48
+            ],
+            [
+                365,
+                125
+            ],
+            [
+                211,
+                125
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            35,
+            51,
+            203,
+            117
+        ],
+        [
+            211,
+            48,
+            365,
+            125
+        ]
+    ]
+}

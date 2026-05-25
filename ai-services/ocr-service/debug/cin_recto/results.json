@@ -1,0 +1,390 @@
+{
+  "document": "cin_recto",
+  "file": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\documentsAtester\\cinRecto.jpg",
+  "side": "recto",
+  "image_size": {
+    "width": 1745,
+    "height": 1101
+  },
+  "yolo_elapsed_s": 1.248,
+  "ocr_elapsed_s": 2.253,
+  "total_detections": 10,
+  "total_ocr_ok": 7,
+  "total_ocr_empty": 0,
+  "total_skipped": 3,
+  "detections": [
+    {
+      "index": 0,
+      "label": "header_text",
+      "yolo_score": 0.8865,
+      "bbox": {
+        "x1": 475,
+        "y1": 31,
+        "x2": 1388,
+        "y2": 395
+      },
+      "bbox_size": {
+        "width": 913,
+        "height": 364
+      },
+      "crop_size": {
+        "width": 993,
+        "height": 444
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\crops\\header_text_7.png"
+    },
+    {
+      "index": 1,
+      "label": "flag1",
+      "yolo_score": 0.9198,
+      "bbox": {
+        "x1": 116,
+        "y1": 94,
+        "x2": 426,
+        "y2": 327
+      },
+      "bbox_size": {
+        "width": 310,
+        "height": 233
+      },
+      "crop_size": {
+        "width": 390,
+        "height": 313
+      },
+      "skip_ocr": true,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\crops\\flag1_2.png"
+    },
+    {
+      "index": 2,
+      "label": "flag2",
+      "yolo_score": 0.9182,
+      "bbox": {
+        "x1": 1422,
+        "y1": 103,
+        "x2": 1646,
+        "y2": 369
+      },
+      "bbox_size": {
+        "width": 224,
+        "height": 266
+      },
+      "crop_size": {
+        "width": 304,
+        "height": 346
+      },
+      "skip_ocr": true,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\crops\\flag2_3.png"
+    },
+    {
+      "index": 3,
+      "label": "image",
+      "yolo_score": 0.9286,
+      "bbox": {
+        "x1": 64,
+        "y1": 383,
+        "x2": 635,
+        "y2": 1074
+      },
+      "bbox_size": {
+        "width": 571,
+        "height": 691
+      },
+      "crop_size": {
+        "width": 651,
+        "height": 771
+      },
+      "skip_ocr": true,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\crops\\image_0.png"
+    },
+    {
+      "index": 4,
+      "label": "num_cin",
+      "yolo_score": 0.8901,
+      "bbox": {
+        "x1": 691,
+        "y1": 390,
+        "x2": 1162,
+        "y2": 534
+      },
+      "bbox_size": {
+        "width": 471,
+        "height": 144
+      },
+      "crop_size": {
+        "width": 551,
+        "height": 224
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\crops\\num_cin_6.png"
+    },
+    {
+      "index": 5,
+      "label": "last_name",
+      "yolo_score": 0.92,
+      "bbox": {
+        "x1": 995,
+        "y1": 523,
+        "x2": 1492,
+        "y2": 712
+      },
+      "bbox_size": {
+        "width": 497,
+        "height": 189
+      },
+      "crop_size": {
+        "width": 577,
+        "height": 269
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\crops\\last_name_1.png"
+    },
+    {
+      "index": 6,
+      "label": "first_name",
+      "yolo_score": 0.9113,
+      "bbox": {
+        "x1": 1237,
+        "y1": 659,
+        "x2": 1509,
+        "y2": 787
+      },
+      "bbox_size": {
+        "width": 272,
+        "height": 128
+      },
+      "crop_size": {
+        "width": 352,
+        "height": 208
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\crops\\first_name_4.png"
+    },
+    {
+      "index": 7,
+      "label": "full_name",
+      "yolo_score": 0.8201,
+      "bbox": {
+        "x1": 789,
+        "y1": 716,
+        "x2": 1654,
+        "y2": 915
+      },
+      "bbox_size": {
+        "width": 865,
+        "height": 199
+      },
+      "crop_size": {
+        "width": 945,
+        "height": 229
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\crops\\full_name_9.png"
+    },
+    {
+      "index": 8,
+      "label": "dob",
+      "yolo_score": 0.8498,
+      "bbox": {
+        "x1": 779,
+        "y1": 829,
+        "x2": 1373,
+        "y2": 980
+      },
+      "bbox_size": {
+        "width": 594,
+        "height": 151
+      },
+      "crop_size": {
+        "width": 674,
+        "height": 231
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\crops\\dob_8.png"
+    },
+    {
+      "index": 9,
+      "label": "pob",
+      "yolo_score": 0.8954,
+      "bbox": {
+        "x1": 1315,
+        "y1": 950,
+        "x2": 1517,
+        "y2": 1064
+      },
+      "bbox_size": {
+        "width": 202,
+        "height": 114
+      },
+      "crop_size": {
+        "width": 282,
+        "height": 194
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\crops\\pob_5.png"
+    }
+  ],
+  "ocr_results": [
+    {
+      "index": 0,
+      "label": "header_text",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "الجمهورية التونسية االوسطنية بطاقة اللتعرريف ال",
+      "ocr_score": 0.7823,
+      "ocr_lines": [
+        {
+          "text": "الجمهورية التونسية",
+          "score": 0.9486
+        },
+        {
+          "text": "االوسطنية",
+          "score": 0.6664
+        },
+        {
+          "text": "بطاقة اللتعرريف ال",
+          "score": 0.732
+        }
+      ],
+      "elapsed_s": 1.033,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\preprocessed\\header_text_0_preprocessed.png"
+    },
+    {
+      "index": 1,
+      "label": "flag1",
+      "skip_ocr": true,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null,
+      "lang_used": "none",
+      "elapsed_s": 0.0,
+      "preprocessed_path": null
+    },
+    {
+      "index": 2,
+      "label": "flag2",
+      "skip_ocr": true,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null,
+      "lang_used": "none",
+      "elapsed_s": 0.0,
+      "preprocessed_path": null
+    },
+    {
+      "index": 3,
+      "label": "image",
+      "skip_ocr": true,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null,
+      "lang_used": "none",
+      "elapsed_s": 0.0,
+      "preprocessed_path": null
+    },
+    {
+      "index": 4,
+      "label": "num_cin",
+      "skip_ocr": false,
+      "lang_used": "fr (chiffres)",
+      "ocr_text": "14447754",
+      "ocr_score": 0.9999,
+      "ocr_lines": [
+        {
+          "text": "14447754",
+          "score": 0.9999
+        }
+      ],
+      "elapsed_s": 0.24,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\preprocessed\\num_cin_4_preprocessed.png"
+    },
+    {
+      "index": 5,
+      "label": "last_name",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "المعموري",
+      "ocr_score": 0.9295,
+      "ocr_lines": [
+        {
+          "text": "المعموري",
+          "score": 0.9295
+        }
+      ],
+      "elapsed_s": 0.175,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\preprocessed\\last_name_5_preprocessed.png"
+    },
+    {
+      "index": 6,
+      "label": "first_name",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "ياسين",
+      "ocr_score": 0.9546,
+      "ocr_lines": [
+        {
+          "text": "ياسين",
+          "score": 0.9546
+        }
+      ],
+      "elapsed_s": 0.155,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\preprocessed\\first_name_6_preprocessed.png"
+    },
+    {
+      "index": 7,
+      "label": "full_name",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "بن نورالدين بن البشير",
+      "ocr_score": 0.89,
+      "ocr_lines": [
+        {
+          "text": "بن نورالدين بن البشير",
+          "score": 0.89
+        }
+      ],
+      "elapsed_s": 0.264,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\preprocessed\\full_name_7_preprocessed.png"
+    },
+    {
+      "index": 8,
+      "label": "dob",
+      "skip_ocr": false,
+      "lang_used": "ar + fr (date mixte)",
+      "ocr_text": "29 أفريل 2004",
+      "ocr_score": 0.5643,
+      "ocr_lines": [
+        {
+          "text": "29",
+          "score": 0.5643
+        },
+        {
+          "text": "أفريل",
+          "score": 0.5643
+        },
+        {
+          "text": "2004",
+          "score": 0.5643
+        }
+      ],
+      "elapsed_s": 0.271,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\preprocessed\\dob_8_preprocessed.png"
+    },
+    {
+      "index": 9,
+      "label": "pob",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "نابل",
+      "ocr_score": 0.971,
+      "ocr_lines": [
+        {
+          "text": "نابل",
+          "score": 0.971
+        }
+      ],
+      "elapsed_s": 0.115,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_recto\\preprocessed\\pob_9_preprocessed.png"
+    }
+  ]
+}

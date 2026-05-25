@@ -1,0 +1,4 @@
+# Place your YOLO model files here:
+#   cin_recto_best.pt
+#   cin_verso_.pt
+# These are ignored by git (see root .gitignore — *.pt rule).

@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                98,
+                19
+            ],
+            [
+                373,
+                19
+            ],
+            [
+                373,
+                110
+            ],
+            [
+                98,
+                110
+            ]
+        ],
+        [
+            [
+                352,
+                27
+            ],
+            [
+                516,
+                20
+            ],
+            [
+                519,
+                99
+            ],
+            [
+                355,
+                106
+            ]
+        ],
+        [
+            [
+                5,
+                66
+            ],
+            [
+                640,
+                77
+            ],
+            [
+                640,
+                257
+            ],
+            [
+                2,
+                246
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "ورية التونسية",
+        "الجمهو",
+        "بطاقة التعرفي الوطنية"
+    ],
+    "rec_scores": [
+        0.7518413066864014,
+        0.9983439445495605,
+        0.7211198806762695
+    ],
+    "rec_polys": [
+        [
+            [
+                98,
+                19
+            ],
+            [
+                373,
+                19
+            ],
+            [
+                373,
+                110
+            ],
+            [
+                98,
+                110
+            ]
+        ],
+        [
+            [
+                352,
+                27
+            ],
+            [
+                516,
+                20
+            ],
+            [
+                519,
+                99
+            ],
+            [
+                355,
+                106
+            ]
+        ],
+        [
+            [
+                5,
+                66
+            ],
+            [
+                640,
+                77
+            ],
+            [
+                640,
+                257
+            ],
+            [
+                2,
+                246
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            98,
+            19,
+            373,
+            110
+        ],
+        [
+            352,
+            20,
+            519,
+            106
+        ],
+        [
+            2,
+            66,
+            640,
+            257
+        ]
+    ]
+}

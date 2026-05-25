@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                112,
+                50
+            ],
+            [
+                323,
+                46
+            ],
+            [
+                324,
+                120
+            ],
+            [
+                113,
+                124
+            ]
+        ],
+        [
+            [
+                293,
+                45
+            ],
+            [
+                546,
+                38
+            ],
+            [
+                549,
+                123
+            ],
+            [
+                295,
+                130
+            ]
+        ],
+        [
+            [
+                13,
+                100
+            ],
+            [
+                652,
+                98
+            ],
+            [
+                652,
+                254
+            ],
+            [
+                13,
+                256
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "التونسية",
+        "الجمهوريةًا",
+        "بطاقة التعريف الوطنية"
+    ],
+    "rec_scores": [
+        0.9386086463928223,
+        0.8376851677894592,
+        0.8366158604621887
+    ],
+    "rec_polys": [
+        [
+            [
+                112,
+                50
+            ],
+            [
+                323,
+                46
+            ],
+            [
+                324,
+                120
+            ],
+            [
+                113,
+                124
+            ]
+        ],
+        [
+            [
+                293,
+                45
+            ],
+            [
+                546,
+                38
+            ],
+            [
+                549,
+                123
+            ],
+            [
+                295,
+                130
+            ]
+        ],
+        [
+            [
+                13,
+                100
+            ],
+            [
+                652,
+                98
+            ],
+            [
+                652,
+                254
+            ],
+            [
+                13,
+                256
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            112,
+            46,
+            324,
+            124
+        ],
+        [
+            293,
+            38,
+            549,
+            130
+        ],
+        [
+            13,
+            98,
+            652,
+            256
+        ]
+    ]
+}

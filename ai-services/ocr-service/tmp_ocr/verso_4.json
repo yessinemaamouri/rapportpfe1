@@ -1,0 +1,155 @@
+[
+  {
+    "cin_type": "verso",
+    "class": "mother_name",
+    "yolo_score": 0.876,
+    "position": {
+      "x1": 293,
+      "y1": 85,
+      "x2": 758,
+      "y2": 140
+    },
+    "crop_path": null,
+    "ocr_text": "سمية الساسي",
+    "ocr_score": 0.997,
+    "ocr_lines": [
+      {
+        "text": "سمية",
+        "score": 0.9964
+      },
+      {
+        "text": "الساسي",
+        "score": 0.9976
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "profession",
+    "yolo_score": 0.8946,
+    "position": {
+      "x1": 245,
+      "y1": 142,
+      "x2": 582,
+      "y2": 195
+    },
+    "crop_path": null,
+    "ocr_text": "ضابط أمن",
+    "ocr_score": 0.9816,
+    "ocr_lines": [
+      {
+        "text": "ضابط أمن",
+        "score": 0.9816
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "finger_print",
+    "yolo_score": 0.7837,
+    "position": {
+      "x1": 671,
+      "y1": 173,
+      "x2": 935,
+      "y2": 451
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "address",
+    "yolo_score": 0.9239,
+    "position": {
+      "x1": 70,
+      "y1": 208,
+      "x2": 665,
+      "y2": 330
+    },
+    "crop_path": null,
+    "ocr_text": "السزا د النار",
+    "ocr_score": 0.5105,
+    "ocr_lines": [
+      {
+        "text": "السزا د النار",
+        "score": 0.5105
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "issue_date",
+    "yolo_score": 0.9158,
+    "position": {
+      "x1": 38,
+      "y1": 331,
+      "x2": 325,
+      "y2": 397
+    },
+    "crop_path": null,
+    "ocr_text": "20167 جوان",
+    "ocr_score": 0.9232,
+    "ocr_lines": [
+      {
+        "text": "20167",
+        "score": 0.9232
+      },
+      {
+        "text": "جوان",
+        "score": 0.9232
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "flag3",
+    "yolo_score": 0.9304,
+    "position": {
+      "x1": 488,
+      "y1": 332,
+      "x2": 652,
+      "y2": 500
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "print_id",
+    "yolo_score": 0.356,
+    "position": {
+      "x1": 709,
+      "y1": 455,
+      "x2": 886,
+      "y2": 500
+    },
+    "crop_path": null,
+    "ocr_text": "07852393",
+    "ocr_score": 1.0,
+    "ocr_lines": [
+      {
+        "text": "07852393",
+        "score": 1.0
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "barcode",
+    "yolo_score": 0.9272,
+    "position": {
+      "x1": 247,
+      "y1": 514,
+      "x2": 732,
+      "y2": 603
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  }
+]

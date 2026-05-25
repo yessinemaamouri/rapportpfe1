@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                102,
+                48
+            ],
+            [
+                306,
+                45
+            ],
+            [
+                307,
+                120
+            ],
+            [
+                103,
+                123
+            ]
+        ],
+        [
+            [
+                288,
+                44
+            ],
+            [
+                518,
+                40
+            ],
+            [
+                519,
+                121
+            ],
+            [
+                289,
+                125
+            ]
+        ],
+        [
+            [
+                6,
+                79
+            ],
+            [
+                622,
+                95
+            ],
+            [
+                622,
+                258
+            ],
+            [
+                2,
+                242
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "التنونسية",
+        "الجمهورية ",
+        "بطاقة النعريف الوطئية"
+    ],
+    "rec_scores": [
+        0.935983419418335,
+        0.8766509890556335,
+        0.8480984568595886
+    ],
+    "rec_polys": [
+        [
+            [
+                102,
+                48
+            ],
+            [
+                306,
+                45
+            ],
+            [
+                307,
+                120
+            ],
+            [
+                103,
+                123
+            ]
+        ],
+        [
+            [
+                288,
+                44
+            ],
+            [
+                518,
+                40
+            ],
+            [
+                519,
+                121
+            ],
+            [
+                289,
+                125
+            ]
+        ],
+        [
+            [
+                6,
+                79
+            ],
+            [
+                622,
+                95
+            ],
+            [
+                622,
+                258
+            ],
+            [
+                2,
+                242
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            102,
+            45,
+            307,
+            123
+        ],
+        [
+            288,
+            40,
+            519,
+            125
+        ],
+        [
+            2,
+            79,
+            622,
+            258
+        ]
+    ]
+}

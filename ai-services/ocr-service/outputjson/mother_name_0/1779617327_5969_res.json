@@ -1,0 +1,130 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                10,
+                48
+            ],
+            [
+                301,
+                42
+            ],
+            [
+                303,
+                127
+            ],
+            [
+                11,
+                133
+            ]
+        ],
+        [
+            [
+                301,
+                46
+            ],
+            [
+                488,
+                46
+            ],
+            [
+                488,
+                127
+            ],
+            [
+                301,
+                127
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "بنت محمد",
+        "خديجة"
+    ],
+    "rec_scores": [
+        0.9973820447921753,
+        0.9992297887802124
+    ],
+    "rec_polys": [
+        [
+            [
+                10,
+                48
+            ],
+            [
+                301,
+                42
+            ],
+            [
+                303,
+                127
+            ],
+            [
+                11,
+                133
+            ]
+        ],
+        [
+            [
+                301,
+                46
+            ],
+            [
+                488,
+                46
+            ],
+            [
+                488,
+                127
+            ],
+            [
+                301,
+                127
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            10,
+            42,
+            303,
+            133
+        ],
+        [
+            301,
+            46,
+            488,
+            127
+        ]
+    ]
+}

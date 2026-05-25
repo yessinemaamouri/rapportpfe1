@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": true
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": true,
+            "use_doc_unwarping": true
+        },
+        "angle": 0
+    },
+    "dt_polys": [
+        [
+            [
+                116,
+                146
+            ],
+            [
+                213,
+                146
+            ],
+            [
+                213,
+                201
+            ],
+            [
+                116,
+                201
+            ]
+        ],
+        [
+            [
+                305,
+                143
+            ],
+            [
+                466,
+                140
+            ],
+            [
+                467,
+                199
+            ],
+            [
+                305,
+                202
+            ]
+        ],
+        [
+            [
+                224,
+                155
+            ],
+            [
+                291,
+                155
+            ],
+            [
+                291,
+                200
+            ],
+            [
+                224,
+                200
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        0,
+        0,
+        0
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "زايد",
+        "خديجة",
+        "بن"
+    ],
+    "rec_scores": [
+        0.978569746017456,
+        0.9987367391586304,
+        0.947953999042511
+    ],
+    "rec_polys": [
+        [
+            [
+                116,
+                146
+            ],
+            [
+                213,
+                146
+            ],
+            [
+                213,
+                201
+            ],
+            [
+                116,
+                201
+            ]
+        ],
+        [
+            [
+                305,
+                143
+            ],
+            [
+                466,
+                140
+            ],
+            [
+                467,
+                199
+            ],
+            [
+                305,
+                202
+            ]
+        ],
+        [
+            [
+                224,
+                155
+            ],
+            [
+                291,
+                155
+            ],
+            [
+                291,
+                200
+            ],
+            [
+                224,
+                200
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            116,
+            146,
+            213,
+            201
+        ],
+        [
+            305,
+            140,
+            467,
+            202
+        ],
+        [
+            224,
+            155,
+            291,
+            200
+        ]
+    ]
+}

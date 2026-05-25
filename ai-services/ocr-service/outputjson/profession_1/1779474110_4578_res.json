@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                185,
+                56
+            ],
+            [
+                380,
+                61
+            ],
+            [
+                378,
+                131
+            ],
+            [
+                183,
+                126
+            ]
+        ],
+        [
+            [
+                27,
+                67
+            ],
+            [
+                171,
+                60
+            ],
+            [
+                175,
+                121
+            ],
+            [
+                30,
+                128
+            ]
+        ],
+        [
+            [
+                155,
+                109
+            ],
+            [
+                168,
+                109
+            ],
+            [
+                168,
+                122
+            ],
+            [
+                155,
+                122
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "موظف",
+        "إداري",
+        "c"
+    ],
+    "rec_scores": [
+        0.8079866170883179,
+        0.9998605847358704,
+        0.4125487506389618
+    ],
+    "rec_polys": [
+        [
+            [
+                185,
+                56
+            ],
+            [
+                380,
+                61
+            ],
+            [
+                378,
+                131
+            ],
+            [
+                183,
+                126
+            ]
+        ],
+        [
+            [
+                27,
+                67
+            ],
+            [
+                171,
+                60
+            ],
+            [
+                175,
+                121
+            ],
+            [
+                30,
+                128
+            ]
+        ],
+        [
+            [
+                155,
+                109
+            ],
+            [
+                168,
+                109
+            ],
+            [
+                168,
+                122
+            ],
+            [
+                155,
+                122
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            183,
+            56,
+            380,
+            131
+        ],
+        [
+            27,
+            60,
+            175,
+            128
+        ],
+        [
+            155,
+            109,
+            168,
+            122
+        ]
+    ]
+}

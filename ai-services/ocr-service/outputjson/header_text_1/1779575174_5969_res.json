@@ -1,0 +1,130 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                93,
+                41
+            ],
+            [
+                515,
+                29
+            ],
+            [
+                517,
+                115
+            ],
+            [
+                95,
+                127
+            ]
+        ],
+        [
+            [
+                2,
+                77
+            ],
+            [
+                631,
+                77
+            ],
+            [
+                631,
+                250
+            ],
+            [
+                2,
+                250
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "الجمهورية التونسية",
+        "بطاقة التعريي الوطنية"
+    ],
+    "rec_scores": [
+        0.9071595668792725,
+        0.8001057505607605
+    ],
+    "rec_polys": [
+        [
+            [
+                93,
+                41
+            ],
+            [
+                515,
+                29
+            ],
+            [
+                517,
+                115
+            ],
+            [
+                95,
+                127
+            ]
+        ],
+        [
+            [
+                2,
+                77
+            ],
+            [
+                631,
+                77
+            ],
+            [
+                631,
+                250
+            ],
+            [
+                2,
+                250
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            93,
+            29,
+            517,
+            127
+        ],
+        [
+            2,
+            77,
+            631,
+            250
+        ]
+    ]
+}

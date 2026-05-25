@@ -1,0 +1,118 @@
+﻿
+============================================================
+Crop : detectedimages\issue_date_0.png
+  [fr         ] 7 fragment(s)
+         'ASSPORT'  score=0.999  x_min=0
+         'MAA'  score=1.000  x_min=377
+         'YES'  score=1.000  x_min=381
+         'TUN'  score=1.000  x_min=378
+         '29'  score=1.000  x_min=378
+         'M/'  score=0.996  x_min=377
+         '09'  score=0.999  x_min=382
+  [fr+words   ] 7 fragment(s)
+         'ASSPORT'  score=0.999  x_min=0
+         'MAA'  score=1.000  x_min=377
+         'YES'  score=1.000  x_min=381
+         'TUN'  score=1.000  x_min=378
+         '29'  score=1.000  x_min=378
+         'M/'  score=0.996  x_min=377
+         '09'  score=0.999  x_min=382
+
+============================================================
+Crop : detectedimages\issue_date_1.png
+  [fr         ] 1 fragment(s)
+         '202605'  score=0.906  x_min=0
+  [fr+words   ] 1 fragment(s)
+         '202605'  score=0.906  x_min=0
+
+============================================================
+Crop : detectedimages\issue_date_11.png
+  [fr         ] 13 fragment(s)
+         'PASSPORT'  score=0.987  x_min=0
+         'Sumamk'  score=0.868  x_min=426
+         'MAA'  score=0.999  x_min=431
+         'YES'  score=0.999  x_min=433
+         'National'  score=0.953  x_min=425
+         'TUM'  score=0.835  x_min=433
+         'Date'  score=0.985  x_min=427
+         '29'  score=1.000  x_min=431
+         'M/'  score=0.996  x_min=433
+         'Date al'  score=0.757  x_min=428
+         '09'  score=0.999  x_min=433
+         'Date o'  score=0.855  x_min=433
+         '08'  score=0.999  x_min=436
+  [fr+words   ] 13 fragment(s)
+         'PASSPORT'  score=0.987  x_min=0
+         'Sumamk'  score=0.868  x_min=426
+         'MAA'  score=0.999  x_min=431
+         'YES'  score=0.999  x_min=433
+         'National'  score=0.953  x_min=425
+         'TUM'  score=0.835  x_min=433
+         'Date'  score=0.985  x_min=427
+         '29'  score=1.000  x_min=431
+         'M/'  score=0.996  x_min=433
+         'Date al'  score=0.757  x_min=428
+         '09'  score=0.999  x_min=433
+         'Date o'  score=0.855  x_min=433
+         '08'  score=0.999  x_min=436
+
+============================================================
+Crop : detectedimages\issue_date_12.png
+  [fr         ] 14 fragment(s)
+         'ASSPORT'  score=0.999  x_min=0
+         'MAA'  score=0.999  x_min=409
+         'Given ne'  score=0.917  x_min=406
+         'YES'  score=1.000  x_min=412
+         'National'  score=0.920  x_min=405
+         'TUN'  score=0.996  x_min=417
+         'Date of'  score=0.868  x_min=410
+         '29'  score=1.000  x_min=419
+         'Bex/'  score=0.943  x_min=418
+         'M/'  score=0.977  x_min=419
+         'Date'  score=0.913  x_min=418
+         '09'  score=0.999  x_min=429
+         'Date'  score=0.974  x_min=429
+         '08'  score=0.999  x_min=437
+  [fr+words   ] 14 fragment(s)
+         'ASSPORT'  score=0.999  x_min=0
+         'MAA'  score=0.999  x_min=409
+         'Given ne'  score=0.917  x_min=406
+         'YES'  score=1.000  x_min=412
+         'National'  score=0.920  x_min=405
+         'TUN'  score=0.996  x_min=417
+         'Date of'  score=0.868  x_min=410
+         '29'  score=1.000  x_min=419
+         'Bex/'  score=0.943  x_min=418
+         'M/'  score=0.977  x_min=419
+         'Date'  score=0.913  x_min=418
+         '09'  score=0.999  x_min=429
+         'Date'  score=0.974  x_min=429
+         '08'  score=0.999  x_min=437
+
+============================================================
+Crop : detectedimages\issue_date_2.png
+  [fr         ] 1 fragment(s)
+         '2605'  score=0.763  x_min=0
+  [fr+words   ] 1 fragment(s)
+         '2605'  score=0.763  x_min=0
+
+============================================================
+Crop : detectedimages\issue_date_3.png
+  [fr         ] 1 fragment(s)
+         '202605'  score=0.689  x_min=0
+  [fr+words   ] 1 fragment(s)
+         '202605'  score=0.689  x_min=0
+
+============================================================
+Crop : detectedimages\issue_date_4.png
+  [fr         ] 1 fragment(s)
+         '202605'  score=0.848  x_min=0
+  [fr+words   ] 1 fragment(s)
+         '202605'  score=0.848  x_min=0
+
+============================================================
+Crop : detectedimages\issue_date_5.png
+  [fr         ] 1 fragment(s)
+         '20050'  score=0.695  x_min=0
+  [fr+words   ] 1 fragment(s)
+         '20050'  score=0.695  x_min=0

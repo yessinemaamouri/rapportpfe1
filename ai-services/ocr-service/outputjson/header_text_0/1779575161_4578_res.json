@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                269,
+                38
+            ],
+            [
+                517,
+                35
+            ],
+            [
+                518,
+                129
+            ],
+            [
+                270,
+                132
+            ]
+        ],
+        [
+            [
+                102,
+                53
+            ],
+            [
+                304,
+                47
+            ],
+            [
+                306,
+                122
+            ],
+            [
+                104,
+                129
+            ]
+        ],
+        [
+            [
+                11,
+                89
+            ],
+            [
+                629,
+                96
+            ],
+            [
+                629,
+                257
+            ],
+            [
+                9,
+                250
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "الجمهوية ال",
+        "التونسية",
+        "بطاقة التهريف الوطنية"
+    ],
+    "rec_scores": [
+        0.8069887161254883,
+        0.9755361080169678,
+        0.8616026043891907
+    ],
+    "rec_polys": [
+        [
+            [
+                269,
+                38
+            ],
+            [
+                517,
+                35
+            ],
+            [
+                518,
+                129
+            ],
+            [
+                270,
+                132
+            ]
+        ],
+        [
+            [
+                102,
+                53
+            ],
+            [
+                304,
+                47
+            ],
+            [
+                306,
+                122
+            ],
+            [
+                104,
+                129
+            ]
+        ],
+        [
+            [
+                11,
+                89
+            ],
+            [
+                629,
+                96
+            ],
+            [
+                629,
+                257
+            ],
+            [
+                9,
+                250
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            269,
+            35,
+            518,
+            132
+        ],
+        [
+            102,
+            47,
+            306,
+            129
+        ],
+        [
+            9,
+            89,
+            629,
+            257
+        ]
+    ]
+}

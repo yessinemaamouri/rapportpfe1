@@ -1,0 +1,167 @@
+[
+  {
+    "cin_type": "verso",
+    "class": "mother_name",
+    "yolo_score": 0.9475,
+    "position": {
+      "x1": 512,
+      "y1": 54,
+      "x2": 794,
+      "y2": 123
+    },
+    "crop_path": null,
+    "ocr_text": "النفزا ي مروى",
+    "ocr_score": 0.8941,
+    "ocr_lines": [
+      {
+        "text": "النفزا",
+        "score": 0.7994
+      },
+      {
+        "text": "ي",
+        "score": 0.9991
+      },
+      {
+        "text": "مروى",
+        "score": 0.8838
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "profession",
+    "yolo_score": 0.96,
+    "position": {
+      "x1": 404,
+      "y1": 121,
+      "x2": 583,
+      "y2": 184
+    },
+    "crop_path": null,
+    "ocr_text": "محا سب",
+    "ocr_score": 0.7963,
+    "ocr_lines": [
+      {
+        "text": "محا",
+        "score": 0.8315
+      },
+      {
+        "text": "سب",
+        "score": 0.7611
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "finger_print",
+    "yolo_score": 0.9812,
+    "position": {
+      "x1": 693,
+      "y1": 137,
+      "x2": 992,
+      "y2": 462
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "address",
+    "yolo_score": 0.9474,
+    "position": {
+      "x1": 138,
+      "y1": 183,
+      "x2": 689,
+      "y2": 339
+    },
+    "crop_path": null,
+    "ocr_text": "العنران٦نهج النور الكرم",
+    "ocr_score": 0.8919,
+    "ocr_lines": [
+      {
+        "text": "العنران٦نهج النور الكرم",
+        "score": 0.8919
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "flag3",
+    "yolo_score": 0.9711,
+    "position": {
+      "x1": 490,
+      "y1": 321,
+      "x2": 679,
+      "y2": 500
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "issue_date",
+    "yolo_score": 0.6412,
+    "position": {
+      "x1": 6,
+      "y1": 333,
+      "x2": 329,
+      "y2": 414
+    },
+    "crop_path": null,
+    "ocr_text": "6 سبتمبر 2020",
+    "ocr_score": 0.9298,
+    "ocr_lines": [
+      {
+        "text": "6",
+        "score": 0.9298
+      },
+      {
+        "text": "سبتمبر",
+        "score": 0.9298
+      },
+      {
+        "text": "2020",
+        "score": 0.9298
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "print_id",
+    "yolo_score": 0.8223,
+    "position": {
+      "x1": 741,
+      "y1": 464,
+      "x2": 952,
+      "y2": 515
+    },
+    "crop_path": null,
+    "ocr_text": "06513316",
+    "ocr_score": 0.9999,
+    "ocr_lines": [
+      {
+        "text": "06513316",
+        "score": 0.9999
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "barcode",
+    "yolo_score": 0.9387,
+    "position": {
+      "x1": 227,
+      "y1": 524,
+      "x2": 775,
+      "y2": 630
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  }
+]

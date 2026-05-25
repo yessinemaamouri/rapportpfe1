@@ -1,0 +1,85 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": true
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": true,
+            "use_doc_unwarping": true
+        },
+        "angle": 0
+    },
+    "dt_polys": [
+        [
+            [
+                330,
+                184
+            ],
+            [
+                547,
+                193
+            ],
+            [
+                545,
+                254
+            ],
+            [
+                328,
+                246
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        0
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "ممرضة"
+    ],
+    "rec_scores": [
+        0.9926816821098328
+    ],
+    "rec_polys": [
+        [
+            [
+                330,
+                184
+            ],
+            [
+                547,
+                193
+            ],
+            [
+                545,
+                254
+            ],
+            [
+                328,
+                246
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            328,
+            184,
+            547,
+            254
+        ]
+    ]
+}

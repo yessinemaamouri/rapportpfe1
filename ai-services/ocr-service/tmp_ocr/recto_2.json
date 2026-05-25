@@ -1,0 +1,207 @@
+[
+  {
+    "cin_type": "recto",
+    "class": "header_text",
+    "yolo_score": 0.8897,
+    "position": {
+      "x1": 271,
+      "y1": 0,
+      "x2": 820,
+      "y2": 183
+    },
+    "crop_path": null,
+    "ocr_text": "الجمهورية التون نسية اوية بطاقة",
+    "ocr_score": 0.7279,
+    "ocr_lines": [
+      {
+        "text": "الجمهورية التون",
+        "score": 0.8403
+      },
+      {
+        "text": "نسية",
+        "score": 0.9121
+      },
+      {
+        "text": "اوية",
+        "score": 0.4554
+      },
+      {
+        "text": "بطاقة",
+        "score": 0.7037
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "flag2",
+    "yolo_score": 0.9185,
+    "position": {
+      "x1": 836,
+      "y1": 7,
+      "x2": 986,
+      "y2": 179
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "flag1",
+    "yolo_score": 0.9187,
+    "position": {
+      "x1": 34,
+      "y1": 19,
+      "x2": 240,
+      "y2": 163
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "num_cin",
+    "yolo_score": 0.8693,
+    "position": {
+      "x1": 381,
+      "y1": 194,
+      "x2": 697,
+      "y2": 286
+    },
+    "crop_path": null,
+    "ocr_text": "00770039",
+    "ocr_score": 0.9998,
+    "ocr_lines": [
+      {
+        "text": "00770039",
+        "score": 0.9998
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "image",
+    "yolo_score": 0.9312,
+    "position": {
+      "x1": 3,
+      "y1": 199,
+      "x2": 354,
+      "y2": 612
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "last_name",
+    "yolo_score": 0.8966,
+    "position": {
+      "x1": 663,
+      "y1": 275,
+      "x2": 901,
+      "y2": 375
+    },
+    "crop_path": null,
+    "ocr_text": "الجدّاد",
+    "ocr_score": 0.8933,
+    "ocr_lines": [
+      {
+        "text": "الجدّاد",
+        "score": 0.8933
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "first_name",
+    "yolo_score": 0.9041,
+    "position": {
+      "x1": 707,
+      "y1": 361,
+      "x2": 909,
+      "y2": 430
+    },
+    "crop_path": null,
+    "ocr_text": "الهادي",
+    "ocr_score": 0.9951,
+    "ocr_lines": [
+      {
+        "text": "الهادي",
+        "score": 0.9951
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "full_name",
+    "yolo_score": 0.8165,
+    "position": {
+      "x1": 513,
+      "y1": 416,
+      "x2": 1004,
+      "y2": 492
+    },
+    "crop_path": null,
+    "ocr_text": "بن محمد بن مبروك",
+    "ocr_score": 0.9687,
+    "ocr_lines": [
+      {
+        "text": "بن محمد بن مبروك",
+        "score": 0.9687
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "dob",
+    "yolo_score": 0.8284,
+    "position": {
+      "x1": 466,
+      "y1": 471,
+      "x2": 829,
+      "y2": 548
+    },
+    "crop_path": null,
+    "ocr_text": "07 مارس 1967",
+    "ocr_score": 0.8713,
+    "ocr_lines": [
+      {
+        "text": "07",
+        "score": 0.8713
+      },
+      {
+        "text": "مارس",
+        "score": 0.8713
+      },
+      {
+        "text": "1967",
+        "score": 0.8713
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "pob",
+    "yolo_score": 0.8267,
+    "position": {
+      "x1": 726,
+      "y1": 539,
+      "x2": 925,
+      "y2": 612
+    },
+    "crop_path": null,
+    "ocr_text": "تونس",
+    "ocr_score": 0.9951,
+    "ocr_lines": [
+      {
+        "text": "تونس",
+        "score": 0.9951
+      }
+    ]
+  }
+]

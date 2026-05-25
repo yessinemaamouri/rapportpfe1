@@ -1,0 +1,171 @@
+[
+  {
+    "cin_type": "verso",
+    "class": "mother_name",
+    "yolo_score": 0.842,
+    "position": {
+      "x1": 538,
+      "y1": 49,
+      "x2": 784,
+      "y2": 119
+    },
+    "crop_path": null,
+    "ocr_text": "العيا حياح ة ري",
+    "ocr_score": 0.819,
+    "ocr_lines": [
+      {
+        "text": "العيا",
+        "score": 0.8294
+      },
+      {
+        "text": "حياح",
+        "score": 0.8109
+      },
+      {
+        "text": "ة",
+        "score": 0.8219
+      },
+      {
+        "text": "ري",
+        "score": 0.8136
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "profession",
+    "yolo_score": 0.9498,
+    "position": {
+      "x1": 339,
+      "y1": 118,
+      "x2": 578,
+      "y2": 187
+    },
+    "crop_path": null,
+    "ocr_text": "عامل يومي",
+    "ocr_score": 0.9006,
+    "ocr_lines": [
+      {
+        "text": "عامل",
+        "score": 0.8048
+      },
+      {
+        "text": "يومي",
+        "score": 0.9964
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "finger_print",
+    "yolo_score": 0.9817,
+    "position": {
+      "x1": 695,
+      "y1": 140,
+      "x2": 993,
+      "y2": 461
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "address",
+    "yolo_score": 0.8908,
+    "position": {
+      "x1": 50,
+      "y1": 183,
+      "x2": 678,
+      "y2": 327
+    },
+    "crop_path": null,
+    "ocr_text": "العنران 29 نهج الفردوس حمام الأنة",
+    "ocr_score": 0.9532,
+    "ocr_lines": [
+      {
+        "text": "العنران 29 نهج الفردوس حمام الأنة",
+        "score": 0.9532
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "flag3",
+    "yolo_score": 0.9669,
+    "position": {
+      "x1": 490,
+      "y1": 323,
+      "x2": 678,
+      "y2": 500
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "issue_date",
+    "yolo_score": 0.9072,
+    "position": {
+      "x1": 0,
+      "y1": 335,
+      "x2": 316,
+      "y2": 411
+    },
+    "crop_path": null,
+    "ocr_text": "1 سبتمبر 2023",
+    "ocr_score": 0.9382,
+    "ocr_lines": [
+      {
+        "text": "1",
+        "score": 0.9382
+      },
+      {
+        "text": "سبتمبر",
+        "score": 0.9382
+      },
+      {
+        "text": "2023",
+        "score": 0.9382
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "print_id",
+    "yolo_score": 0.9506,
+    "position": {
+      "x1": 739,
+      "y1": 462,
+      "x2": 939,
+      "y2": 511
+    },
+    "crop_path": null,
+    "ocr_text": "03622853",
+    "ocr_score": 0.9999,
+    "ocr_lines": [
+      {
+        "text": "03622853",
+        "score": 0.9999
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "barcode",
+    "yolo_score": 0.9503,
+    "position": {
+      "x1": 227,
+      "y1": 525,
+      "x2": 773,
+      "y2": 628
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  }
+]

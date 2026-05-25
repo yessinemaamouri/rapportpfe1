@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                104,
+                54
+            ],
+            [
+                524,
+                54
+            ],
+            [
+                524,
+                136
+            ],
+            [
+                104,
+                136
+            ]
+        ],
+        [
+            [
+                16,
+                112
+            ],
+            [
+                447,
+                114
+            ],
+            [
+                446,
+                242
+            ],
+            [
+                15,
+                240
+            ]
+        ],
+        [
+            [
+                427,
+                113
+            ],
+            [
+                628,
+                119
+            ],
+            [
+                624,
+                253
+            ],
+            [
+                423,
+                247
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "الجمهورية التونسية",
+        "التعريف  الوطنية",
+        "بطاقة"
+    ],
+    "rec_scores": [
+        0.9597651362419128,
+        0.8473649024963379,
+        0.9212050437927246
+    ],
+    "rec_polys": [
+        [
+            [
+                104,
+                54
+            ],
+            [
+                524,
+                54
+            ],
+            [
+                524,
+                136
+            ],
+            [
+                104,
+                136
+            ]
+        ],
+        [
+            [
+                16,
+                112
+            ],
+            [
+                447,
+                114
+            ],
+            [
+                446,
+                242
+            ],
+            [
+                15,
+                240
+            ]
+        ],
+        [
+            [
+                427,
+                113
+            ],
+            [
+                628,
+                119
+            ],
+            [
+                624,
+                253
+            ],
+            [
+                423,
+                247
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            104,
+            54,
+            524,
+            136
+        ],
+        [
+            15,
+            112,
+            447,
+            242
+        ],
+        [
+            423,
+            113,
+            628,
+            253
+        ]
+    ]
+}

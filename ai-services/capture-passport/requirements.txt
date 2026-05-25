@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+websockets
+ultralytics
+opencv-python-headless
+python-dotenv
+pydantic
+numpy
+Pillow
+loguru
+minio
+psycopg2-binary
+httpx

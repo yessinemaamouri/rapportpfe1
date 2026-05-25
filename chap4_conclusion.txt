@@ -1,0 +1,108 @@
+﻿CHAPITRE 4
+Réalisation Applicative (Agile / Scrum)
+✎  À RÉDIGER — Introduction du Chapitre 4
+Rédiger un paragraphe d'introduction (6 à 8 lignes) qui rappelle que le pipeline IA est désormais validé (Chapitre 3) et que ce chapitre se concentre sur la réalisation de la couche applicative. Mentionner la méthodologie Agile/Scrum adoptée, les trois sprints planifiés, et annoncer le plan du chapitre.
+
+
+5.1  Méthodologie Agile Adoptée
+✎  À RÉDIGER — Présentation de l'approche Agile retenue
+Expliquer pourquoi Scrum (version allégée, projet individuel) a été choisi plutôt qu'une approche classique. Décrire les éléments Scrum utilisés : Product Backlog, sprints de 2 semaines, Definition of Done. Préciser les rôles endossés (développeur, Scrum Master, Product Owner en solo). Terminer par une phrase de transition vers le backlog.
+ Inclure un schéma du cycle Scrum adapté (Figure 4.1) et y référencer les 3 sprints du projet. Rester concis : 1 à 1,5 page suffit pour cette section.
+
+
+5.2  Backlog et Planification des Sprints
+✎  À RÉDIGER — Product Backlog — liste des User Stories
+Présenter le Product Backlog sous forme de tableau (ID, User Story, Priorité, Estimation, Sprint assigné). Inclure au minimum : les US liées à l'authentification admin, la gestion des dossiers KYC, la soumission de documents côté client, le suivi de statut, et l'intégration du module IA. Distinguer Must Have / Should Have / Nice to Have.
+✎  À RÉDIGER — Planification des sprints — tableau récapitulatif
+Présenter un tableau de planification (Sprint | Objectif | US incluses | Durée | Livrable attendu). Justifier brièvement la répartition choisie et la logique de priorisation (interface admin en premier car elle conditionne le workflow de validation).
+Le backlog est le cœur de ce chapitre : soigner la formulation des User Stories au format 'En tant que [rôle], je veux [action] afin de [bénéfice]'.
+
+
+5.3  Sprint 1 — Interface Administrateur
+Objectif et périmètre du sprint
+✎  À RÉDIGER — Objectif du Sprint 1
+Décrire l'objectif du sprint (back-office agent bancaire) et lister les User Stories incluses. Rappeler la durée et le livrable attendu (interface admin fonctionnelle).
+Conception UML
+✎  À RÉDIGER — Diagrammes UML du Sprint 1
+Intégrer et commenter les diagrammes de cas d'utilisation et de séquence relatifs à l'interface admin : connexion sécurisée, tableau de bord KYC, consultation/validation des dossiers, gestion des utilisateurs. Référencer chaque figure.
+Réalisation — Captures d'écran
+✎  À RÉDIGER — Présentation des interfaces réalisées
+Présenter les principales interfaces développées avec captures d'écran annotées : page de login admin, dashboard (statistiques dossiers, taux de validation), liste des dossiers KYC avec filtres, vue détail dossier, écran de validation/rejet avec commentaire. Pour chaque écran, décrire brièvement les choix UX retenus.
+Tests et validation
+✎  À RÉDIGER — Résultats des tests du Sprint 1
+Présenter les tests fonctionnels réalisés (cas de test, résultat attendu, résultat obtenu). Mentionner les corrections effectuées avant clôture du sprint. Conclure sur la Definition of Done atteinte.
+
+
+________________
+
+
+5.4  Sprint 2 — Interface Client
+Objectif et périmètre du sprint
+✎  À RÉDIGER — Objectif du Sprint 2
+Décrire l'objectif du sprint (front-office client) et lister les User Stories incluses. Rappeler la durée et le livrable attendu (interface client fonctionnelle, soumission de documents et suivi de dossier en temps réel).
+Conception UML
+✎  À RÉDIGER — Diagrammes UML du Sprint 2
+Intégrer et commenter les diagrammes relatifs au parcours client : inscription/login, soumission de CIN ou passeport, suivi de l'état du dossier (En attente / Validé / Rejeté), notifications. Inclure le diagramme de séquence de la soumission de document.
+Réalisation — Captures d'écran
+✎  À RÉDIGER — Présentation des interfaces réalisées
+Présenter les interfaces client développées : page d'accueil/inscription, étapes du parcours de soumission (upload CIN recto/verso ou passeport), page de suivi de dossier, écran de confirmation/notification. Annoter chaque capture et justifier les choix d'ergonomie (mobile-first, guidage étape par étape).
+Tests et validation
+✎  À RÉDIGER — Résultats des tests du Sprint 2
+Présenter les scénarios de test côté client (soumission valide, document illisible, format non supporté). Mentionner les ajustements UI réalisés suite aux tests. Conclure sur la Definition of Done atteinte.
+
+
+5.5  Sprint 3 — Intégration du Module IA
+Objectif et périmètre du sprint
+✎  À RÉDIGER — Objectif du Sprint 3
+Décrire l'objectif du sprint : connecter le pipeline IA (YOLO + OCR) à la couche applicative, et valider le système end-to-end. Lister les User Stories incluses et le livrable attendu (système KYC complet opérationnel).
+Architecture d'intégration
+✎  À RÉDIGER — Schéma d'intégration IA ↔ Application
+Présenter le schéma d'architecture d'intégration : comment l'application appelle le module IA (API REST / appel direct), comment le résultat est renvoyé et affiché dans le back-office. Décrire le format des échanges (JSON), la gestion des erreurs et des cas limites (document non reconnu, score faible).
+Réalisation — Flux end-to-end
+✎  À RÉDIGER — Démonstration du flux complet
+Décrire et illustrer le flux bout-en-bout : client soumet un document → module IA détecte et extrait les données → résultat affiché dans le dossier admin → agent valide ou corrige. Inclure des captures d'écran montrant les données extraites affichées dans l'interface (nom, prénom, numéro CIN, date naissance, etc.).
+Tests end-to-end et performance globale
+✎  À RÉDIGER — Tests d'intégration et mesures de performance
+Présenter les tests d'intégration réalisés (différents types de documents, qualités variées). Donner les métriques clés : temps de traitement moyen de bout en bout, taux de succès de l'extraction complète, taux d'erreurs résiduelles. Comparer avec les objectifs fixés en début de projet.
+Conseil : Ce sprint est le climax du projet : soigner particulièrement les captures d'écran et les métriques. C'est ici que le lecteur voit la valeur concrète du système.
+
+
+5.6  Synthèse — Système KYC Complet Opérationnel
+✎  À RÉDIGER — Bilan de la réalisation applicative
+Rédiger une synthèse (1 page) qui récapitule : les 3 sprints réalisés, les livrables produits, les technologies utilisées (stack front/back, framework, base de données). Présenter un tableau récapitulatif Sprint / Livrable / Statut. Conclure sur le fait que le système KYC est désormais complet et opérationnel, prêt à être déployé.
+Conseil : Inclure ici un tableau comparatif 'Objectifs initiaux vs Réalisations' pour montrer l'adéquation entre la planification et l'exécution.
+________________
+
+
+CONCLUSION GÉNÉRALE
+et Perspectives
+Bilan des Réalisations
+✎  À RÉDIGER — Synthèse globale du projet
+Rédiger 2 à 3 paragraphes qui rappellent : (1) le contexte et la problématique posée en Chapitre 1 (KYC manuel, limites des solutions commerciales) ; (2) les réponses apportées — pipeline IA on-premise (YOLO + OCR) et application Agile en 3 sprints ; (3) les principaux résultats obtenus (métriques de précision OCR, taux de détection, temps de traitement, conformité BCT). Employer un ton conclusif et affirmatif.
+Conseil : Reprendre les chiffres clés des Chapitres 3 et 4 (précision, temps moyen, taux de succès). La conclusion doit refléter directement la problématique du Chapitre 1.
+
+
+Limites du Projet
+✎  À RÉDIGER — Identification honnête des limites
+Identifier et discuter 3 à 5 limites réelles du projet, par exemple : (1) taille du dataset d'entraînement et diversité limitée des documents ; (2) absence de module de détection de fraude avancée (deepfake, document altéré) ; (3) non-implémentation d'un système de monitoring automatique en production ; (4) interface non encore soumise à des tests utilisateurs réels (agents BTE) ; (5) absence de liveness detection pour la vérification biométrique. Chaque limite doit être formulée objectivement, sans minimiser ni dramatiser.
+Conseil : Présenter les limites de façon neutre et structurée. Les examinateurs apprécient la lucidité sur les limites — c'est un signe de maturité scientifique.
+
+
+Perspectives
+Déploiement On-Premise
+✎  À RÉDIGER — Perspective 1 — Mise en production
+Décrire les étapes envisagées pour un déploiement réel en production sur l'infrastructure de la BTE : conteneurisation Docker, orchestration Kubernetes, intégration dans le SI bancaire existant, formation des agents, plan de déploiement progressif par agence pilote.
+Monitoring et Amélioration Continue
+✎  À RÉDIGER — Perspective 2 — Monitoring du modèle
+Présenter la mise en place d'un système de monitoring du modèle IA en production : suivi de la dérive des données (data drift), réentraînement périodique sur de nouveaux documents, tableau de bord de supervision des performances (dashboard MLOps). Mentionner des outils envisagés (MLflow, Grafana, Prometheus).
+Extensions Fonctionnelles
+✎  À RÉDIGER — Perspective 3 — Extensions envisagées
+Décrire les extensions fonctionnelles possibles à moyen terme : (1) ajout d'un module de liveness detection pour la vérification biométrique (anti-spoofing) ; (2) extension aux documents d'identité étrangers (passeports européens, permis de séjour) ; (3) intégration d'un scoring de risque de fraude documentaire basé sur des modèles de détection d'altérations ; (4) extension de la solution à d'autres établissements financiers tunisiens via une offre SaaS on-premise mutualisée.
+Conseil : Les perspectives doivent être réalistes et directement ancrées dans les limites identifiées. Éviter les perspectives trop génériques ou déjà réalisées dans le projet.
+
+
+
+
+
+
+Mot de fin — Rédiger une ou deux phrases de clôture affirmant que ce projet constitue une contribution concrète à la modernisation du KYC en Tunisie, et qu'il ouvre la voie à une transformation plus large de la conformité bancaire par l'intelligence artificielle.

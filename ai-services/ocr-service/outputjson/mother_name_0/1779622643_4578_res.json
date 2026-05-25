@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                0,
+                46
+            ],
+            [
+                199,
+                50
+            ],
+            [
+                198,
+                123
+            ],
+            [
+                0,
+                119
+            ]
+        ],
+        [
+            [
+                163,
+                51
+            ],
+            [
+                313,
+                51
+            ],
+            [
+                313,
+                119
+            ],
+            [
+                163,
+                119
+            ]
+        ],
+        [
+            [
+                304,
+                53
+            ],
+            [
+                454,
+                44
+            ],
+            [
+                458,
+                115
+            ],
+            [
+                308,
+                124
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "عبد الله",
+        "بنت ع",
+        "كلثوم"
+    ],
+    "rec_scores": [
+        0.9796133041381836,
+        0.8625966310501099,
+        0.9845867156982422
+    ],
+    "rec_polys": [
+        [
+            [
+                0,
+                46
+            ],
+            [
+                199,
+                50
+            ],
+            [
+                198,
+                123
+            ],
+            [
+                0,
+                119
+            ]
+        ],
+        [
+            [
+                163,
+                51
+            ],
+            [
+                313,
+                51
+            ],
+            [
+                313,
+                119
+            ],
+            [
+                163,
+                119
+            ]
+        ],
+        [
+            [
+                304,
+                53
+            ],
+            [
+                454,
+                44
+            ],
+            [
+                458,
+                115
+            ],
+            [
+                308,
+                124
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            0,
+            46,
+            199,
+            123
+        ],
+        [
+            163,
+            51,
+            313,
+            119
+        ],
+        [
+            304,
+            44,
+            458,
+            124
+        ]
+    ]
+}

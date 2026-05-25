@@ -1,0 +1,85 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": true
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": true,
+            "use_doc_unwarping": true
+        },
+        "angle": 90
+    },
+    "dt_polys": [
+        [
+            [
+                145,
+                162
+            ],
+            [
+                222,
+                159
+            ],
+            [
+                234,
+                475
+            ],
+            [
+                157,
+                478
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        0
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "اد  صال"
+    ],
+    "rec_scores": [
+        0.6086455583572388
+    ],
+    "rec_polys": [
+        [
+            [
+                145,
+                162
+            ],
+            [
+                222,
+                159
+            ],
+            [
+                234,
+                475
+            ],
+            [
+                157,
+                478
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            145,
+            159,
+            234,
+            478
+        ]
+    ]
+}

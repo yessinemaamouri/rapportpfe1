@@ -1,0 +1,220 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                159,
+                62
+            ],
+            [
+                289,
+                58
+            ],
+            [
+                291,
+                128
+            ],
+            [
+                161,
+                132
+            ]
+        ],
+        [
+            [
+                299,
+                59
+            ],
+            [
+                440,
+                56
+            ],
+            [
+                441,
+                118
+            ],
+            [
+                300,
+                121
+            ]
+        ],
+        [
+            [
+                426,
+                53
+            ],
+            [
+                436,
+                53
+            ],
+            [
+                436,
+                65
+            ],
+            [
+                426,
+                65
+            ]
+        ],
+        [
+            [
+                6,
+                69
+            ],
+            [
+                146,
+                59
+            ],
+            [
+                150,
+                125
+            ],
+            [
+                10,
+                135
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "تعليم",
+        "أستاذ",
+        "c",
+        "ثانوي"
+    ],
+    "rec_scores": [
+        0.8284069299697876,
+        0.9988441467285156,
+        0.9479650259017944,
+        0.8607692718505859
+    ],
+    "rec_polys": [
+        [
+            [
+                159,
+                62
+            ],
+            [
+                289,
+                58
+            ],
+            [
+                291,
+                128
+            ],
+            [
+                161,
+                132
+            ]
+        ],
+        [
+            [
+                299,
+                59
+            ],
+            [
+                440,
+                56
+            ],
+            [
+                441,
+                118
+            ],
+            [
+                300,
+                121
+            ]
+        ],
+        [
+            [
+                426,
+                53
+            ],
+            [
+                436,
+                53
+            ],
+            [
+                436,
+                65
+            ],
+            [
+                426,
+                65
+            ]
+        ],
+        [
+            [
+                6,
+                69
+            ],
+            [
+                146,
+                59
+            ],
+            [
+                150,
+                125
+            ],
+            [
+                10,
+                135
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            159,
+            58,
+            291,
+            132
+        ],
+        [
+            299,
+            56,
+            441,
+            121
+        ],
+        [
+            426,
+            53,
+            436,
+            65
+        ],
+        [
+            6,
+            59,
+            150,
+            135
+        ]
+    ]
+}

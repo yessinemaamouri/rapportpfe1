@@ -1,0 +1,93 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Cadre Général du Projet}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Organisme d'accueil}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Présentation de la BTE}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Organigramme de la BTE}{4}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Compréhension du métier KYC}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}KYC traditionnel vs KYC automatisé}{5}{subsection.1.2.1}%
+\contentsline {paragraph}{\hspace {1cm} a. Processus hors ligne}{6}{subsection.1.2.1}%
+\contentsline {paragraph}{\hspace {1cm} b. Processus en ligne}{6}{figure.1.3}%
+\contentsline {paragraph}{\hspace {1cm} c. Limites structurelles du KYC traditionnel}{7}{figure.1.4}%
+\contentsline {subsection}{\numberline {1.2.2}Cadre réglementaire et normatif}{8}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Position du problème}{9}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Étude de l'existant}{9}{subsection.1.3.1}%
+\contentsline {paragraph}{\hspace {1cm} a. uqudo}{10}{figure.1.6}%
+\contentsline {paragraph}{\hspace {1cm} b. NEUROPARSER}{11}{figure.1.6}%
+\contentsline {paragraph}{\hspace {1cm} c. FACEKI}{11}{figure.1.6}%
+\contentsline {subsection}{\numberline {1.3.2}Analyse critique de l'existant}{11}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Problématique retenue}{12}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Solution proposée}{13}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}Méthodologie adoptée --- approche hybride en deux incréments}{14}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Modèle incrémental}{14}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}CRISP-ML(Q)}{14}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Modèle en cascade}{16}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Planification globale du projet}{17}{subsection.1.4.4}%
+\contentsline {chapter}{\numberline {2}Spécification des Besoins et Architecture}{20}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Spécification des besoins}{20}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Identification des acteurs}{20}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Besoins fonctionnels}{20}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Besoins non fonctionnels}{22}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Architecture globale de la solution}{22}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Architecture logique}{22}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Architecture physique}{22}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Diagramme de cas d'utilisation global}{22}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Description des cas d'utilisation}{24}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Conception UML}{32}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Diagramme de séquence}{32}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Diagramme de classes}{36}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Diagramme d'activité}{42}{subsection.2.4.3}%
+\contentsline {part}{I\hspace {1em}Incrément 1 : Fondements IA et Réalisation du Pipeline}{44}{part.1}%
+\contentsline {chapter}{\numberline {3}Fondements Théoriques et Choix Technologiques}{46}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Fondements théoriques}{46}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Intelligence artificielle, machine learning et deep learning}{46}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Vision par ordinateur et réseaux de neurones}{47}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Détection d'objets}{48}{subsection.3.1.3}%
+\contentsline {paragraph}{Méthodes One-Stage}{50}{figure.3.4}%
+\contentsline {paragraph}{Méthodes Two-Stage}{50}{figure.3.4}%
+\contentsline {paragraph}{Principe de fonctionnement}{51}{figure.3.5}%
+\contentsline {paragraph}{Évolution de l'architecture YOLO}{51}{figure.3.6}%
+\contentsline {paragraph}{Analyse comparative sur COCO}{53}{figure.3.7}%
+\contentsline {subsection}{\numberline {3.1.4}Reconnaissance optique de caractères (OCR)}{53}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Choix technologiques}{55}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Modèle de détection : YOLO11m}{55}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Moteur OCR : PaddleOCR PP-OCRv5}{57}{subsection.3.2.2}%
+\contentsline {paragraph}{a) Support natif de l'arabe}{57}{table.3.4}%
+\contentsline {paragraph}{b) Amélioration de précision documentée}{57}{table.3.4}%
+\contentsline {paragraph}{c) Performance face aux grands modèles de vision (VLM)}{58}{table.3.4}%
+\contentsline {paragraph}{d) Licence open source et facilité d'intégration}{58}{table.3.4}%
+\contentsline {chapter}{\numberline {4}Méthodologie CRISP-ML(Q) --- Réalisation du Module IA}{60}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Business understanding, data understanding \& collecte}{60}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Pipeline métier du système IA}{60}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Analyse des besoins documentaires}{61}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Collecte et composition du dataset}{61}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Préparation des données (ingénierie des données)}{63}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Restauration et génération de données}{63}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Labellisation : construction de la vérité terrain}{64}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Augmentation contrôlée : simulation de la variabilité réelle}{66}{subsection.4.2.3}%
+\contentsline {paragraph}{A. Invariance spatiale (géométrie \& perspective)}{66}{table.4.4}%
+\contentsline {paragraph}{B. Invariance photométrique (lumière \& couleur)}{67}{figure.4.7}%
+\contentsline {paragraph}{C. Résilience optique (flou \& bruit capteur)}{68}{figure.4.8}%
+\contentsline {section}{\numberline {4.3}Modélisation}{69}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Architecture globale du système IA}{69}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Détection de présence du document --- YOLOv8n}{70}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Détection des champs texte --- YOLOv11m}{71}{subsection.4.3.3}%
+\contentsline {paragraph}{CIN Recto}{74}{table.4.6}%
+\contentsline {paragraph}{CIN Verso}{76}{table.4.7}%
+\contentsline {paragraph}{Passeport}{78}{table.4.8}%
+\contentsline {subsection}{\numberline {4.3.4}Extraction texte --- PaddleOCR PP-OCRv5}{80}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Configuration matérielle et environnement}{82}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Évaluation et assurance qualité}{83}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Déploiement et intégration}{83}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Surveillance et maintenance}{83}{section.4.6}%
+\contentsline {part}{II\hspace {1em}Incrément 2 : Réalisation du Système eKYC}{85}{part.2}%
+\contentsline {chapter}{\numberline {5}Réalisation Applicative et Tests}{87}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Environnement de développement \& stack technique}{87}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Réalisation des interfaces}{87}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Interface administrateur}{87}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Interface client}{87}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Intégration du module IA dans l'application}{87}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tests et validation}{87}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Tests fonctionnels}{87}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Tests d'intégration}{87}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Synthèse --- système KYC complet opérationnel}{87}{subsection.5.4.3}%
+\contentsline {chapter}{Conclusion Générale}{88}{chapter*.2}%

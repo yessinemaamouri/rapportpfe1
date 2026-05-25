@@ -1,0 +1,130 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                2,
+                43
+            ],
+            [
+                282,
+                40
+            ],
+            [
+                283,
+                137
+            ],
+            [
+                3,
+                139
+            ]
+        ],
+        [
+            [
+                291,
+                44
+            ],
+            [
+                486,
+                44
+            ],
+            [
+                486,
+                113
+            ],
+            [
+                291,
+                113
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "صيدلاني",
+        "مساعد"
+    ],
+    "rec_scores": [
+        0.9987130761146545,
+        0.9843670129776001
+    ],
+    "rec_polys": [
+        [
+            [
+                2,
+                43
+            ],
+            [
+                282,
+                40
+            ],
+            [
+                283,
+                137
+            ],
+            [
+                3,
+                139
+            ]
+        ],
+        [
+            [
+                291,
+                44
+            ],
+            [
+                486,
+                44
+            ],
+            [
+                486,
+                113
+            ],
+            [
+                291,
+                113
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            2,
+            40,
+            283,
+            139
+        ],
+        [
+            291,
+            44,
+            486,
+            113
+        ]
+    ]
+}

@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                2,
+                59
+            ],
+            [
+                160,
+                59
+            ],
+            [
+                160,
+                115
+            ],
+            [
+                2,
+                115
+            ]
+        ],
+        [
+            [
+                167,
+                66
+            ],
+            [
+                356,
+                60
+            ],
+            [
+                357,
+                125
+            ],
+            [
+                168,
+                130
+            ]
+        ],
+        [
+            [
+                371,
+                60
+            ],
+            [
+                443,
+                60
+            ],
+            [
+                443,
+                116
+            ],
+            [
+                371,
+                116
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "2023",
+        "سبتمبر",
+        "14"
+    ],
+    "rec_scores": [
+        0.9995865821838379,
+        0.8707823753356934,
+        0.9997172355651855
+    ],
+    "rec_polys": [
+        [
+            [
+                2,
+                59
+            ],
+            [
+                160,
+                59
+            ],
+            [
+                160,
+                115
+            ],
+            [
+                2,
+                115
+            ]
+        ],
+        [
+            [
+                167,
+                66
+            ],
+            [
+                356,
+                60
+            ],
+            [
+                357,
+                125
+            ],
+            [
+                168,
+                130
+            ]
+        ],
+        [
+            [
+                371,
+                60
+            ],
+            [
+                443,
+                60
+            ],
+            [
+                443,
+                116
+            ],
+            [
+                371,
+                116
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            2,
+            59,
+            160,
+            115
+        ],
+        [
+            167,
+            60,
+            357,
+            130
+        ],
+        [
+            371,
+            60,
+            443,
+            116
+        ]
+    ]
+}

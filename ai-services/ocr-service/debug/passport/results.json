@@ -1,0 +1,482 @@
+{
+  "document": "passport",
+  "file": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\documentsAtester\\passPort.jpg",
+  "side": "passport",
+  "image_size": {
+    "width": 1919,
+    "height": 1212
+  },
+  "yolo_elapsed_s": 1.042,
+  "ocr_elapsed_s": 2.241,
+  "total_detections": 12,
+  "total_ocr_ok": 11,
+  "total_ocr_empty": 0,
+  "total_skipped": 1,
+  "detections": [
+    {
+      "index": 0,
+      "label": "num_pass",
+      "yolo_score": 0.6476,
+      "bbox": {
+        "x1": 1173,
+        "y1": 144,
+        "x2": 1413,
+        "y2": 190
+      },
+      "bbox_size": {
+        "width": 240,
+        "height": 46
+      },
+      "crop_size": {
+        "width": 359,
+        "height": 138
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\num_pass_11.png"
+    },
+    {
+      "index": 1,
+      "label": "full_name",
+      "yolo_score": 0.7089,
+      "bbox": {
+        "x1": 1220,
+        "y1": 208,
+        "x2": 1811,
+        "y2": 279
+      },
+      "bbox_size": {
+        "width": 591,
+        "height": 71
+      },
+      "crop_size": {
+        "width": 730,
+        "height": 158
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\full_name_8.png"
+    },
+    {
+      "index": 2,
+      "label": "last_name",
+      "yolo_score": 0.8275,
+      "bbox": {
+        "x1": 535,
+        "y1": 283,
+        "x2": 841,
+        "y2": 339
+      },
+      "bbox_size": {
+        "width": 306,
+        "height": 56
+      },
+      "crop_size": {
+        "width": 435,
+        "height": 151
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\last_name_1.png"
+    },
+    {
+      "index": 3,
+      "label": "image",
+      "yolo_score": 0.9278,
+      "bbox": {
+        "x1": 75,
+        "y1": 297,
+        "x2": 505,
+        "y2": 924
+      },
+      "bbox_size": {
+        "width": 430,
+        "height": 627
+      },
+      "crop_size": {
+        "width": 579,
+        "height": 877
+      },
+      "skip_ocr": true,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\image_0.png"
+    },
+    {
+      "index": 4,
+      "label": "first_name",
+      "yolo_score": 0.7636,
+      "bbox": {
+        "x1": 536,
+        "y1": 355,
+        "x2": 817,
+        "y2": 407
+      },
+      "bbox_size": {
+        "width": 281,
+        "height": 52
+      },
+      "crop_size": {
+        "width": 406,
+        "height": 146
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\first_name_5.png"
+    },
+    {
+      "index": 5,
+      "label": "profession",
+      "yolo_score": 0.7663,
+      "bbox": {
+        "x1": 1698,
+        "y1": 423,
+        "x2": 1827,
+        "y2": 474
+      },
+      "bbox_size": {
+        "width": 129,
+        "height": 51
+      },
+      "crop_size": {
+        "width": 274,
+        "height": 157
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\profession_4.png"
+    },
+    {
+      "index": 6,
+      "label": "dob",
+      "yolo_score": 0.7636,
+      "bbox": {
+        "x1": 543,
+        "y1": 496,
+        "x2": 920,
+        "y2": 560
+      },
+      "bbox_size": {
+        "width": 377,
+        "height": 64
+      },
+      "crop_size": {
+        "width": 649,
+        "height": 175
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\dob_6.png"
+    },
+    {
+      "index": 7,
+      "label": "address",
+      "yolo_score": 0.6664,
+      "bbox": {
+        "x1": 1717,
+        "y1": 498,
+        "x2": 1822,
+        "y2": 551
+      },
+      "bbox_size": {
+        "width": 105,
+        "height": 53
+      },
+      "crop_size": {
+        "width": 284,
+        "height": 176
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\address_9.png"
+    },
+    {
+      "index": 8,
+      "label": "num_cin",
+      "yolo_score": 0.7748,
+      "bbox": {
+        "x1": 1176,
+        "y1": 502,
+        "x2": 1502,
+        "y2": 564
+      },
+      "bbox_size": {
+        "width": 326,
+        "height": 62
+      },
+      "crop_size": {
+        "width": 459,
+        "height": 159
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\num_cin_3.png"
+    },
+    {
+      "index": 9,
+      "label": "pob",
+      "yolo_score": 0.7835,
+      "bbox": {
+        "x1": 756,
+        "y1": 584,
+        "x2": 978,
+        "y2": 630
+      },
+      "bbox_size": {
+        "width": 222,
+        "height": 46
+      },
+      "crop_size": {
+        "width": 337,
+        "height": 138
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\pob_2.png"
+    },
+    {
+      "index": 10,
+      "label": "issue_date",
+      "yolo_score": 0.7517,
+      "bbox": {
+        "x1": 558,
+        "y1": 652,
+        "x2": 916,
+        "y2": 708
+      },
+      "bbox_size": {
+        "width": 358,
+        "height": 56
+      },
+      "crop_size": {
+        "width": 621,
+        "height": 163
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\issue_date_7.png"
+    },
+    {
+      "index": 11,
+      "label": "expiry_date",
+      "yolo_score": 0.6517,
+      "bbox": {
+        "x1": 562,
+        "y1": 731,
+        "x2": 913,
+        "y2": 789
+      },
+      "bbox_size": {
+        "width": 351,
+        "height": 58
+      },
+      "crop_size": {
+        "width": 610,
+        "height": 166
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\crops\\expiry_date_10.png"
+    }
+  ],
+  "ocr_results": [
+    {
+      "index": 0,
+      "label": "num_pass",
+      "skip_ocr": false,
+      "lang_used": "fr (chiffres)",
+      "ocr_text": "U668123",
+      "ocr_score": 0.9961,
+      "ocr_lines": [
+        {
+          "text": "U668123",
+          "score": 0.9961
+        }
+      ],
+      "elapsed_s": 0.171,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\num_pass_0_preprocessed.png"
+    },
+    {
+      "index": 1,
+      "label": "full_name",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "ياسين بن نور الدين المعموري",
+      "ocr_score": 0.9599,
+      "ocr_lines": [
+        {
+          "text": "ياسين بن نور الدين المعموري",
+          "score": 0.9599
+        }
+      ],
+      "elapsed_s": 0.171,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\full_name_1_preprocessed.png"
+    },
+    {
+      "index": 2,
+      "label": "last_name",
+      "skip_ocr": false,
+      "lang_used": "fr (latin)",
+      "ocr_text": "MAAMOURI",
+      "ocr_score": 0.997,
+      "ocr_lines": [
+        {
+          "text": "MAAMOURI",
+          "score": 0.997
+        }
+      ],
+      "elapsed_s": 0.145,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\last_name_2_preprocessed.png"
+    },
+    {
+      "index": 3,
+      "label": "image",
+      "skip_ocr": true,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null,
+      "lang_used": "none",
+      "elapsed_s": 0.0,
+      "preprocessed_path": null
+    },
+    {
+      "index": 4,
+      "label": "first_name",
+      "skip_ocr": false,
+      "lang_used": "fr (latin)",
+      "ocr_text": "YESSINE",
+      "ocr_score": 0.9963,
+      "ocr_lines": [
+        {
+          "text": "YESSINE",
+          "score": 0.9963
+        }
+      ],
+      "elapsed_s": 0.153,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\first_name_4_preprocessed.png"
+    },
+    {
+      "index": 5,
+      "label": "profession",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "طالب",
+      "ocr_score": 0.8216,
+      "ocr_lines": [
+        {
+          "text": "طالب",
+          "score": 0.8216
+        }
+      ],
+      "elapsed_s": 0.133,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\profession_5_preprocessed.png"
+    },
+    {
+      "index": 6,
+      "label": "dob",
+      "skip_ocr": false,
+      "lang_used": "fr (dates latin)",
+      "ocr_text": "29 04 2004",
+      "ocr_score": 0.9147,
+      "ocr_lines": [
+        {
+          "text": "29",
+          "score": 0.9147
+        },
+        {
+          "text": "04",
+          "score": 0.9147
+        },
+        {
+          "text": "2004",
+          "score": 0.9147
+        }
+      ],
+      "elapsed_s": 0.192,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\dob_6_preprocessed.png"
+    },
+    {
+      "index": 7,
+      "label": "address",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "نابل",
+      "ocr_score": 0.8477,
+      "ocr_lines": [
+        {
+          "text": "نابل",
+          "score": 0.8477
+        }
+      ],
+      "elapsed_s": 0.596,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\address_7_preprocessed.png"
+    },
+    {
+      "index": 8,
+      "label": "num_cin",
+      "skip_ocr": false,
+      "lang_used": "fr (chiffres)",
+      "ocr_text": "14447754",
+      "ocr_score": 0.9977,
+      "ocr_lines": [
+        {
+          "text": "14447754",
+          "score": 0.9977
+        }
+      ],
+      "elapsed_s": 0.159,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\num_cin_8_preprocessed.png"
+    },
+    {
+      "index": 9,
+      "label": "pob",
+      "skip_ocr": false,
+      "lang_used": "fr (latin)",
+      "ocr_text": "NABEUL",
+      "ocr_score": 0.9906,
+      "ocr_lines": [
+        {
+          "text": "NABEUL",
+          "score": 0.9906
+        }
+      ],
+      "elapsed_s": 0.144,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\pob_9_preprocessed.png"
+    },
+    {
+      "index": 10,
+      "label": "issue_date",
+      "skip_ocr": false,
+      "lang_used": "fr (dates latin)",
+      "ocr_text": "09 03 2026",
+      "ocr_score": 0.847,
+      "ocr_lines": [
+        {
+          "text": "09",
+          "score": 0.847
+        },
+        {
+          "text": "03",
+          "score": 0.847
+        },
+        {
+          "text": "2026",
+          "score": 0.847
+        }
+      ],
+      "elapsed_s": 0.189,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\issue_date_10_preprocessed.png"
+    },
+    {
+      "index": 11,
+      "label": "expiry_date",
+      "skip_ocr": false,
+      "lang_used": "fr (dates latin)",
+      "ocr_text": "08 03 2031",
+      "ocr_score": 0.8373,
+      "ocr_lines": [
+        {
+          "text": "08",
+          "score": 0.8373
+        },
+        {
+          "text": "03",
+          "score": 0.8373
+        },
+        {
+          "text": "2031",
+          "score": 0.8373
+        }
+      ],
+      "elapsed_s": 0.187,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\passport\\preprocessed\\expiry_date_11_preprocessed.png"
+    }
+  ]
+}

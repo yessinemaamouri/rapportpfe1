@@ -1,0 +1,316 @@
+{
+  "document": "cin_verso",
+  "file": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\documentsAtester\\cinVerso.jpg",
+  "side": "verso",
+  "image_size": {
+    "width": 1745,
+    "height": 1101
+  },
+  "yolo_elapsed_s": 1.076,
+  "ocr_elapsed_s": 1.067,
+  "total_detections": 8,
+  "total_ocr_ok": 5,
+  "total_ocr_empty": 0,
+  "total_skipped": 3,
+  "detections": [
+    {
+      "index": 0,
+      "label": "mother_name",
+      "yolo_score": 0.9174,
+      "bbox": {
+        "x1": 892,
+        "y1": 189,
+        "x2": 1405,
+        "y2": 308
+      },
+      "bbox_size": {
+        "width": 513,
+        "height": 119
+      },
+      "crop_size": {
+        "width": 593,
+        "height": 199
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\crops\\mother_name_3.png"
+    },
+    {
+      "index": 1,
+      "label": "profession",
+      "yolo_score": 0.3682,
+      "bbox": {
+        "x1": 664,
+        "y1": 295,
+        "x2": 1066,
+        "y2": 417
+      },
+      "bbox_size": {
+        "width": 402,
+        "height": 122
+      },
+      "crop_size": {
+        "width": 482,
+        "height": 202
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\crops\\profession_7.png"
+    },
+    {
+      "index": 2,
+      "label": "finger_print",
+      "yolo_score": 0.9785,
+      "bbox": {
+        "x1": 1267,
+        "y1": 344,
+        "x2": 1725,
+        "y2": 871
+      },
+      "bbox_size": {
+        "width": 458,
+        "height": 527
+      },
+      "crop_size": {
+        "width": 538,
+        "height": 607
+      },
+      "skip_ocr": true,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\crops\\finger_print_0.png"
+    },
+    {
+      "index": 3,
+      "label": "address",
+      "yolo_score": 0.7201,
+      "bbox": {
+        "x1": 94,
+        "y1": 409,
+        "x2": 1211,
+        "y2": 637
+      },
+      "bbox_size": {
+        "width": 1117,
+        "height": 228
+      },
+      "crop_size": {
+        "width": 1197,
+        "height": 308
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\crops\\address_5.png"
+    },
+    {
+      "index": 4,
+      "label": "issue_date",
+      "yolo_score": 0.8601,
+      "bbox": {
+        "x1": 79,
+        "y1": 635,
+        "x2": 617,
+        "y2": 765
+      },
+      "bbox_size": {
+        "width": 538,
+        "height": 130
+      },
+      "crop_size": {
+        "width": 618,
+        "height": 210
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\crops\\issue_date_4.png"
+    },
+    {
+      "index": 5,
+      "label": "flag3",
+      "yolo_score": 0.9502,
+      "bbox": {
+        "x1": 875,
+        "y1": 640,
+        "x2": 1185,
+        "y2": 915
+      },
+      "bbox_size": {
+        "width": 310,
+        "height": 275
+      },
+      "crop_size": {
+        "width": 390,
+        "height": 355
+      },
+      "skip_ocr": true,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\crops\\flag3_1.png"
+    },
+    {
+      "index": 6,
+      "label": "print_id",
+      "yolo_score": 0.9286,
+      "bbox": {
+        "x1": 1248,
+        "y1": 873,
+        "x2": 1599,
+        "y2": 954
+      },
+      "bbox_size": {
+        "width": 351,
+        "height": 81
+      },
+      "crop_size": {
+        "width": 431,
+        "height": 161
+      },
+      "skip_ocr": false,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\crops\\print_id_2.png"
+    },
+    {
+      "index": 7,
+      "label": "barcode",
+      "yolo_score": 0.649,
+      "bbox": {
+        "x1": 461,
+        "y1": 939,
+        "x2": 1325,
+        "y2": 1101
+      },
+      "bbox_size": {
+        "width": 864,
+        "height": 162
+      },
+      "crop_size": {
+        "width": 944,
+        "height": 242
+      },
+      "skip_ocr": true,
+      "crop_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\crops\\barcode_6.png"
+    }
+  ],
+  "ocr_results": [
+    {
+      "index": 0,
+      "label": "mother_name",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "صوفية مهير",
+      "ocr_score": 0.9917,
+      "ocr_lines": [
+        {
+          "text": "صوفية مهير",
+          "score": 0.9917
+        }
+      ],
+      "elapsed_s": 0.156,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\preprocessed\\mother_name_0_preprocessed.png"
+    },
+    {
+      "index": 1,
+      "label": "profession",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "طالب",
+      "ocr_score": 0.9853,
+      "ocr_lines": [
+        {
+          "text": "طالب",
+          "score": 0.9853
+        }
+      ],
+      "elapsed_s": 0.22,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\preprocessed\\profession_1_preprocessed.png"
+    },
+    {
+      "index": 2,
+      "label": "finger_print",
+      "skip_ocr": true,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null,
+      "lang_used": "none",
+      "elapsed_s": 0.0,
+      "preprocessed_path": null
+    },
+    {
+      "index": 3,
+      "label": "address",
+      "skip_ocr": false,
+      "lang_used": "ar",
+      "ocr_text": "حي باستور دار شعبان العنوان الفهرى نابل",
+      "ocr_score": 0.9604,
+      "ocr_lines": [
+        {
+          "text": "حي باستور دار شعبان",
+          "score": 0.9936
+        },
+        {
+          "text": "العنوان",
+          "score": 0.9138
+        },
+        {
+          "text": "الفهرى نابل",
+          "score": 0.9737
+        }
+      ],
+      "elapsed_s": 0.314,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\preprocessed\\address_3_preprocessed.png"
+    },
+    {
+      "index": 4,
+      "label": "issue_date",
+      "skip_ocr": false,
+      "lang_used": "ar + fr (date mixte)",
+      "ocr_text": "05 جانفي 2026",
+      "ocr_score": 0.9348,
+      "ocr_lines": [
+        {
+          "text": "05",
+          "score": 0.9348
+        },
+        {
+          "text": "جانفي",
+          "score": 0.9348
+        },
+        {
+          "text": "2026",
+          "score": 0.9348
+        }
+      ],
+      "elapsed_s": 0.259,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\preprocessed\\issue_date_4_preprocessed.png"
+    },
+    {
+      "index": 5,
+      "label": "flag3",
+      "skip_ocr": true,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null,
+      "lang_used": "none",
+      "elapsed_s": 0.0,
+      "preprocessed_path": null
+    },
+    {
+      "index": 6,
+      "label": "print_id",
+      "skip_ocr": false,
+      "lang_used": "fr (chiffres)",
+      "ocr_text": "22261151",
+      "ocr_score": 0.9969,
+      "ocr_lines": [
+        {
+          "text": "22261151",
+          "score": 0.9969
+        }
+      ],
+      "elapsed_s": 0.118,
+      "preprocessed_path": "C:\\Users\\yessi\\ekyc-platform\\ai-services\\ocr-service\\debug\\cin_verso\\preprocessed\\print_id_6_preprocessed.png"
+    },
+    {
+      "index": 7,
+      "label": "barcode",
+      "skip_ocr": true,
+      "ocr_text": null,
+      "ocr_score": null,
+      "ocr_lines": null,
+      "lang_used": "none",
+      "elapsed_s": 0.0,
+      "preprocessed_path": null
+    }
+  ]
+}

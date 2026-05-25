@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                132,
+                21
+            ],
+            [
+                782,
+                13
+            ],
+            [
+                784,
+                165
+            ],
+            [
+                134,
+                173
+            ]
+        ],
+        [
+            [
+                0,
+                114
+            ],
+            [
+                699,
+                119
+            ],
+            [
+                698,
+                359
+            ],
+            [
+                0,
+                354
+            ]
+        ],
+        [
+            [
+                578,
+                119
+            ],
+            [
+                933,
+                119
+            ],
+            [
+                933,
+                347
+            ],
+            [
+                578,
+                347
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "اجمهورية التونسية",
+        "التعريف الوسطنية",
+        "بطاقة ال"
+    ],
+    "rec_scores": [
+        0.926490306854248,
+        0.7599552869796753,
+        0.8486615419387817
+    ],
+    "rec_polys": [
+        [
+            [
+                132,
+                21
+            ],
+            [
+                782,
+                13
+            ],
+            [
+                784,
+                165
+            ],
+            [
+                134,
+                173
+            ]
+        ],
+        [
+            [
+                0,
+                114
+            ],
+            [
+                699,
+                119
+            ],
+            [
+                698,
+                359
+            ],
+            [
+                0,
+                354
+            ]
+        ],
+        [
+            [
+                578,
+                119
+            ],
+            [
+                933,
+                119
+            ],
+            [
+                933,
+                347
+            ],
+            [
+                578,
+                347
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            132,
+            13,
+            784,
+            173
+        ],
+        [
+            0,
+            114,
+            699,
+            359
+        ],
+        [
+            578,
+            119,
+            933,
+            347
+        ]
+    ]
+}

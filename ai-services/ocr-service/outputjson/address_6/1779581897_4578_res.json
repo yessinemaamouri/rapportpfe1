@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": true
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": true,
+            "use_doc_unwarping": true
+        },
+        "angle": 0
+    },
+    "dt_polys": [
+        [
+            [
+                228,
+                214
+            ],
+            [
+                478,
+                216
+            ],
+            [
+                477,
+                326
+            ],
+            [
+                227,
+                323
+            ]
+        ],
+        [
+            [
+                587,
+                227
+            ],
+            [
+                769,
+                227
+            ],
+            [
+                769,
+                324
+            ],
+            [
+                587,
+                324
+            ]
+        ],
+        [
+            [
+                507,
+                239
+            ],
+            [
+                594,
+                239
+            ],
+            [
+                594,
+                333
+            ],
+            [
+                507,
+                333
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        0,
+        0,
+        0
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "بوزيد",
+        "سيد",
+        "ي"
+    ],
+    "rec_scores": [
+        0.9948412179946899,
+        0.904168426990509,
+        0.9790692925453186
+    ],
+    "rec_polys": [
+        [
+            [
+                228,
+                214
+            ],
+            [
+                478,
+                216
+            ],
+            [
+                477,
+                326
+            ],
+            [
+                227,
+                323
+            ]
+        ],
+        [
+            [
+                587,
+                227
+            ],
+            [
+                769,
+                227
+            ],
+            [
+                769,
+                324
+            ],
+            [
+                587,
+                324
+            ]
+        ],
+        [
+            [
+                507,
+                239
+            ],
+            [
+                594,
+                239
+            ],
+            [
+                594,
+                333
+            ],
+            [
+                507,
+                333
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            227,
+            214,
+            478,
+            326
+        ],
+        [
+            587,
+            227,
+            769,
+            324
+        ],
+        [
+            507,
+            239,
+            594,
+            333
+        ]
+    ]
+}

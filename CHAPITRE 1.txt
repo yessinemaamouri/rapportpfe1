@@ -1,0 +1,351 @@
+﻿CHAPITRE 1
+Cadre Général du Projet
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHAPITRE 1 — Cadre Général du Projet
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1.Présentation de la BTE
+2.Compréhension du Métier KYC
+2.1 KYC traditionnel vs KYC automatisé
+2.2 Cadre réglementaire et normatif
+3.Analyse des solutions existantes
+3.1 KYC à la BTE (modes actuels)
+3.2 Solutions commerciales (uqudo, NEUROPARSER, FACEKI)
+4.Problématique
+5.Solution Proposée
+6.Méthodologie adoptée (approche hybride CRISP-ML + Agile)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ce chapitre pose le cadre général dans lequel s'inscrit le présent projet. Il présente d'abord l'organisme d'accueil — la Banque de Tunisie et des Émirats (BTE) — et son contexte de transformation numérique, avant d'introduire le concept du KYC et ses évolutions réglementaires. L'analyse critique des pratiques internes et des solutions commerciales disponibles permet ensuite de formuler la problématique centrale du projet et d'en déduire la solution proposée. Le chapitre se conclut par la présentation de la méthodologie hybride retenue — CRISP-ML(Q) et Agile — qui structure l'ensemble du développement.
+
+
+I. Organisme d'Accueil
+1.1 Présentation de la BTE
+  
+
+Figure 1.1 — Logo officiel de la Banque de Tunisie et des Émirats (BTE)
+La Banque de Tunisie et des Émirats (BTE) est un établissement bancaire de référence en Tunisie, reconnu pour son engagement constant dans la modernisation de ses services et la transformation digitale de son système d’information. Fondée en 1982 à la suite d’une convention stratégique entre l’Abou Dhabi Investment Authority (ADIA) et le gouvernement tunisien. Depuis sa création, elle s’est positionnée comme un acteur financier majeur, contribuant activement au développement économique et à l’innovation bancaire.
+La BTE s’inscrit aujourd’hui dans une dynamique de transformation numérique ambitieuse, pilotée par sa Direction Centrale de l'Informatique et de l'Organisation (DCIO). Cette direction joue un rôle moteur dans la modernisation du système d'information, l'optimisation des processus métier et le déploiement de solutions technologiques innovantes au service de la clientèle.
+
+
+
+
+La plateforme digitale NEO BTE
+Illustration concrète de cette ambition, la BTE a lancé NEO BTE, plateforme bancaire en ligne accessible via web et applications mobiles (iOS et Android). Cette solution permet aux clients d'effectuer l'ensemble de leurs opérations à distance, en toute sécurité et à tout moment, positionnant ainsi la BTE parmi les établissements les plus avancés dans le domaine de la banque numérique en Tunisie.
+NEO BTE intègre notamment un parcours d'ouverture de compte en ligne avec scan des documents d'identité — une avancée significative qui constitue, comme nous le verrons, le point de départ direct du présent projet.
+ 
+Organigramme du la bte a faire 
+Figure 1.2 — Organigramme de la Banque de Tunisie et des Émirats
+
+
+Ancrée dans cette dynamique de digitalisation, la BTE fait face à un enjeu réglementaire et opérationnel central : la modernisation de son processus de vérification d'identité client, communément désigné sous le terme KYC.
+
+
+
+
+
+
+
+
+
+
+2.Compréhension du métier KYC 
+
+
+Le KYC (Know Your Customer), ou « Connaissance du Client », constitue une obligation réglementaire majeure pour les entités opérant dans des secteurs régulés tels que la banque et l'assurance. Ce processus vise à authentifier l'identité des clients afin de se conformer aux normes de lutte contre le blanchiment d'argent et le financement du terrorisme (LCB-FT). Il représente un pilier de sécurité garantissant l'intégrité de l'institution financière et la protection de ses usagers.
+2.1 KYC traditionnel vs KYC automatisé
+1. Le KYC Traditionnel
+Historiquement, le processus KYC repose sur des interactions physiques ou semi-numériques. Le client soumet des documents d'identité (Carte Nationale d'Identité, Passeport) qui sont ensuite contrôlés par des agents humains, selon deux modalités distinctes :
+
+
+1.1Processus hors ligne
+Dans ce mode, le client se déplace en agence pour remettre ses documents en main propre. L'agent de back-office procède à une vérification manuelle, saisit les données dans le système d'information et notifie le client de l'issue du contrôle.
+
+
+  
+
+Figure 2.1 — Processus KYC traditionnel hors ligne
+
+
+1.2  Processus en ligne
+La variante en ligne permet au client de soumettre ses documents via le portail numérique de l'établissement. Malgré la dématérialisation du canal, la vérification reste entièrement manuelle : un opérateur examine chaque pièce transmise avant de valider ou rejeter le dossier.
+
+
+  
+
+Figure 2.2 — Processus KYC traditionnel en ligne
+
+
+Limites structurelles du KYC traditionnel
+* Latence opérationnelle : des délais de traitement significatifs qui dégradent l'expérience client et ralentissent l'onboarding.
+* Faillibilité humaine : risque d'erreurs lors de la saisie ou de la vérification manuelle des données, pouvant induire des faux positifs ou des failles de conformité.
+* Coût élevé : mobilisation importante de ressources humaines et logistiques difficiles à scaler face à une croissance du portefeuille client.
+	2. Le KYC Automatisé (e-KYC)
+Sous l'impulsion de la transformation digitale, les institutions financières migrent progressivement vers des solutions de e-KYC (Electronic KYC). Cette approche substitue l'intervention humaine par des traitements algorithmiques intelligents, capables d'analyser, d'extraire et de valider les informations d'identité en temps réel.
+
+
+  
+
+Figure 2.3 — Processus KYC automatisé
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ce nouveau paradigme repose sur un enchaînement fluide d'étapes entièrement automatisées :
+
+
+1
+	Numérisation des documents d'identité via smartphone ou scanner.
+	2
+	Traitement par un moteur OCR pour l'extraction des données textuelles.
+	3
+	Validation croisée et saisie automatique des données extraites dans le système.
+	4
+	Vérification KYC complète, sans intervention humaine.
+	
+
+Cette automatisation offre des avantages stratégiques concrets :
+
+
+* Une vérification rapide des documents
+* Une réduction des erreurs humaines
+* Une amélioration de la conformité
+* Une accessibilité à distance via mobile
+2.2 Cadre Réglementaire et Normatif
+Toute solution de KYC automatisé doit s'inscrire dans un cadre légal rigoureux, tant au niveau international qu'au plan national tunisien.
+
+
+1 .Normes internationales
+Référence
+	Description
+	GAFI — Rec. 10
+	Organisme international fixant les standards mondiaux LCB-FT, notamment la vigilance client (Customer Due Diligence).
+	RGPD
+	Règlement européen applicable aux solutions traitant des données de ressortissants ou de filiales de banques européennes. Exige la sécurisation des données biométriques et personnelles.
+	
+
+2 .Réglementations nationales (Tunisie)
+Référence
+	Description
+	Loi n° 2015-26 (mod. 2019-9)
+	Texte fondateur imposant aux banques tunisiennes l'identification rigoureuse de leurs clients. Conforme aux recommandations du GAFI.
+	Circulaire BCT n° 2018-09
+	Fixe les règles de contrôle interne et de conformité, obligeant les établissements à déployer des procédures KYC formalisées.
+	Loi n° 2004-63 (INPDP)
+	Toute solution KYC collectant des images de CIN en Tunisie doit être déclarée à l'INPDP. Notre solution y répond via un traitement local (on-device), selon les principes de Privacy by Design.
+	CTAF / BCT / CMF
+	Principaux régulateurs supervisant respectivement la conformité LCB-FT, les institutions financières et les marchés de capitaux.
+	
+
+Le passage du KYC traditionnel vers le e-KYC représente une rupture profonde dans la gestion de l'identité client. En substituant les traitements manuels par des pipelines intelligents — OCR, vision par ordinateur, IA — les établissements financiers gagnent en rapidité, en précision et en conformité. Encadrée par un corpus réglementaire solide, tant international que tunisien, cette évolution s'impose désormais comme un levier stratégique incontournable pour toute institution souhaitant conjuguer efficacité opérationnelle et robustesse réglementaire.
+	
+
+
+
+3.État de l'art des solutions KYC et problématique 
+
+
+3.1.KYC au sein de la BTE
+Le processus KYC (Know Your Customer) au sein de la BTE s'articule autour de deux modes complémentaires : un processus traditionnel réalisé en agence et un processus digital accessible via l'application mobile Neo BTE. Si ces deux canaux couvrent des usages différents, ils partagent une caractéristique fondamentale : tous deux reposent entièrement sur une vérification manuelle par des agents humains, sans aucune automatisation du traitement documentaire.
+
+
+
+
+  
+
+[Figure : Schéma comparatif des deux modes KYC — Traditionnel en agence vs Digital via Neo BTE]
+
+
+
+
+Ces deux modes coexistent aujourd'hui au sein de la BTE et constituent le point de départ de notre réflexion sur une solution KYC plus complète et automatisée.Face à ce constat, il convient d'examiner les solutions commerciales disponibles sur le marché afin d'évaluer leur pertinence pour le contexte spécifique de la BTE.
+
+
+
+
+3.2Analyse des Solutions KYC Existantes
+Plusieurs plateformes commerciales proposent des solutions d'automatisation du KYC. Afin d'en évaluer objectivement la pertinence pour notre contexte, nous avons analysé trois solutions représentatives du marché
+Présentation des Solutions.
+uqudo
+Plateforme complète intégrant OCR, biométrie et détection de fraude. Elle propose une solution KYC/AML à travers une API cloud, avec support multilingue et détection avancée des tentatives de fraude documentaire.
+NEUROPARSER
+Solution spécialisée dans l'OCR de la carte d'identité nationale tunisienne. Son périmètre fonctionnel est limité à l'extraction de données textuelles, sans capacités biométriques ni de détection d'anomalies.
+FACEKI
+Solution KYC orientée vérification biométrique et analyse documentaire. Elle offre des garanties de sécurité avancées mais repose entièrement sur une infrastructure cloud externe.
+
+
+1.Tableau comparatif des solutions
+
+
+Critère
+	uqudo
+	NEUROPARSER
+	FACEKI
+	Périmètre fonctionnel
+	KYC + AML + Biométrie
+	OCR uniquement
+	Biométrie + Docs
+	Support CIN tunisienne
+	Partiel
+	✔ Natif
+	Partiel
+	Détection de fraude
+	✔ Avancée
+	✗ Absente
+	✔ Modérée
+	Intégration API
+	✔ Oui
+	✔ Oui
+	✔ Oui
+	Sensibilité qualité image
+	Modérée
+	Élevée
+	Modérée
+	Dépendance cloud
+	Forte
+	Forte
+	Forte
+	Coût
+	Élevé
+	Modéré
+	Élevé
+	Personnalisation
+	Limitée
+	Limitée
+	Limitée
+	Tableau 1.3 — Comparaison des solutions KYC commerciales : uqudo, NEUROPARSER et FACEKI
+
+
+2.Synthèse des limites communes
+L'analyse de ces trois solutions met en évidence des limites structurelles partagées, indépendamment de leurs spécificités respectives :
+
+
+* Sensibilité aux images de mauvaise qualité, impactant la fiabilité des résultats
+* Difficulté de traitement des documents bilingues (arabe / latin) propres au contexte tunisien
+* Coût élevé des licences et des frais d'intégration pour les solutions propriétaires
+* Dépendance systématique aux services cloud, source de risques en matière de souveraineté des données
+* Manque de flexibilité pour s'adapter aux spécificités réglementaires et documentaires locales
+
+
+Ces constats légitiment la conception d'une solution interne, adaptée au contexte tunisien et placée sous le contrôle exclusif de la banque.
+
+
+
+
+
+
+4.Problématique 
+
+
+Le processus KYC au sein de la BTE s'articule aujourd'hui autour de  deux modes entièrement traditionnels : un traitement en agence reposant sur la vérification manuelle des documents par un agent, et un processus à distance via l'application Neo BTE nécessitant encore des interventions humaines significatives. Malgré leur complémentarité apparente, ces deux modes partagent les mêmes limites structurelles : délais incompatibles avec les exigences du digital, exposition aux erreurs de saisie et d'appréciation, vulnérabilité face à la fraude documentaire sophistiquée et déficit de scalabilité face à la croissance de la clientèle en ligne. 
+L'analyse des solutions commerciales disponibles  révèle que ces alternatives ne constituent pas une réponse adaptée au contexte de la BTE. Leur dépendance systématique à des infrastructures cloud externes soulève des enjeux de souveraineté des données incompatibles avec les exigences d'une institution bancaire réglementée. Par ailleurs, leur faible adaptation aux spécificités documentaires tunisiennes, notamment le traitement bilingue arabe/latin, et leurs coûts de licence élevés limitent considérablement leur pertinence opérationnelle.
+Ce double constat insuffisance du processus interne et inadéquation des solutions du marché soulève une question centrale :<
+Comment concevoir une solution KYC automatisée, internalisée et adaptée au contexte tunisien, capable d'extraire, de classifier et de valider des documents d'identité avec fiabilité, tout en garantissant la conformité aux directives de la BCT ?
+Cette problématique engage trois défis techniques majeurs : l'extraction précise de données textuelles sur des documents multilingues et de qualité variable, la robustesse du système face aux conditions de capture mobile réelles, et l'intégration du module IA dans un workflow bancaire structuré, modulaire et auditable.
+
+
+5.Solution proposée
+Face aux insuffisances des modes internes et  aux limites  des solutions commerciales analysées, le présent projet propose de concevoir une solution KYC automatisé interne , développée sur mesure pour la BTE et reposant exclusivement sur des technologies open-source.
+Cette solution répond directement aux trois limites structurelles identifiées :
+Souveraineté des Données
+Contrairement aux solutions existantes dont la dépendance cloud expose les données sensibles à des risques réglementaires, la solution retenue adopte une architecture on-premise. L'intégralité du traitement est réalisée sur les serveurs internes de la banque, sans aucune transmission vers des services tiers.
+Adaptation au Contexte Tunisien
+Les solutions commerciales analysées présentent une prise en charge partielle ou inadaptée des documents bilingues arabe/latin. La solution développée est conçue nativement pour traiter la CIN tunisienne et le passeport tunisien, avec un pipeline dédié à chaque type de document.
+Maîtrise des Coûts et Indépendance Technologique
+En s'appuyant exclusivement sur des briques open source, la solution s'affranchit de toute contrainte de licence et de tout lien de dépendance envers un fournisseur externe, garantissant à la banque une autonomie technologique durable.
+6.MÉTHODOLOGIE ADOPTÉE
+6.1Une approche hybride CRISP-ML(Q) et Agile
+La nature duale de ce projet combinant la recherche et le développement en intelligence artificielle d'une part, et la conception d'une plateforme bancaire fonctionnelle d'autre part  impose une approche méthodologique réfléchie et adaptée. Ni les méthodologies classiques de génie logiciel, ni les frameworks purement scientifiques ne permettent, pris isolément, de répondre efficacement à l'ensemble des contraintes du projet.
+Justification du choix
+Une méthode classique de type Waterfall aurait imposé une rigidité incompatible avec l’incertitude inhérente aux projets d’intelligence artificielle, notamment en vision par ordinateur. En effet, les performances d’un modèle ne peuvent être anticipées avec précision et nécessitent des cycles itératifs d’expérimentation, d’évaluation et d’ajustement.
+À l’inverse, une approche Agile pure, orientée principalement vers la livraison continue de fonctionnalités logicielles, ne permet pas de couvrir le cadre structuré et rigoureux requis pour la construction et la validation d’un pipeline d’IA fiable.
+Le projet présente une double complexité :
+* une composante Intelligence Artificielle (vision par ordinateur, OCR, scoring), caractérisée par une forte incertitude expérimentale et une dépendance importante à la qualité des données ;
+* une composante développement logiciel (backend, frontend, workflow), nécessitant une architecture claire et une intégration progressive.
+Cependant, il est important de souligner que ces deux composantes présentent une faible interdépendance technique, ce qui permet de les concevoir et de les développer de manière relativement découplée. Cette caractéristique rend possible une structuration du projet en deux incréments distincts, tout en conservant une cohérence globale du système.
+
+
+
+
+C'est pourquoi nous avons opté pour une approche incrémentale hybride, combinant le standard CRISP-ML(Q) pour la dimension IA et une méthodologie Agile simplifiée pour la dimension applicative. Ce choix constitue un compromis optimal entre rigueur scientifique et flexibilité de développement.
+CRISP-ML(Q) vs CRISP-DM
+CRISP-ML(Q) est une adaptation de CRISP-DM (Cross-Industry Standard Process for Data Mining), publié en 1999 et longtemps utilisé comme référence pour les projets data. La différence majeure porte sur les phases de monitoring et de maintenance, absentes de CRISP-DM car le data mining classique ne nécessitait pas de modèles en production continue. CRISP-ML(Q) ajoute aussi le "Q" — Quality Assurance — en intégrant des contrôles qualité systématiques à chaque étape, pas seulement à l'évaluation.
+
+
+Source : Hymaïa Datadictionary | Qu'est-ce que CRISP-ML(Q), la méthodologie ML ? 
+6.2 Structure en Deux Incréments
+Incrément 1 — Développement du cœur intelligent (CRISP-ML(Q))
+Le premier incrément est entièrement dédié à la conception, l'entraînement et la validation du pipeline d'intelligence artificielle. Nous avons retenu le standard CRISP-ML(Q) — extension du modèle CRISP-DM adaptée aux projets de Machine Learning, avec une dimension qualité renforcée — comme cadre directeur de cet incrément. 
+
+
+  
+
+
+
+Ce modèle structure le travail autour de six phases distinctes et complémentaires :
+1. Business & Data Understanding : analyse des besoins métiers, identification des types de documents à traiter, ainsi que constitution et caractérisation du jeu de données.
+
+
+2. Data Preparation : nettoyage, transformation, organisation et préparation des données afin de les rendre exploitables pour l’apprentissage.
+
+
+3. Modeling : entraînement et optimisation des modèles de Deep Learning répondant au problème identifié.
+
+
+4. Evaluation & Quality Assurance : mesure des performances du modèle et vérification de son adéquation avec les objectifs métier fixés.
+
+
+5. Deployment & Integration : intégration du modèle validé dans une application ou un environnement de production exploitable.
+
+
+6. Monitoring & Maintenance : suivi continu du modèle déployé, maintenance et amélioration face aux évolutions des données.
+
+
+À l'issue de cet incrément, le résultat attendu est un moteur IA opérationnel, capable de détecter les documents soumis, d'en extraire les informations structurées et de fonctionner de manière fiable en conditions réelles.
+
+
+Incrément 2 — Développement de l'application (Agile simplifiée)
+Une fois le cœur IA validé, le second incrément se consacre au développement de la plateforme applicative dans son intégralité. Compte tenu du contexte d'un projet individuel, nous avons adopté une version allégée de Scrum, organisée en cycles courts appelés sprints, chacun livrant un ensemble cohérent de fonctionnalités.
+Le développement est structuré en trois itérations principales :
+* développement du back-office destiné aux agents bancaires (gestion des dossiers, supervision des validations, tableau de bord KYC). Sprint 1 — Interface Administrateur :
+* développement du front-office permettant aux clients de soumettre leurs documents et de suivre l'état de leur dossier en temps réel. Sprint 2 — Interface Client :
+* connexion de l'interface applicative au pipeline intelligent développé lors de l'incrément 1, tests end-to-end et validation du système complet. Sprint 3 — Intégration du module IA :
+
+
+Cette structuration en sprints garantit une intégration progressive et maîtrisée des composantes du système, tout en permettant des ajustements rapides en fonction des retours obtenus à chaque étape.
+
+
+Synthèse de la démarche
+L'approche incrémentale hybride adoptée répond aux deux exigences fondamentales du projet : sécuriser le développement du modèle d'intelligence artificielle — composante la plus critique et la plus incertaine — tout en structurant efficacement le développement applicatif selon des principes Agile éprouvés. 
+
+
+
+
+Conclusion du chapitre — Ce chapitre a posé l'ensemble du cadre général du projet : présentation de la BTE et de sa plateforme NEO BTE, compréhension du métier KYC et de son cadre réglementaire, analyse critique des pratiques internes et des solutions commerciales disponibles. De ces analyses découle une problématique claire, à laquelle répond une solution interne on-premise, open source et adaptée au contexte tunisien. La méthodologie hybride CRISP-ML(Q) et Agile adoptée garantit une structuration rigoureuse du développement, en deux incréments complémentaires.

@@ -1,0 +1,199 @@
+[
+  {
+    "cin_type": "verso",
+    "class": "mother_name",
+    "yolo_score": 0.9414,
+    "position": {
+      "x1": 476,
+      "y1": 34,
+      "x2": 792,
+      "y2": 128
+    },
+    "crop_path": null,
+    "ocr_text": "الزغلا جليلة مي",
+    "ocr_score": 0.9203,
+    "ocr_lines": [
+      {
+        "text": "الزغلا",
+        "score": 0.9285
+      },
+      {
+        "text": "جليلة",
+        "score": 0.999
+      },
+      {
+        "text": "مي",
+        "score": 0.8333
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "profession",
+    "yolo_score": 0.9437,
+    "position": {
+      "x1": 319,
+      "y1": 112,
+      "x2": 589,
+      "y2": 208
+    },
+    "crop_path": null,
+    "ocr_text": "مسؤول مدير",
+    "ocr_score": 0.905,
+    "ocr_lines": [
+      {
+        "text": "مسؤول",
+        "score": 0.9986
+      },
+      {
+        "text": "مدير",
+        "score": 0.8113
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "finger_print",
+    "yolo_score": 0.9779,
+    "position": {
+      "x1": 686,
+      "y1": 132,
+      "x2": 998,
+      "y2": 470
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "address",
+    "yolo_score": 0.9052,
+    "position": {
+      "x1": 51,
+      "y1": 150,
+      "x2": 685,
+      "y2": 355
+    },
+    "crop_path": null,
+    "ocr_text": "مسؤول مدير الأنذ حمام الشهداء نهج 106 العنران صفاقس",
+    "ocr_score": 0.901,
+    "ocr_lines": [
+      {
+        "text": "مسؤول",
+        "score": 0.9709
+      },
+      {
+        "text": "مدير",
+        "score": 0.8723
+      },
+      {
+        "text": "الأنذ",
+        "score": 0.8453
+      },
+      {
+        "text": "حمام",
+        "score": 0.7943
+      },
+      {
+        "text": "الشهداء",
+        "score": 0.9962
+      },
+      {
+        "text": "نهج",
+        "score": 0.8425
+      },
+      {
+        "text": "106",
+        "score": 0.9998
+      },
+      {
+        "text": "العنران",
+        "score": 0.9437
+      },
+      {
+        "text": "صفاقس",
+        "score": 0.8445
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "flag3",
+    "yolo_score": 0.9645,
+    "position": {
+      "x1": 487,
+      "y1": 316,
+      "x2": 687,
+      "y2": 505
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "issue_date",
+    "yolo_score": 0.9223,
+    "position": {
+      "x1": 0,
+      "y1": 320,
+      "x2": 322,
+      "y2": 423
+    },
+    "crop_path": null,
+    "ocr_text": "12 سبتمبر 2023",
+    "ocr_score": 0.8113,
+    "ocr_lines": [
+      {
+        "text": "12",
+        "score": 0.8113
+      },
+      {
+        "text": "سبتمبر",
+        "score": 0.8113
+      },
+      {
+        "text": "2023",
+        "score": 0.8113
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "print_id",
+    "yolo_score": 0.9334,
+    "position": {
+      "x1": 733,
+      "y1": 454,
+      "x2": 940,
+      "y2": 516
+    },
+    "crop_path": null,
+    "ocr_text": "02106852",
+    "ocr_score": 1.0,
+    "ocr_lines": [
+      {
+        "text": "02106852",
+        "score": 1.0
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "barcode",
+    "yolo_score": 0.9267,
+    "position": {
+      "x1": 232,
+      "y1": 505,
+      "x2": 774,
+      "y2": 632
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  }
+]

@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": true
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": true,
+            "use_doc_unwarping": true
+        },
+        "angle": 0
+    },
+    "dt_polys": [
+        [
+            [
+                67,
+                143
+            ],
+            [
+                224,
+                138
+            ],
+            [
+                227,
+                209
+            ],
+            [
+                69,
+                215
+            ]
+        ],
+        [
+            [
+                224,
+                139
+            ],
+            [
+                378,
+                143
+            ],
+            [
+                376,
+                216
+            ],
+            [
+                222,
+                212
+            ]
+        ],
+        [
+            [
+                371,
+                139
+            ],
+            [
+                555,
+                144
+            ],
+            [
+                553,
+                218
+            ],
+            [
+                368,
+                213
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        0,
+        0,
+        0
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "تكوين",
+        "بهيكل",
+        "متكونة"
+    ],
+    "rec_scores": [
+        0.9976609349250793,
+        0.9902853965759277,
+        0.997884213924408
+    ],
+    "rec_polys": [
+        [
+            [
+                67,
+                143
+            ],
+            [
+                224,
+                138
+            ],
+            [
+                227,
+                209
+            ],
+            [
+                69,
+                215
+            ]
+        ],
+        [
+            [
+                224,
+                139
+            ],
+            [
+                378,
+                143
+            ],
+            [
+                376,
+                216
+            ],
+            [
+                222,
+                212
+            ]
+        ],
+        [
+            [
+                371,
+                139
+            ],
+            [
+                555,
+                144
+            ],
+            [
+                553,
+                218
+            ],
+            [
+                368,
+                213
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            67,
+            138,
+            227,
+            215
+        ],
+        [
+            222,
+            139,
+            378,
+            216
+        ],
+        [
+            368,
+            139,
+            555,
+            218
+        ]
+    ]
+}

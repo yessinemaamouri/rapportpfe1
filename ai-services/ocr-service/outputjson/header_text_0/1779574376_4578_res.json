@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                96,
+                49
+            ],
+            [
+                300,
+                45
+            ],
+            [
+                302,
+                119
+            ],
+            [
+                97,
+                123
+            ]
+        ],
+        [
+            [
+                266,
+                41
+            ],
+            [
+                519,
+                34
+            ],
+            [
+                521,
+                119
+            ],
+            [
+                268,
+                126
+            ]
+        ],
+        [
+            [
+                0,
+                86
+            ],
+            [
+                623,
+                86
+            ],
+            [
+                623,
+                256
+            ],
+            [
+                0,
+                256
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "التونسية",
+        "الجمهورية ال",
+        "بطاقة التعيف الوطنية"
+    ],
+    "rec_scores": [
+        0.9637220501899719,
+        0.8055538535118103,
+        0.8141112327575684
+    ],
+    "rec_polys": [
+        [
+            [
+                96,
+                49
+            ],
+            [
+                300,
+                45
+            ],
+            [
+                302,
+                119
+            ],
+            [
+                97,
+                123
+            ]
+        ],
+        [
+            [
+                266,
+                41
+            ],
+            [
+                519,
+                34
+            ],
+            [
+                521,
+                119
+            ],
+            [
+                268,
+                126
+            ]
+        ],
+        [
+            [
+                0,
+                86
+            ],
+            [
+                623,
+                86
+            ],
+            [
+                623,
+                256
+            ],
+            [
+                0,
+                256
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            96,
+            45,
+            302,
+            123
+        ],
+        [
+            266,
+            34,
+            521,
+            126
+        ],
+        [
+            0,
+            86,
+            623,
+            256
+        ]
+    ]
+}

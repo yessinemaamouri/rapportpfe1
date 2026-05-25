@@ -1,0 +1,187 @@
+[
+  {
+    "cin_type": "verso",
+    "class": "mother_name",
+    "yolo_score": 0.9453,
+    "position": {
+      "x1": 530,
+      "y1": 38,
+      "x2": 790,
+      "y2": 129
+    },
+    "crop_path": null,
+    "ocr_text": "رجاء النفزي",
+    "ocr_score": 0.8988,
+    "ocr_lines": [
+      {
+        "text": "رجاء",
+        "score": 0.9998
+      },
+      {
+        "text": "النفزي",
+        "score": 0.7978
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "profession",
+    "yolo_score": 0.9465,
+    "position": {
+      "x1": 368,
+      "y1": 107,
+      "x2": 581,
+      "y2": 197
+    },
+    "crop_path": null,
+    "ocr_text": "تاجر حر",
+    "ocr_score": 0.8286,
+    "ocr_lines": [
+      {
+        "text": "تاجر",
+        "score": 0.8222
+      },
+      {
+        "text": "حر",
+        "score": 0.8351
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "finger_print",
+    "yolo_score": 0.97,
+    "position": {
+      "x1": 677,
+      "y1": 123,
+      "x2": 995,
+      "y2": 470
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "address",
+    "yolo_score": 0.9117,
+    "position": {
+      "x1": 49,
+      "y1": 156,
+      "x2": 690,
+      "y2": 362
+    },
+    "crop_path": null,
+    "ocr_text": "الورد نهج 55 العنران ع ي ي العاصمة تونس",
+    "ocr_score": 0.8083,
+    "ocr_lines": [
+      {
+        "text": "الورد",
+        "score": 0.8362
+      },
+      {
+        "text": "نهج",
+        "score": 0.8517
+      },
+      {
+        "text": "55",
+        "score": 0.9999
+      },
+      {
+        "text": "العنران",
+        "score": 0.8836
+      },
+      {
+        "text": "ع",
+        "score": 0.3978
+      },
+      {
+        "text": "ي",
+        "score": 0.9995
+      },
+      {
+        "text": "ي",
+        "score": 0.5218
+      },
+      {
+        "text": "العاصمة",
+        "score": 0.9992
+      },
+      {
+        "text": "تونس",
+        "score": 0.785
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "flag3",
+    "yolo_score": 0.9671,
+    "position": {
+      "x1": 479,
+      "y1": 310,
+      "x2": 687,
+      "y2": 506
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "verso",
+    "class": "issue_date",
+    "yolo_score": 0.8537,
+    "position": {
+      "x1": 0,
+      "y1": 312,
+      "x2": 285,
+      "y2": 425
+    },
+    "crop_path": null,
+    "ocr_text": "2022",
+    "ocr_score": 0.8012,
+    "ocr_lines": [
+      {
+        "text": "2022",
+        "score": 0.8012
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "print_id",
+    "yolo_score": 0.9283,
+    "position": {
+      "x1": 739,
+      "y1": 450,
+      "x2": 951,
+      "y2": 517
+    },
+    "crop_path": null,
+    "ocr_text": "05553010",
+    "ocr_score": 0.9999,
+    "ocr_lines": [
+      {
+        "text": "05553010",
+        "score": 0.9999
+      }
+    ]
+  },
+  {
+    "cin_type": "verso",
+    "class": "barcode",
+    "yolo_score": 0.9201,
+    "position": {
+      "x1": 229,
+      "y1": 493,
+      "x2": 772,
+      "y2": 620
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  }
+]

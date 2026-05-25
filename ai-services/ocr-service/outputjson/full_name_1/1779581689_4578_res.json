@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": true
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": true,
+            "use_doc_unwarping": true
+        },
+        "angle": 0
+    },
+    "dt_polys": [
+        [
+            [
+                123,
+                151
+            ],
+            [
+                233,
+                151
+            ],
+            [
+                233,
+                188
+            ],
+            [
+                123,
+                188
+            ]
+        ],
+        [
+            [
+                245,
+                157
+            ],
+            [
+                306,
+                157
+            ],
+            [
+                306,
+                195
+            ],
+            [
+                245,
+                195
+            ]
+        ],
+        [
+            [
+                318,
+                159
+            ],
+            [
+                427,
+                155
+            ],
+            [
+                428,
+                200
+            ],
+            [
+                320,
+                204
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        0,
+        0,
+        0
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "احمد",
+        "بن",
+        "مريم"
+    ],
+    "rec_scores": [
+        0.9771921038627625,
+        0.956525981426239,
+        0.9961227178573608
+    ],
+    "rec_polys": [
+        [
+            [
+                123,
+                151
+            ],
+            [
+                233,
+                151
+            ],
+            [
+                233,
+                188
+            ],
+            [
+                123,
+                188
+            ]
+        ],
+        [
+            [
+                245,
+                157
+            ],
+            [
+                306,
+                157
+            ],
+            [
+                306,
+                195
+            ],
+            [
+                245,
+                195
+            ]
+        ],
+        [
+            [
+                318,
+                159
+            ],
+            [
+                427,
+                155
+            ],
+            [
+                428,
+                200
+            ],
+            [
+                320,
+                204
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            123,
+            151,
+            233,
+            188
+        ],
+        [
+            245,
+            157,
+            306,
+            195
+        ],
+        [
+            318,
+            155,
+            428,
+            204
+        ]
+    ]
+}

@@ -1,0 +1,92 @@
+\chapter{Réalisation Applicative --- Méthodologie Agile}
+\label{chap:realisation-agile}
+
+À RÉDIGER : Introduction générale (2-3 paragraphes) expliquant la transition du module IA vers la réalisation applicative et la méthodologie Agile/Scrum adoptée.
+
+\section{Méthodologie Agile Adoptée}
+
+À RÉDIGER : 1-1,5 pages expliquant pourquoi Agile/Scrum a été choisi plutôt que Waterfall, les avantages (itération rapide, flexibilité, réduction des risques), et comment Scrum a été adapté au contexte d'un projet individuel.
+
+Conseils : Mentionner Product Backlog, Sprint Backlog, Definition of Done, et les trois rôles endossés (développeur, Scrum Master, Product Owner).
+
+\section{Backlog et Planification des Sprints}
+
+À RÉDIGER : Présenter le Product Backlog complet sous forme de tableau avec colonnes : ID, User Story, Priorité (Must Have / Should Have), Points d'estimation, Sprint assigné.
+
+Conseils : Format user story : « En tant que [rôle], je veux [action] afin de [bénéfice] ». 
+Inclure au minimum les user stories pour : authentification admin, dashboard, liste dossiers, détail dossier, validation, upload client, consultation statut, invocation IA, visualisation résultats IA, corrections manuelles, tests end-to-end.
+
+\section{Sprint 1 --- Interface Administrateur}
+
+À RÉDIGER : Objectifs et scope du Sprint 1 (1 page)
+Diagrammes UML : Use Cases, Diagramme de Séquence (login administrateur, consultation dashboard, validation dossier)
+Screenshots/Maquettes des interfaces réalisées
+Résultats des tests unitaires et d'intégration
+
+Conseils : Le sprint 1 doit livrer l'interface back-office complète (login, dashboard, gestion dossiers, validation). Durée estimée : 2 semaines. Points d'effort : 31 points (US-01 à US-06).
+
+\section{Sprint 2 --- Interface Client}
+
+À RÉDIGER : Objectifs et scope du Sprint 2 (1 page)
+Diagrammes UML : Use Cases, Diagramme de Séquence (création compte, upload documents, consultation statut)
+Screenshots/Maquettes des interfaces mobiles et desktop
+Résultats des tests
+
+Conseils : Le sprint 2 doit livrer l'interface client (création compte, upload CIN/Passeport, suivi en temps réel, notifications). Approche mobile-first. Points : 23 points (US-07 à US-11).
+
+\section{Sprint 3 --- Intégration du Module IA}
+
+À RÉDIGER : Objectifs et scope du Sprint 3 (1 page)
+Diagramme d'architecture montrant l'intégration IA ↔ Application
+Diagrammes de séquence end-to-end (soumission document → extraction IA → affichage résultats → correction manuelle)
+Screenshots du flux complet
+Résultats des tests d'intégration et métriques de performance (latence, précision OCR, taux de succès détection)
+
+Conseils : Le sprint 3 finalise l'intégration du pipeline YOLO11m + PP-OCRv5. Points : 24 points (US-12 à US-15). Tester le flux complet avec données réelles.
+
+\section{Synthèse --- Système KYC Complet Opérationnel}
+
+À RÉDIGER : 1 page résumant le système KYC complet après les 3 sprints
+Flux utilisateur end-to-end (client soumet doc → extraction IA → validation admin → décision)
+Tableau récapitulatif : User Stories complétées, Points livrés par sprint, métriques globales (temps développement, couverture tests, taux de défauts)
+Décision d'arrêt du projet (PFE complet) vs recommandations pour production
+
+\section{CONCLUSION GÉNÉRALE}
+
+\subsection{Bilan des Réalisations}
+
+À RÉDIGER : 2-3 paragraphes résumant les accomplissements majeures :
+- Incrément 1 : Pipeline IA complet (YOLO11m + PP-OCRv5) avec performance validation
+- Incrément 2 : Plateforme bancaire opérationelle (admin + client)
+- Intégration réussie des deux composantes
+- Système KYC automatisé en production (ou prêt pour)
+
+\subsection{Limites du Projet}
+
+À RÉDIGER : 3-5 limitations identifiées et leurs justifications. Exemples :
+- Couverture limitée aux documents CIN, Passeport (autres documents pas traités)
+- Dataset limité à 685 instances (scalabilité sur millions de transactions?)
+- Architecture monolingue (français/tunisien uniquement)
+- Pas de déploiement en production réelle (tests sur infrastructure de test seulement)
+- Coûts d'infrastructure cloud non modélisés
+
+\subsection{Perspectives}
+
+À RÉDIGER : 1-2 pages sur les évolutions futures recommandées :
+
+\paragraph{Déploiement en Production}
+Passage de l'architecture de test à l'environnement production BTE (infrastructure, sécurité, conformité RGPD/INPDP, SLA).
+
+\paragraph{Monitoring et Maintenance}
+Mise en place de dashboards de monitoring (précision modèle, latence, taux rejet), alertes anomalies, retraining périodique du modèle sur nouvelles données.
+
+\paragraph{Extensions Fonctionnelles}
+Support de documents supplémentaires (permis de conduire, attestation résidence, relevé bancaire), multilingue (anglais, arabe), intégration avec d'autres régulateurs (CRIF, CTAF).
+
+\paragraph{Optimisations IA}
+Fine-tuning des modèles YOLO et PP-OCR sur dataset bancaire spécialisé, évaluation d'architectures alternatives (YOLO12, CRAFT OCR).
+
+\paragraph{Infrastructure Scalable}
+Migration vers architecture serverless (AWS Lambda, GCP Cloud Functions) ou Kubernetes pour gérer pics d'utilisation mobiles saisonniers.
+
+Conclusion générale (1 paragraphe final) : Affirmer que ce projet KYC automatisé constitue un levier stratégique majeur pour la BTE, conjuguant efficacité opérationnelle, conformité réglementaire et expérience client améliorée. Encourager la poursuite et l'amplification de cette initiative.

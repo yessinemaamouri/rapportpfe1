@@ -1,0 +1,175 @@
+{
+    "input_path": null,
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": true
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                52,
+                36
+            ],
+            [
+                410,
+                36
+            ],
+            [
+                410,
+                122
+            ],
+            [
+                52,
+                122
+            ]
+        ],
+        [
+            [
+                421,
+                60
+            ],
+            [
+                581,
+                64
+            ],
+            [
+                579,
+                110
+            ],
+            [
+                420,
+                106
+            ]
+        ],
+        [
+            [
+                597,
+                71
+            ],
+            [
+                648,
+                71
+            ],
+            [
+                648,
+                119
+            ],
+            [
+                597,
+                119
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "على الزرزري",
+        "محمد",
+        "N"
+    ],
+    "rec_scores": [
+        0.9560912847518921,
+        0.981952428817749,
+        0.22363491356372833
+    ],
+    "rec_polys": [
+        [
+            [
+                52,
+                36
+            ],
+            [
+                410,
+                36
+            ],
+            [
+                410,
+                122
+            ],
+            [
+                52,
+                122
+            ]
+        ],
+        [
+            [
+                421,
+                60
+            ],
+            [
+                581,
+                64
+            ],
+            [
+                579,
+                110
+            ],
+            [
+                420,
+                106
+            ]
+        ],
+        [
+            [
+                597,
+                71
+            ],
+            [
+                648,
+                71
+            ],
+            [
+                648,
+                119
+            ],
+            [
+                597,
+                119
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            52,
+            36,
+            410,
+            122
+        ],
+        [
+            420,
+            60,
+            581,
+            110
+        ],
+        [
+            597,
+            71,
+            648,
+            119
+        ]
+    ]
+}

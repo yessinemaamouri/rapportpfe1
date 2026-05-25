@@ -1,0 +1,199 @@
+[
+  {
+    "cin_type": "recto",
+    "class": "header_text",
+    "yolo_score": 0.9115,
+    "position": {
+      "x1": 213,
+      "y1": 0,
+      "x2": 620,
+      "y2": 137
+    },
+    "crop_path": null,
+    "ocr_text": "الجمهورية التونسية وةويية",
+    "ocr_score": 0.6874,
+    "ocr_lines": [
+      {
+        "text": "الجمهورية التونسية",
+        "score": 0.964
+      },
+      {
+        "text": "وةويية",
+        "score": 0.4107
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "flag2",
+    "yolo_score": 0.9259,
+    "position": {
+      "x1": 637,
+      "y1": 7,
+      "x2": 747,
+      "y2": 134
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "flag1",
+    "yolo_score": 0.9203,
+    "position": {
+      "x1": 28,
+      "y1": 11,
+      "x2": 186,
+      "y2": 123
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "num_cin",
+    "yolo_score": 0.898,
+    "position": {
+      "x1": 290,
+      "y1": 146,
+      "x2": 519,
+      "y2": 209
+    },
+    "crop_path": null,
+    "ocr_text": "01581249",
+    "ocr_score": 0.9999,
+    "ocr_lines": [
+      {
+        "text": "01581249",
+        "score": 0.9999
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "image",
+    "yolo_score": 0.9465,
+    "position": {
+      "x1": 15,
+      "y1": 148,
+      "x2": 257,
+      "y2": 446
+    },
+    "crop_path": null,
+    "ocr_text": null,
+    "ocr_score": null,
+    "ocr_lines": null
+  },
+  {
+    "cin_type": "recto",
+    "class": "last_name",
+    "yolo_score": 0.9019,
+    "position": {
+      "x1": 555,
+      "y1": 212,
+      "x2": 678,
+      "y2": 277
+    },
+    "crop_path": null,
+    "ocr_text": "نوار",
+    "ocr_score": 0.944,
+    "ocr_lines": [
+      {
+        "text": "نوار",
+        "score": 0.944
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "first_name",
+    "yolo_score": 0.8903,
+    "position": {
+      "x1": 521,
+      "y1": 264,
+      "x2": 686,
+      "y2": 315
+    },
+    "crop_path": null,
+    "ocr_text": "عبد الله",
+    "ocr_score": 0.9492,
+    "ocr_lines": [
+      {
+        "text": "عبد الله",
+        "score": 0.9492
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "full_name",
+    "yolo_score": 0.8801,
+    "position": {
+      "x1": 414,
+      "y1": 304,
+      "x2": 758,
+      "y2": 365
+    },
+    "crop_path": null,
+    "ocr_text": "بن محمد بن احمد",
+    "ocr_score": 0.9695,
+    "ocr_lines": [
+      {
+        "text": "بن محمد بن احمد",
+        "score": 0.9695
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "dob",
+    "yolo_score": 0.8521,
+    "position": {
+      "x1": 313,
+      "y1": 344,
+      "x2": 629,
+      "y2": 410
+    },
+    "crop_path": null,
+    "ocr_text": "29 سبتمبر 1952",
+    "ocr_score": 0.9079,
+    "ocr_lines": [
+      {
+        "text": "29",
+        "score": 0.9079
+      },
+      {
+        "text": "سبتمبر",
+        "score": 0.9079
+      },
+      {
+        "text": "1952",
+        "score": 0.9079
+      }
+    ]
+  },
+  {
+    "cin_type": "recto",
+    "class": "pob",
+    "yolo_score": 0.7444,
+    "position": {
+      "x1": 403,
+      "y1": 391,
+      "x2": 696,
+      "y2": 461
+    },
+    "crop_path": null,
+    "ocr_text": "ال ييي",
+    "ocr_score": 0.537,
+    "ocr_lines": [
+      {
+        "text": "ال ييي",
+        "score": 0.537
+      }
+    ]
+  }
+]
