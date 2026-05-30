@@ -1,93 +1,190 @@
-\babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {1}Cadre Général du Projet}{4}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Organisme d'accueil}{4}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Présentation de la BTE}{4}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Organigramme de la BTE}{4}{subsection.1.1.2}%
-\contentsline {section}{\numberline {1.2}Compréhension du métier KYC}{5}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}KYC traditionnel vs KYC automatisé}{5}{subsection.1.2.1}%
-\contentsline {paragraph}{\hspace {1cm} a. Processus hors ligne}{6}{subsection.1.2.1}%
-\contentsline {paragraph}{\hspace {1cm} b. Processus en ligne}{6}{figure.1.3}%
-\contentsline {paragraph}{\hspace {1cm} c. Limites structurelles du KYC traditionnel}{7}{figure.1.4}%
-\contentsline {subsection}{\numberline {1.2.2}Cadre réglementaire et normatif}{8}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Position du problème}{9}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Étude de l'existant}{9}{subsection.1.3.1}%
-\contentsline {paragraph}{\hspace {1cm} a. uqudo}{10}{figure.1.6}%
-\contentsline {paragraph}{\hspace {1cm} b. NEUROPARSER}{11}{figure.1.6}%
-\contentsline {paragraph}{\hspace {1cm} c. FACEKI}{11}{figure.1.6}%
-\contentsline {subsection}{\numberline {1.3.2}Analyse critique de l'existant}{11}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Problématique retenue}{12}{subsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}Solution proposée}{13}{subsection.1.3.4}%
-\contentsline {section}{\numberline {1.4}Méthodologie adoptée --- approche hybride en deux incréments}{14}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Modèle incrémental}{14}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}CRISP-ML(Q)}{14}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Modèle en cascade}{16}{subsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.4.4}Planification globale du projet}{17}{subsection.1.4.4}%
-\contentsline {chapter}{\numberline {2}Spécification des Besoins et Architecture}{20}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Spécification des besoins}{20}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Identification des acteurs}{20}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Besoins fonctionnels}{20}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Besoins non fonctionnels}{22}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Architecture globale de la solution}{22}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Architecture logique}{22}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Architecture physique}{22}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Diagramme de cas d'utilisation global}{22}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Description des cas d'utilisation}{24}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}Conception UML}{32}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Diagramme de séquence}{32}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Diagramme de classes}{36}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Diagramme d'activité}{42}{subsection.2.4.3}%
-\contentsline {part}{I\hspace {1em}Incrément 1 : Fondements IA et Réalisation du Pipeline}{44}{part.1}%
-\contentsline {chapter}{\numberline {3}Fondements Théoriques et Choix Technologiques}{46}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Fondements théoriques}{46}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Intelligence artificielle, machine learning et deep learning}{46}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Vision par ordinateur et réseaux de neurones}{47}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Détection d'objets}{48}{subsection.3.1.3}%
-\contentsline {paragraph}{Méthodes One-Stage}{50}{figure.3.4}%
-\contentsline {paragraph}{Méthodes Two-Stage}{50}{figure.3.4}%
-\contentsline {paragraph}{Principe de fonctionnement}{51}{figure.3.5}%
-\contentsline {paragraph}{Évolution de l'architecture YOLO}{51}{figure.3.6}%
-\contentsline {paragraph}{Analyse comparative sur COCO}{53}{figure.3.7}%
-\contentsline {subsection}{\numberline {3.1.4}Reconnaissance optique de caractères (OCR)}{53}{subsection.3.1.4}%
-\contentsline {section}{\numberline {3.2}Choix technologiques}{55}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Modèle de détection : YOLO11m}{55}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Moteur OCR : PaddleOCR PP-OCRv5}{57}{subsection.3.2.2}%
-\contentsline {paragraph}{a) Support natif de l'arabe}{57}{table.3.4}%
-\contentsline {paragraph}{b) Amélioration de précision documentée}{57}{table.3.4}%
-\contentsline {paragraph}{c) Performance face aux grands modèles de vision (VLM)}{58}{table.3.4}%
-\contentsline {paragraph}{d) Licence open source et facilité d'intégration}{58}{table.3.4}%
-\contentsline {chapter}{\numberline {4}Méthodologie CRISP-ML(Q) --- Réalisation du Module IA}{60}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Business understanding, data understanding \& collecte}{60}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Pipeline métier du système IA}{60}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Analyse des besoins documentaires}{61}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Collecte et composition du dataset}{61}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Préparation des données (ingénierie des données)}{63}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Restauration et génération de données}{63}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Labellisation : construction de la vérité terrain}{64}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Augmentation contrôlée : simulation de la variabilité réelle}{66}{subsection.4.2.3}%
-\contentsline {paragraph}{A. Invariance spatiale (géométrie \& perspective)}{66}{table.4.4}%
-\contentsline {paragraph}{B. Invariance photométrique (lumière \& couleur)}{67}{figure.4.7}%
-\contentsline {paragraph}{C. Résilience optique (flou \& bruit capteur)}{68}{figure.4.8}%
-\contentsline {section}{\numberline {4.3}Modélisation}{69}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Architecture globale du système IA}{69}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Détection de présence du document --- YOLOv8n}{70}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Détection des champs texte --- YOLOv11m}{71}{subsection.4.3.3}%
-\contentsline {paragraph}{CIN Recto}{74}{table.4.6}%
-\contentsline {paragraph}{CIN Verso}{76}{table.4.7}%
-\contentsline {paragraph}{Passeport}{78}{table.4.8}%
-\contentsline {subsection}{\numberline {4.3.4}Extraction texte --- PaddleOCR PP-OCRv5}{80}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Configuration matérielle et environnement}{82}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}Évaluation et assurance qualité}{83}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Déploiement et intégration}{83}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Surveillance et maintenance}{83}{section.4.6}%
-\contentsline {part}{II\hspace {1em}Incrément 2 : Réalisation du Système eKYC}{85}{part.2}%
-\contentsline {chapter}{\numberline {5}Réalisation Applicative et Tests}{87}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Environnement de développement \& stack technique}{87}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Réalisation des interfaces}{87}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Interface administrateur}{87}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Interface client}{87}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Intégration du module IA dans l'application}{87}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tests et validation}{87}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Tests fonctionnels}{87}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Tests d'intégration}{87}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Synthèse --- système KYC complet opérationnel}{87}{subsection.5.4.3}%
-\contentsline {chapter}{Conclusion Générale}{88}{chapter*.2}%
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\xpg@aux {}{french}
+\contentsline {chapter}{\numberline {1}Cadre Général du Projet}{6}{chapter.1}%
+\etoc@startlocaltoc {2}
+\contentsline {section}{\numberline {1.1}Organisme d'accueil}{7}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Présentation de la BTE}{7}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Organigramme de la BTE}{7}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Compréhension du métier KYC}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}KYC traditionnel vs KYC automatisé}{8}{subsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.}Le KYC traditionnel}{8}{subsubsection.1.2.1.1}%
+\contentsline {paragraph}{\numberline {a.}Processus hors ligne}{9}{paragraph.1.2.1.1.1}%
+\contentsline {paragraph}{\numberline {b.}Processus en ligne}{9}{paragraph.1.2.1.1.2}%
+\contentsline {paragraph}{\numberline {c.}Limites structurelles du KYC traditionnel}{9}{paragraph.1.2.1.1.3}%
+\contentsline {subsubsection}{\numberline {2.}Le KYC automatisé (e-KYC)}{10}{subsubsection.1.2.1.2}%
+\contentsline {subsection}{\numberline {1.2.2}Cadre réglementaire et normatif}{11}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.}Normes internationales}{11}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.}Réglementations nationales (Tunisie)}{11}{subsubsection.1.2.2.2}%
+\contentsline {section}{\numberline {1.3}Position du problème}{12}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Étude de l'existant}{12}{subsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.}KYC au sein de la BTE}{12}{subsubsection.1.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.}Solutions KYC commerciales disponibles}{13}{subsubsection.1.3.1.2}%
+\contentsline {paragraph}{\numberline {a.}uqudo}{13}{paragraph.1.3.1.2.1}%
+\contentsline {paragraph}{\numberline {b.}NEUROPARSER}{14}{paragraph.1.3.1.2.2}%
+\contentsline {paragraph}{\numberline {c.}FACEKI}{14}{paragraph.1.3.1.2.3}%
+\contentsline {subsection}{\numberline {1.3.2}Analyse critique de l'existant}{14}{subsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.}Faiblesses du processus KYC interne}{14}{subsubsection.1.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.}Limites des solutions commerciales}{15}{subsubsection.1.3.2.2}%
+\contentsline {subsection}{\numberline {1.3.3}Problématique retenue}{15}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Solution proposée}{16}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}Méthodologie adoptée --- approche hybride en deux incréments}{17}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Modèle incrémental}{17}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}CRISP-ML(Q)}{18}{subsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.}CRISP-ML(Q) vs CRISP-DM}{18}{subsubsection.1.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.}Les six phases de CRISP-ML(Q)}{18}{subsubsection.1.4.2.2}%
+\contentsline {subsection}{\numberline {1.4.3}Modèle en cascade}{20}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Planification globale du projet}{21}{subsection.1.4.4}%
+\contentsline {chapter}{\numberline {2}Spécification des Besoins et Architecture}{22}{chapter.2}%
+\etoc@startlocaltoc {3}
+\contentsline {section}{\numberline {2.1}Spécification des besoins}{23}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Identification des acteurs}{23}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Besoins fonctionnels}{23}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {1.}S'inscrire}{23}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {2.}S'authentifier}{23}{subsubsection.2.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.}Soumettre et suivre un dossier KYC}{24}{subsubsection.2.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.}Demander des services bancaires}{24}{subsubsection.2.1.2.4}%
+\contentsline {subsubsection}{\numberline {5.}Traiter les dossiers KYC}{24}{subsubsection.2.1.2.5}%
+\contentsline {subsubsection}{\numberline {6.}Administrer et surveiller la plateforme}{25}{subsubsection.2.1.2.6}%
+\contentsline {subsection}{\numberline {2.1.3}Besoins non fonctionnels}{25}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Architecture globale de la solution}{27}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Architecture logique}{27}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Architecture physique}{27}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Diagramme de cas d'utilisation global}{28}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Description des cas d'utilisation}{29}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {1.}UC1 --- S'inscrire}{29}{subsubsection.2.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.}UC2 --- S'authentifier}{30}{subsubsection.2.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.}UC3 --- Soumettre et suivre un dossier KYC}{31}{subsubsection.2.3.1.3}%
+\contentsline {subsubsection}{\numberline {4.}UC4 --- Traiter un dossier KYC}{33}{subsubsection.2.3.1.4}%
+\contentsline {subsubsection}{\numberline {5.}UC5 --- Surveiller les performances des modèles IA}{34}{subsubsection.2.3.1.5}%
+\contentsline {part}{Incrément 1 : Fondements IA et Réalisation du Pipeline}{36}{table.2.6}%
+\contentsline {chapter}{\numberline {3}Fondements Théoriques et Choix Technologiques}{38}{chapter.3}%
+\etoc@startlocaltoc {4}
+\contentsline {section}{\numberline {3.1}Fondements théoriques}{39}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Intelligence artificielle, machine learning et deep learning}{39}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Vision par ordinateur et réseaux de neurones}{40}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Détection d'objets}{41}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {1.}Niveaux de complexité des tâches de vision}{41}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {2.}Méthodes de détection : One-Stage vs Two-Stage}{42}{subsubsection.3.1.3.2}%
+\contentsline {paragraph}{\numberline {a.}Méthodes One-Stage}{42}{paragraph.3.1.3.2.1}%
+\contentsline {paragraph}{\numberline {b.}Méthodes Two-Stage}{42}{paragraph.3.1.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.}YOLO (You Only Look Once)}{43}{subsubsection.3.1.3.3}%
+\contentsline {paragraph}{\numberline {a.}Principe de fonctionnement}{43}{paragraph.3.1.3.3.1}%
+\contentsline {paragraph}{\numberline {b.}Évolution de l'architecture YOLO}{44}{paragraph.3.1.3.3.2}%
+\contentsline {paragraph}{\numberline {c.}Analyse comparative sur COCO}{45}{paragraph.3.1.3.3.3}%
+\contentsline {subsection}{\numberline {3.1.4}Reconnaissance optique de caractères (OCR)}{45}{subsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {1.}Pipeline OCR : processus pas à pas}{45}{subsubsection.3.1.4.1}%
+\contentsline {subsubsection}{\numberline {2.}Benchmark des moteurs OCR open source}{46}{subsubsection.3.1.4.2}%
+\contentsline {section}{\numberline {3.2}Choix technologiques}{46}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Modèle de détection : YOLO11m}{47}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {1.}Présentation de YOLO11}{47}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.}Comparaison des variantes YOLO11}{47}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.}Justification du choix : YOLO11m vs YOLOv8m}{48}{subsubsection.3.2.1.3}%
+\contentsline {subsection}{\numberline {3.2.2}Moteur OCR : PaddleOCR PP-OCRv5}{48}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {1.}Présentation de PP-OCRv5}{48}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.}Performances et évolution par rapport aux versions précédentes}{49}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.}Critères de sélection pour le contexte tunisien}{49}{subsubsection.3.2.2.3}%
+\contentsline {paragraph}{\numberline {a.}Support natif de l'arabe}{49}{paragraph.3.2.2.3.1}%
+\contentsline {paragraph}{\numberline {b.}Amélioration de précision documentée}{49}{paragraph.3.2.2.3.2}%
+\contentsline {paragraph}{\numberline {c.}Performance face aux grands modèles de vision (VLM)}{49}{paragraph.3.2.2.3.3}%
+\contentsline {paragraph}{\numberline {d.}Licence open source et facilité d'intégration}{50}{paragraph.3.2.2.3.4}%
+\contentsline {chapter}{\numberline {4}Méthodologie CRISP-ML(Q) --- Réalisation du Module IA}{51}{chapter.4}%
+\etoc@startlocaltoc {5}
+\contentsline {section}{\numberline {4.1}Business understanding, data understanding \& collecte}{53}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Pipeline métier du système IA}{53}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Analyse des besoins documentaires}{54}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Collecte et composition du dataset}{54}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {1.}Stratégie de collecte hybride}{55}{subsubsection.4.1.3.1}%
+\contentsline {section}{\numberline {4.2}Préparation des données (ingénierie des données)}{55}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Restauration et génération de données}{56}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {1.}CIN recto --- restauration par Deep Inpainting}{56}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.}CIN verso --- génération automatisée par Data Factory Python}{56}{subsubsection.4.2.1.2}%
+\contentsline {subsection}{\numberline {4.2.2}Labellisation : construction de la vérité terrain}{57}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {1.}Ontologie des classes}{57}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.}Méthodologie hybride : du Gold Standard à l'Auto-Labeling}{57}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.}Contrainte des Tight Bounding Boxes}{58}{subsubsection.4.2.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Augmentation contrôlée : simulation de la variabilité réelle}{58}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {1.}Coefficients d'augmentation différenciés}{59}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.}Paramètres d'augmentation et impacts visuels}{59}{subsubsection.4.2.3.2}%
+\contentsline {paragraph}{\numberline {a.}Invariance spatiale (géométrie \& perspective)}{59}{paragraph.4.2.3.2.1}%
+\contentsline {paragraph}{\numberline {b.}Invariance photométrique (lumière \& couleur)}{60}{paragraph.4.2.3.2.2}%
+\contentsline {paragraph}{\numberline {c.}Résilience optique (flou \& bruit capteur)}{61}{paragraph.4.2.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.}Configurations Roboflow par pipeline}{62}{subsubsection.4.2.3.3}%
+\contentsline {subsection}{\numberline {4.2.4}Split final : entraînement / validation / test}{62}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Modélisation}{63}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Architecture globale du système IA}{63}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {1.}Pipeline structuré --- CIN et Passeport}{63}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.}Pipeline non structuré --- documents sans géométrie fixe}{65}{subsubsection.4.3.1.2}%
+\contentsline {subsection}{\numberline {4.3.2}Paramètres d'entraînement YOLO — référentiel}{65}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Détection de présence du document --- YOLOv8n}{68}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {1.}Objectifs de l'étape de détection}{68}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {2.}Paramètres d'entraînement --- YOLOv8n}{68}{subsubsection.4.3.3.2}%
+\contentsline {subsection}{\numberline {4.3.4}Détection des champs texte --- YOLOv11m}{70}{subsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {1.}Stratégie : trois modèles spécialisés}{70}{subsubsection.4.3.4.1}%
+\contentsline {subsubsection}{\numberline {2.}Paramètres d'entraînement --- YOLO11m}{70}{subsubsection.4.3.4.2}%
+\contentsline {subsection}{\numberline {4.3.5}Extraction texte --- PaddleOCR PP-OCRv5}{72}{subsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {1.}Workflow d'extraction}{72}{subsubsection.4.3.5.1}%
+\contentsline {subsubsection}{\numberline {2.}Prétraitement : gestion des petits crops}{73}{subsubsection.4.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.}Post-traitement et structuration JSON}{73}{subsubsection.4.3.5.3}%
+\contentsline {subsection}{\numberline {4.3.6}Configuration matérielle et environnement}{74}{subsection.4.3.6}%
+\contentsline {section}{\numberline {4.4}Évaluation et assurance qualité}{75}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Analyse des courbes d'entraînement}{75}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {1.}CIN --- Recto et Verso}{77}{subsubsection.4.4.1.1}%
+\contentsline {paragraph}{\numberline {a.}CIN Recto}{77}{paragraph.4.4.1.1.1}%
+\contentsline {paragraph}{\numberline {b.}CIN Verso}{80}{paragraph.4.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {2.}Passeport}{83}{subsubsection.4.4.1.2}%
+\contentsline {paragraph}{\numberline {a.}Passeport}{83}{paragraph.4.4.1.2.1}%
+\contentsline {subsection}{\numberline {4.4.2}Évaluation de YOLOv11m sur le jeu de test}{85}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {1.}CIN Recto (70 images, 10 classes)}{85}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.}CIN Verso (60 images, 8 classes)}{86}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {3.}Passeport (53 images, 12 classes)}{87}{subsubsection.4.4.2.3}%
+\contentsline {subsection}{\numberline {4.4.3}Métriques d'évaluation du pipeline OCR}{88}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Résultats par type de document}{89}{subsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {1.}CIN Recto (6 champs, 60 images)}{89}{subsubsection.4.4.4.1}%
+\contentsline {subsubsection}{\numberline {2.}CIN Verso (5 champs, 60 images)}{90}{subsubsection.4.4.4.2}%
+\contentsline {subsubsection}{\numberline {3.}Passeport (11 champs, 60 images)}{91}{subsubsection.4.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.5}Synthèse comparative}{92}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Analyse qualitative des erreurs}{93}{subsection.4.4.6}%
+\contentsline {subsubsection}{\numberline {1.}CIN Recto --- Analyse sur trois niveaux de qualité}{93}{subsubsection.4.4.6.1}%
+\contentsline {subsubsection}{\numberline {2.}CIN Verso --- Analyse sur trois niveaux de qualité}{94}{subsubsection.4.4.6.2}%
+\contentsline {subsubsection}{\numberline {3.}Passeport --- Analyse sur trois niveaux de qualité}{96}{subsubsection.4.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.}Synthèse des causes d'erreur}{98}{subsubsection.4.4.6.4}%
+\contentsline {section}{\numberline {4.5}Déploiement et intégration}{98}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Surveillance et maintenance}{100}{section.4.6}%
+\contentsline {part}{Incrément 2 : Réalisation du Système eKYC}{100}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Conception du Système}{102}{chapter.5}%
+\etoc@startlocaltoc {6}
+\contentsline {section}{\numberline {5.1}Diagramme de classes}{103}{section.5.1}%
+\contentsline {subsubsection}{\numberline {1.}M1 --- Utilisateurs et authentification}{103}{subsubsection.5.1.0.1}%
+\contentsline {subsubsection}{\numberline {2.}M2 --- Dossier KYC}{106}{subsubsection.5.1.0.2}%
+\contentsline {subsubsection}{\numberline {3.}M3 --- Pipeline OCR}{110}{subsubsection.5.1.0.3}%
+\contentsline {subsubsection}{\numberline {4.}M4 --- Screening AML}{113}{subsubsection.5.1.0.4}%
+\contentsline {section}{\numberline {5.2}Diagramme d'activité}{116}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Diagramme de séquence}{118}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Réalisation et Déploiement}{121}{chapter.6}%
+\etoc@startlocaltoc {7}
+\contentsline {section}{\numberline {6.1}Environnement et outils de développement}{122}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Infrastructure applicative}{122}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Architecture globale de la plateforme}{122}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}API REST --- Endpoints principaux}{123}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Persistance et stockage}{123}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {1.}Base de données PostgreSQL}{123}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.}Stockage objet MinIO}{125}{subsubsection.6.2.3.2}%
+\contentsline {section}{\numberline {6.3}Intégration des services IA}{126}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}De deux incréments à un système unifié}{126}{subsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {1.}Le contrat d'interface comme point de jonction}{126}{subsubsection.6.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.}Comment les deux incréments se rejoignent}{127}{subsubsection.6.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.}Bénéfices de cette approche}{128}{subsubsection.6.3.1.3}%
+\contentsline {subsection}{\numberline {6.3.2}Communication entre les couches}{128}{subsection.6.3.2}%
+\contentsline {paragraph}{\numberline {a.}L'interface client}{129}{paragraph.6.3.2.0.1}%
+\contentsline {paragraph}{\numberline {b.}Les modules de capture}{129}{paragraph.6.3.2.0.2}%
+\contentsline {paragraph}{\numberline {c.}Les modules OCR}{129}{paragraph.6.3.2.0.3}%
+\contentsline {paragraph}{\numberline {d.}Le backend}{129}{paragraph.6.3.2.0.4}%
+\contentsline {paragraph}{\numberline {e.}Le module de comparaison biométrique}{129}{paragraph.6.3.2.0.5}%
+\contentsline {subsubsection}{\numberline {1.}Rôle de MinIO comme intermédiaire universel}{130}{subsubsection.6.3.2.1}%
+\contentsline {section}{\numberline {6.4}Interface client}{130}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Interface administrateur}{130}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Évaluation selon les exigences BCT}{130}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Métriques imposées}{130}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Résultats obtenus}{130}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Conclusion}{130}{subsection.6.6.3}%
+\contentsline {chapter}{Conclusion Générale}{131}{chapter*.49}%

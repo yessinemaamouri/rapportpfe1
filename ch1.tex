@@ -1,5 +1,10 @@
 \chapter{Cadre Général du Projet}
 \label{chap:cadre-general}
+\vspace{1em}
+\noindent\textbf{\large Sommaire}
+\vspace{0.5em}
+\localtableofcontents
+\clearpage
 
 Ce chapitre pose le cadre général dans lequel s'inscrit le présent projet. Il présente d'abord l'organisme d'accueil --- la Banque de Tunisie et des Émirats (BTE) --- et son contexte de transformation numérique, avant d'introduire le concept du KYC et ses évolutions réglementaires. L'analyse critique des pratiques internes et des solutions commerciales disponibles permet ensuite de formuler la problématique centrale du projet et d'en déduire la solution proposée. Le chapitre se conclut par la présentation de la méthodologie hybride retenue, qui structure l'ensemble du développement.
 
@@ -28,11 +33,11 @@ L'expression la plus concrète de cette dynamique est le lancement de \og NEO BT
 \subsection{Organigramme de la BTE}
 \label{subsec:organigramme-bte}
 
-La structure organisationnelle de la BTE repose sur une gouvernance multi-niveaux, alliant direction générale, pôles métiers et directions supports. L'organigramme présenté en Figure~\ref{fig:ch1-organigramme} illustre cette hiérarchie fonctionnelle, au sein de laquelle la DCIO occupe une position stratégique transversale, en interface directe avec l'ensemble des directions opérationnelles.
+La structure organisationnelle de la BTE est illustrée par la Figure~\ref{fig:ch1-organigramme}. Au c\oe{}ur de cette organisation, la Direction Centrale de l'Informatique et de l'Organisation (DCIO) regroupe trois directions : la Direction Informatique, la Direction Système et Sécurité Fonctionnelle, et la Direction de l'Organisation. La Direction Informatique se subdivise elle-même en deux départements opérationnels : le Département Développement, responsable de la conception et de l'évolution des applications métiers, et le Département Support Informatique, chargé de la maintenance et de l'assistance aux utilisateurs.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/image_ch1/logo_bte.png}
+  \includegraphics[width=0.75\textwidth]{images copy/image_ch1/organigramme.png}
   \caption{\textit{Organigramme de la Banque de Tunisie et des Émirats}}
   \label{fig:ch1-organigramme}
 \end{figure}
@@ -50,12 +55,11 @@ Dans un secteur bancaire soumis à des exigences réglementaires croissantes, la
 \subsection{KYC traditionnel vs KYC automatisé}
 \label{subsec:kyc-traditionnel-vs-automatise}
 
-\subsubsection*{\hspace{0.5cm} 1. Le KYC traditionnel}
+\subsubsection{Le KYC traditionnel}
 
 Historiquement, le processus KYC repose sur des interactions physiques ou semi-numériques. Le client soumet des documents d'identité (Carte Nationale d'Identité, Passeport) qui sont ensuite contrôlés par des agents humains, selon deux modalités distinctes.
 
-\paragraph{\hspace{1cm} a. Processus hors ligne}
-\mbox{}\\
+\paragraph{Processus hors ligne}
 Dans ce mode, le client se déplace en agence pour remettre ses documents en main propre. L'agent de back-office procède à une vérification manuelle, saisit les données dans le système d'information et notifie le client de l'issue du contrôle. Ce processus séquentiel est visualisé à travers la Figure~\ref{fig:ch1-kyc-hors-ligne}.
 
 \begin{figure}[H]
@@ -65,8 +69,7 @@ Dans ce mode, le client se déplace en agence pour remettre ses documents en mai
   \label{fig:ch1-kyc-hors-ligne}
 \end{figure}
 
-\paragraph{\hspace{1cm} b. Processus en ligne}
-\mbox{}\\
+\paragraph{Processus en ligne}
 La variante en ligne, illustrée par la Figure~\ref{fig:ch1-kyc-en-ligne}, permet au client de soumettre ses documents via le portail numérique de l'établissement. Malgré la dématérialisation du canal, la vérification reste entièrement manuelle : un opérateur examine chaque pièce transmise avant de valider ou de rejeter le dossier.
 
 \begin{figure}[H]
@@ -76,8 +79,7 @@ La variante en ligne, illustrée par la Figure~\ref{fig:ch1-kyc-en-ligne}, perme
   \label{fig:ch1-kyc-en-ligne}
 \end{figure}
 
-\paragraph{\hspace{1cm} c. Limites structurelles du KYC traditionnel}
-\mbox{}\\
+\paragraph{Limites structurelles du KYC traditionnel}
 Qu'il soit réalisé en agence ou via un portail numérique, le KYC traditionnel présente des failles communes qui fragilisent son aptitude à répondre aux exigences croissantes des institutions financières modernes :
 
 \begin{itemize}
@@ -86,7 +88,7 @@ Qu'il soit réalisé en agence ou via un portail numérique, le KYC traditionnel
   \item \textbf{Coût élevé :} mobilisation importante de ressources humaines et logistiques, difficiles à faire évoluer face à la croissance du portefeuille clients.
 \end{itemize}
 
-\subsubsection*{\hspace{0.5cm} 2. Le KYC automatisé (e-KYC)}
+\subsubsection{Le KYC automatisé (e-KYC)}
 
 Sous l'impulsion de la transformation digitale, les institutions financières migrent progressivement vers des solutions de e-KYC (\textit{Electronic KYC}). Cette approche substitue l'intervention humaine par des traitements algorithmiques intelligents, capables d'analyser, d'extraire et de valider les informations d'identité en temps réel. Ce nouveau paradigme repose sur un enchaînement fluide d'étapes entièrement automatisées, comme le montre la Figure~\ref{fig:ch1-kyc-automatise}.
 
@@ -118,7 +120,7 @@ Cette automatisation offre des avantages stratégiques concrets :
 
 Toute solution de KYC automatisé doit s'inscrire dans un cadre légal rigoureux, tant au niveau international qu'au plan national tunisien.
 
-\subsubsection*{\hspace{0.5cm} 1. Normes internationales}
+\subsubsection{Normes internationales}
 
 Déployer un système eKYC dans un environnement bancaire réglementé implique de respecter des standards internationaux qui définissent les obligations minimales en matière de vigilance client. Le Tableau~\ref{tab:normes-intl} présente les deux références les plus déterminantes pour le périmètre de ce projet.
 
@@ -143,7 +145,7 @@ Déployer un système eKYC dans un environnement bancaire réglementé implique 
   \label{tab:normes-intl}
 \end{table}
 
-\subsubsection*{\hspace{0.5cm} 2. Réglementations nationales (Tunisie)}
+\subsubsection{Réglementations nationales (Tunisie)}
 
 Au plan national, la solution eKYC de la BTE doit se conformer à un corpus législatif tunisien qui encadre à la fois l'identification des clients, le contrôle interne et la protection des données personnelles. Le Tableau~\ref{tab:normes-natl} en synthétise les textes fondateurs.
 
@@ -191,7 +193,7 @@ Le passage du KYC traditionnel vers le e-KYC représente une rupture profonde da
 \subsection{Étude de l'existant}
 \label{subsec:etude-existant}
 
-\subsubsection*{\hspace{0.5cm} 1. KYC au sein de la BTE}
+\subsubsection{KYC au sein de la BTE}
 
 Le processus KYC au sein de la BTE s'articule autour de deux modes complémentaires : un traitement réalisé en agence et un parcours digital accessible via l'application mobile NEO BTE. Si ces deux canaux couvrent des usages distincts, ils partagent une caractéristique fondamentale : tous deux reposent entièrement sur une vérification manuelle par des agents humains, sans aucune automatisation du traitement documentaire. La Figure~\ref{fig:ch1-kyc-modes} met en regard ces deux modalités et souligne leur dénominateur commun : la dépendance à l'intervention humaine.
 
@@ -202,20 +204,17 @@ Le processus KYC au sein de la BTE s'articule autour de deux modes complémentai
   \label{fig:ch1-kyc-modes}
 \end{figure}
 
-\subsubsection*{\hspace{0.5cm} 2. Solutions KYC commerciales disponibles}
+\subsubsection{Solutions KYC commerciales disponibles}
 
 Face à ce constat, trois plateformes représentatives du marché ont été étudiées pour évaluer leur pertinence dans le contexte spécifique de la BTE. Chacune a été analysée selon des critères déterminants --- couverture fonctionnelle, support du contexte tunisien, dépendance cloud et personnalisabilité --- afin d'objectiver leur adéquation réelle avant d'écarter ou de retenir une approche.
 
-\paragraph{\hspace{1cm} a. uqudo}
-\mbox{}\\
+\paragraph{uqudo}
 Plateforme complète intégrant OCR, biométrie et détection de fraude. Accessible via une API cloud avec support multilingue, elle couvre un périmètre fonctionnel large mais repose entièrement sur une infrastructure externe.
 
-\paragraph{\hspace{1cm} b. NEUROPARSER}
-\mbox{}\\
+\paragraph{NEUROPARSER}
 Solution spécialisée dans l'OCR de la carte d'identité nationale tunisienne. Bien qu'elle offre un support natif de la CIN, son périmètre se limite à l'extraction de données textuelles, sans capacités biométriques ni détection d'anomalies.
 
-\paragraph{\hspace{1cm} c. FACEKI}
-\mbox{}\\
+\paragraph{FACEKI}
 Solution orientée vers la vérification biométrique et l'analyse documentaire. Elle offre des garanties de sécurité avancées, mais dépend entièrement d'une infrastructure cloud externe pour l'ensemble de son traitement.
 
 Le Tableau~\ref{tab:solutions-kyc} synthétise cette analyse comparative selon les critères les plus déterminants pour le contexte de la BTE.
@@ -258,7 +257,7 @@ Le Tableau~\ref{tab:solutions-kyc} synthétise cette analyse comparative selon l
 
 L'examen croisé du processus interne de la BTE et des solutions commerciales disponibles met en évidence des failles structurelles qui touchent les deux dimensions de l'existant.
 
-\subsubsection*{Faiblesses du processus KYC interne}
+\subsubsection{Faiblesses du processus KYC interne}
 
 \begin{itemize}
   \item \textbf{Délais incompatibles avec le digital :} la vérification manuelle impose des temps de traitement qui dégradent l'expérience d'onboarding et contrastent avec les attentes d'un client NEO BTE habitué à l'instantané.
@@ -267,7 +266,7 @@ L'examen croisé du processus interne de la BTE et des solutions commerciales di
   \item \textbf{Absence de passage à l'échelle :} le modèle manuel ne peut absorber la croissance du portefeuille clients NEO BTE sans une augmentation proportionnelle des effectifs, rendant le système structurellement non scalable.
 \end{itemize}
 
-\subsubsection*{Limites des solutions commerciales}
+\subsubsection{Limites des solutions commerciales}
 
 \begin{itemize}
   \item \textbf{Dépendance cloud systématique :} les trois plateformes analysées transmettent les données documentaires vers des serveurs externes, soulevant des enjeux de souveraineté des données incompatibles avec les exigences d'un établissement bancaire réglementé.
@@ -366,13 +365,13 @@ Ces deux composantes présentant une faible interdépendance technique, leur str
 \subsection{CRISP-ML(Q)}
 \label{subsec:crisp-mlq}
 
-\subsubsection*{\hspace{0.5cm} 1. CRISP-ML(Q) vs CRISP-DM}
+\subsubsection{CRISP-ML(Q) vs CRISP-DM}
 
 Avant d'aller plus loin, il convient de situer CRISP-ML(Q) par rapport à son prédécesseur. CRISP-DM (\textit{Cross-Industry Standard Process for Data Mining}), publié en 1999, a longtemps constitué la référence méthodologique pour les projets de fouille de données. Cependant, son adoption aux projets de Machine Learning en production révèle plusieurs lacunes : l'absence de phases dédiées au déploiement continu, à la surveillance en production et, surtout, à l'assurance qualité systématique tout au long du cycle de vie du modèle.
 
 CRISP-ML(Q) comble précisément ces lacunes. Proposé en 2020 par Studer \textit{et al.}~\cite{studer2021crispmlq} (arXiv:2003.05155, soumis le 11 mars 2020, révisé le 24 février 2021), le modèle introduit le \og Q \fg{} --- pour \textit{Quality} --- comme philosophie transversale : des contrôles qualité formels sont intégrés à \textit{chaque phase} du processus, et non uniquement lors de l'évaluation finale. À chaque étape --- de la compréhension métier jusqu'à la maintenance en production --- des critères de qualité sont définis, mesurés et documentés, garantissant ainsi la traçabilité et la robustesse du modèle développé. Cette dimension qualité renforcée est particulièrement précieuse dans un contexte bancaire où la fiabilité et l'auditabilité des systèmes IA sont des exigences non négociables.
 
-\subsubsection*{\hspace{0.5cm} 2. Les six phases de CRISP-ML(Q)}
+\subsubsection{Les six phases de CRISP-ML(Q)}
 
 Le 1\textsuperscript{er} incrément du projet est entièrement dédié à la conception, à l'entraînement et à la validation du pipeline d'intelligence artificielle, selon le cadre CRISP-ML(Q). La Figure~\ref{fig:ch1-6-phases-crisp-mlq} présente les six phases qui structurent ce cycle.
 

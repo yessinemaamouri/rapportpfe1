@@ -1,0 +1,319 @@
+Configuration
+Les paramètres et hyperparamètres de YOLO jouent un rôle crucial dans les performances, la vitesse et la précision du modèle. Ces réglages peuvent influencer le comportement du modèle à différentes étapes, notamment lors de l'entraînement, de la validation et de la prédiction.
+
+
+Watch: Mastering Ultralytics YOLO: Configuration
+Les commandes Ultralytics utilisent la syntaxe suivante :
+
+Exemple
+CLI
+Python
+
+yolo TASK MODE ARGS
+Où :
+
+TASK (optionnel) est l'un des suivants : (detect, segment, semantic, classify, pose, obb)
+MODE (requis) est l'un des suivants : (train, val, predict, export, track, benchmark)
+ARGS (optional) are arg=value pairs like imgsz=640 that override defaults.
+Default ARG values are defined on this page and come from the cfg/default.yaml file.
+
+Tâches
+Les modèles YOLO d'Ultralytics peuvent effectuer une variété de tâches de vision par ordinateur, notamment :
+
+Detect : La détection d'objets identifie et localise des objets dans une image ou une vidéo.
+Segment : La segmentation d'instances divise une image ou une vidéo en zones correspondant à différents objets ou classes.
+Segmentation sémantique (semantic) : La segmentation sémantique attribue une étiquette de classe à chaque pixel d'une image pour une compréhension dense de la scène.
+Classify : La classification d'images prédit l'étiquette de classe d'une image d'entrée.
+Pose : L'estimation de pose identifie des objets et estime leurs points clés dans une image ou une vidéo.
+OBB : Les boîtes englobantes orientées utilisent des boîtes englobantes pivotées, adaptées à l'imagerie satellite ou médicale.
+Argument	Défaut	Description
+task	'detect'	Spécifie la tâche YOLO : detect pour la détection d'objets, segment pour la segmentation d'instances, semantic pour la segmentation sémantique, classify pour la classification, pose pour l'estimation de pose et obb pour les boîtes englobantes orientées. Chaque tâche est adaptée à des sorties et des problèmes spécifiques dans l'analyse d'images et de vidéos.
+Guide des tâches
+
+Modes
+Les modèles YOLO d'Ultralytics fonctionnent dans différents modes, chacun conçu pour une étape spécifique du cycle de vie du modèle :
+
+Train : Entraîne un modèle YOLO sur un jeu de données personnalisé.
+Val : Valide un modèle YOLO entraîné.
+Predict : Utilise un modèle YOLO entraîné pour faire des prédictions sur de nouvelles images ou vidéos.
+Export : Exporte un modèle YOLO pour le déploiement.
+Track : Suit des objets en temps réel en utilisant un modèle YOLO.
+Benchmark : Évalue la vitesse et la précision des exportations YOLO (ONNX, TensorRT, etc.).
+Argument	Défaut	Description
+mode	'train'	Spécifie le mode de fonctionnement du modèle YOLO : train pour l'entraînement, val pour la validation, predict pour l'inférence, export pour la conversion vers des formats de déploiement, track pour le suivi d'objets et benchmark pour l'évaluation des performances. Chaque mode prend en charge différentes étapes, du développement au déploiement.
+Guide des modes
+
+Paramètres d'entraînement
+Les paramètres d'entraînement pour les modèles YOLO incluent des hyperparamètres et des configurations qui affectent les performances, la vitesse et la précision du modèle. Les réglages clés incluent la taille de lot (batch size), le taux d'apprentissage (learning rate), le momentum et la décroissance de poids (weight decay). Le choix de l'optimiseur, de la fonction de perte (loss function) et la composition du jeu de données ont également un impact sur l'entraînement. Le réglage et l'expérimentation sont cruciaux pour des performances optimales. Pour plus de détails, consulte la fonction de point d'entrée Ultralytics.
+
+Argument	Type	Défaut	Description
+model	str	None	Spécifie le fichier de modèle pour l'entraînement. Accepte un chemin vers un modèle pré-entraîné .pt ou un fichier de configuration .yaml. Essentiel pour définir la structure du modèle ou initialiser les poids.
+data	str	None	Chemin vers le fichier de configuration du jeu de données (par exemple, coco8.yaml). Ce fichier contient des paramètres spécifiques au jeu de données, y compris les chemins vers les données d'entraînement et de validation, les noms des classes et le nombre de classes.
+epochs	int	100	Nombre total d'époques d'entraînement. Chaque époque représente un passage complet sur l'ensemble du jeu de données. L'ajustement de cette valeur peut affecter la durée de l'entraînement et les performances du modèle.
+time	float	None	Temps d'entraînement maximal en heures. S'il est défini, cela remplace l'argument epochs, permettant à l'entraînement de s'arrêter automatiquement après la durée spécifiée. Utile pour les scénarios d'entraînement à durée limitée.
+patience	int	100	Nombre d'époques à attendre sans amélioration des métriques de validation avant d'arrêter prématurément l'entraînement. Aide à prévenir le surapprentissage (overfitting) en interrompant l'entraînement lorsque les performances plafonnent.
+batch	int ou float	16	Taille de lot (batch size), avec trois modes : défini comme un entier (par exemple, batch=16), mode automatique pour 60 % d'utilisation de la mémoire GPU (batch=-1), ou mode automatique avec une fraction d'utilisation spécifiée (batch=0.70).
+imgsz	int	640	Taille d'image cible pour l'entraînement. Les images sont redimensionnées en carrés avec des côtés égaux à la valeur spécifiée (si rect=False), préservant le rapport d'aspect pour les modèles YOLO mais pas pour RT-DETR. Affecte la précision du modèle et la complexité computationnelle.
+save	bool	True	Active l'enregistrement des points de contrôle (checkpoints) d'entraînement et des poids finaux du modèle. Utile pour reprendre l'entraînement ou le déploiement du modèle.
+save_period	int	-1	Fréquence de sauvegarde des points de contrôle du modèle, spécifiée en époques. Une valeur de -1 désactive cette fonctionnalité. Utile pour enregistrer des modèles intermédiaires lors de longues sessions d'entraînement.
+cache	bool	False	Active la mise en cache des images du jeu de données en mémoire (True/ram), sur le disque (disk), ou la désactive (False). Améliore la vitesse d'entraînement en réduisant les E/S disque au prix d'une utilisation accrue de la mémoire.
+device	int ou str ou list	None	Spécifie le ou les périphériques de calcul pour l'entraînement : un seul GPU (device=0), plusieurs GPU (device=[0,1]), CPU (device=cpu), MPS pour Apple silicon (device=mps), NPU Huawei Ascend (device=npu ou device=npu:0), ou sélection automatique du GPU le plus inactif (device=-1) ou de plusieurs GPU inactifs (device=[-1,-1]).
+workers	int	8	Nombre de threads de travail pour le chargement des données (par RANK en cas d'entraînement Multi-GPU). Influence la vitesse du prétraitement des données et leur alimentation vers le modèle, particulièrement utile dans les configurations multi-GPU.
+project	str	None	Nom du répertoire de projet où les sorties d'entraînement sont enregistrées. Permet un stockage organisé des différentes expériences.
+name	str	None	Nom de l'exécution d'entraînement. Utilisé pour créer un sous-répertoire dans le dossier du projet, où les journaux et les sorties d'entraînement sont stockés.
+exist_ok	bool	False	Si True, permet l'écrasement d'un répertoire projet/nom existant. Utile pour l'expérimentation itérative sans avoir besoin de supprimer manuellement les sorties précédentes.
+pretrained	bool ou str	True	Détermine s'il faut commencer l'entraînement à partir de poids pré-entraînés. Peut être une valeur booléenne ou un chemin textuel vers les poids à charger. pretrained=False entraîne à partir de poids initialisés aléatoirement tout en conservant l'architecture du modèle.
+optimizer	str	'auto'	Choix de l'optimiseur pour l'entraînement. Les options incluent SGD, MuSGD, Adam, Adamax, AdamW, NAdam, RAdam, RMSProp, ou auto pour une sélection automatique basée sur la configuration du modèle. Affecte la vitesse de convergence et la stabilité.
+seed	int	0	Définit la graine aléatoire (seed) pour l'entraînement, garantissant la reproductibilité des résultats entre les exécutions avec les mêmes configurations.
+deterministic	bool	True	Force l'utilisation d'un algorithme déterministe, garantissant la reproductibilité, mais peut affecter les performances et la vitesse en raison de la restriction sur les algorithmes non déterministes.
+verbose	bool	True	Active une sortie détaillée pendant l'entraînement, affichant des barres de progression, des métriques par époque et des informations d'entraînement supplémentaires dans la console.
+single_cls	bool	False	Traite toutes les classes dans les jeux de données multi-classes comme une seule classe pendant l'entraînement. Utile pour les tâches de classification binaire ou lorsque l'on se concentre sur la présence d'objets plutôt que sur la classification.
+classes	list[int]	None	Spécifie une liste d'IDs de classe pour l'entraînement. Utile pour filtrer et te concentrer uniquement sur certaines classes pendant l'entraînement.
+rect	bool	False	Active la stratégie de padding minimal—les images dans un lot sont complétées au minimum pour atteindre une taille commune, avec le côté le plus long égal à imgsz. Cela peut améliorer l'efficacité et la vitesse mais peut affecter la précision du modèle.
+multi_scale	float	0.0	Fait varier aléatoirement imgsz à chaque lot de +/- multi_scale (par ex. 0.25 -> 0.75x à 1.25x), en arrondissant aux multiples du pas du modèle ; 0.0 désactive l'entraînement multi-échelle.
+cos_lr	bool	False	Utilise un planificateur de learning rate cosinus, ajustant le taux d'apprentissage en suivant une courbe cosinus sur les époques. Aide à gérer le taux d'apprentissage pour une meilleure convergence.
+close_mosaic	int	10	Désactive la data augmentation mosaïque durant les N dernières époques pour stabiliser l'entraînement avant la fin. Définir sur 0 désactive cette fonctionnalité.
+resume	bool	False	Reprend l'entraînement à partir du dernier checkpoint sauvegardé. Charge automatiquement les poids du modèle, l'état de l'optimiseur et le compteur d'époques, continuant l'entraînement de manière transparente.
+amp	bool	True	Active l'entraînement en Mixed Precision automatique (AMP), réduisant l'utilisation de la mémoire et accélérant potentiellement l'entraînement avec un impact minimal sur la précision.
+fraction	float	1.0	Spécifie la fraction du jeu de données à utiliser pour l'entraînement. Permet de s'entraîner sur un sous-ensemble du jeu de données complet, utile pour des expériences ou lorsque les ressources sont limitées.
+profile	bool	False	Active le profilage des vitesses ONNX et TensorRT pendant l'entraînement, utile pour optimiser le déploiement du modèle.
+freeze	int ou list	None	Gèle les N premières couches du modèle ou les couches spécifiées par index, réduisant le nombre de paramètres entraînables. Utile pour le réglage fin ou le transfer learning.
+lr0	float	0.01	Taux d'apprentissage initial (par ex. SGD=1E-2, Adam=1E-3). Ajuster cette valeur est crucial pour le processus d'optimisation, influençant la rapidité avec laquelle les poids du modèle sont mis à jour.
+lrf	float	0.01	Taux d'apprentissage final en tant que fraction du taux initial = (lr0 * lrf), utilisé conjointement avec des planificateurs pour ajuster le taux d'apprentissage au fil du temps.
+momentum	float	0.937	Facteur de momentum pour SGD ou beta1 pour les Adam optimizers, influençant l'incorporation des gradients passés dans la mise à jour actuelle.
+weight_decay	float	0.0005	Terme de regularization L2, pénalisant les poids importants pour éviter le surapprentissage.
+warmup_epochs	float	3.0	Nombre d'époques pour l'échauffement (warmup) du taux d'apprentissage, augmentant progressivement le taux d'apprentissage d'une valeur faible à la valeur initiale pour stabiliser l'entraînement dès le début.
+warmup_momentum	float	0.8	Momentum initial pour la phase d'échauffement, s'ajustant progressivement au momentum défini sur la période d'échauffement.
+warmup_bias_lr	float	0.1	Taux d'apprentissage pour les paramètres de biais pendant la phase d'échauffement, aidant à stabiliser l'entraînement du modèle dans les premières époques.
+box	float	7.5	Poids de la composante de perte de boîte dans la loss function, influençant l'accent mis sur la prédiction précise des coordonnées de bounding box.
+cls	float	0.5	Poids de la perte de classification dans la fonction de perte totale, affectant l'importance de la prédiction correcte de la classe par rapport aux autres composantes.
+cls_pw	float	0.0	Puissance pour la pondération des classes afin de gérer le déséquilibre des classes en utilisant la fréquence inverse des classes. 0.0 désactive la pondération des classes, 1.0 applique une pondération inverse totale par fréquence. Les valeurs entre 0 et 1 fournissent une pondération partielle.
+dfl	float	1.5	Poids de la distribution focal loss, utilisée dans certaines versions de YOLO pour une classification fine.
+pose	float	12.0	Poids de la perte de pose dans les modèles entraînés pour l'estimation de pose, influençant l'accent mis sur la prédiction précise des points clés de la pose.
+kobj	float	1.0	Poids de la perte d'objectness des points clés dans les modèles d'estimation de pose, équilibrant la confiance de détection avec la précision de la pose.
+rle	float	1.0	Poids de la perte d'estimation de log-vraisemblance résiduelle dans les modèles d'estimation de pose, affectant la précision de la localisation des points clés.
+angle	float	1.0	Poids de la perte d'angle dans les modèles obb, affectant la précision des prédictions d'angle des boîtes englobantes orientées.
+nbs	int	64	Taille de lot nominale pour la normalisation de la perte.
+overlap_mask	bool	True	Détermine si les masques d'objets doivent être fusionnés en un seul masque pour l'entraînement, ou maintenus séparés pour chaque objet. En cas de chevauchement, le masque le plus petit est superposé sur le masque le plus grand lors de la fusion.
+mask_ratio	int	4	Ratio de sous-échantillonnage pour les masques de segmentation, affectant la résolution des masques utilisés pendant l'entraînement.
+dropout	float	0.0	Taux de dropout pour la régularisation dans les tâches de classification, empêchant le surapprentissage en omettant aléatoirement des unités pendant l'entraînement.
+val	bool	True	Active la validation pendant l'entraînement, permettant une évaluation périodique des performances du modèle sur un jeu de données séparé.
+plots	bool	True	Génère et sauvegarde des graphiques des métriques d'entraînement et de validation, ainsi que des exemples de prédiction, offrant des aperçus visuels sur les performances du modèle et la progression de l'apprentissage.
+compile	bool ou str	False	Active la compilation de graphe PyTorch 2.x torch.compile avec backend='inductor'. Accepte True → "default", False → désactive, ou un mode chaîne tel que "default", "reduce-overhead", "max-autotune-no-cudagraphs". Revient au mode eager avec un avertissement si non pris en charge.
+max_det	int	300	Spécifie le nombre maximum d'objets conservés pendant la phase de validation de l'entraînement.
+Note sur les paramètres de taille de lot
+L'argument batch propose trois options de configuration :
+
+Taille de lot fixe : Spécifie le nombre d'images par lot avec un entier (par ex. batch=16).
+Mode Auto (60% de mémoire GPU) : Utilise batch=-1 pour un ajustement automatique à environ 60% de l'utilisation de la mémoire CUDA.
+Mode Auto avec fraction d'utilisation : Définit une fraction (par ex. batch=0.70) pour ajuster en fonction d'une utilisation spécifique de la mémoire GPU.
+Guide d'entraînement
+
+Paramètres de prédiction
+Les paramètres de prédiction pour les modèles YOLO incluent des hyperparamètres et des configurations qui influencent les performances, la vitesse et la accuracy pendant l'inférence. Les paramètres clés incluent le seuil de confiance, le seuil de Non-Maximum Suppression (NMS) et le nombre de classes. La taille des données d'entrée, le format et les fonctionnalités supplémentaires comme les masques affectent également les prédictions. Ajuster ces paramètres est essentiel pour des performances optimales.
+
+Arguments d'inférence :
+
+Argument	Type	Défaut	Description
+source	str ou int ou None	None	Spécifie la source de données pour l'inférence. Peut être un chemin d'image, un fichier vidéo, un répertoire, une URL ou un ID de périphérique pour les flux en direct. Si omis, un avertissement est enregistré et le modèle utilise les assets de démonstration intégrés (ultralytics/assets, ou une URL de démo pour OBB). Prend en charge un large éventail de formats et de sources, permettant une application flexible sur différents types d'entrée.
+conf	float	0.25	Définit le seuil de confiance minimum pour les détections. Les objets détectés avec une confiance inférieure à ce seuil seront ignorés. Ajuster cette valeur peut aider à réduire les faux positifs.
+iou	float	0.7	Seuil Intersection Over Union (IoU) pour la Non-Maximum Suppression (NMS). Des valeurs plus faibles entraînent moins de détections en éliminant les boîtes qui se chevauchent, utile pour réduire les doublons.
+imgsz	int ou tuple	640	Cible Letterbox. Un entier donne un carré N×N ; un tuple donne (height, width). Avec rect=True, le tenseur réel peut être plus petit que cette cible en raison du remplissage minimal par rectangle. Utilise rect=False pour une taille fixe. Voir Forme fixe vs rectangle minimal.
+rect	bool	True	Si True, utilise le remplissage par rectangle minimal lorsque cela est possible (batch de même forme et backend pris en charge). Si False, effectue toujours un remplissage complet vers imgsz. Voir Forme fixe vs rectangle minimal.
+half	bool	False	Active l'inférence en demi-précision (FP16), ce qui peut accélérer l'inférence du modèle sur les GPU compatibles avec un impact minimal sur la précision.
+device	str	None	Spécifie le périphérique pour l'inférence (par ex., cpu, cuda:0, 0, npu ou npu:0). Permet de choisir entre le CPU, un GPU spécifique, le NPU Huawei Ascend ou d'autres périphériques de calcul pour l'exécution du modèle.
+batch	int	1	Spécifie la taille du batch pour l'inférence (fonctionne uniquement lorsque la source est un répertoire, un fichier vidéo ou un fichier .txt). Une taille de batch plus grande peut offrir un débit plus élevé, réduisant le temps total requis pour l'inférence.
+max_det	int	300	Nombre maximal de détections autorisées par image. Limite le nombre total d'objets que le modèle peut détecter en une seule inférence, évitant ainsi des sorties excessives dans les scènes denses.
+vid_stride	int	1	Pas de trame pour les entrées vidéo. Permet de sauter des trames dans les vidéos pour accélérer le traitement au prix d'une résolution temporelle réduite. Une valeur de 1 traite chaque trame, des valeurs plus élevées sautent des trames.
+stream_buffer	bool	False	Détermine s'il faut mettre en file d'attente les trames entrantes pour les flux vidéo. Si False, les anciennes trames sont abandonnées pour laisser place aux nouvelles (optimisé pour les applications en temps réel). Si True, met en file d'attente les nouvelles trames dans un tampon, garantissant qu'aucune trame n'est sautée, mais provoquant une latence si le FPS d'inférence est inférieur au FPS du flux.
+visualize	bool	False	Active la visualisation des caractéristiques du modèle pendant l'inférence, offrant un aperçu de ce que le modèle "voit". Utile pour le débogage et l'interprétation du modèle.
+augment	bool	False	Active l'augmentation au moment du test (TTA) pour les prédictions, améliorant potentiellement la robustesse de la détection au prix de la vitesse d'inférence.
+agnostic_nms	bool	False	Active la suppression non-maximale (NMS) agnostique aux classes, qui fusionne les boîtes qui se chevauchent de différentes classes. Utile dans les scénarios de détection multi-classes où le chevauchement des classes est fréquent. Pour les modèles de bout en bout (YOLO26, YOLOv10), cela empêche uniquement la même détection d'apparaître avec plusieurs étiquettes de classe (doublons IoU=1.0) et n'effectue pas de suppression basée sur le seuil d'IoU entre des boîtes distinctes.
+classes	list[int]	None	Filtre les prédictions vers un ensemble d'ID de classe. Seules les détections appartenant aux classes spécifiées seront retournées. Utile pour se concentrer sur les objets pertinents dans les tâches de détection multi-classes.
+retina_masks	bool	False	Retourne des masques de segmentation haute résolution. Les masques retournés (masks.data) correspondront à la taille de l'image originale si activé. Si désactivé, ils ont la taille de l'image utilisée pendant l'inférence.
+embed	list[int]	None	Spécifie les couches à partir desquelles extraire des vecteurs de caractéristiques ou des embeddings. Utile pour des tâches en aval comme le clustering ou la recherche de similarité.
+project	str	None	Nom du répertoire du projet où les sorties de prédiction sont enregistrées si save est activé.
+name	str	None	Nom de l'exécution de prédiction. Utilisé pour créer un sous-répertoire dans le dossier du projet, où les sorties de prédiction sont stockées si save est activé.
+stream	bool	False	Active un traitement économe en mémoire pour les longues vidéos ou de nombreuses images en retournant un générateur d'objets Results au lieu de charger toutes les trames en mémoire à la fois.
+verbose	bool	True	Contrôle s'il faut afficher des journaux d'inférence détaillés dans le terminal, fournissant un retour en temps réel sur le processus de prédiction.
+compile	bool ou str	False	Active la compilation de graphe PyTorch 2.x torch.compile avec backend='inductor'. Accepte True → "default", False → désactive, ou un mode chaîne tel que "default", "reduce-overhead", "max-autotune-no-cudagraphs". Revient au mode eager avec un avertissement si non pris en charge.
+end2end	bool	None	Outrepasse le mode de bout en bout dans les modèles YOLO prenant en charge l'inférence sans NMS (YOLO26, YOLOv10). Le définir sur False te permet d'exécuter la prédiction en utilisant le pipeline NMS traditionnel, te permettant en outre d'utiliser l'argument iou. Voir le guide de détection de bout en bout pour plus de détails.
+Arguments de visualisation :
+
+Argument	Type	Défaut	Description
+show	bool	False	Si True, affiche les images ou vidéos annotées dans une fenêtre. Utile pour un retour visuel immédiat pendant le développement ou les tests.
+save	bool	False or True	Active l'enregistrement des images ou vidéos annotées dans des fichiers. Utile pour la documentation, l'analyse approfondie ou le partage des résultats. Par défaut à True lors de l'utilisation de la CLI et False lors de l'utilisation en Python.
+save_frames	bool	False	Lors du traitement de vidéos, enregistre les trames individuelles en tant qu'images. Utile pour extraire des trames spécifiques ou pour une analyse détaillée trame par trame.
+save_txt	bool	False	Enregistre les résultats de détection dans un fichier texte, en suivant le format [class] [x_center] [y_center] [width] [height] [confidence]. Utile pour l'intégration avec d'autres outils d'analyse.
+save_conf	bool	False	Inclut les scores de confiance dans les fichiers texte enregistrés. Améliore le détail disponible pour le post-traitement et l'analyse.
+save_crop	bool	False	Enregistre des images recadrées des détections. Utile pour l'augmentation de jeux de données, l'analyse ou la création de jeux de données ciblés pour des objets spécifiques.
+show_labels	bool	True	Affiche les étiquettes pour chaque détection dans la sortie visuelle. Fournit une compréhension immédiate des objets détectés.
+show_conf	bool	True	Affiche le score de confiance pour chaque détection à côté de l'étiquette. Donne un aperçu de la certitude du modèle pour chaque détection.
+show_boxes	bool	True	Dessine des boîtes englobantes autour des objets détectés. Essentiel pour l'identification visuelle et la localisation des objets dans les images ou les trames vidéo.
+line_width	int or None	None	Spécifie la largeur de ligne des boîtes englobantes. Si None, la largeur de ligne est automatiquement ajustée en fonction de la taille de l'image. Offre une personnalisation visuelle pour plus de clarté.
+Guide de prédiction
+
+Paramètres de validation
+Les paramètres de validation pour les modèles YOLO impliquent des hyperparamètres et des configurations pour évaluer les performances sur un jeu de données de validation. Ces paramètres influencent les performances, la vitesse et la précision. Les paramètres courants incluent la taille du batch, la fréquence de validation et les mesures de performance. La taille et la composition du jeu de données de validation, ainsi que la tâche spécifique, affectent également le processus.
+
+Argument	Type	Défaut	Description
+data	str	None	Spécifie le chemin vers le fichier de configuration du jeu de données (par ex., coco8.yaml). Ce fichier doit inclure le chemin vers les données de validation.
+imgsz	int	640	Définit la taille des images d'entrée. Toutes les images sont redimensionnées à cette dimension avant le traitement. Des tailles plus grandes peuvent améliorer la précision pour les petits objets mais augmentent le temps de calcul.
+batch	int	16	Définit le nombre d'images par batch. Des valeurs plus élevées utilisent la mémoire GPU plus efficacement mais nécessitent plus de VRAM. Ajuste en fonction des ressources matérielles disponibles.
+save_json	bool	False	Si True, enregistre les résultats dans un fichier JSON pour une analyse plus poussée, une intégration avec d'autres outils ou une soumission à des serveurs d'évaluation comme COCO.
+conf	float	0.001	Définit le seuil de confiance minimal pour les détections. Des valeurs plus faibles augmentent le rappel mais peuvent introduire plus de faux positifs. Utilisé pendant la validation pour calculer les courbes précision-rappel. Par défaut à 0.01 pour la validation OBB afin de réduire l'utilisation de la mémoire.
+iou	float	0.7	Définit le seuil d'Intersection sur Union pour la Suppression Non-Maximale. Contrôle l'élimination des détections en double.
+max_det	int	300	Limite le nombre maximal de détections par image. Utile dans les scènes denses pour éviter des détections excessives et gérer les ressources informatiques.
+half	bool	False	Active le calcul en demi-précision (FP16), réduisant l'utilisation de la mémoire et augmentant potentiellement la vitesse avec un impact minimal sur la précision.
+device	str	None	Spécifie le périphérique pour la validation (cpu, cuda:0, npu, npu:0, etc.). Lorsque None, sélectionne automatiquement le meilleur périphérique disponible. Plusieurs périphériques CUDA peuvent être spécifiés avec une séparation par virgule.
+dnn	bool	False	Si True, utilise le module DNN d'OpenCV pour l'inférence de modèle ONNX, offrant une alternative aux méthodes d'inférence PyTorch.
+plots	bool	True	Lorsqu'il est défini sur True, génère et enregistre des graphiques des prédictions par rapport à la réalité terrain, des matrices de confusion et des courbes PR pour l'évaluation visuelle des performances du modèle.
+classes	list[int]	None	Spécifie une liste d'ID de classe à évaluer. Utile pour filtrer et se concentrer uniquement sur certaines classes pendant l'évaluation.
+rect	bool	True	Si True, utilise l'inférence rectangulaire pour le traitement par lots, réduisant le remplissage et augmentant potentiellement la vitesse et l'efficacité en traitant les images dans leur rapport hauteur/largeur d'origine.
+split	str	'val'	Détermine la division du jeu de données à utiliser pour la validation (val, test ou train). Permet une flexibilité dans le choix du segment de données pour l'évaluation des performances.
+project	str	None	Nom du répertoire du projet où les sorties de validation sont enregistrées. Aide à organiser les résultats de différentes expériences ou modèles.
+name	str	None	Nom de l'exécution de validation. Utilisé pour créer un sous-répertoire dans le dossier du projet, où les journaux et les sorties de validation sont stockés.
+verbose	bool	True	Si True, affiche des informations détaillées pendant le processus de validation, y compris les mesures par classe, la progression du batch et des informations de débogage supplémentaires.
+save_txt	bool	False	Si True, enregistre les résultats de détection dans des fichiers texte, avec un fichier par image, utile pour une analyse plus approfondie, un post-traitement personnalisé ou une intégration avec d'autres systèmes.
+save_conf	bool	False	Si True, inclut les valeurs de confiance dans les fichiers texte enregistrés lorsque save_txt est activé, fournissant une sortie plus détaillée pour l'analyse et le filtrage.
+workers	int	8	Nombre de threads de travail pour le chargement des données. Des valeurs plus élevées peuvent accélérer le prétraitement des données mais peuvent augmenter l'utilisation du CPU. Définir sur 0 utilise le thread principal, ce qui peut être plus stable dans certains environnements.
+augment	bool	False	Active l'augmentation au moment du test (TTA) pendant la validation, améliorant potentiellement la précision de la détection au prix de la vitesse d'inférence en effectuant l'inférence sur des versions transformées de l'entrée.
+agnostic_nms	bool	False	Active la Suppression Non-Maximale agnostique aux classes, qui fusionne les boîtes qui se chevauchent indépendamment de leur classe prédite. Utile pour les applications centrées sur les instances. Pour les modèles de bout en bout (YOLO26, YOLOv10), cela empêche uniquement la même détection d'apparaître avec plusieurs étiquettes de classe (doublons IoU=1.0) et n'effectue pas de suppression basée sur le seuil d'IoU entre des boîtes distinctes.
+single_cls	bool	False	Traite toutes les classes comme une seule classe pendant la validation. Utile pour évaluer les performances du modèle sur des tâches de détection binaire ou lorsque les distinctions de classe ne sont pas importantes.
+visualize	bool	False	Visualise les vérités terrain, les vrais positifs, les faux positifs et les faux négatifs pour chaque image. Utile pour le débogage et l'interprétation du modèle.
+show_labels	bool	True	Affiche les étiquettes de classe dans les visualisations de validation lorsque visualize=True. Définit sur False pour une vue plus claire des correspondances et des erreurs.
+show_conf	bool	True	Affiche les scores de confiance dans les visualisations de validation lorsque visualize=True. Définit sur False pour une vue plus claire des correspondances et des erreurs.
+compile	bool ou str	False	Active la compilation de graphe PyTorch 2.x torch.compile avec backend='inductor'. Accepte True → "default", False → désactive, ou un mode chaîne tel que "default", "reduce-overhead", "max-autotune-no-cudagraphs". Revient au mode eager avec un avertissement si non pris en charge.
+end2end	bool	None	Outrepasse le mode de bout en bout dans les modèles YOLO prenant en charge l'inférence sans NMS (YOLO26, YOLOv10). Le définir sur False te permet d'exécuter la validation en utilisant le pipeline NMS traditionnel, te permettant en outre d'utiliser l'argument iou.
+Un réglage et une expérimentation minutieux sont cruciaux pour garantir des performances optimales et pour détecter et prévenir le surapprentissage.
+
+Guide de validation
+
+Paramètres d'exportation
+Les paramètres d'exportation pour les modèles YOLO incluent des configurations pour enregistrer ou exporter le modèle pour une utilisation dans différents environnements. Ces paramètres impactent les performances, la taille et la compatibilité. Les paramètres clés incluent le format de fichier exporté (par ex., ONNX, TensorFlow SavedModel), le périphérique cible (par ex., CPU, GPU) et des fonctionnalités comme les masques. La tâche du modèle et les contraintes de l'environnement de destination affectent également le processus d'exportation.
+
+Argument	Type	Défaut	Description
+format	str	'torchscript'	Format cible pour le modèle exporté, tel que 'onnx', 'torchscript', 'engine' (TensorRT), ou autres. Chaque format permet la compatibilité avec différents environnements de déploiement.
+imgsz	int ou tuple	640	Taille d'image souhaitée pour l'entrée du modèle. Peut être un entier pour des images carrées (par ex., 640 pour 640×640) ou un tuple (height, width) pour des dimensions spécifiques.
+keras	bool	False	Active l'exportation au format Keras pour le SavedModel de TensorFlow, offrant une compatibilité avec le service et les API TensorFlow.
+optimize	bool	False	Applique une optimisation pour les appareils mobiles lors de l'exportation vers TorchScript, réduisant potentiellement la taille du modèle et améliorant les performances d'inférence. Non compatible avec le format NCNN ou les périphériques CUDA. Pour DEEPX, active une optimisation de compilateur plus élevée qui réduit la latence d'inférence et augmente le temps de compilation.
+half	bool	False	Active la quantification FP16 (demi-précision), ce qui réduit la taille du modèle et accélère potentiellement l'inférence sur le matériel compatible. Incompatible avec la quantification INT8 ou les exportations CPU uniquement. Disponible uniquement pour certains formats, par ex. ONNX (voir ci-dessous).
+int8	bool	False	Active la quantification INT8, ce qui compresse davantage le modèle et accélère l'inférence avec une perte de précision minimale, principalement pour les appareils edge. Lorsqu'il est utilisé avec TensorRT, effectue une quantification post-entraînement (PTQ).
+dynamic	bool	False	Autorise des tailles d'entrée dynamiques pour les exportations TorchScript, ONNX, OpenVINO, TensorRT et CoreML, améliorant ainsi la flexibilité pour gérer des dimensions d'image variables. Défini automatiquement sur True lors de l'utilisation de TensorRT avec INT8.
+simplify	bool	True	Simplifie le graphe du modèle pour les exportations ONNX avec onnxslim, ce qui peut améliorer les performances et la compatibilité avec les moteurs d'inférence.
+opset	int	None	Spécifie la version de l'opset ONNX pour la compatibilité avec différents analyseurs et runtimes ONNX. S'il n'est pas défini, utilise la dernière version prise en charge.
+workspace	float ou None	None	Définit la taille maximale de l'espace de travail en GiB pour les optimisations TensorRT, équilibrant l'utilisation de la mémoire et les performances. Utilise None pour une allocation automatique par TensorRT jusqu'au maximum de l'appareil.
+nms	bool	False	Ajoute la suppression non maximale (NMS) au modèle exporté lorsqu'elle est prise en charge (voir Formats d'exportation), améliorant l'efficacité du post-traitement de détection. Non disponible pour les modèles end2end.
+batch	int	1	Spécifie la taille d'inférence par lot du modèle exporté ou le nombre maximal d'images que le modèle exporté traitera simultanément en mode predict. Pour les exportations Edge TPU, cela est automatiquement défini sur 1.
+device	str	None	Spécifie l'appareil pour l'exportation : GPU (device=0), CPU (device=cpu), MPS pour Apple silicon (device=mps), Huawei Ascend NPU (device=npu ou device=npu:0), ou DLA pour NVIDIA Jetson (device=dla:0 ou device=dla:1). Les exportations TensorRT utilisent automatiquement le GPU.
+data	str	'coco8.yaml'	Chemin d'accès au fichier de configuration du dataset, essentiel pour la calibration de la quantification INT8. S'il n'est pas spécifié avec INT8 activé, coco8.yaml sera utilisé par défaut pour la calibration.
+fraction	float	1.0	Spécifie la fraction du dataset à utiliser pour la calibration de la quantification INT8. Permet de calibrer sur un sous-ensemble du dataset complet, utile pour les expériences ou lorsque les ressources sont limitées. S'il n'est pas spécifié avec INT8 activé, le dataset complet sera utilisé.
+end2end	bool	None	Remplace le mode end-to-end dans les modèles YOLO qui prennent en charge l'inférence sans NMS (YOLO26, YOLOv10). Le définir sur False te permet d'exporter ces modèles pour qu'ils soient compatibles avec le pipeline de post-traitement traditionnel basé sur NMS. Voir le guide de détection End-to-End pour plus de détails.
+Une configuration réfléchie garantit que le modèle exporté est optimisé pour son cas d'utilisation et fonctionne efficacement dans l'environnement cible.
+
+Guide d'exportation
+
+Paramètres des solutions
+Les paramètres de configuration des Ultralytics Solutions offrent une flexibilité pour personnaliser les modèles pour des tâches telles que le comptage d'objets, la création de cartes thermiques, le suivi d'entraînement, l'analyse de données, le suivi de zone, la gestion de file d'attente et le comptage par région. Ces options permettent des ajustements faciles pour des résultats précis et utiles adaptés à tes besoins spécifiques.
+
+Argument	Type	Défaut	Description
+model	str	None	Chemin d'accès à un fichier de modèle Ultralytics YOLO.
+region	list	'[(20, 400), (1260, 400)]'	Liste de points définissant la zone de comptage.
+show_in	bool	True	Indicateur pour contrôler si les entrées doivent être affichées sur le flux vidéo.
+show_out	bool	True	Indicateur pour contrôler si les sorties doivent être affichées sur le flux vidéo.
+analytics_type	str	'line'	Type de graphique, c'est-à-dire line, bar, area ou pie.
+colormap	int	cv2.COLORMAP_DEEPGREEN	Palette de couleurs à utiliser pour la carte thermique.
+json_file	str	None	Chemin d'accès au fichier JSON qui contient toutes les données de coordonnées de stationnement.
+up_angle	float	145.0	Seuil d'angle pour la pose 'up'.
+kpts	list[int]	'[6, 8, 10]'	Liste de trois indices de points clés utilisés pour surveiller les entraînements. Ces points clés correspondent aux articulations ou aux parties du corps, telles que les épaules, les coudes et les poignets, pour des exercices comme les pompes, les tractions, les squats et les abdos.
+down_angle	int	90	Seuil d'angle pour la pose 'down'.
+blur_ratio	float	0.5	Ajuste le pourcentage d'intensité du flou, avec des valeurs dans la plage 0.1 - 1.0.
+crop_dir	str	'cropped-detections'	Nom du répertoire pour stocker les détections recadrées.
+records	int	5	Nombre total de détections pour déclencher un e-mail avec le système d'alarme de sécurité.
+vision_point	tuple[int, int]	(20, 20)	Le point où la vision suivra les objets et dessinera des chemins à l'aide de la solution VisionEye.
+source	str	None	Chemin d'accès à la source d'entrée (vidéo, RTSP, etc.). Utilisable uniquement avec l'interface de ligne de commande (CLI) des Solutions.
+figsize	tuple[int, int]	(12.8, 7.2)	Taille de la figure pour les graphiques analytiques tels que les cartes thermiques ou les graphiques.
+fps	float	30.0	Images par seconde utilisées pour les calculs de vitesse.
+max_hist	int	5	Points historiques maximaux à suivre par objet pour les calculs de vitesse/direction.
+meter_per_pixel	float	0.05	Facteur d'échelle utilisé pour convertir la distance en pixels en unités réelles.
+max_speed	int	120	Limite de vitesse maximale dans les superpositions visuelles (utilisée dans les alertes).
+data	str	'images'	Chemin d'accès au répertoire d'images utilisé pour la recherche de similarité.
+imgsz	int	640	Taille de l'image d'entrée pour l'inférence du modèle.
+Guide des solutions
+
+Paramètres d'augmentation
+Les techniques d'augmentation de données sont essentielles pour améliorer la robustesse et les performances du modèle YOLO en introduisant de la variabilité dans les données d'entraînement, aidant le modèle à mieux se généraliser aux données inconnues. Le tableau suivant décrit l'objectif et l'effet de chaque argument d'augmentation :
+
+Argument	Type	Défaut	Tâches prises en charge	Plage	Description
+hsv_h	float	0.015	detect, segment, pose, obb, classify	0.0 - 1.0	Ajuste la teinte de l'image par une fraction de la roue chromatique, introduisant une variabilité des couleurs. Aide le modèle à se généraliser dans différentes conditions d'éclairage.
+hsv_s	float	0.7	detect, segment, pose, obb, classify	0.0 - 1.0	Modifie la saturation de l'image par une fraction, affectant l'intensité des couleurs. Utile pour simuler différentes conditions environnementales.
+hsv_v	float	0.4	detect, segment, pose, obb, classify	0.0 - 1.0	Modifie la valeur (luminosité) de l'image par une fraction, aidant le modèle à bien fonctionner dans diverses conditions d'éclairage.
+degrees	float	0	detect, segment, pose, obb	0.0 - 180	Fait pivoter l'image aléatoirement dans la plage de degrés spécifiée, améliorant la capacité du modèle à reconnaître des objets à diverses orientations.
+translate	float	0.1	detect, segment, pose, obb	0.0 - 1.0	Traduit l'image horizontalement et verticalement par une fraction de la taille de l'image, ce qui aide à apprendre à détecter les objets partiellement visibles.
+scale	float	0.5	detect, segment, pose, obb, classify	0 - 1	Redimensionne l'image par un facteur de gain, simulant des objets à différentes distances de la caméra.
+shear	float	0	detect, segment, pose, obb	-180 - +180	Incline l'image d'un degré spécifié, imitant l'effet d'objets vus sous différents angles.
+perspective	float	0	detect, segment, pose, obb	0.0 - 0.001	Applique une transformation de perspective aléatoire à l'image, améliorant la capacité du modèle à comprendre les objets dans l'espace 3D.
+flipud	float	0	detect, segment, pose, obb, classify	0.0 - 1.0	Retourne l'image de haut en bas avec la probabilité spécifiée, augmentant la variabilité des données sans affecter les caractéristiques de l'objet.
+fliplr	float	0.5	detect, segment, pose, obb, classify	0.0 - 1.0	Retourne l'image de gauche à droite avec la probabilité spécifiée, utile pour apprendre des objets symétriques et augmenter la diversité du jeu de données.
+bgr	float	0	detect, segment, pose, obb	0.0 - 1.0	Inverse les canaux de l'image de RGB à BGR avec la probabilité spécifiée, utile pour accroître la robustesse face à un ordre de canaux incorrect.
+mosaic	float	1	detect, segment, pose, obb	0.0 - 1.0	Combine quatre images d'entraînement en une seule, simulant différentes compositions de scènes et interactions d'objets. Très efficace pour la compréhension de scènes complexes.
+mixup	float	0	detect, segment, pose, obb	0.0 - 1.0	Mélange deux images et leurs étiquettes, créant une image composite. Améliore la capacité du modèle à généraliser en introduisant du bruit dans les étiquettes et de la variabilité visuelle.
+cutmix	float	0	detect, segment, pose, obb	0.0 - 1.0	Combine des parties de deux images, créant un mélange partiel tout en conservant des zones distinctes. Améliore la robustesse du modèle en créant des scénarios d'occlusion.
+copy_paste	float	0	segment	0.0 - 1.0	Copie et colle des objets à travers les images pour augmenter le nombre d'instances d'objets.
+copy_paste_mode	str	flip	segment	-	Spécifie la stratégie copy-paste à utiliser. Les options incluent 'flip' et 'mixup'.
+auto_augment	str	randaugment	classify	-	Applique une politique d'augmentation prédéfinie ('randaugment', 'autoaugment' ou 'augmix') pour améliorer les performances du modèle grâce à la diversité visuelle.
+erasing	float	0.4	classify	0.0 - 1.0	Efface aléatoirement des zones de l'image pendant l'entraînement pour encourager le modèle à se concentrer sur des caractéristiques moins évidentes.
+augmentations	list	``	detect, segment, pose, obb	-	Transformations Albumentations personnalisées pour une augmentation de données avancée (API Python uniquement). Accepte une liste d'objets de transformation pour des besoins d'augmentation spécialisés.
+Ajuste ces paramètres pour répondre aux exigences de ton jeu de données et de ta tâche. Expérimenter avec différentes valeurs peut aider à trouver la stratégie d'augmentation optimale pour obtenir les meilleures performances du modèle.
+
+Guide d'augmentation
+
+Paramètres de journalisation, de points de contrôle et de traçage
+La journalisation, les points de contrôle, le traçage et la gestion des fichiers sont importants lors de l'entraînement d'un modèle YOLO :
+
+Journalisation (Logging) : Suis la progression du modèle et diagnostique les problèmes en utilisant des bibliothèques comme TensorBoard ou en écrivant dans un fichier.
+Points de contrôle (Checkpoints) : Enregistre le modèle à intervalles réguliers pour reprendre l'entraînement ou expérimenter avec différentes configurations.
+Traçage (Plotting) : Visualise les performances et la progression de l'entraînement en utilisant des bibliothèques comme Matplotlib ou TensorBoard.
+Gestion de fichiers : Organise les fichiers générés pendant l'entraînement, tels que les points de contrôle, les fichiers journaux et les tracés, pour un accès et une analyse faciles.
+Une gestion efficace de ces aspects aide à suivre la progression et facilite le débogage et l'optimisation.
+
+Argument	Défaut	Description
+project	'runs'	Spécifie le répertoire racine pour enregistrer les exécutions d'entraînement. Chaque exécution est enregistrée dans un sous-répertoire séparé.
+name	'exp'	Définit le nom de l'expérience. Si non spécifié, YOLO incrémente ce nom pour chaque exécution (par ex. exp, exp-2) pour éviter l'écrasement.
+exist_ok	False	Détermine s'il faut écraser un répertoire d'expérience existant. True permet l'écrasement ; False l'empêche.
+plots	True	Contrôle la génération et l'enregistrement des tracés d'entraînement et de validation. Règle sur True pour créer des tracés tels que les courbes de perte, les courbes precision-recall et les prédictions d'échantillons pour un suivi visuel des performances.
+save	True	Active l'enregistrement des points de contrôle d'entraînement et des poids finaux du modèle. Règle sur True pour enregistrer périodiquement les états du modèle, permettant la reprise de l'entraînement ou le déploiement du modèle.
+Fichier de configuration personnalisé
+Charge un fichier YAML enregistré pour réutiliser un ensemble complet d'arguments sans les passer en ligne de commande. L'argument cfg remplace les valeurs de default.yaml, tandis que les arguments supplémentaires passés en parallèle conservent la priorité.
+
+Argument	Défaut	Description
+cfg	None	Chemin vers un fichier YAML dont les valeurs remplacent les entrées de default.yaml. Voir Remplacer le fichier de configuration par défaut pour un exemple concret avec l'interface CLI.
+FAQ
+Comment améliorer les performances de mon modèle YOLO pendant l'entraînement ?
+Améliore les performances en ajustant les hyperparamètres tels que la taille de lot, le taux d'apprentissage, le momentum et la décroissance du poids. Ajuste les paramètres d'augmentation de données, sélectionne l'optimiseur approprié et utilise des techniques comme l'arrêt précoce (early stopping) ou la précision mixte. Pour plus de détails, consulte le Guide d'entraînement.
+
+Quels sont les hyperparamètres clés pour la précision du modèle YOLO ?
+Les hyperparamètres clés affectant la précision incluent :
+
+Taille de lot (batch) : Des tailles plus grandes peuvent stabiliser l'entraînement mais nécessitent plus de mémoire.
+Taux d'apprentissage (lr0) : Des taux plus petits offrent des ajustements précis mais une convergence plus lente.
+Momentum (momentum) : Accélère les vecteurs de gradient, atténuant les oscillations.
+Taille de l'image (imgsz) : Des tailles plus grandes améliorent la précision mais augmentent la charge de calcul.
+Ajuste ces paramètres en fonction de ton jeu de données et de ton matériel. Apprends-en plus dans Paramètres d'entraînement.
+
+Comment définir le taux d'apprentissage pour l'entraînement d'un modèle YOLO ?
+Le taux d'apprentissage (lr0) est crucial ; commence avec 0.01 pour SGD ou 0.001 pour l'optimiseur Adam. Surveille les métriques et ajuste selon les besoins. Utilise des planificateurs de taux d'apprentissage cosinus (cos_lr) ou un échauffement (warmup_epochs, warmup_momentum). Les détails se trouvent dans le Guide d'entraînement.
+
+Quels sont les paramètres d'inférence par défaut pour les modèles YOLO ?
+Les paramètres par défaut incluent :
+
+Seuil de confiance (conf=0.25) : Confiance minimale pour les détections.
+Seuil IoU (iou=0.7) : Pour la Non-Maximum Suppression (NMS).
+Taille de l'image (imgsz=640) : Redimensionne les images d'entrée.
+Appareil (device=None) : Sélectionne CPU, GPU, Apple MPS ou Huawei Ascend NPU (npu).
+Pour une vue d'ensemble complète, consulte Paramètres de prédiction et le Guide de prédiction.
+
+Pourquoi utiliser l'entraînement en précision mixte avec les modèles YOLO ?
+L'entraînement en précision mixte (amp=True) réduit l'utilisation de la mémoire et accélère l'entraînement en utilisant FP16 et FP32. C'est bénéfique pour les GPU modernes, permettant des modèles plus grands et des calculs plus rapides sans perte significative de précision. Apprends-en plus dans le Guide d'entraînement.
+
+

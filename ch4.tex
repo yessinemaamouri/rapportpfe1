@@ -4,6 +4,11 @@
 
 \chapter{Spécification des Besoins et Architecture}
 \label{chap:specification-architecture}
+\vspace{1em}
+\noindent\textbf{\large Sommaire}
+\vspace{0.5em}
+\localtableofcontents
+\clearpage
 
 
 %=============================================================
@@ -14,79 +19,91 @@
 \subsection{Identification des acteurs}
 \label{subsec:identification-acteurs}
 
-Le système eKYC développé dans ce projet met en interaction plusieurs acteurs aux responsabilités bien distinctes. Le Tableau~\ref{tab:acteurs} présente chaque acteur, sa nature et son rôle au sein de la plateforme.
+Le système eKYC développé dans ce projet met en interaction plusieurs acteurs aux responsabilités bien distinctes. Le Tableau~\ref{tab:acteurs_pfe} présente chaque acteur, sa nature et son rôle au sein de la plateforme.
 
-\begin{table}[H]
-    \centering
-    \label{tab:acteurs}
-    \renewcommand{\arraystretch}{1.5} % Donne de l'air aux lignes
-    \rowcolors{2}{gray!5}{white} % Alterne les couleurs de ligne (nécessite \usepackage[table]{xcolor})
-    \begin{tabular}{l p{10cm}}
-        \rowcolor{bleu_clair!20} % En-tête coloré
-        \textbf{Acteur} & \textbf{Rôle et Responsabilités} \\
-        \midrule
-        \textbf{Client} & Particulier souhaitant ouvrir un compte ou demander un service bancaire. Interagit exclusivement avec l'interface client, accessible sur mobile et navigateur web. \\
-        \textbf{Agent KYC} &Agent opérationnel de la BTE chargé d'examiner les dossiers traités par le système et de prendre la décision finale de validation ou de rejet via l'interface d'administration. \\
-        \textbf{Administrateur} & Supervise la plateforme, gère les accès utilisateurs et consulte les journaux d'audit. \\
-        \textbf{Agent IA} & Profil technique chargé de surveiller les performances des modèles d'intelligence artificielle. N'accède à aucune donnée personnelle client. \\
-        \textbf{Système IA} & Acteur secondaire qui analyse les documents soumis, extrait les informations et calcule un score de risque, sans prendre aucune décision finale. \\
-        \bottomrule
-    \end{tabular}
-    \vspace{0.3cm} % Petit espace entre le tableau et la légende
-    \caption{Acteurs et périmètres d'action du système eKYC}
-    \label{tab:acteurs_pfe}
-\end{table}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{|>{\bfseries}p{3.8cm}|p{10.2cm}|}
+  \hline
+  \rowcolor{bleu_clair!20}
+  \textbf{Acteur} & \textbf{Rôle et responsabilités} \\
+  \hline
+  \endfirsthead
+  \hline
+  \rowcolor{bleu_clair!20}
+  \textbf{Acteur} & \textbf{Rôle et responsabilités} \\
+  \hline
+  \endhead
+    Client & 
+      Particulier souhaitant ouvrir un compte bancaire. Interagit exclusivement avec l'interface client, accessible sur mobile et navigateur web. Soumet ses documents d'identité, peut corriger les données extraites et réalise la capture biométrique. \\
+    \hline
+    Analyste KYC & 
+      Agent opérationnel de la BTE chargé d'examiner les dossiers traités par le système IA. Consulte les données extraites, les résultats du filtrage AML (\textit{Anti-Money Laundering} / Lutte contre le blanchiment d'argent) et le score de risque, puis prend la décision finale de validation, de rejet ou de demande de complément. \\
+    \hline
+    Administrateur & 
+      Profil à droits étendus qui possède les mêmes fonctionnalités que l'analyste KYC et le responsable qualité du système IA. Consulte le journal d'audit dans son intégralité. \\
+    \hline
+    Responsable qualité IA & 
+      Profil technique chargé de surveiller en continu les performances des modèles d'intelligence artificielle. Consulte les indicateurs de qualité par type de document et par modèle. N'accède à aucune donnée personnelle du client. \\
+    \hline
+  
+  \caption{Acteurs et périmètres d'action du système eKYC}
+  \label{tab:acteurs_pfe}
+\end{longtable}
 
 \subsection{Besoins fonctionnels}
 \label{subsec:besoins-fonctionnels}
 
-Les exigences fonctionnelles définissent les fonctionnalités clés que le système doit fournir pour satisfaire les besoins des utilisateurs. Elles sont organisées ci-dessous par groupe de cas d'utilisation.
+Les exigences fonctionnelles définissent les fonctionnalités clés que le système doit fournir pour satisfaire les besoins des utilisateurs.
 
-\subsubsection*{S'authentifier \textnormal{\small(tous les utilisateurs)}}
+\subsubsection{S'inscrire}
 \begin{itemize}
   \item Créer un compte sur l'application (inscription classique).
-  \item Se connecter à la plateforme avec ses identifiants.
-  \item Se déconnecter de manière sécurisée.
+\end{itemize}
+\subsubsection{S'authentifier}
+\begin{itemize} 
+  \item Se connecter à la plateforme avec ses identifiants. 
 \end{itemize}
 
-\subsubsection*{Soumettre une demande d'ouverture de compte bancaire --- parcours KYC \textnormal{\small(client connecté)}}
+\subsubsection{Soumettre et suivre un dossier KYC}
 \begin{itemize}
   \item Initier un dossier KYC et choisir le type de document à soumettre (CIN ou passeport).
-  \item Capturer ou téléverser son document, guidé par un retour visuel en temps réel.
-  \item Consulter et corriger les informations extraites automatiquement avant soumission finale.
-  \item Effectuer une vérification biométrique par selfie.
-  \item Suivre l'état de son dossier et recevoir une notification à chaque changement de statut.
+  \item Capturer son document guidé par un retour visuel en temps réel~; le système détecte automatiquement la présence, le type et la qualité du document via YOLOv8n avant de déclencher la capture.
+  \item Consulter et peut corriger les informations extraites automatiquement par le pipeline OCR (YOLOv11m + PaddleOCR) avant soumission finale.
+  \item Capturer un selfie biométrique avec un retour visuel en temps réel pour garantir un cadrage conforme au format requis.
+  \item Suivre l'état de son dossier .
 \end{itemize}
 
-\subsubsection*{Demander des services bancaires \textnormal{\small(compte validé uniquement)}}
+\subsubsection{Demander des services bancaires}
+
+\noindent Une fois son dossier KYC approuvé et son compte bancaire courant ouvert, le client peut :
+
 \begin{itemize}
   \item Soumettre une demande de carte bancaire.
   \item Soumettre une demande de chéquier.
-  \item Soumettre une demande de crédit avec les documents justificatifs requis (attestation de travail, fiche de paie).
+  \item Soumettre une demande de crédit avec le document justificatif requis (attestation de salaire).
   \item Suivre l'état de ses demandes en cours.
 \end{itemize}
 
-\subsubsection*{Traiter les dossiers KYC \textnormal{\small(Agent KYC et Administrateur)}}
+\subsubsection{Traiter les dossiers KYC}
 \begin{itemize}
   \item Consulter la file de traitement des dossiers en attente.
-  \item Accéder au détail d'un dossier : données extraites, score de risque, résultat de la comparaison biométrique.
+  \item Accéder au détail d'un dossier : données extraites, score de risque, résultat de la comparaison biométrique et alertes AML.
   \item Valider un dossier si les informations sont correctes et le score satisfaisant.
   \item Corriger manuellement un champ extrait erroné avant validation.
   \item Rejeter un dossier en documentant obligatoirement le motif de refus.
+  \item demander des informations complémentaires au client en précisant les pièces manquantes ou les corrections à apporter.
 \end{itemize}
 
-\subsubsection*{Administrer la plateforme \textnormal{\small(Administrateur)}}
+\subsubsection{Administrer et surveiller la plateforme}
 \begin{itemize}
   \item Consulter le registre global de tous les dossiers, tous statuts confondus.
   \item Consulter le journal d'audit immuable de toutes les actions effectuées.
+  \item Consulter les indicateurs de performance des modèles IA .
+ 
 \end{itemize}
 
-\subsubsection*{Surveiller les modèles IA \textnormal{\small(Agent IA et Administrateur)}}
-\begin{itemize}
-  \item Consulter les indicateurs de performance des modèles (taux de confiance, taux d'erreur).
-  \item Détecter les dégradations de performance et recevoir des alertes.
-  \item Suivre les statistiques de classification et d'extraction par lot de dossiers.
-\end{itemize}
+\bigskip
+\noindent L'analyse des besoins révèle que le système eKYC combine deux natures de travail complémentaires : un pipeline IA qui exige une phase de recherche, d'entraînement et de validation avant tout déploiement, et une plateforme applicative dont la réalisation dépend directement des résultats de ce pipeline. Cette interdépendance justifie l'adoption d'un \textbf{modèle de développement incrémental en deux incréments} : le premier consacré à la conception et à la validation du module IA, le second à la réalisation de la plateforme.
 
 \subsection{Besoins non fonctionnels}
 \label{subsec:besoins-non-fonctionnels}
@@ -96,19 +113,26 @@ Les besoins non fonctionnels définissent les caractéristiques essentielles que
 \begin{description}[style=nextline, leftmargin=0pt, labelwidth=!, font=\bfseries\color{bleu_clair}]
 
   \item[Sécurité]
-  La plateforme garantit la protection des données personnelles et documentaires des clients. Les communications sont chiffrées en transit, les données sont chiffrées au repos, et l'accès à chaque fonctionnalité est strictement contrôlé par rôle. La solution est conforme à la Loi n°~2015-26, à la Circulaire BCT n°~2018-09 et à la Loi INPDP n°~2004-63 (\textit{Privacy by Design}). L'architecture \textit{on-premise} garantit qu'aucune donnée personnelle ne quitte l'infrastructure de la BTE.
+  Bien que le cadre de ce projet académique n'impose pas de contraintes de sécurité formelles, nous avons fait le choix d'intégrer des mécanismes de sécurité qui se rapprochent au maximum des standards appliqués en environnement bancaire réel. La plateforme manipule des données d'identité sensibles comme les numéros de CIN, les photos de documents et les selfies, ce qui nous a guidés vers l'adoption de bonnes pratiques dès la conception. L'authentification repose sur des tokens JWT dont la durée de validité est limitée à 60 minutes, les mots de passe sont stockés sous forme hachée avec l'algorithme bcrypt, et les tokens sont révoqués immédiatement à la déconnexion. Les agents et administrateurs disposent d'un circuit d'authentification distinct des clients. Une double authentification est mise en place pour les actions critiques : toute décision sur un dossier nécessite une confirmation du mot de passe avant d'être enregistrée. Toutes les actions sensibles comme la connexion, la décision sur un dossier et la modification de paramètres sont tracées dans un journal d'audit horodaté et non modifiable.
+  \item[Confidentialité des données]
+  Dans le cadre de ce projet, l'ensemble de la plateforme est déployé en environnement local, simulant les conditions réelles d'un système bancaire où toutes les données restent confinées à l'infrastructure interne de la banque et ne transitent jamais vers l'extérieur. Cette approche reproduit le principe de souveraineté des données qu'une banque applique en production : les photos de documents, les selfies et les données d'identité des clients ne quittent jamais le périmètre du système. Les images sont stockées sur un serveur de fichiers local, et chaque composant y accède directement via une adresse interne sans exposition vers un réseau externe. Les résultats OCR contenant les données d'identité sont conservés temporairement côté client, puis transmis en une seule requête au backend lors de la soumission finale du dossier.
+  \item[Conformité réglementaire]
+  La plateforme eKYC a été conçue en conformité avec la \textbf{circulaire aux banques n°2025-06 du 28 février 2025} de la Banque Centrale de Tunisie, relative aux règles minimales régissant l'enrôlement électronique des clients~\cite{bct2025circ06}. Conformément aux exigences de cette circulaire, la plateforme met en oeuvre un processus d'identification électronique complet : collecte et vérification des documents d'identité du client, confirmation de la présence réelle du client par reconnaissance faciale (Article 6), filtrage et profilage du risque de chaque client (Article 7), et génération automatique d'une fiche d'identification KYC à l'issue du parcours (Article 8). La plateforme respecte également l'exigence de vigilance proportionnelle au profil de risque (Article 3) en attribuant à chaque dossier un niveau de risque (faible, moyen, élevé ou critique) qui détermine la décision de validation ou de revue manuelle par un agent.
 
   \item[Performance]
-  Le système assure un traitement rapide et efficace des dossiers. Le pipeline IA produit un résultat complet en moins de dix secondes par document. L'interface client est fluide et réactive sur réseau mobile, et la disponibilité de la plateforme est garantie à 99,5\,\% en heures ouvrables.
+  Le système est conçu pour minimiser le temps de traitement perçu par le client à chaque étape du parcours KYC. Les modèles d'intelligence artificielle YOLO et PaddleOCR sont chargés en mémoire une seule fois au démarrage de chaque service et réutilisés pour toutes les requêtes suivantes, évitant ainsi tout rechargement coûteux. La détection en temps réel lors de la capture des documents s'exécute en moins de 20 ms par frame sur GPU, assurant une expérience fluide devant la caméra. Le pipeline OCR complet sur une CIN recto s'exécute en moyenne en [X] ms, en [X] ms pour le verso, et en [X] ms pour un passeport.
+
 
   \item[Maintenabilité]
   L'architecture modulaire permet de faire évoluer chaque composant indépendamment des autres. En particulier, le module IA peut être mis à jour ou remplacé sans impact sur la plateforme applicative, ce qui facilite les opérations de maintenance et les évolutions futures.
+  \item[Extensibilité]
+  La plateforme est conçue pour accueillir de nouveaux services bancaires sans restructuration de l'architecture existante. L'ajout d'un nouveau type de demande comme le crédit, la carte bancaire ou le chéquier suit le même schéma : un groupe de routes dédié dans le backend, un modèle de données indépendant et une interface client spécifique. Les services IA sont également extensibles : un nouveau type de document ou un nouveau modèle de détection peut être intégré comme un module supplémentaire sur un port dédié, sans modifier les services existants.
 
   \item[Accessibilité]
   Les interfaces sont conçues pour être intuitives et accessibles. L'interface client est disponible sur mobile et navigateur web sans installation. L'interface d'administration est ergonomique et structurée selon les rôles, permettant à chaque profil d'accéder rapidement aux fonctionnalités qui le concernent.
 
   \item[Auditabilité]
-  Chaque action effectuée sur la plateforme est tracée avec son auteur, son horodatage et son contexte. Les décisions du module IA sont enregistrées avec leur score de confiance, et les décisions humaines sont associées à l'identifiant de l'agent. Ces journaux sont disponibles pour les contrôles réglementaires de la BCT.
+  Chaque action significative réalisée sur la plateforme est enregistrée dans un journal d'audit horodaté et non modifiable. Cela inclut les connexions et déconnexions des agents, les décisions prises sur les dossiers KYC (validation, rejet, demande de complément) De plus, toutes les corrections apportées aux données OCR, qu'elles proviennent du client ou d'un agent, sont conservées dans un historique dédié, permettant de retracer l'origine de chaque donnée utilisée dans la décision finale.
 
 \end{description}
 
@@ -121,12 +145,28 @@ Les besoins non fonctionnels définissent les caractéristiques essentielles que
 \subsection{Architecture logique}
 \label{subsec:architecture-logique}
 
-% [Contenu à rédiger ultérieurement]
+ l'architecture logique de la plateforme eKYC, présentée dans la Figure~\ref{fig:ch4-archi-logique}, met en évidence en évidence les quatre couches fonctionnelles qui structurent le système ainsi que les flux de communication entre elles. On y distingue la couche présentation regroupant les interfaces utilisateur, la couche intelligence artificielle constituée des modules de capture et d'analyse, la couche backend centralisant la logique métier et l'authentification, et enfin la couche données assurant la persistance des informations.
+
+\vspace{0.6em}
+\begin{center}
+  \includegraphics[width=0.95\textwidth]{images/architectures/logique.png}
+  \captionof{figure}{Architecture logique de la plateforme eKYC}
+  \label{fig:ch4-archi-logique}
+\end{center}
+\vspace{0.6em}
 
 \subsection{Architecture physique}
 \label{subsec:architecture-physique}
 
-% [Contenu à rédiger ultérieurement]
+l'architecture physique de la plateforme eKYC, présentée dans la Figure~\ref{fig:ch4-archi-physique}, met en évidence les principaux éléments matériels et logiciels déployés ainsi que les échanges entre les postes clients, le serveur web, le serveur intelligence artificielle, le serveur backend et les serveurs de stockage. On y distingue les communications entre chaque composant : le poste client interagit avec le serveur web via HTTPS, le serveur web dialogue avec le serveur IA et le serveur backend, tandis que le serveur IA accède au stockage MinIO pour les images et le serveur backend persiste les données métier dans PostgreSQL.
+
+\vspace{0.6em}
+\begin{center}
+  \includegraphics[width=0.95\textwidth]{images/architectures/physique.png}
+  \captionof{figure}{Architecture physique de la plateforme eKYC}
+  \label{fig:ch4-archi-physique}
+\end{center}
+\vspace{0.6em}
 
 
 %=============================================================
@@ -134,7 +174,7 @@ Les besoins non fonctionnels définissent les caractéristiques essentielles que
 \label{sec:use-cases-global}
 %=============================================================
 
-Le diagramme de cas d'utilisation global (Figure~\ref{fig:uc-global}) offre une vue synthétique de l'ensemble des interactions entre les acteurs du système et la plateforme eKYC. Il met en évidence six profils d'acteurs aux périmètres fonctionnels distincts : le visiteur non inscrit, l'utilisateur authentifié engagé dans un parcours KYC, le client dont le compte est validé et qui accède aux services bancaires, l'analyste KYC chargé de statuer sur les dossiers, le responsable qualité IA qui surveille les performances des modèles, et l'administrateur qui hérite des droits des deux profils précédents tout en assurant la supervision globale de la plateforme. Les relations d'inclusion et d'extension représentées sont conformes aux normes UML et reflètent fidèlement les dépendances fonctionnelles entre les cas d'utilisation.
+Le diagramme de cas d'utilisation global illustrée par la Figure~\ref{fig:uc-global} offre une vue synthétique de l'ensemble des interactions entre les acteurs du système et la plateforme eKYC. Il met en évidence six profils d'acteurs aux périmètres fonctionnels distincts : le visiteur non inscrit, l'utilisateur authentifié engagé dans un parcours KYC, le client dont le compte est validé et qui accède aux services bancaires, l'analyste KYC chargé de statuer sur les dossiers, le responsable qualité IA qui surveille les performances des modèles, et l'administrateur qui hérite des droits des deux profils précédents tout en assurant la supervision globale de la plateforme.
 
 \begin{figure}[H]
     \centering
@@ -148,53 +188,41 @@ Le diagramme de cas d'utilisation global (Figure~\ref{fig:uc-global}) offre une 
 \label{subsec:description-uc}
 %-------------------------------------------------------------
 
-Les tableaux suivants décrivent de manière détaillée les principaux cas d'utilisation identifiés dans le diagramme global. Chaque tableau est autonome et renseigne, pour le cas d'utilisation concerné, l'acteur principal, les acteurs secondaires impliqués, l'objectif poursuivi, les préconditions requises, le scénario nominal déroulé en séquence, les postconditions résultantes ainsi que les scénarios alternatifs à envisager.
+Les tableaux suivants décrivent de manière détaillée les principaux cas d'utilisation identifiés dans le diagramme global.
+
+\renewcommand{\arraystretch}{1.5}
 
 % ────────────────────────────────────────────────
 % UC1 — S'inscrire
 % ────────────────────────────────────────────────
-\subsubsection*{UC1 --- S'inscrire}
+\subsubsection{UC1 --- S'inscrire}
 
-\renewcommand{\arraystretch}{1.4}
-\begin{longtable}{|>{\bfseries}p{3.5cm}|p{10.5cm}|}
-  \rowcolor{bleu_principal}
-  \textcolor{white}{\textbf{Champ}} & \textcolor{white}{\textbf{Description}} \\
-  \endfirsthead
-  \rowcolor{bleu_principal}
-  \textcolor{white}{\textbf{Champ}} & \textcolor{white}{\textbf{Description}} \\
-  \endhead
-  \midrule
-  Cas d'utilisation & S'inscrire \\
-  \midrule
-  \rowcolor{gris_leger}
-  Acteur principal & Visiteur (personne non encore inscrite sur la plateforme) \\
-  \midrule
-  Acteurs secondaires & Aucun \\
-  \midrule
-  \rowcolor{gris_leger}
-  Objectif & Créer un compte personnel sur la plateforme afin de pouvoir soumettre ultérieurement une demande d'ouverture de compte bancaire. \\
-  \midrule
-  Préconditions & Le visiteur n'est pas encore enregistré dans le système. Il dispose d'une adresse électronique valide. \\
-  \midrule
-  \rowcolor{gris_leger}
-  Scénario nominal &
-  \begin{enumerate}[leftmargin=1.2em, itemsep=2pt]
-    \item Le visiteur accède à la page d'inscription de la plateforme.
-    \item Il renseigne ses informations personnelles : nom, prénom, adresse électronique et mot de passe.
-    \item Il confirme son mot de passe et accepte les conditions générales d'utilisation.
-    \item Le système vérifie que l'adresse électronique n'est pas déjà associée à un compte existant.
-    \item Le système crée le compte, initialise le profil utilisateur et redirige automatiquement vers le tableau de bord.
-  \end{enumerate} \\
-  \midrule
-  Postconditions & Un compte utilisateur est créé et actif. Le visiteur accède désormais à la plateforme en tant qu'utilisateur authentifié. \\
-  \midrule
-  \rowcolor{gris_leger}
+\begin{longtable}{|>{\bfseries}p{3.8cm}|p{10.2cm}|}
+  \hline
+  Cas d'utilisation    & S'inscrire (Création de compte) \\
+  \hline
+  Acteur principal     & Visiteur \\
+  \hline
+  Objectif             & Permettre à un visiteur de créer un compte sur l'interface client afin d'accéder au parcours KYC en utilisant son nom, son adresse électronique ou son numéro de téléphone et son mot de passe. \\
+  \hline
+  Préconditions        &
+    - L'utilisateur ne possède pas encore de compte et accède à la page d'inscription. \newline
+  \hline
+  Scénario nominal     &
+    - L'utilisateur accède au formulaire d'inscription de la plateforme. \newline
+    - Il remplit le formulaire avec les informations requises : nom, adresse électronique ou numéro de téléphone et mot de passe. \newline
+    - Le système valide les informations.\newline
+    - Le système vérifie l'unicité de l'adresse électronique dans la base de données. \newline
+    - Si toutes les informations sont valides, le compte est créé et un message de confirmation de création de compte est affiché. \newline
+    - Le client est redirigé vers la page de connexion.. \\
+  \hline
+  Post-conditions      & Le compte de l'utilisateur est créé avec succès et enregistré dans la base de données. \\
+  \hline
   Scénarios alternatifs &
-  \begin{tabular}{@{}p{3.5cm}p{6.5cm}@{}}
-    \textit{Adresse déjà utilisée} & Le système affiche un message d'erreur et invite le visiteur à se connecter ou à réinitialiser son mot de passe. \\[4pt]
-    \textit{Données invalides} & Le système signale les champs incorrects (format d'adresse, mots de passe non concordants) et invite l'utilisateur à les corriger. \\
-  \end{tabular} \\
-  \bottomrule
+    Le système affiche un message d'erreur et invite l'utilisateur à corriger les informations dans les cas suivants : \newline
+    - Le format de l'adresse électronique est invalide ou le mot de passe est trop court. \newline
+    - L'adresse électronique existe déjà dans la base de données (compte déjà existant). \\
+  \hline
   \caption{UC1 --- S'inscrire}
   \label{tab:uc1}
 \end{longtable}
@@ -202,46 +230,31 @@ Les tableaux suivants décrivent de manière détaillée les principaux cas d'ut
 % ────────────────────────────────────────────────
 % UC2 — S'authentifier
 % ────────────────────────────────────────────────
-\subsubsection*{UC2 --- S'authentifier}
+\subsubsection{UC2 --- S'authentifier}
 
-\begin{longtable}{|>{\bfseries}p{3.5cm}|p{10.5cm}|}
-  \rowcolor{bleu_principal}
-  \textcolor{white}{\textbf{Champ}} & \textcolor{white}{\textbf{Description}} \\
-  \endfirsthead
-  \rowcolor{bleu_principal}
-  \textcolor{white}{\textbf{Champ}} & \textcolor{white}{\textbf{Description}} \\
-  \endhead
-  \midrule
-  Cas d'utilisation & S'authentifier \\
-  \midrule
-  \rowcolor{gris_leger}
-  Acteur principal & Tout utilisateur disposant d'un compte (client, analyste KYC, responsable qualité IA, administrateur) \\
-  \midrule
-  Acteurs secondaires & Aucun \\
-  \midrule
-  \rowcolor{gris_leger}
-  Objectif & Accéder à l'espace personnel de la plateforme en présentant des identifiants valides. \\
-  \midrule
-  Préconditions & L'utilisateur possède un compte actif sur la plateforme. \\
-  \midrule
-  \rowcolor{gris_leger}
-  Scénario nominal &
-  \begin{enumerate}[leftmargin=1.2em, itemsep=2pt]
-    \item L'utilisateur accède à la page de connexion.
-    \item Il saisit son adresse électronique et son mot de passe.
-    \item Le système vérifie les identifiants et détermine le rôle associé au compte.
-    \item L'utilisateur est redirigé vers l'interface correspondant à son profil : tableau de bord client, interface de traitement des dossiers pour l'analyste, ou console de supervision pour l'administrateur.
-  \end{enumerate} \\
-  \midrule
-  Postconditions & Une session sécurisée est ouverte. L'utilisateur accède aux fonctionnalités autorisées par son rôle. \\
-  \midrule
-  \rowcolor{gris_leger}
+\begin{longtable}{|>{\bfseries}p{3.8cm}|p{10.2cm}|}
+  \hline
+  Cas d'utilisation    & S'authentifier \\
+  \hline
+  Acteur principal     & Tout utilisateur disposant d'un compte (client, analyste KYC, responsable qualité IA, administrateur) \\
+  \hline
+  Objectif             & Accéder à l'espace personnel de la plateforme en présentant des identifiants valides. \\
+  \hline
+  Préconditions        &
+    - L'utilisateur possède un compte actif sur la plateforme. \newline
+    - L'utilisateur accède à la page de connexion. \\
+  \hline
+  Scénario nominal     &
+    - L'utilisateur saisit son adresse électronique ou son numéro de téléphone(cas du client) et son mot de passe. \newline
+    - Le système vérifie les identifiants et détermine le rôle associé au compte. \newline
+    - L'utilisateur est redirigé vers l'interface correspondant à son profil (interface client, interface admin)\\
+  \hline
+  Post-conditions      & Une session sécurisée est ouverte. L'utilisateur accède aux fonctionnalités autorisées par son rôle. \\
+  \hline
   Scénarios alternatifs &
-  \begin{tabular}{@{}p{3.5cm}p{6.5cm}@{}}
-    \textit{Identifiants incorrects} & Le système affiche un message d'erreur générique sans préciser lequel des deux champs est erroné, par mesure de sécurité. \\[4pt]
-    \textit{Compte inexistant} & L'utilisateur est invité à créer un compte ou à vérifier son adresse. \\
-  \end{tabular} \\
-  \bottomrule
+    - Identifiants incorrects : le système affiche un message d'erreur générique sans préciser lequel des deux champs est erroné, par mesure de sécurité. \newline
+    - Compte inexistant : l'utilisateur est invité à créer un compte ou à vérifier son adresse électronique. \\
+  \hline
   \caption{UC2 --- S'authentifier}
   \label{tab:uc2}
 \end{longtable}
@@ -249,55 +262,33 @@ Les tableaux suivants décrivent de manière détaillée les principaux cas d'ut
 % ────────────────────────────────────────────────
 % UC3 — Soumettre une demande KYC
 % ────────────────────────────────────────────────
-\subsubsection*{UC3 --- Soumettre une demande d'ouverture de compte bancaire}
+\subsubsection{UC3 --- Soumettre et suivre un dossier KYC}
 
-\begin{longtable}{|>{\bfseries}p{3.5cm}|p{10.5cm}|}
-  \rowcolor{bleu_principal}
-  \textcolor{white}{\textbf{Champ}} & \textcolor{white}{\textbf{Description}} \\
-  \endfirsthead
-  \rowcolor{bleu_principal}
-  \textcolor{white}{\textbf{Champ}} & \textcolor{white}{\textbf{Description}} \\
-  \endhead
-  \midrule
-  Cas d'utilisation & Soumettre une demande d'ouverture de compte bancaire (parcours KYC) \\
-  \midrule
-  \rowcolor{gris_leger}
-  Acteur principal & Utilisateur authentifié \\
-  \midrule
-  Acteurs secondaires & Système IA (détection de document, extraction OCR, comparaison biométrique) \\
-  \midrule
-  \rowcolor{gris_leger}
-  Objectif & Déposer un dossier de demande d'ouverture de compte bancaire en soumettant un document d'identité vérifié et une preuve biométrique par selfie, via un parcours guidé en quatre étapes. \\
-  \midrule
-  Préconditions & L'utilisateur est authentifié. Il ne dispose pas encore d'un dossier KYC actif (statut en attente ou approuvé). Il dispose d'un document d'identité valide (carte d'identité nationale ou passeport) et d'un accès à la caméra de son appareil. \\
-  \midrule
-  \rowcolor{gris_leger}
-  Scénario nominal &
-  \textbf{Étape 1 — Capture du document d'identité.}
-  L'utilisateur choisit le type de document qu'il souhaite soumettre : carte d'identité nationale (nécessitant deux captures, recto puis verso) ou passeport (une seule capture). La caméra s'ouvre avec un cadre guide adapté au format du document. Le système analyse en temps réel chaque image transmise par la caméra et vérifie que le document est bien positionné et de qualité suffisante. Lorsque cinq images consécutives satisfaisantes sont obtenues, la capture est confirmée automatiquement. Dès la capture validée, le système déclenche en arrière-plan l'extraction des données textuelles du document, sans interrompre la navigation de l'utilisateur.
-
-  \smallskip
-  \textbf{Étape 2 — Vérification et correction des informations extraites.}
-  L'utilisateur visualise les informations extraites automatiquement depuis son document : nom, prénom, numéro de document, date et lieu de naissance, ainsi que les données du verso pour la carte d'identité. Si un champ est inexact, l'utilisateur peut le corriger directement dans l'interface. Chaque correction est enregistrée avec la valeur initiale et la valeur corrigée, et sera transmise à l'analyste KYC pour information.
-
-  \smallskip
-  \textbf{Étape 3 — Capture du selfie et vérification biométrique.}
-  Un écran d'instructions précède la capture (conditions d'éclairage, visage découvert). La caméra s'ouvre avec un cadre ovale centré. Le système détecte le visage en temps réel et active le bouton de capture dès que le cadrage est jugé satisfaisant. Une fois le selfie validé par l'utilisateur, il est transmis au système, qui procède automatiquement à la comparaison biométrique entre le visage détecté sur le selfie et celui figurant sur le document d'identité.
-
-  \smallskip
-  \textbf{Étape 4 — Récapitulatif et soumission finale.}
-  Un écran de récapitulatif présente l'ensemble des informations collectées : document d'identité, selfie, données extraites et type de compte souhaité. L'utilisateur prend connaissance des conditions générales et certifie l'exactitude des informations fournies avant de soumettre sa demande. Une seule requête est alors transmise au serveur, qui enregistre l'intégralité du dossier en base de données avec le statut \og{}en attente\fg{}. Un numéro de référence de dossier est affiché à l'utilisateur. \\
-  \midrule
-  Postconditions & Un dossier KYC complet est créé en base de données avec le statut \og{}en attente\fg{}. L'utilisateur peut suivre l'évolution du statut de son dossier depuis son espace personnel. \\
-  \midrule
-  \rowcolor{gris_leger}
+\begin{longtable}{|>{\bfseries}p{3.8cm}|p{10.2cm}|}
+  \hline
+  Cas d'utilisation    & Soumettre et suivre un dossier KYC (parcours KYC) \\
+  \hline
+  Acteur principal     & Utilisateur authentifié \\
+  \hline
+  Objectif             & Déposer un dossier complet de demande d'ouverture de compte bancaire via un parcours guidé en quatre étapes, intégrant la capture du document d'identité, la vérification des données extraites, la capture du selfie biométrique et la soumission finale. \\
+  \hline
+  Préconditions        &
+    - L'utilisateur est authentifié sur la plateforme. \newline
+    - Il dispose d'un document d'identité valide (carte d'identité nationale ou passeport) et d'un accès à la caméra de son appareil. \\
+  \hline
+  Scénario nominal     &
+    \textbf{Étape 1 — Capture du document d'identité.} L'utilisateur choisit le type de document (carte d'identité nationale en deux captures recto/verso, ou passeport en une seule capture). La caméra s'ouvre avec un cadre guide adapté. Le système analyse chaque image en temps réel~; le bouton de capture est initialement désactivé et ne s'active que lorsque le service IA confirme que le document détecté est valide (CIN ou passeport reconnu). L'utilisateur déclenche alors manuellement la capture. L'extraction des données textuelles est déclenchée en arrière-plan. \newline\newline
+    \textbf{Étape 2 — Vérification des informations extraites.} L'utilisateur consulte les données extraites depuis son document. Il peut corriger manuellement tout champ inexact ; chaque correction est enregistrée et transmise à l'analyste KYC. \newline\newline
+    \textbf{Étape 3 — Capture du selfie .} La caméra s'ouvre avec un cadre ovale centré. Le système détecte le visage en temps réel et active la capture dès que le cadrage est satisfaisant. \newline\newline
+    \textbf{Étape 4 — Récapitulatif et soumission finale.} L'utilisateur vérifie l'ensemble des informations collectées, coche les cases de consentement et soumet sa demande. Le dossier complet est enregistré en base de données avec le statut « en attente » et un numéro de référence est communiqué à l'utilisateur. \\
+  \hline
+  Post-conditions      & Un dossier KYC complet est créé avec le statut « en attente ». L'utilisateur peut suivre l'évolution de son dossier depuis son espace personnel. \\
+  \hline
   Scénarios alternatifs &
-  \begin{tabular}{@{}p{3.5cm}p{6.5cm}@{}}
-    \textit{Document non reconnu} & Le système indique que le document n'est pas lisible et invite l'utilisateur à recommencer la capture dans de meilleures conditions d'éclairage. \\[4pt]
-    \textit{Selfie non conforme} & Si le visage n'est pas détecté correctement, l'utilisateur est invité à recommencer la capture en respectant les consignes d'éclairage et de positionnement. \\[4pt]
-    \textit{Échec de soumission} & En cas d'erreur réseau lors de la soumission finale, les données restent conservées localement et l'utilisateur peut relancer la soumission. \\
-  \end{tabular} \\
-  \bottomrule
+    - Document non reconnu : le système invite l'utilisateur à recommencer la capture dans de meilleures conditions d'éclairage. \newline
+    - Selfie non conforme : l'utilisateur est invité à recommencer la capture en respectant les consignes de positionnement. \newline
+    - Échec de soumission : les données restent conservées localement et l'utilisateur peut relancer la soumission. \\
+  \hline
   \caption{UC3 --- Soumettre une demande d'ouverture de compte bancaire}
   \label{tab:uc3}
 \end{longtable}
@@ -305,51 +296,36 @@ Les tableaux suivants décrivent de manière détaillée les principaux cas d'ut
 % ────────────────────────────────────────────────
 % UC4 — Traiter un dossier KYC
 % ────────────────────────────────────────────────
-\subsubsection*{UC4 --- Traiter un dossier KYC}
+\subsubsection{UC4 --- Traiter un dossier KYC}
 
-\begin{longtable}{|>{\bfseries}p{3.5cm}|p{10.5cm}|}
-  \rowcolor{bleu_principal}
-  \textcolor{white}{\textbf{Champ}} & \textcolor{white}{\textbf{Description}} \\
-  \endfirsthead
-  \rowcolor{bleu_principal}
-  \textcolor{white}{\textbf{Champ}} & \textcolor{white}{\textbf{Description}} \\
-  \endhead
-  \midrule
-  Cas d'utilisation & Traiter un dossier KYC \\
-  \midrule
-  \rowcolor{gris_leger}
-  Acteur principal & Analyste KYC \\
-  \midrule
-  Acteurs secondaires & Système IA (filtrage AML, vérification documentaire, score de risque), Administrateur (peut exercer les mêmes droits) \\
-  \midrule
-  \rowcolor{gris_leger}
-  Objectif & Examiner un dossier de demande d'ouverture de compte, vérifier la conformité des données et des documents soumis, et statuer sur la suite à donner à la demande. \\
-  \midrule
-  Préconditions & L'analyste est authentifié avec le rôle approprié. Au moins un dossier KYC est en attente de traitement. \\
-  \midrule
-  \rowcolor{gris_leger}
-  Scénario nominal &
-  \begin{enumerate}[leftmargin=1.2em, itemsep=3pt]
-    \item L'analyste consulte la file d'attente des dossiers en attente de traitement, triée par ordre d'ancienneté, et sélectionne un dossier à instruire.
-    \item Il accède à la page de revue complète du dossier, qui regroupe les images des documents capturés, les données extraites par le système, les éventuelles corrections apportées par le client, ainsi que le résultat de la comparaison biométrique entre le selfie et la photo du document.
-    \item L'analyste vérifie les données extraites et peut, si nécessaire, corriger manuellement un champ erroné. Toute correction est enregistrée avec horodatage et invalide les résultats de filtrage précédemment calculés, contraignant le système à les recalculer avant toute décision.
-    \item Le système présente les résultats de la vérification de conformité documentaire : présence et cohérence des champs obligatoires, validité de la date d'expiration et cohérence interne des informations. Un score de conformité documentaire est calculé.
-    \item L'analyste lance le filtrage anti-blanchiment, qui confronte les données du client à trois référentiels : la liste des personnes blacklistées, la liste des personnes politiquement exposées, et la base des dossiers déjà validés afin de détecter d'éventuels doublons d'identité. Les alertes éventuelles sont présentées avec leur niveau de similarité et leur recommandation associée.
-    \item L'analyste consulte le score de risque global, qui agrège les résultats du filtrage, la conformité documentaire et la similarité biométrique. Le système formule une recommandation automatique, que l'analyste est libre de suivre ou non.
-    \item L'analyste peut ajouter des commentaires internes au dossier, attachés à des champs spécifiques ou formulés en note générale.
-    \item L'analyste prend sa décision finale : approbation du compte, rejet motivé, ou demande de complément documentaire. La décision est enregistrée et le client est notifié du changement de statut de son dossier.
-  \end{enumerate} \\
-  \midrule
-  Postconditions & Le dossier est mis à jour avec la décision de l'analyste. Si le dossier est approuvé, le compte bancaire du client est activé et il accède aux services bancaires. Si le dossier est rejeté, un motif est transmis au client. \\
-  \midrule
-  \rowcolor{gris_leger}
+\begin{longtable}{|>{\bfseries}p{3.8cm}|p{10.2cm}|}
+  \hline
+  Cas d'utilisation    & Traiter un dossier KYC \\
+  \hline
+  Acteur principal     & Analyste KYC (ou Administrateur) \\
+  \hline
+  Objectif             & Examiner un dossier de demande d'ouverture de compte, vérifier la conformité des données et des documents soumis, et prendre une décision sur la suite à donner à la demande. \\
+  \hline
+  Préconditions        &
+    - L'analyste est authentifié avec le rôle approprié. \newline
+    - Au moins un dossier KYC est en attente de traitement dans la file. \\
+  \hline
+  Scénario nominal     &
+    - L'analyste consulte la file d'attente des dossiers triée par ordre d'ancienneté et sélectionne un dossier à instruire. \newline
+    - Il accède à la page de revue complète : images des documents, données extraites, corrections apportées par le client et résultat de la comparaison biométrique. \newline
+    - Il vérifie les données extraites et corrige si nécessaire tout champ erroné. Chaque correction est horodatée et invalide les résultats de filtrage précédemment calculés. \newline
+    - Le système présente les résultats de la vérification de conformité documentaire (cohérence des champs obligatoires, validité de la date d'expiration) et calcule un score de conformité. \newline
+    - L'analyste lance le filtrage anti-blanchiment, qui confronte les données du client à la liste des personnes blacklistées, à la liste des personnes politiquement exposées et à la base des dossiers validés pour détecter d'éventuels doublons d'identité. \newline
+    - L'analyste consulte le score de risque global agrégeant les résultats du filtrage, la conformité documentaire et la similarité biométrique. Le système formule une recommandation automatique. \newline
+    - L'analyste prend sa décision finale : approbation, rejet motivé ou demande de complément documentaire. La décision est enregistrée et le client est notifié. \\
+  \hline
+  Post-conditions      & Le dossier est mis à jour avec la décision de l'analyste. Si approuvé, le compte bancaire est activé. Si rejeté, le motif est transmis au client. \\
+  \hline
   Scénarios alternatifs &
-  \begin{tabular}{@{}p{3.5cm}p{6.5cm}@{}}
-    \textit{Alerte AML confirmée} & L'analyste qualifie l'alerte et documente sa décision. Si l'alerte est avérée, la demande est rejetée avec le motif approprié ; si elle est écartée, le score de risque est recalculé en excluant cette alerte. \\[4pt]
-    \textit{Documents insuffisants} & L'analyste sélectionne le statut \og{}incomplet\fg{} et précise les documents manquants. La demande reste en attente de complément. \\[4pt]
-    \textit{Discordance biométrique} & Si la similarité entre le selfie et la photo du document est insuffisante, l'analyste peut rejeter la demande ou demander un complément d'information. \\
-  \end{tabular} \\
-  \bottomrule
+    - Alerte AML confirmée : si l'alerte est avérée, la demande est rejetée ; si elle est écartée, le score de risque est recalculé en excluant cette alerte. \newline
+    - Documents insuffisants : l'analyste sélectionne le statut « incomplet » et précise les pièces manquantes. \newline
+    - Discordance biométrique : l'analyste peut rejeter la demande ou solliciter un complément d'information auprès du client. \\
+  \hline
   \caption{UC4 --- Traiter un dossier KYC}
   \label{tab:uc4}
 \end{longtable}
@@ -357,172 +333,38 @@ Les tableaux suivants décrivent de manière détaillée les principaux cas d'ut
 % ────────────────────────────────────────────────
 % UC5 — Surveiller les performances des modèles IA
 % ────────────────────────────────────────────────
-\subsubsection*{UC5 --- Surveiller les performances des modèles IA}
+\subsubsection{UC5 --- Surveiller les performances des modèles IA}
 
-\begin{longtable}{|>{\bfseries}p{3.5cm}|p{10.5cm}|}
-  \rowcolor{bleu_principal}
-  \textcolor{white}{\textbf{Champ}} & \textcolor{white}{\textbf{Description}} \\
-  \endfirsthead
-  \rowcolor{bleu_principal}
-  \textcolor{white}{\textbf{Champ}} & \textcolor{white}{\textbf{Description}} \\
-  \endhead
-  \midrule
-  Cas d'utilisation & Surveiller les performances des modèles IA \\
-  \midrule
-  \rowcolor{gris_leger}
-  Acteur principal & Responsable qualité IA \\
-  \midrule
-  Acteurs secondaires & Administrateur (accès identique), Système IA (fournisseur des données de performance) \\
-  \midrule
-  \rowcolor{gris_leger}
-  Objectif & Évaluer en continu la qualité des traitements automatiques produits par les modèles de détection et d'extraction du système, afin de détecter toute dégradation de performance et d'orienter les actions correctives. \\
-  \midrule
-  Préconditions & Le responsable est authentifié avec le rôle approprié. Des dossiers ont été traités par le système, générant des données de performance exploitables. \\
-  \midrule
-  \rowcolor{gris_leger}
-  Scénario nominal &
-  \begin{enumerate}[leftmargin=1.2em, itemsep=3pt]
-    \item Le responsable accède à la page de supervision IA et sélectionne le type de document à analyser (carte d'identité recto, carte d'identité verso ou passeport) ainsi que la période d'observation souhaitée.
-    \item Il consulte les indicateurs clés de performance globaux : précision, rappel, score F1 et latence moyenne pour le pipeline complet, puis pour chacun des deux modèles séparément.
-    \item Il examine le graphique d'évolution hebdomadaire des scores de confiance, qui lui permet d'identifier une éventuelle tendance à la dégradation dans le temps.
-    \item Il analyse les performances du modèle de détection champ par champ : score de confiance moyen par zone du document, taux de zones manquantes et taux de faux positifs global.
-    \item Il analyse les performances du moteur de lecture champ par champ : score de confiance OCR moyen, taux de corrections manuelles et taux de champs vides.
-    \item Il consulte le graphique de corrélation entre les scores de confiance du modèle de détection et ceux du moteur de lecture, afin d'identifier les zones du document présentant une incohérence entre les deux modèles.
-    \item En cas d'anomalie détectée sur un champ particulier, le responsable documente ses observations et escalade la situation pour déclencher une action corrective sur le modèle ou le prétraitement concerné.
-  \end{enumerate} \\
-  \midrule
-  Postconditions & Le responsable dispose d'une vue objective et actualisée de la qualité des traitements automatiques. Les anomalies identifiées sont documentées et transmises aux équipes techniques compétentes. \\
-  \midrule
-  \rowcolor{gris_leger}
+\begin{longtable}{|>{\bfseries}p{3.8cm}|p{10.2cm}|}
+  \hline
+  Cas d'utilisation    & Surveiller les performances des modèles IA \\
+  \hline
+  Acteur principal     & Responsable qualité IA (ou Administrateur) \\
+  \hline
+  Objectif             & Évaluer en continu la qualité des traitements automatiques produits par les modèles de détection et d'extraction, afin de détecter toute dégradation de performance et d'orienter les actions correctives. \\
+  \hline
+  Préconditions        &
+    - Le responsable est authentifié avec le rôle approprié. \newline
+    - Des dossiers ont été traités par le système, générant des données de performance exploitables. \\
+  \hline
+  Scénario nominal     &
+    - Le responsable accède à la page de supervision IA et sélectionne le type de document à analyser (carte d'identité recto, verso ou passeport) ainsi que la période d'observation. \newline
+    - Il consulte les indicateurs clés de performance globaux : précision, rappel, score F1 et latence moyenne pour le pipeline complet et pour chacun des deux modèles séparément. \newline
+    - Il examine le graphique d'évolution hebdomadaire des scores de confiance pour détecter toute tendance à la dégradation dans le temps. \newline
+    - Il analyse les performances du modèle de détection champ par champ : score de confiance moyen, taux de zones manquantes et taux de faux positifs. \newline
+    - Il analyse les performances du moteur de lecture champ par champ : score de confiance OCR moyen, taux de corrections manuelles et taux de champs vides. \newline
+    - Il consulte le graphique de corrélation entre les scores des deux modèles pour identifier les zones présentant une incohérence. \newline
+    - En cas d'anomalie, il documente ses observations et déclenche une action corrective sur le modèle ou le prétraitement concerné. \\
+  \hline
+  Post-conditions      & Le responsable dispose d'une vue objective et actualisée de la qualité des traitements. Les anomalies identifiées sont documentées et transmises aux équipes techniques. \\
+  \hline
   Scénarios alternatifs &
-  \begin{tabular}{@{}p{3.5cm}p{6.5cm}@{}}
-    \textit{Dégradation détectée} & Si un indicateur passe sous le seuil de qualité cible (par exemple un taux de correction dépassant 10\,\% sur un champ donné), un signal d'alerte visuel est affiché. Le responsable peut filtrer les dossiers concernés pour mener une analyse approfondie. \\[4pt]
-    \textit{Aucune donnée disponible} & Si aucun document n'a été traité sur la période sélectionnée, la page affiche un message informatif et invite à élargir la fenêtre temporelle d'observation. \\
-  \end{tabular} \\
-  \bottomrule
+    - Dégradation détectée : un signal d'alerte visuel est affiché lorsqu'un indicateur passe sous le seuil de qualité cible (ex. taux de correction dépassant 10\,\% sur un champ). \newline
+    - Aucune donnée disponible : la page affiche un message informatif et invite à élargir la fenêtre temporelle d'observation. \\
+  \hline
   \caption{UC5 --- Surveiller les performances des modèles IA}
   \label{tab:uc5}
 \end{longtable}
-
-
-%=============================================================
-\section{Conception UML}
-\label{sec:conception-uml}
-%=============================================================
-
-\subsection{Diagramme de séquence}
-\label{subsec:diagramme-sequence}
-
-Les diagrammes de séquence décrivent les interactions entre les composants du système pour chaque étape du processus d'ouverture de compte. Le modèle adopté est \textbf{local-first} : les données sont conservées côté client (sessionStorage) durant les étapes 1 à 3, et une seule transaction est envoyée au serveur à l'étape 4.
-
-\subsubsection*{Étape 1 — Capture et validation du document}
-
-La Figure~\ref{fig:seq1} illustre le processus de capture du document d'identité (CIN ou passeport). Le Système IA analyse le flux caméra en temps réel, détecte et valide le document, puis déclenche l'extraction OCR via YOLOv11 et PaddleOCR. L'image validée est sauvegardée dans MinIO.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{conceptionImage/seq1.2.png}
-    \caption{Diagramme de séquence — Étape 1 : Capture du document}
-    \label{fig:seq1}
-\end{figure}
-
-\subsubsection*{Étape 2 — Vérification des informations OCR}
-
-La Figure~\ref{fig:seq2} décrit l'étape de vérification des informations extraites par l'OCR. Cette étape se déroule entièrement côté client, sans communication avec le serveur. Le client examine et corrige si nécessaire les champs extraits avant de valider.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{conceptionImage/seq2.png}
-    \caption{Diagramme de séquence — Étape 2 : Vérification OCR}
-    \label{fig:seq2}
-\end{figure}
-
-\subsubsection*{Étape 3 — Capture et validation du selfie}
-
-La Figure~\ref{fig:seq3} présente la capture du selfie biométrique. Le même principe que l'étape 1 est appliqué : le Système IA détecte le visage en temps réel, active le bouton de capture lorsque le cadrage est correct, et le selfie validé est sauvegardé dans MinIO.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{conceptionImage/seq3.2.png}
-    \caption{Diagramme de séquence — Étape 3 : Capture du selfie}
-    \label{fig:seq3}
-\end{figure}
-
-\subsubsection*{Étape 4 — Soumission finale du dossier}
-
-La Figure~\ref{fig:seq4} illustre la soumission finale du dossier complet. Toutes les données collectées durant les étapes précédentes sont envoyées en une seule transaction au serveur backend, qui enregistre la demande en base de données avec le statut \texttt{EN\_ATTENTE}.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{conceptionImage/seq4.2.png}
-    \caption{Diagramme de séquence — Étape 4 : Soumission finale}
-    \label{fig:seq4}
-\end{figure}
-
-
-\subsection{Diagramme de classes}
-\label{subsec:diagramme-classes}
-
-Le modèle de classes est décomposé en quatre domaines fonctionnels distincts pour une meilleure lisibilité. Les classes partagées entre domaines sont représentées avec le stéréotype \texttt{<<external>>} sans répétition de leurs attributs.
-
-\subsubsection*{D1 — Utilisateurs et rôles}
-
-La Figure~\ref{fig:classe1} présente le domaine des utilisateurs. La classe \texttt{User} est liée en composition à \texttt{UserInformation} (fiche identitaire validée par l'agent) et à \texttt{AuditLog} (journal des actions). La classe \texttt{Setting} est liée par agrégation.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{conceptionImage/classe1.png}
-    \caption{Diagramme de classes — D1 : Utilisateurs et rôles}
-    \label{fig:classe1}
-\end{figure}
-
-\subsubsection*{D2 — Dossier KYC}
-
-La Figure~\ref{fig:classe2} présente le domaine du dossier KYC. La classe \texttt{KycDemande} est le nœud central, composée de \texttt{KycDocument}, \texttt{Selfie}, \texttt{FaceCrop} et \texttt{DemandComment}. Elle est liée par agrégation à \texttt{UserInformation}.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{conceptionImage/classe2.drawio.png}
-    \caption{Diagramme de classes — D2 : Dossier KYC}
-    \label{fig:classe2}
-\end{figure}
-
-\subsubsection*{D3 — Pipeline OCR}
-
-La Figure~\ref{fig:classe3} présente le domaine du pipeline OCR. \texttt{OcrResult} est lié en composition à \texttt{KycDocument} et contient les résultats bruts de l'extraction. \texttt{OcrCorrection} enregistre les corrections manuelles effectuées par le client ou l'agent. \texttt{ValidationScore} consolide le score de risque de la demande.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{conceptionImage/classe3.drawio.png}
-    \caption{Diagramme de classes — D3 : Pipeline OCR}
-    \label{fig:classe3}
-\end{figure}
-
-\subsubsection*{D4 — Screening AML}
-
-La Figure~\ref{fig:classe4} présente le domaine du screening anti-blanchiment. Les classes abstraites \texttt{ListeReference} et \texttt{Match} factorisent les champs communs entre \texttt{Blacklist}/\texttt{PpeList} et \texttt{BlacklistMatch}/\texttt{PpeMatch}. \texttt{IdentityDuplicateAlert} détecte les doublons inter-clients.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{conceptionImage/classe4.drawio.png}
-    \caption{Diagramme de classes — D4 : Screening AML}
-    \label{fig:classe4}
-\end{figure}
-
-
-\subsection{Diagramme d'activité}
-\label{subsec:diagramme-activite}
-
-Le diagramme d'activité (Figure~\ref{fig:diag-activite}) modélise le flux complet du processus KYC, depuis la soumission du document par le client jusqu'à la décision finale de l'agent. Il met en évidence les trois zones de responsabilité : le client, le système IA et l'agent KYC, ainsi que les points de décision où l'intervention humaine est requise.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{conceptionImage/activite.png}
-    \caption{Diagramme d'activité --- Processus KYC complet}
-    \label{fig:diag-activite}
-\end{figure}
-
-
 \section*{Conclusion du chapitre}
 
 Ce chapitre a défini les acteurs et les besoins du système eKYC, constituant ainsi le socle de la phase de conception et de réalisation présentée au chapitre suivant.

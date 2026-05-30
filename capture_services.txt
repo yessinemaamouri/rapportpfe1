@@ -1,0 +1,257 @@
+cin_recto_detection du presence
+model.train(
+    # === DATASET ===
+    data="/content/cin_recto_classfication-2-1/data.yaml",
+    project=my_drive_path,
+    name="yolov8n_cin_v2",
+
+    # === GÉNÉRAL ===
+    epochs=100,
+    imgsz=640,           # Cohérent avec l'inférence caméra (640px)
+    batch=16,            # T4 + 640px → batch 16 stable
+    device=0,
+    workers=4,
+    pretrained=True,
+    val=True,
+    save_period=10,
+    patience=30,         # 1 classe simple → convergence rapide
+
+    # === OPTIMISEUR & LR ===
+    optimizer="AdamW",
+    lr0=0.001,
+    lrf=0.1,             # LR final = lr0 * lrf = 0.0001 ✅
+    weight_decay=0.0005,
+    warmup_epochs=3,
+    warmup_bias_lr=0.1,
+    cos_lr=True,
+
+    # === AUGMENTATIONS ===
+    # Roboflow a déjà appliqué : rotation ±15°, brightness ±10%, blur 0.5px
+    # → On complète LÉGÈREMENT sans redoubler
+    mosaic=0.0,          # ❌ Désactivé : docuement structuré, context doit rester propre
+    mixup=0.0,           # ❌ Désactivé
+    copy_paste=0.0,      # ❌ Désactivé
+    fliplr=0.0,          # ❌ CIN retournée invalide en prod
+    flipud=0.0,          # ❌ Idem
+    shear=0.0,           # ❌ Déforme le texte arabe
+    perspective=0.0,     # ❌ Document photographié de face
+
+    degrees=3.0,         # Léger complément (Roboflow couvre déjà ±15°)
+    scale=0.15,          # Légère variation de zoom
+    translate=0.05,      # Décalage léger → simule mauvais cadrage
+    hsv_h=0.01,
+    hsv_s=0.2,
+    hsv_v=0.2,           # Variations d'éclairage intérieur/extérieur
+
+    close_mosaic=0,
+
+    # === LOSS WEIGHTS ===
+    # Priorité ABSOLUE sur la précision de la bbox (centrage KYC)
+    box=9.0,             # ⬆ Augmenté vs défaut (7.5) → bbox ultra-précise
+    cls=0.3,             # ⬇ 1 seule classe → pénalité cls réduite
+    dfl=1.5,             # ✅ Maintenu pour précision des bords
+
+    # === DIVERS ===
+    seed=42,
+    plots=True,
+    exist_ok=True,
+    cache=True,          # ✅ Accélère l'entraînement sur Colab
+)
+
+cinVerso
+
+model.train(
+    # === DATASET ===
+    data="/content/cin_verso_classfication-1/data.yaml",   # ← changé
+    project=my_drive_path,
+    name="yolov8n_verso_v1",                       # ← changé
+
+    # === GÉNÉRAL ===
+    epochs=100,
+    imgsz=640,
+    batch=16,
+    device=0,
+    workers=4,
+    pretrained=True,
+    val=True,
+    save_period=10,
+    patience=30,         # ⚠️ 630 imgs → peut converger plus vite
+                         # si early stop à epoch 40 c'est normal
+
+    # === OPTIMISEUR & LR ===
+    optimizer="AdamW",
+    lr0=0.001,
+    lrf=0.1,
+    weight_decay=0.0005,
+    warmup_epochs=3,
+    warmup_bias_lr=0.1,
+    cos_lr=True,
+
+    # === AUGMENTATIONS ===
+    mosaic=0.0,
+    mixup=0.0,
+    copy_paste=0.0,
+    fliplr=0.0,
+    flipud=0.0,
+    shear=0.0,
+    perspective=0.0,
+
+    degrees=3.0,
+    scale=0.15,
+    translate=0.05,
+    hsv_h=0.01,
+    hsv_s=0.2,
+    hsv_v=0.2,
+
+    close_mosaic=0,
+
+    # === LOSS WEIGHTS ===
+    box=9.0,
+    cls=0.3,
+    dfl=1.5,
+
+    # === DIVERS ===
+    seed=42,
+    plots=True,
+    exist_ok=True,
+    cache=True,
+)
+
+passeport ( model.train(
+    # === DATASET ===
+    data="/content/passeport-classification-1/data.yaml",   # ← changé
+    project=my_drive_path,
+    name="yolov8n_pass_v1",                       # ← changé
+
+    # === GÉNÉRAL ===
+    epochs=100,
+    imgsz=640,
+    batch=16,
+    device=0,
+    workers=4,
+    pretrained=True,
+    val=True,
+    save_period=10,
+    patience=30,         # ⚠️ 630 imgs → peut converger plus vite
+                         # si early stop à epoch 40 c'est normal
+
+    # === OPTIMISEUR & LR ===
+    optimizer="AdamW",
+    lr0=0.001,
+    lrf=0.1,
+    weight_decay=0.0005,
+    warmup_epochs=3,
+    warmup_bias_lr=0.1,
+    cos_lr=True,
+
+    # === AUGMENTATIONS ===
+    mosaic=0.0,
+    mixup=0.0,
+    copy_paste=0.0,
+    fliplr=0.0,
+    flipud=0.0,
+    shear=0.0,
+    perspective=0.0,
+
+    degrees=3.0,
+    scale=0.15,
+    translate=0.05,
+    hsv_h=0.01,
+    hsv_s=0.2,
+    hsv_v=0.2,
+
+    close_mosaic=0,
+
+    # === LOSS WEIGHTS ===
+    box=9.0,
+    cls=0.3,
+    dfl=1.5,
+
+    # === DIVERS ===
+    seed=42,
+    plots=True,
+    exist_ok=True,
+    cache=True,
+))
+
+
+face 
+model.train(
+    # ═══════════════════════════════════════════════
+    # DATASET
+    # 1000 imgs @ 640×640 → dataset moyen
+    # ═══════════════════════════════════════════════
+    data="/content/Face-Detection-1/data.yaml",
+    project=my_drive_path,
+    name="yolov8n_face_640_v1",
+
+    # ═══════════════════════════════════════════════
+    # GÉNÉRAL
+    # ═══════════════════════════════════════════════
+    epochs=100,              # 1000 imgs → même ordre que passeport (630 imgs / 100 epochs)
+                             # yolov8n converge vite sur 1 classe simple
+    imgsz=640,               # images déjà 640×640 → cohérent, pas besoin de 1280
+    batch=16,                # 640px + yolov8n léger → batch 16 confortable sur T4
+    device=0,
+    workers=4,
+    pretrained=True,         # COCO contient déjà des visages → transfer learning direct
+    val=True,
+    save_period=10,
+    patience=30,             # identique au passeport : 1 classe simple converge vite
+                             # si early stop à epoch 40-50 c'est normal
+
+    # ═══════════════════════════════════════════════
+    # OPTIMISEUR & LR
+    # ═══════════════════════════════════════════════
+    optimizer="AdamW",
+    lr0=0.001,               # standard fine-tuning pretrained
+    lrf=0.1,                 # identique passeport : 1 classe → descente LR agressive ok
+                             # lr final = 0.001 × 0.1 = 1e-4
+    weight_decay=0.0005,     # identique passeport : dataset moyen → régularisation standard
+    warmup_epochs=3,
+    warmup_bias_lr=0.1,
+    cos_lr=True,             # descente douce → évite oscillations sur petit dataset
+
+    # ═══════════════════════════════════════════════
+    # AUGMENTATIONS
+    # Visage sur CIN = position fixe, pas de retournement réaliste
+    # ═══════════════════════════════════════════════
+    mosaic=0.5,              # ✅ Activé (contrairement à CIN recto)
+                             # visage = objet naturel, mosaic aide la généralisation
+                             # 0.5 au lieu de 1.0 car position relativement fixe sur CIN
+    mixup=0.0,               # désactivé : 1 seule classe → mixup n'apporte rien
+    copy_paste=0.0,          # désactivé : pas de segmentation
+    fliplr=0.5,              # ✅ Activé : visage symétrique → flip horizontal valide
+    flipud=0.0,              # désactivé : visage à l'envers = invalide en production
+    shear=0.0,               # désactivé : déforme le visage inutilement
+    perspective=0.0,         # désactivé : CIN photographiée de face
+
+    degrees=5.0,             # légère rotation : photo mobile peut être légèrement inclinée
+                             # plus que CIN recto (2°) car visage tolère mieux la rotation
+    scale=0.3,               # ✅ Plus large que passeport (0.15)
+                             # visage peut être proche ou loin de la caméra
+    translate=0.05,          # translation légère : visage centré sur CIN
+    hsv_h=0.01,              # teinte : variation minimale (peau ≠ objet coloré)
+    hsv_s=0.4,               # saturation : peaux différentes → variation utile
+                             # plus élevé que CIN recto (0.2) pour diversité de teintes
+    hsv_v=0.3,               # luminosité : photos en conditions variées (intérieur/extérieur)
+                             # plus élevé que passeport (0.2) car visage sensible à l'éclairage
+    close_mosaic=10,         # désactive mosaic sur les 10 dernières epochs
+                             # pour stabiliser la convergence finale
+
+    # ═══════════════════════════════════════════════
+    # LOSS WEIGHTS
+    # 1 seule classe → cls peu important, focus sur bbox
+    # ═══════════════════════════════════════════════
+    box=9.0,                 # identique passeport : priorité localisation précise du visage
+    cls=0.3,                 # identique passeport : 1 classe → classification triviale
+    dfl=1.5,                 # standard : précision des bords de bbox (contour visage)
+
+    # ═══════════════════════════════════════════════
+    # DIVERS
+    # ═══════════════════════════════════════════════
+    seed=42,
+    plots=True,
+    exist_ok=True,
+    cache=True,              # 1000 imgs @ 640px → tient en RAM → accélère l'entraînement
+)

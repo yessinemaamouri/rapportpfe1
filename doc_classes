@@ -1,0 +1,322 @@
+Tables de la base de données
+users
+Stocke les comptes d'authentification de tous les utilisateurs de la plateforme (clients, agents, superviseurs, administrateurs). Chaque utilisateur possède un rôle qui détermine ses droits d'accès.
+
+Champ	Description
+id	Identifiant unique (UUID)
+email	Adresse email — unique, utilisée pour la connexion
+phone	Numéro de téléphone (optionnel)
+hashed_password	Mot de passe hashé avec bcrypt
+full_name	Nom complet affiché
+role	Rôle : CLIENT / AGENT / SUPERVISEUR / ADMIN
+is_active	Indique si le compte est actif
+Relations :
+
+demandes — retourne la liste des demandes KYC soumises par le client
+demandes_assignees — retourne la liste des dossiers assignés à l'agent
+corrections — retourne les corrections OCR effectuées par l'utilisateur
+audit_logs — retourne l'historique des actions effectuées par l'utilisateur
+information — retourne la fiche identitaire liée au compte (one-to-one)
+kyc_demandes
+Représente un dossier de demande d'ouverture de compte soumis par un client. Un client peut soumettre plusieurs demandes successives. La demande est le point central autour duquel s'organisent tous les documents, résultats OCR et décisions.
+
+Champ	Description
+id	Identifiant unique (UUID)
+user_id	Référence vers le client qui a soumis la demande
+agent_id	Référence vers l'agent assigné au dossier (optionnel)
+user_information_id	Référence vers la fiche identitaire du client (rempli après validation)
+type_compte	Type de compte demandé : COURANT ou EPARGNE
+status	Statut : EN_ATTENTE / EN_COURS / APPROUVE / REJETE / INCOMPLET
+risk_level	Niveau de risque calculé : LOW / MEDIUM / HIGH / CRITICAL
+global_ia_score	Score global calculé par les services IA
+rejection_reason	Motif de rejet saisi par l'agent
+decided_at	Date et heure de la décision finale
+data_validated_at	Date de validation des données OCR par l'agent (null si pas encore validé)
+Relations :
+
+documents — retourne la liste des documents soumis (CIN recto/verso ou passeport)
+selfies — retourne le selfie capturé par le client
+face_crops — retourne le crop du visage extrait automatiquement depuis le document
+comments — retourne les commentaires des agents sur le dossier
+validation — retourne le score de risque calculé pour la demande
+kyc_documents
+Stocke les références des images de documents soumis par le client. Chaque document est lié à une demande et possède un type précis. Le fichier binaire est stocké dans MinIO, seule l'URL est conservée en base de données.
+
+Champ	Description
+id	Identifiant unique (UUID)
+demande_id	Référence vers la demande associée
+type_doc	Type : CIN_RECTO / CIN_VERSO / PASSPORT / SELFIE / AUTRE
+file_path	URL MinIO de l'image
+status	Statut de validation : EN_ATTENTE / VALIDE / REJETE
+Relations :
+
+ocr_result — retourne le résultat OCR associé à ce document
+kyc_job — retourne le job de traitement associé à ce document
+selfies
+Stocke le selfie capturé par le client lors de l'étape 3 du processus d'ouverture de compte. Le score de correspondance faciale est renseigné après la comparaison avec la photo extraite du document.
+
+Champ	Description
+id	Identifiant unique (UUID)
+demande_id	Référence vers la demande associée
+minio_path	URL MinIO du selfie
+face_match_score	Score de correspondance entre le selfie et la photo du document (0 à 1)
+face_match_passe	Résultat : MATCH / MISMATCH / UNCLEAR
+face_crops
+Stocke le crop du visage extrait automatiquement depuis le document CIN recto ou le passeport par le service OCR (YOLOv11m). Ce crop est utilisé pour la comparaison faciale avec le selfie.
+
+Champ	Description
+id	Identifiant unique (UUID)
+demande_id	Référence vers la demande associée
+minio_path	URL MinIO du crop
+doc_type	Type de document source : CIN_RECTO ou PASSPORT
+yolo_score	Score de confiance de la détection du visage par YOLO
+user_information
+Centralise la fiche identitaire permanente du client, créée lors de la première validation d'une demande par un agent. Cette fiche est mise à jour (et non recréée) en cas de re-soumission. Elle regroupe toutes les informations extraites des documents et validées par l'agent.
+
+Champ	Description
+id	Identifiant unique (UUID)
+user_id	Référence vers le compte utilisateur (one-to-one)
+cin_number	Numéro de CIN (8 chiffres)
+nom / prenom	Nom et prénom en caractères latins
+nom_arabe / prenom_arabe	Nom et prénom en caractères arabes
+nom_complet	Nom complet incluant les ascendants (extrait OCR recto CIN)
+nom_mere_complet	Nom complet de la mère (extrait verso CIN)
+date_naissance	Date de naissance
+sexe	Sexe : M ou F
+adresse	Adresse complète (extrait verso CIN)
+cin_recto_url / cin_verso_url / passport_url	URLs MinIO des documents validés
+selfie_url	URL MinIO du selfie validé
+face_match_score	Score de correspondance faciale
+statut	Statut KYC : PENDING / VERIFIED / REJECTED / MANUAL_REVIEW
+Relations :
+
+demandes — retourne toutes les demandes liées à cette fiche identitaire
+blacklist_matches — retourne les correspondances détectées dans la liste noire
+ppe_matches — retourne les correspondances détectées dans la liste PPE
+duplicate_alerts_as_subject — retourne les alertes de doublon où ce client est le nouveau
+duplicate_alerts_as_matched — retourne les alertes de doublon où ce client est l'existant
+ocr_results
+Stocke le résultat brut retourné par le service OCR après traitement d'un document. Ce résultat est immuable après insertion. Les modifications humaines sont enregistrées séparément dans ocr_corrections.
+
+Champ	Description
+id	Identifiant unique (UUID)
+document_id	Référence vers le document traité (unique)
+raw_output	Résultat complet du pipeline OCR en format JSONB
+confidence	Score de confiance global de l'extraction
+yolo_elapsed_ms	Temps d'exécution du modèle YOLO en millisecondes
+ocr_elapsed_ms	Temps d'exécution de PaddleOCR en millisecondes
+Relations :
+
+corrections — retourne la liste des corrections apportées à ce résultat OCR
+ocr_corrections
+Enregistre chaque correction manuelle apportée à un champ OCR, qu'elle soit effectuée par le client (étape 2) ou par l'agent (page de review). Chaque correction est immuable après insertion pour des raisons de traçabilité.
+
+Champ	Description
+id	Identifiant unique (UUID)
+ocr_result_id	Référence vers le résultat OCR corrigé
+field_name	Nom du champ corrigé (ex : nom, date_naissance)
+old_value	Valeur avant correction
+new_value	Valeur après correction
+corrected_by	Auteur de la correction : CLIENT ou AGENT
+user_id	Référence vers l'utilisateur qui a effectué la correction
+reason	Motif de la correction (optionnel)
+validation_scores
+Stocke le score de risque global calculé au moment de la décision de l'agent. Ce score combine plusieurs composantes : filtrage AML, doublons cross-clients, correspondance faciale et vérification des champs du document.
+
+Champ	Description
+id	Identifiant unique (UUID)
+demande_id	Référence vers la demande évaluée
+aml_risk_score	Composante risque AML (blacklist + PPE)
+cross_client_risk_score	Composante risque doublons cross-clients
+face_match_score	Composante correspondance faciale (0 à 1)
+security_risk_score	Composante vérification des champs du document
+risk_score_global	Score de risque global pondéré
+risk_level	Niveau de risque final : LOW / MEDIUM / HIGH / CRITICAL
+recommendation	Recommandation : ACCEPT / MANUAL_REVIEW / REJECT
+score_detail	Détail complet par composante en format JSONB
+blacklist
+Contient les entrées de la liste noire KYC. Chaque entrée représente une personne interdite d'accès aux services bancaires, issue de sources officielles (CTAF, ONU, OFAC, INTERPOL).
+
+Champ	Description
+id	Identifiant unique (UUID)
+cin_number	Numéro de CIN (si disponible)
+nom / prenom	Identité en caractères latins
+nom_arabe / prenom_arabe	Identité en caractères arabes
+source	Source de la liste : CTAF_SIMULE / ONU_SIMULE / OFAC_SIMULE / INTERNE
+motif	Motif d'inscription sur la liste
+niveau_risque	Niveau : MEDIUM / HIGH / CRITICAL
+actif	Indique si l'entrée est toujours active
+date_expiration	Date d'expiration de l'entrée (optionnel)
+ppe_list
+Contient les entrées de la liste des Personnes Politiquement Exposées (PPE). Chaque entrée représente une personne occupant ou ayant occupé une fonction publique importante.
+
+Champ	Description
+id	Identifiant unique (UUID)
+cin_number	Numéro de CIN (si disponible)
+nom / prenom	Identité en caractères latins
+fonction	Fonction exercée (ex : ministre, député)
+categorie	Catégorie : MINISTRE / DEPUTE / MAGISTRAT / MILITAIRE_SUPERIEUR / ...
+pays	Pays d'exercice de la fonction
+niveau_risque	Niveau : MEDIUM / HIGH / VERY_HIGH
+date_debut / date_fin	Période d'exercice de la fonction
+actif	Indique si la personne est toujours en fonction
+blacklist_match
+Enregistre le résultat d'une comparaison entre la fiche identitaire d'un client et une entrée de la liste noire. Chaque correspondance détectée lors du filtrage AML génère une entrée dans cette table.
+
+Champ	Description
+id	Identifiant unique (UUID)
+user_information_id	Référence vers la fiche identitaire du client contrôlé
+blacklist_id	Référence vers l'entrée de la liste noire correspondante
+match_type	Type de correspondance : EXACT_CIN / EXACT_NOM+DATE / FUZZY_NOM / ...
+score_similarite	Score de similarité global (0 à 1)
+champs_matches	Liste des champs ayant déclenché la correspondance
+recommendation	Recommandation : BLOCK / MANUAL_REVIEW / SOFT_FLAG
+nom_score / birth_score / cin_score	Scores détaillés par champ
+ppe_match
+Enregistre le résultat d'une comparaison entre la fiche identitaire d'un client et une entrée de la liste PPE. Fonctionne sur le même principe que blacklist_match avec des recommandations adaptées aux PPE.
+
+Champ	Description
+id	Identifiant unique (UUID)
+user_information_id	Référence vers la fiche identitaire du client contrôlé
+ppe_id	Référence vers l'entrée PPE correspondante
+match_type	Type de correspondance
+score_similarite	Score de similarité global (0 à 1)
+is_former_pep	Indique si la personne est une ancienne PPE
+edd_required	Indique si une due diligence renforcée est requise
+management_approval	Indique si une validation de la direction est nécessaire
+recommendation	Recommandation : ESCALADE_DIRECTION / ENHANCED_DUE_DILIGENCE / MANUAL_REVIEW
+identity_duplicate_alerts
+Enregistre les alertes de doublons identitaires détectés entre clients de la banque. Une alerte est générée automatiquement lorsqu'un nouveau client présente une identité trop similaire à celle d'un client déjà enregistré.
+
+Champ	Description
+id	Identifiant unique (UUID)
+subject_id	Référence vers le nouveau client (celui qui vient d'être validé)
+matched_id	Référence vers le client existant trop similaire
+match_type	Type de correspondance : EXACT_CIN_CROSS / EXACT_NOM+DATE / FUZZY_MULTI
+score_similarite	Score de similarité global (0 à 1)
+champs_matches	Liste des champs ayant déclenché l'alerte
+recommendation	Recommandation : BLOCK_DOUBLON / MANUAL_REVIEW / SOFT_FLAG
+face_similarity_score	Score de similarité faciale entre les selfies des deux clients
+status	Statut : OPEN / CONFIRMED / FALSE_POSITIVE / RESOLVED
+resolved_by	Référence vers l'agent qui a traité l'alerte
+resolution_note	Commentaire libre de l'agent lors de la résolution
+audit_logs
+Trace immuable de toutes les actions effectuées sur la plateforme. Chaque entrée est créée au moment de l'action et ne peut jamais être modifiée ni supprimée.
+
+Champ	Description
+id	Identifiant unique (UUID)
+user_id	Référence vers l'utilisateur ayant effectué l'action
+action	Type d'action : LOGIN / REVIEW / APPROVE / REJECT / UPDATE / ...
+entity_type	Type de l'entité concernée (ex : kyc_demande, user)
+entity_id	Identifiant de l'entité concernée
+old_value	Valeur avant modification (format JSONB)
+new_value	Valeur après modification (format JSONB)
+ip_address	Adresse IP de l'utilisateur au moment de l'action
+demand_comments
+Stocke les commentaires rédigés par les agents et superviseurs sur un dossier. Un commentaire peut être associé à un champ OCR spécifique pour signaler un problème précis.
+
+Champ	Description
+id	Identifiant unique (UUID)
+demande_id	Référence vers le dossier commenté
+author_id	Référence vers l'agent auteur du commentaire
+field_name	Champ OCR concerné par le commentaire (optionnel)
+content	Contenu du commentaire
+category	Catégorie : note / concern / verification / resolution
+settings
+Stocke les paramètres de configuration globaux de la plateforme, modifiables par l'administrateur depuis l'interface dashboard.
+
+Champ	Description
+id	Identifiant unique (UUID)
+key	Clé unique du paramètre (ex : face_match_tolerance)
+value	Valeur du paramètre en format JSONB
+description	Description du paramètre
+updated_by	Référence vers l'administrateur qui a modifié le paramètre
+
+kyc_demandes
+Fonction	Signature	Description
+list_demandes	list_demandes(db: Session, skip: int, limit: int) -> list[dict]	Retourne la liste paginée des demandes avec les informations de base du client associé
+count_demandes	count_demandes(db: Session) -> int	Retourne le nombre total de demandes enregistrées en base de données
+get_demande_detail	get_demande_detail(db: Session, demande_id: str) -> dict | None	Retourne le dossier complet d'une demande incluant les documents, le résultat OCR et le selfie
+validate_data	validate_data(demande_id: str, db: Session) -> dict	Extrait les informations OCR, crée ou met à jour la fiche identitaire, marque la demande comme validée et lance le filtrage AML
+submit_decision	submit_decision(demande_id: str, payload: DecisionRequest, db: Session) -> dict	Met à jour le statut de la demande avec la décision finale de l'agent
+Tu veux que je refasse toutes les tables avec ce format ?
+
+vasy
+Laisse-moi lire les fonctions manquantes avant de tout rédiger.
+
+Read admin.py (lines 81-180)
+Read kyc.py (lines 81-170)
+Read risk_scorer.py
+Read filtrage_orchestrator.py
+Voici la documentation complète avec les signatures Python pour toutes les tables :
+
+users
+Fonction	Signature	Description
+register	register(payload: RegisterRequest, db: Session) -> dict	Crée un nouveau compte utilisateur avec le rôle CLIENT et sauvegarde le mot de passe hashé
+login	login(payload: LoginRequest, db: Session) -> dict	Vérifie les identifiants et retourne un token JWT si valides
+verify	verify(token: str, db: Session) -> dict	Vérifie la validité du token JWT et retourne les informations de l'utilisateur connecté
+kyc_demandes
+Fonction	Signature	Description
+list_demandes	list_demandes(db: Session, skip: int, limit: int) -> list[dict]	Retourne la liste paginée des demandes avec les informations de base du client associé
+count_demandes	count_demandes(db: Session) -> int	Retourne le nombre total de demandes enregistrées en base de données
+get_demande_detail	get_demande_detail(db: Session, demande_id: str) -> dict | None	Retourne le dossier complet d'une demande incluant les documents, le résultat OCR et le selfie
+submit_full	submit_full(payload: SubmitFullRequest, db: Session) -> dict	Crée une nouvelle demande avec tous ses éléments associés en une seule transaction
+validate_data	validate_data(demande_id: str, db: Session) -> dict	Extrait les informations OCR, crée ou met à jour la fiche identitaire, marque la demande comme validée et lance le filtrage AML
+submit_decision	submit_decision(demande_id: str, payload: DecisionRequest, db: Session) -> dict	Met à jour le statut de la demande avec la décision finale de l'agent
+kyc_documents
+Fonction	Signature	Description
+_build_documents	_build_documents(documents: list[KycDocument]) -> dict	Construit le bloc documents structuré (recto, verso, passeport, selfie) à partir de la liste des documents d'une demande
+_build_doc_entry	_build_doc_entry(doc: KycDocument) -> dict	Construit l'entrée détaillée d'un document incluant l'URL présignée MinIO et le résultat OCR associé
+selfies
+Fonction	Signature	Description
+capture	capture(payload: CaptureRequest, db: Session) -> dict	Sauvegarde le selfie dans MinIO et crée l'entrée en base de données
+_build_selfie_entry	_build_selfie_entry(selfie: Selfie) -> dict	Construit l'entrée détaillée du selfie incluant l'URL présignée MinIO et le score de correspondance faciale
+face_crops
+Fonction	Signature	Description
+extract	extract(payload: ExtractRequest, db: Session) -> dict	Extrait automatiquement le crop du visage depuis le document via YOLOv11m et sauvegarde le résultat dans MinIO et en base de données
+user_information
+Fonction	Signature	Description
+_build_user_info_from_structured	_build_user_info_from_structured(demande_id: UUID, demande: KycDemande, db: Session) -> tuple	Extrait les informations identitaires du client depuis le résultat OCR structuré de la demande
+_upsert_user_information	_upsert_user_information(demande: KycDemande, db: Session, cin_number: str, nom: str, prenom: str, ...) -> UserInformation	Crée la fiche identitaire si elle n'existe pas, ou la met à jour si le client re-soumet une demande
+_copy_document_urls	_copy_document_urls(demande: KycDemande, ui: UserInformation, db: Session) -> None	Copie les URLs MinIO des documents validés vers la fiche identitaire du client
+ocr_results
+Fonction	Signature	Description
+extract	extract(payload: ExtractRequest, db: Session) -> dict	Exécute le pipeline OCR complet (YOLOv11m + PaddleOCR) sur une CIN et sauvegarde le résultat brut en base de données
+extract_passport	extract_passport(payload: ExtractRequest, db: Session) -> dict	Exécute le pipeline OCR pour un passeport et sauvegarde le résultat brut en base de données
+get_ocr_metrics	get_ocr_metrics(period: str, db: Session) -> dict	Agrège les résultats OCR par type de document et par période pour calculer les KPIs de supervision IA
+ocr_corrections
+Fonction	Signature	Description
+_insert_corrections	_insert_corrections(db: Session, ocr_id: UUID, corrections: dict, structured: dict, user_id: UUID) -> None	Enregistre les corrections apportées par le client ou l'agent sur les champs OCR en comparant les valeurs avant et après modification
+_get_corrected_structured	_get_corrected_structured(demande_id: UUID, db: Session) -> dict	Fusionne les champs OCR recto et verso et applique les corrections agent pour retourner le dictionnaire final à utiliser pour le filtrage
+validation_scores
+Fonction	Signature	Description
+compute_risk_score	compute_risk_score(demande_id: str, db: Session) -> dict	Calcule le score de risque global en combinant quatre composantes pondérées (AML 35%, cross-client 25%, face match 20%, vérification champs 20%) et persiste le résultat
+_run_security_check	_run_security_check(demande_id: UUID, db: Session) -> float | None	Vérifie la cohérence des champs du document et retourne un score de risque normalisé entre 0 et 1
+_risk_level	_risk_level(score: float) -> str	Convertit un score numérique en niveau de risque : LOW / MEDIUM / HIGH / CRITICAL
+_recommendation	_recommendation(risk_level: str, aml_block: bool, cross_block: bool) -> str	Retourne la recommandation finale : ACCEPT / MANUAL_REVIEW / REJECT selon le niveau de risque et les blocages détectés
+blacklist et ppe_list
+Fonction	Signature	Description
+BlacklistFilter.run	run(db: Session, user_information_id: str, cin_number: str, nom: str, ...) -> dict	Compare la fiche identitaire du client contre toutes les entrées actives de la liste noire et retourne les correspondances détectées
+PpeFilter.run	run(db: Session, user_information_id: str, cin_number: str, nom: str, ...) -> dict	Compare la fiche identitaire du client contre toutes les entrées actives de la liste PPE et retourne les correspondances détectées
+blacklist_match et ppe_match
+Fonction	Signature	Description
+FiltrageOrchestrator.run_screening	run_screening(db: Session, user_information_id: str, cin_number: str, nom: str, date_naissance: date, nom_arabe: str, nom_mere: str, nom_ascendance: str, num_pass: str, doc_type: str) -> dict	Orchestre le filtrage complet (blacklist + PPE + cross-client), sauvegarde les correspondances et retourne la décision globale
+identity_duplicate_alerts
+Fonction	Signature	Description
+CrossClientFilter.run	run(db: Session, user_information_id: str, cin_number: str, nom: str, date_naissance: date, ...) -> dict	Compare la fiche identitaire du nouveau client contre tous les clients déjà enregistrés et crée une alerte en cas de similarité détectée
+kyc_jobs
+Fonction	Signature	Description
+create_job	create_job(db: Session, image_path: str, document_id: str) -> KycJob	Crée un nouveau job de traitement avec le statut PENDING et le lie au document correspondant
+get_job_by_id	get_job_by_id(db: Session, job_id: str) -> KycJob | None	Retourne un job de traitement à partir de son identifiant
+update_job_status	update_job_status(db: Session, job_id: str, status: str, step_result: dict | None) -> None	Met à jour le statut d'un job et sauvegarde le résultat cumulé des étapes de traitement
+audit_logs
+Fonction	Signature	Description
+get_audit_logs	get_audit_logs(skip: int, limit: int, db: Session) -> list[dict]	Retourne l'historique paginé de toutes les actions effectuées sur la plateforme avec les informations de l'utilisateur et les valeurs avant et après modification
+demand_comments
+Fonction	Signature	Description
+add_comment	add_comment(demande_id: str, payload: CommentRequest, db: Session) -> dict	Ajoute un commentaire d'un agent sur un dossier, optionnellement associé à un champ OCR spécifique
+get_comments	get_comments(demande_id: str, db: Session) -> list[dict]	Retourne la liste des commentaires associés à un dossier
+settings
+Fonction	Signature	Description
+get_settings	get_settings(db: Session) -> list[dict]	Retourne la liste de tous les paramètres de configuration de la plateforme
+update_setting	update_setting(key: str, payload: SettingRequest, db: Session) -> dict	Met à jour la valeur d'un paramètre et enregistre l'identifiant de l'administrateur ayant effectué la modification

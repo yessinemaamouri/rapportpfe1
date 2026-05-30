@@ -1,0 +1,671 @@
+{
+  "recto1": {
+    "num_cin": {
+      "yolo_detected": true,
+      "yolo_score": 0.89,
+      "ocr_score": 1.0,
+      "text_raw": "14447754",
+      "text_final": "14447754",
+      "changed": false
+    },
+    "last_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.907,
+      "ocr_score": 0.99,
+      "text_raw": "المعموري",
+      "text_final": "المعموري",
+      "changed": false
+    },
+    "first_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.898,
+      "ocr_score": 0.93,
+      "text_raw": "ياسين",
+      "text_final": "ياسين",
+      "changed": false
+    },
+    "full_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.797,
+      "ocr_score": 0.967,
+      "text_raw": "بن نور الدين بن البشير",
+      "text_final": "بن نور الدين بن البشير",
+      "changed": false
+    },
+    "dob": {
+      "yolo_detected": true,
+      "yolo_score": 0.856,
+      "ocr_score": 0.906,
+      "text_raw": "افريل 200429",
+      "text_final": "29 افريل 2004",
+      "changed": true
+    },
+    "pob": {
+      "yolo_detected": true,
+      "yolo_score": 0.913,
+      "ocr_score": 0.954,
+      "text_raw": "نابل",
+      "text_final": "نابل",
+      "changed": false
+    },
+    "image": {
+      "yolo_detected": true,
+      "yolo_score": 0.905,
+      "type": "image"
+    },
+    "_global": {
+      "confidence": 0.9281,
+      "yolo_ms": 5002,
+      "ocr_ms": 2090,
+      "image": "recto1.png",
+      "n_detections": 10
+    }
+  },
+  "verso1": {
+    "address": {
+      "yolo_detected": true,
+      "yolo_score": 0.931,
+      "ocr_score": 0.907,
+      "text_raw": "العنران حي باستور دار شعبان الفهر ي نابل",
+      "text_final": "حي باستور دار شعبان الفهر ي نابل",
+      "changed": true
+    },
+    "profession": {
+      "yolo_detected": true,
+      "yolo_score": 0.872,
+      "ocr_score": 0.894,
+      "text_raw": "طالب",
+      "text_final": "طالب",
+      "changed": false
+    },
+    "mother_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.926,
+      "ocr_score": 0.947,
+      "text_raw": "صوفية مهير",
+      "text_final": "صوفية مهير",
+      "changed": false
+    },
+    "print_id": {
+      "yolo_detected": true,
+      "yolo_score": 0.94,
+      "ocr_score": 0.907,
+      "text_raw": "2 2 2 6 1 1 5 1",
+      "text_final": "2 2 2 6 1 1 5 1",
+      "changed": false
+    },
+    "issue_date": {
+      "yolo_detected": true,
+      "yolo_score": 0.934,
+      "ocr_score": 0.828,
+      "text_raw": "جانفي 202605",
+      "text_final": "05 جانفي 2026",
+      "changed": true
+    },
+    "finger_print": {
+      "yolo_detected": true,
+      "yolo_score": 0.965,
+      "type": "image"
+    },
+    "_global": {
+      "confidence": 0.9281,
+      "yolo_ms": 5002,
+      "ocr_ms": 2090,
+      "image": "verso1.png",
+      "n_detections": 8
+    }
+  },
+  "recto2": {
+    "num_cin": {
+      "yolo_detected": true,
+      "yolo_score": 0.88,
+      "ocr_score": 1.0,
+      "text_raw": "14447754",
+      "text_final": "14447754",
+      "changed": false
+    },
+    "last_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.846,
+      "ocr_score": 0.904,
+      "text_raw": "المع وري",
+      "text_final": "المع وري",
+      "changed": false
+    },
+    "first_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.904,
+      "ocr_score": 0.934,
+      "text_raw": "ياسين",
+      "text_final": "ياسين",
+      "changed": false
+    },
+    "full_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.777,
+      "ocr_score": 0.93,
+      "text_raw": "بن نور الدين بن البشير",
+      "text_final": "بن نور الدين بن البشير",
+      "changed": false
+    },
+    "dob": {
+      "yolo_detected": true,
+      "yolo_score": 0.833,
+      "ocr_score": 0.848,
+      "text_raw": "أفريل 200429",
+      "text_final": "29 أفريل 2004",
+      "changed": true
+    },
+    "pob": {
+      "yolo_detected": true,
+      "yolo_score": 0.912,
+      "ocr_score": 0.952,
+      "text_raw": "نابل",
+      "text_final": "نابل",
+      "changed": false
+    },
+    "image": {
+      "yolo_detected": true,
+      "yolo_score": 0.938,
+      "type": "image"
+    },
+    "_global": {
+      "confidence": 0.9437,
+      "yolo_ms": 4419,
+      "ocr_ms": 2217,
+      "image": "recto2.png",
+      "n_detections": 10
+    }
+  },
+  "verso2": {
+    "address": {
+      "yolo_detected": true,
+      "yolo_score": 0.921,
+      "ocr_score": 0.919,
+      "text_raw": "العنوان حى باستور دار شعبان الفهري بل",
+      "text_final": "حى باستور دار شعبان الفهري بل",
+      "changed": true
+    },
+    "profession": {
+      "yolo_detected": true,
+      "yolo_score": 0.779,
+      "ocr_score": 0.991,
+      "text_raw": "طالب",
+      "text_final": "طالب",
+      "changed": false
+    },
+    "mother_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.923,
+      "ocr_score": 0.99,
+      "text_raw": "صوفية مهير",
+      "text_final": "صوفية مهير",
+      "changed": false
+    },
+    "print_id": {
+      "yolo_detected": true,
+      "yolo_score": 0.946,
+      "ocr_score": 0.999,
+      "text_raw": "22261151",
+      "text_final": "22261151",
+      "changed": false
+    },
+    "issue_date": {
+      "yolo_detected": true,
+      "yolo_score": 0.94,
+      "ocr_score": 0.911,
+      "text_raw": "جانفي 202605",
+      "text_final": "05 جانفي 2026",
+      "changed": true
+    },
+    "finger_print": {
+      "yolo_detected": true,
+      "yolo_score": 0.969,
+      "type": "image"
+    },
+    "_global": {
+      "confidence": 0.9437,
+      "yolo_ms": 4419,
+      "ocr_ms": 2217,
+      "image": "verso2.png",
+      "n_detections": 8
+    }
+  },
+  "recto3": {
+    "num_cin": {
+      "yolo_detected": true,
+      "yolo_score": 0.803,
+      "ocr_score": 0.942,
+      "text_raw": "14447754",
+      "text_final": "14447754",
+      "changed": false
+    },
+    "last_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.362,
+      "ocr_score": 0.9,
+      "text_raw": "المعموري",
+      "text_final": "المعموري",
+      "changed": false
+    },
+    "first_name": {
+      "yolo_detected": false,
+      "yolo_score": null,
+      "ocr_score": null,
+      "text_raw": null,
+      "text_final": null,
+      "changed": false,
+      "note": "Champ 'first_name' non detecte par YOLO"
+    },
+    "full_name": {
+      "yolo_detected": false,
+      "yolo_score": null,
+      "ocr_score": null,
+      "text_raw": null,
+      "text_final": null,
+      "changed": false,
+      "note": "Champ 'full_name' non detecte par YOLO"
+    },
+    "dob": {
+      "yolo_detected": false,
+      "yolo_score": null,
+      "ocr_score": null,
+      "text_raw": null,
+      "text_final": null,
+      "changed": false,
+      "note": "Champ 'dob' non detecte par YOLO"
+    },
+    "pob": {
+      "yolo_detected": false,
+      "yolo_score": null,
+      "ocr_score": null,
+      "text_raw": null,
+      "text_final": null,
+      "changed": false,
+      "note": "Champ 'pob' non detecte par YOLO"
+    },
+    "image": {
+      "yolo_detected": false,
+      "type": "image",
+      "note": "Champ 'image' non detecte par YOLO"
+    },
+    "_global": {
+      "confidence": 0.8815,
+      "yolo_ms": 4642,
+      "ocr_ms": 1361,
+      "image": "recto3.jpeg",
+      "n_detections": 5
+    }
+  },
+  "verso3": {
+    "address": {
+      "yolo_detected": false,
+      "yolo_score": null,
+      "ocr_score": null,
+      "text_raw": null,
+      "text_final": null,
+      "changed": false,
+      "note": "Champ 'address' non detecte par YOLO"
+    },
+    "profession": {
+      "yolo_detected": false,
+      "yolo_score": null,
+      "ocr_score": null,
+      "text_raw": null,
+      "text_final": null,
+      "changed": false,
+      "note": "Champ 'profession' non detecte par YOLO"
+    },
+    "mother_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.909,
+      "ocr_score": 0.902,
+      "text_raw": "صو فية مهير",
+      "text_final": "صو فية مهير",
+      "changed": false
+    },
+    "print_id": {
+      "yolo_detected": true,
+      "yolo_score": 0.958,
+      "ocr_score": 0.999,
+      "text_raw": "22261151",
+      "text_final": "22261151",
+      "changed": false
+    },
+    "issue_date": {
+      "yolo_detected": true,
+      "yolo_score": 0.919,
+      "ocr_score": 0.831,
+      "text_raw": "2026 جانفي 05 05 2026",
+      "text_final": "05 جانفي 2026",
+      "changed": true
+    },
+    "finger_print": {
+      "yolo_detected": true,
+      "yolo_score": 0.97,
+      "type": "image"
+    },
+    "_global": {
+      "confidence": 0.8815,
+      "yolo_ms": 4642,
+      "ocr_ms": 1361,
+      "image": "verso3.png",
+      "n_detections": 6
+    }
+  },
+  "passebonne": {
+    "last_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.818,
+      "ocr_score": 0.999,
+      "text_raw": "MAAMOURI",
+      "text_final": "MAAMOURI",
+      "changed": false
+    },
+    "first_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.735,
+      "ocr_score": 0.997,
+      "text_raw": "YESSINE",
+      "text_final": "YESSINE",
+      "changed": false
+    },
+    "full_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.658,
+      "ocr_score": 0.927,
+      "text_raw": "ياسين بن نور الدين المعموري",
+      "text_final": "ياسين بن نور الدين المعموري",
+      "changed": false
+    },
+    "num_pass": {
+      "yolo_detected": true,
+      "yolo_score": 0.659,
+      "ocr_score": 0.98,
+      "text_raw": "U668123",
+      "text_final": "U668123",
+      "changed": false
+    },
+    "num_cin": {
+      "yolo_detected": true,
+      "yolo_score": 0.727,
+      "ocr_score": 0.995,
+      "text_raw": "14447754",
+      "text_final": "14447754",
+      "changed": false
+    },
+    "dob": {
+      "yolo_detected": true,
+      "yolo_score": 0.722,
+      "ocr_score": 0.865,
+      "text_raw": "29-04-2004 Sex Place of birth/ J",
+      "text_final": "29/04/2004",
+      "changed": true
+    },
+    "pob": {
+      "yolo_detected": true,
+      "yolo_score": 0.792,
+      "ocr_score": 0.994,
+      "text_raw": "NABEUL",
+      "text_final": "NABEUL",
+      "changed": false
+    },
+    "issue_date": {
+      "yolo_detected": true,
+      "yolo_score": 0.719,
+      "ocr_score": 0.915,
+      "text_raw": "09-03-2026 Date of expiry /L",
+      "text_final": "09/03/2026",
+      "changed": true
+    },
+    "expiry_date": {
+      "yolo_detected": true,
+      "yolo_score": 0.674,
+      "ocr_score": 0.826,
+      "text_raw": "08-03-2031",
+      "text_final": "08/03/2031",
+      "changed": true
+    },
+    "address": {
+      "yolo_detected": true,
+      "yolo_score": 0.684,
+      "ocr_score": 0.993,
+      "text_raw": "نابل",
+      "text_final": "نابل",
+      "changed": false
+    },
+    "profession": {
+      "yolo_detected": true,
+      "yolo_score": 0.777,
+      "ocr_score": 0.94,
+      "text_raw": "طالب",
+      "text_final": "طالب",
+      "changed": false
+    },
+    "image": {
+      "yolo_detected": true,
+      "yolo_score": 0.903,
+      "type": "image"
+    },
+    "_global": {
+      "confidence": 0.9481,
+      "yolo_ms": 2041,
+      "ocr_ms": 1518,
+      "images": [
+        "passebonne.jpg"
+      ],
+      "n_detections": 12
+    }
+  },
+  "passmotif": {
+    "last_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.434,
+      "ocr_score": 0.985,
+      "text_raw": "EL MAAMOURI",
+      "text_final": "EL MAAMOURI",
+      "changed": false
+    },
+    "first_name": {
+      "yolo_detected": false,
+      "yolo_score": null,
+      "ocr_score": null,
+      "text_raw": null,
+      "text_final": null,
+      "changed": false,
+      "note": "Champ 'first_name' non detecte par YOLO"
+    },
+    "full_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.555,
+      "ocr_score": 0.872,
+      "text_raw": "ال الدين تور الدين سيف بن",
+      "text_final": "سيف الدين بن تور الدين ال",
+      "changed": true
+    },
+    "num_pass": {
+      "yolo_detected": true,
+      "yolo_score": 0.74,
+      "ocr_score": 0.991,
+      "text_raw": "H814973",
+      "text_final": "H814973",
+      "changed": false
+    },
+    "num_cin": {
+      "yolo_detected": true,
+      "yolo_score": 0.742,
+      "ocr_score": 1.0,
+      "text_raw": "09804159",
+      "text_final": "09804159",
+      "changed": false
+    },
+    "dob": {
+      "yolo_detected": false,
+      "yolo_score": null,
+      "ocr_score": null,
+      "text_raw": null,
+      "text_final": null,
+      "changed": false,
+      "note": "Champ 'dob' non detecte par YOLO"
+    },
+    "pob": {
+      "yolo_detected": true,
+      "yolo_score": 0.772,
+      "ocr_score": 0.998,
+      "text_raw": "NABEUL",
+      "text_final": "NABEUL",
+      "changed": false
+    },
+    "issue_date": {
+      "yolo_detected": true,
+      "yolo_score": 0.267,
+      "ocr_score": null,
+      "text_raw": "PASSPORT",
+      "text_final": "23/12/2021",
+      "changed": true
+    },
+    "expiry_date": {
+      "yolo_detected": true,
+      "yolo_score": 0.637,
+      "ocr_score": 0.805,
+      "text_raw": "2 22-12-2026",
+      "text_final": "222/12/2026",
+      "changed": true
+    },
+    "address": {
+      "yolo_detected": true,
+      "yolo_score": 0.767,
+      "ocr_score": 0.986,
+      "text_raw": "نابل",
+      "text_final": "نابل",
+      "changed": false
+    },
+    "profession": {
+      "yolo_detected": true,
+      "yolo_score": 0.39,
+      "ocr_score": 0.845,
+      "text_raw": "الجراز صاحب إبضاء",
+      "text_final": "إبضاء صاحب الجراز",
+      "changed": true
+    },
+    "image": {
+      "yolo_detected": false,
+      "type": "image",
+      "note": "Champ 'image' non detecte par YOLO"
+    },
+    "_global": {
+      "confidence": 0.8956,
+      "yolo_ms": 1888,
+      "ocr_ms": 2277,
+      "images": [
+        "passmotif.png"
+      ],
+      "n_detections": 10
+    }
+  },
+  "passsoleil": {
+    "last_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.591,
+      "ocr_score": 1.0,
+      "text_raw": "EL MAAMOURI",
+      "text_final": "EL MAAMOURI",
+      "changed": false
+    },
+    "first_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.691,
+      "ocr_score": 1.0,
+      "text_raw": "EL MAAMOUR",
+      "text_final": "EL MAAMOUR",
+      "changed": false
+    },
+    "full_name": {
+      "yolo_detected": true,
+      "yolo_score": 0.72,
+      "ocr_score": 0.969,
+      "text_raw": "الدين سيف",
+      "text_final": "سيف الدين",
+      "changed": true
+    },
+    "num_pass": {
+      "yolo_detected": true,
+      "yolo_score": 0.32,
+      "ocr_score": 0.0,
+      "text_raw": null,
+      "text_final": null,
+      "changed": false
+    },
+    "num_cin": {
+      "yolo_detected": true,
+      "yolo_score": 0.671,
+      "ocr_score": 1.0,
+      "text_raw": "09804159",
+      "text_final": "09804159",
+      "changed": false
+    },
+    "dob": {
+      "yolo_detected": true,
+      "yolo_score": 0.988,
+      "ocr_score": 0.695,
+      "text_raw": "Date of birth / 19-05-1995 Sex/. Place of birth E 3.S.",
+      "text_final": "19/05/1995",
+      "changed": true
+    },
+    "pob": {
+      "yolo_detected": true,
+      "yolo_score": 0.775,
+      "ocr_score": 0.996,
+      "text_raw": "NABEUL/",
+      "text_final": "NABEUL/",
+      "changed": false
+    },
+    "issue_date": {
+      "yolo_detected": true,
+      "yolo_score": 0.718,
+      "ocr_score": 0.999,
+      "text_raw": "23-12-2021",
+      "text_final": "23/12/2021",
+      "changed": true
+    },
+    "expiry_date": {
+      "yolo_detected": true,
+      "yolo_score": 0.658,
+      "ocr_score": 0.999,
+      "text_raw": "22-12-2026",
+      "text_final": "22/12/2026",
+      "changed": true
+    },
+    "address": {
+      "yolo_detected": true,
+      "yolo_score": 0.773,
+      "ocr_score": 0.942,
+      "text_raw": "نابل",
+      "text_final": "نابل",
+      "changed": false
+    },
+    "profession": {
+      "yolo_detected": false,
+      "yolo_score": null,
+      "ocr_score": null,
+      "text_raw": null,
+      "text_final": null,
+      "changed": false,
+      "note": "Champ 'profession' non detecte par YOLO"
+    },
+    "image": {
+      "yolo_detected": true,
+      "yolo_score": 0.689,
+      "type": "image"
+    },
+    "_global": {
+      "confidence": 0.8598,
+      "yolo_ms": 1654,
+      "ocr_ms": 2425,
+      "images": [
+        "passsoleil.png"
+      ],
+      "n_detections": 11
+    }
+  }
+}

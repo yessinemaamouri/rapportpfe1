@@ -1,0 +1,1160 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(rapport_PFE.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
+ex.def)))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex
+.sty (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\polyglossia
+.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-latex
+.ldf))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-frenc
+h.ldf)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-arabi
+c.ldf (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\bidi.sty
+****************************************************
+* 
+* bidi package (Bidirectional typesetting with
+* plain TeX and LaTeX formats in XeTeX and LuaTeX engines)
+* 
+* Description: A convenient interface for
+* typesetting bidirectional texts in plain TeX
+* and LaTeX. The package includes adaptations
+* for use with many other commonly-used packages.
+* 
+* Copyright (c) 2007--2026 Vafa Khalighi
+* Copyright (c) 2018--2020 bidi-tex GitHub organization
+* 
+* v26.01.08 (Release Iran), 2026/01/08
+* 
+* License: LaTeX Project Public License, version
+* 1.3c or higher (your choice)
+* 
+* Location on CTAN: /macros/unicodetex/generic/bidi
+* 
+* Issue tracker: https://github.com/xepersian/bidi/issues
+* 
+* Primary author of bidi package: Vafa Khalighi.
+* 
+****************************************************
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\biditools.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty))
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\latex-xetex-bidi.d
+ef
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\footnote-xetex-bid
+i.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\report-xetex-bidi.
+def)))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\arabicnumbe
+rs.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\hijrical.st
+y (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\cal-util.de
+f))) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\geometry-xetex-bid
+i.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def)
+))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\graphicx-xetex-bid
+i.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty)))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\hyperref-xetex-bid
+i.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\array-xetex-bidi.d
+ef))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\colortbl-xetex-bid
+i.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\xcolor-xetex-bidi.
+def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\titlesec-xetex-bid
+i.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\fancyhdr-xetex-bid
+i.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-xetex.def
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-dvipdfmx.def
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def))))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\pgfsys-xetex-bidi.
+def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
+ty)))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\tcolorbox-xetex-bi
+di.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code
+.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.image
+.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryfil
+l.image.code.tex))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsa
+w.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
+))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakable.
+code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/etoc\etoc.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\multicol-xetex-bid
+i.def))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\float-xetex-bidi.d
+ef) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\amstext-xetex-bidi
+.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\amsmath-xetex-bidi
+.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesom
+e5.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesom
+e5-utex-helper.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\tufontawes
+omefree.fd)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\tufontawes
+omebrands.fd)))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upzd.fd)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upsy.fd))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\longtable-xetex-bi
+di.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\caption3-xetex-bid
+i.def)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty))
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\caption-xetex-bidi
+.def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\float-xetex-bidi.d
+ef) (rapport_PFE.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(rapport_PFE.out) (rapport_PFE.out)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+[1] [1] [2] [3] [4] [5] (ch1.tex
+Chapitre 1.
+[6]
+! Undefined control sequence.
+l.31 ...de cette dynamique est le lancement de \og
+                                                   NEO BTE \fg{} : une plate...
+
+! Undefined control sequence.
+l.31 ...amique est le lancement de \og NEO BTE \fg
+                                                  {} : une plateforme bancai...
+
+[7]
+! Undefined control sequence.
+l.53 ... KYC (\textit{Know Your Customer}), ou \og
+                                                   Connaissance du Client \f...
+
+! Undefined control sequence.
+l.53 ...tomer}), ou \og Connaissance du Client \fg
+                                                  {}, désigne l'ensemble des...
+
+[8] [9] [10]
+Underfull \hbox (badness 2393) in paragraph at lines 135--135
+[][]|\TU/lmr/m/n/10.95 Groupe d’Action Fi-[]
+
+Underfull \hbox (badness 5504) in paragraph at lines 135--135
+[]\TU/lmr/m/n/10.95 nancière (GAFI) —[]
+
+Underfull \hbox (badness 1242) in paragraph at lines 140--140
+[][]|\TU/lmr/m/n/10.95 Applicable aux solutions traitant[]
+
+Underfull \hbox (badness 1325) in paragraph at lines 140--140
+[]\TU/lmr/m/n/10.95 des données de ressortissants ou[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][] [] [][] [] [][] []$[][]
+
+Overfull \hbox (44.86502pt too wide) in paragraph at lines 141--142
+[][]$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][]$[][][]| []
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][][] [] [][][] []$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+[][]$[][][][][] [] [][][][][][][] [] [][][][][] []$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+[][]$[][][][][][][][][] [] [][][][][][][][] [] [][][] []$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+[][]$[][][][][][][][][] [] [][][][][][][][][] [] [][] []$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[]\TU/lmr/m/n/10.95 Centrale de Tunisie[]
+
+Underfull \hbox (badness 1867) in paragraph at lines 165--165
+[]\TU/lmr/m/n/10.95 procédures de vigilance \TU/lmr/m/it/10.95 Know[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][] [] [][][] [] [][] []$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+[][]$[][][] [] [][][][][][][][] [] [][][][] [] [][][] [] [][] []$[][]
+
+Underfull \hbox (badness 8151) in paragraph at lines 168--168
+[]\TU/lmr/m/n/10.95 63 — Instance Na-[]
+
+Underfull \hbox (badness 4779) in paragraph at lines 168--168
+[]\TU/lmr/m/n/10.95 tionale de Protection[]
+
+Underfull \hbox (badness 7468) in paragraph at lines 168--168
+[]\TU/lmr/m/n/10.95 des Données Person-[]
+
+Underfull \hbox (badness 1325) in paragraph at lines 169--169
+[]\TU/lmr/m/n/10.95 doit être déclarée à l’INPDP.[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
+[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][][] [] [][] []$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[][]|\TU/lmr/m/n/10.95 Commission Tuni-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]\TU/lmr/m/n/10.95 sienne des Analyses[]
+
+Underfull \hbox (badness 1127) in paragraph at lines 172--172
+[]\TU/lmr/m/n/10.95 Financières (CTAF) /[]
+
+Underfull \hbox (badness 5802) in paragraph at lines 172--172
+[]\TU/lmr/m/n/10.95 du Marché Financier[]
+[11] [12] [13]
+Overfull \hbox (37.0943pt too wide) in paragraph at lines 225--251
+ [][][][] 
+[14]
+Overfull \hbox (3.83417pt too wide) in paragraph at lines 272--273
+[][]\TU/lmr/bx/n/12 Dépendance cloud systématique : \TU/lmr/m/n/12 les trois pl
+ateformes analysées transmettent[]
+
+Overfull \hbox (1.36348pt too wide) in paragraph at lines 273--274
+[][]\TU/lmr/bx/n/12 Inadaptation au contexte tunisien : \TU/lmr/m/n/12 le trait
+ement bilingue arabe/latin, propre[]
+
+Overfull \hbox (19.0476pt too wide) in paragraph at lines 293--294
+[][]\TU/lmr/m/n/12 Parallèlement, les solutions commerciales analysées s’avèren
+t inadaptées aux contraintes[]
+[15] [16] [17]
+! Undefined control sequence.
+l.372 ...février 2021), le modèle introduit le \og
+                                                   Q \fg{} --- pour \textit{...
+
+! Undefined control sequence.
+l.372 ...r 2021), le modèle introduit le \og Q \fg
+                                                  {} --- pour \textit{Qualit...
+
+[18] [19] [20]) (ch4.tex [21]
+Chapitre 2.
+[22]
+Underfull \hbox (badness 1057) in paragraph at lines 45--45
+[][]|\TU/lmr/bx/n/12 Responsable qua-[]
+[23] [24]
+
+Package enumitem Warning: Negative labelwidth. This does not make much
+(enumitem)                sense, on input line 113.
+
+[25]
+
+LaTeX Warning: Citation `bct2025circ06' on page 26 undefined on input line 120.
+
+
+[26]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 153.
+See the caption package documentation for explanation.
+
+[27]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 166.
+See the caption package documentation for explanation.
+
+[28]
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.210   \hline
+              
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.211   S
+         cénario nominal     &
+! Extra alignment tab has been changed to \cr.
+<template> ... width\arrayrulewidth }\endtemplate 
+                                                  
+l.211   S
+         cénario nominal     &
+[29] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
+[][]
+
+Underfull \hbox (badness 1009) in paragraph at lines 280--284
+[]\TU/lmr/bx/n/12 Étape 2 — Vérification des informations ex-[]
+
+Underfull \hbox (badness 1983) in paragraph at lines 280--284
+[]\TU/lmr/bx/n/12 traites. \TU/lmr/m/n/12 L’utilisateur consulte les données ex
+traites[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
+[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
+[][]
+
+Underfull \hbox (badness 3780) in paragraph at lines 280--284
+[]\TU/lmr/bx/n/12 Étape 4 — Récapitulatif et soumission fi-[]
+[31] [32]
+Underfull \hbox (badness 2376) in paragraph at lines 314--321
+[]\TU/lmr/m/n/12 - L’analyste lance le filtrage anti-blanchiment, qui[]
+[33] [34] [35]) [36] [37] (ch2.tex
+Chapitre 3.
+[38] [39] [40] [41] [42] [43] [44] [45] [46]
+Overfull \hbox (15.73027pt too wide) in paragraph at lines 291--309
+ [][][][] 
+
+Overfull \hbox (29.74686pt too wide) in paragraph at lines 322--340
+ [][][][] 
+[47] [48] [49]) (ch3.tex [50]
+Chapitre 4.
+[51] [52] [53]
+Underfull \hbox (badness 5345) in paragraph at lines 59--59
+[][]|\TU/lmr/m/n/12 YOLOv11m + PP-[]
+
+Underfull \hbox (badness 5345) in paragraph at lines 60--60
+[][]|\TU/lmr/m/n/12 YOLOv11m + PP-[]
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+[][]|\TU/lmr/m/n/12 Données propres,[]
+
+Underfull \hbox (badness 4181) in paragraph at lines 91--91
+[][]|\TU/lmr/m/n/12 Faible bruit, peu[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+[][]|\TU/lmr/m/n/12 Pré-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+[][]|\TU/lmr/m/n/12 Masquages agres-[]
+
+Overfull \hbox (2.31798pt too wide) in paragraph at lines 103--103
+ []|[]\TU/lmr/bx/n/17.28 Préparation des données (ingénierie des données)| []
+[55] [56]
+Overfull \hbox (17.04338pt too wide) in paragraph at lines 171--172
+[][]\TU/lmr/bx/n/12 Passeport : \TU/lmr/m/n/12 address, dob, first_name, image,
+ last_name, num_cin, pob, num_pass. []
+[57]
+Overfull \hbox (4.45155pt too wide) in paragraph at lines 199--199
+ []|[]\TU/lmr/bx/n/14.4 Augmentation contrôlée : simulation de la variabilité r
+éelle| []
+[58] [59] [60] [61] [62]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 379.
+See the caption package documentation for explanation.
+
+[63] [64]
+Underfull \hbox (badness 1975) in paragraph at lines 430--431
+[][]|\TU/lmr/m/n/12 Initialise les poids depuis un modèle pré-[]
+
+Underfull \hbox (badness 1565) in paragraph at lines 440--441
+[][]|\TU/lmr/m/n/12 Algorithme d’optimisation. \TU/lmtt/m/n/12 AdamW \TU/lmr/m/
+n/12 offre une[]
+
+Underfull \hbox (badness 1314) in paragraph at lines 480--481
+[][]|\TU/lmr/m/n/12 Désactive la mosaïque sur les $\OML/lmm/m/it/12 N$ \TU/lmr/
+m/n/12 dernières[]
+[65] [66] [67] [68] [69] [70] [71] [72]
+Underfull \hbox (badness 1735) in paragraph at lines 761--761
+[][]|\TU/lmr/m/n/10.95 Score OCR faible ($\OML/lmm/m/it/10.95 <$[]
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ط in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no ج in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ج in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ح in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no د in font [lmmono10-regular]:!
+Missing character: There is no س in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ت in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no و in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ة in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ج in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no و in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no س in font [lmmono10-regular]:!
+Missing character: There is no ت in font [lmmono10-regular]:!
+Missing character: There is no ش in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no ق in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no و in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no ه in font [lmmono10-regular]:!
+Missing character: There is no ج in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no س in font [lmmono10-regular]:!
+Missing character: There is no ت in font [lmmono10-regular]:!
+Missing character: There is no ق in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ع in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no س in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ت in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+[73] [74]
+
+LaTeX Warning: Reference `subsec:yolo11m-detection' on page 75 undefined on inp
+ut line 885.
+
+[75] [76] [77]
+Overfull \hbox (8.92628pt too wide) in paragraph at lines 1037--1039
+[]\TU/lmr/m/n/12 Ultralytics sauvegarde automatiquement le checkpoint \TU/lmtt/
+m/n/12 best.pt \TU/lmr/m/n/12 à l’époque où le mAP@50[]
+[78]
+Overfull \hbox (28.7487pt too wide) in paragraph at lines 1047--1048
+[]\TU/lmr/m/n/12 structurées (\TU/lmtt/m/n/12 flag1\TU/lmr/m/n/12 , \TU/lmtt/m/
+n/12 flag2\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 num_cin\TU/lmr/m/n/12 ). Les confusi
+ons les plus notables concernent \TU/lmtt/m/n/12 first_name[]
+[79] [80] [81] [82] [83] [84]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1264--1269
+ [] [] [] [] [] 
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1269--1274
+ [] [] [] [] [] 
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1274--1300
+ [] [] [] [] [] 
+[85]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1309--1314
+ [] [] [] [] [] 
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1314--1319
+ [] [] [] [] [] 
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1319--1341
+ [] [] [] [] [] 
+[86]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1350--1355
+ [] [] [] [] [] 
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1355--1360
+ [] [] [] [] [] 
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1360--1390
+ [] [] [] [] [] 
+Missing character: There is no أ in font [lmmono12-regular]:!
+Missing character: There is no إ in font [lmmono12-regular]:!
+Missing character: There is no آ in font [lmmono12-regular]:!
+Missing character: There is no ا in font [lmmono12-regular]:!
+
+Underfull \hbox (badness 1635) in paragraph at lines 1447--1448
+[]$\OML/lmm/m/it/12 EMR[]$\TU/lmr/m/n/12 . Un $\OT1/lmr/m/n/12 ^^A\OML/lmm/m/it
+/12 EMR$ \TU/lmr/m/n/12 positif confirme l’apport du module de post-[]
+
+Underfull \hbox (badness 1502) in paragraph at lines 1473--1474
+[]\TU/lmr/m/n/12 Particulièrement utile pour les champs multi-mots (\TU/lmtt/m/
+n/12 full_name\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 address\TU/lmr/m/n/12 ,[]
+[87] [88]
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1507--1512
+ [] [] [] [] 
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1512--1517
+ [] [] [] [] 
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1517--1524
+ [] [] [] [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1532--1532
+[][]|\TU/lmr/bx/n/12 EMR[]
+
+Underfull \hbox (badness 1231) in paragraph at lines 1532--1532
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1532--1533
+[][]|\TU/lmr/bx/n/12 Score[]
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1529--1534
+ [] [] [] [] [] [] [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1537--1537
+[][]|\TU/lmr/bx/n/12 EMR[]
+
+Underfull \hbox (badness 1231) in paragraph at lines 1537--1537
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1537--1538
+[][]|\TU/lmr/bx/n/12 Score[]
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1534--1539
+ [] [] [] [] [] [] [] 
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1539--1554
+ [] [] [] [] [] [] [] 
+[89]
+Missing character: There is no ا in font [lmmono12-regular]:!
+Missing character: There is no ف in font [lmmono12-regular]:!
+Missing character: There is no ر in font [lmmono12-regular]:!
+Missing character: There is no ي in font [lmmono12-regular]:!
+Missing character: There is no ل in font [lmmono12-regular]:!
+Missing character: There is no أ in font [lmmono12-regular]:!
+Missing character: There is no ف in font [lmmono12-regular]:!
+Missing character: There is no ر in font [lmmono12-regular]:!
+Missing character: There is no ي in font [lmmono12-regular]:!
+Missing character: There is no ل in font [lmmono12-regular]:!
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1568--1573
+ [] [] [] [] 
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1573--1578
+ [] [] [] [] 
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1578--1585
+ [] [] [] [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1593--1593
+[][]|\TU/lmr/bx/n/12 EMR[]
+
+Underfull \hbox (badness 1231) in paragraph at lines 1593--1593
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1593--1594
+[][]|\TU/lmr/bx/n/12 Score[]
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1590--1595
+ [] [] [] [] [] [] [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1598--1598
+[][]|\TU/lmr/bx/n/12 EMR[]
+
+Underfull \hbox (badness 1231) in paragraph at lines 1598--1598
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1598--1599
+[][]|\TU/lmr/bx/n/12 Score[]
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1595--1600
+ [] [] [] [] [] [] [] 
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1600--1613
+ [] [] [] [] [] [] [] 
+[90]
+Missing character: There is no ا in font [lmmono12-regular]:!
+Missing character: There is no ل in font [lmmono12-regular]:!
+Missing character: There is no ع in font [lmmono12-regular]:!
+Missing character: There is no ن in font [lmmono12-regular]:!
+Missing character: There is no و in font [lmmono12-regular]:!
+Missing character: There is no ا in font [lmmono12-regular]:!
+Missing character: There is no ن in font [lmmono12-regular]:!
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1627--1632
+ [] [] [] [] 
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1632--1637
+ [] [] [] [] 
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1637--1644
+ [] [] [] [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1652--1652
+[][]|\TU/lmr/bx/n/12 EMR[]
+
+Underfull \hbox (badness 1231) in paragraph at lines 1652--1652
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1652--1653
+[][]|\TU/lmr/bx/n/12 Score[]
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1649--1654
+ [] [] [] [] [] [] [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1657--1657
+[][]|\TU/lmr/bx/n/12 EMR[]
+
+Underfull \hbox (badness 1231) in paragraph at lines 1657--1657
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1657--1658
+[][]|\TU/lmr/bx/n/12 Score[]
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1654--1659
+ [] [] [] [] [] [] [] 
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1659--1684
+ [] [] [] [] [] [] [] 
+[91]
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+[][]|\TU/lmr/bx/n/12 DR[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+[][]|\TU/lmr/bx/n/12 EMR[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
+[][]|\TU/lmr/bx/n/12 CER post-[]
+
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1698--1703
+ [] [] [] [] [] [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+[][]|\TU/lmr/bx/n/12 DR[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+[][]|\TU/lmr/bx/n/12 EMR[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1707
+[][]|\TU/lmr/bx/n/12 CER post-[]
+
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1703--1708
+ [] [] [] [] [] [] 
+
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1708--1717
+ [] [] [] [] [] [] 
+[92]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1740.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1747.
+See the caption package documentation for explanation.
+
+Missing character: There is no م in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no م in font [lmroman12-regular]:mapping=tex-text;!
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1754.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1763--1770
+ [] [] [] [] 
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1770--1777
+ [] [] [] [] 
+Missing character: There is no م in font [lmroman10-bolditalic]:mapping=tex-tex
+t;!
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1777--1801
+ [] [] [] [] 
+[93]
+Underfull \hbox (badness 10000) in paragraph at lines 1808--1809
+[][]|[]\TU/lmr/bx/n/12 Temps total[]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1814.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 1805--1814
+ [][][] 
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1832.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1839.
+See the caption package documentation for explanation.
+
+Missing character: There is no ن in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ا in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ب in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ل in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ن in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ا in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ب in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ل in font [lmroman12-regular]:mapping=tex-text;!
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1846.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1855--1862
+ [] [] [] [] 
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1862--1869
+ [] [] [] [] 
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1869--1890
+ [] [] [] [] 
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 1897--1898
+[][]|[]\TU/lmr/bx/n/12 Temps total[]
+
+Underfull \hbox (badness 6461) in paragraph at lines 1901--1901
+[][]|\TU/lmr/m/n/12 Verso 3 (surexposi-[]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1903.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 1894--1903
+ [][][] 
+[95]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1921.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1928.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1935.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1944--1951
+ [] [] [] [] 
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1951--1958
+ [] [] [] [] 
+
+Underfull \hbox (badness 2376) in paragraph at lines 1988--1988
+[][]|\TU/lmr/m/n/12 19/05/1995 []$\OMS/lmsy/m/n/10.95  $ \TU/lmr/m/n/10.95 OCR 
+bruité par motifs[]
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1958--1997
+ [] [] [] [] 
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 2004--2005
+[][]|[]\TU/lmr/bx/n/12 Temps total[]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2010.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 2001--2010
+ [][][] 
+[97]
+Overfull \hbox (8.05006pt too wide) in paragraph at lines 2016--2017
+[][]\TU/lmr/bx/n/12 Passeport avec reflet. \TU/lmr/m/n/12 Le reflet localisé ma
+sque entièrement les champs \TU/lmtt/m/n/12 first_name[]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2042.
+See the caption package documentation for explanation.
+
+[98]
+Underfull \hbox (badness 5231) in paragraph at lines 2063--2064
+[][]|\TU/lmr/m/n/12 Localise les champs textuels par YO-[]
+[99]) [100] [101] (ch5.tex
+Chapitre 5.
+[102]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 26.
+
+
+Overfull \hbox (74.04079pt too wide) in paragraph at lines 28--29
+[]\TU/lmtt/m/n/12 SuperviseurIA \TU/lmr/m/n/12 et \TU/lmtt/m/n/12 Admin\TU/lmr/
+m/n/12 . La classe \TU/lmtt/m/n/12 Client \TU/lmr/m/n/12 est reliée à la fiche 
+identitaire (\TU/lmtt/m/n/12 InformationUtilisateur\TU/lmr/m/n/12 ),[]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 33.
+See the caption package documentation for explanation.
+
+[103] [104] [105]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 89.
+See the caption package documentation for explanation.
+
+[106]
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+[]|\TU/lmr/bx/n/12 –[]
+
+Overfull \hbox (14.27136pt too wide) in paragraph at lines 126--127
+[]\TU/lmtt/b/n/12 getPourDocument() \TU/lmr/bx/n/12 :[]
+
+Overfull \hbox (38.71536pt too wide) in paragraph at lines 144--144
+[][]\TU/lmr/bx/it/12 InformationUtilisateur[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+[][]\TU/lmr/bx/it/12 AnalysteKYC[]
+[107] [108] [109]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 165.
+See the caption package documentation for explanation.
+
+[110]
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+[][]\TU/lmr/bx/it/12 DocumentKYC[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
+[][]\TU/lmr/bx/it/12 DemandeKYC[]
+
+Underfull \hbox (badness 7832) in paragraph at lines 209--209
+[][]\TU/lmr/bx/it/12 Utilisateur \TU/lmr/m/n/10.95 (ex-[]
+[111] [112]
+Overfull \hbox (1.85161pt too wide) in paragraph at lines 219--220
+[]\TU/lmr/m/n/12 de même, la classe \TU/lmtt/m/n/12 Match \TU/lmr/m/n/12 factor
+ise les champs de correspondance entre \TU/lmtt/m/n/12 BlackListMatch\TU/lmr/m/
+n/12 ,[]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 224.
+See the caption package documentation for explanation.
+
+[113]
+Underfull \hbox (badness 2173) in paragraph at lines 252--253
+[][]|\TU/lmr/m/n/12 Classe abstraite qui factorise les résultats de corres-[]
+
+Underfull \hbox (badness 1515) in paragraph at lines 252--253
+[]\TU/lmr/m/n/12 sociée. Héritée par \TU/lmtt/m/n/12 BlackListMatch\TU/lmr/m/n/
+12 , \TU/lmtt/m/n/12 PpeListMatch \TU/lmr/m/n/12 et[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--273
+[][]\TU/lmr/bx/it/12 AnalysteKYC[]
+
+Overfull \hbox (38.71536pt too wide) in paragraph at lines 276--276
+[][]\TU/lmr/bx/it/12 InformationUtilisateur[]
+[114] [115]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 294.
+See the caption package documentation for explanation.
+
+[116] [117]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 320.
+See the caption package documentation for explanation.
+
+[118] [119]) (ch6.tex [120]
+Chapitre 6.
+[121]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 36.
+See the caption package documentation for explanation.
+
+[122]
+Overfull \hbox (35.77354pt too wide) in alignment at lines 49--53
+ [] [] [] [] 
+
+Overfull \hbox (35.77354pt too wide) in alignment at lines 53--57
+ [] [] [] [] 
+
+Overfull \hbox (35.77354pt too wide) in alignment at lines 57--72
+ [] [] [] [] 
+
+Overfull \hbox (12.23622pt too wide) in paragraph at lines 108--108
+[][]|\TU/lmtt/m/n/12 identity_duplicate_alerts| []
+[123] [124] [125]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 164.
+See the caption package documentation for explanation.
+
+[126]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 178.
+See the caption package documentation for explanation.
+
+[127]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 198.
+See the caption package documentation for explanation.
+
+[128] [129]) [130] (rapport_PFE.bbl [131]) [132] (rapport_PFE.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+(see the transcript file for additional information)
+Output written on rapport_PFE.pdf (133 pages).
+Transcript written on rapport_PFE.log.

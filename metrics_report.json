@@ -1,0 +1,918 @@
+{
+  "cin_recto": {
+    "fields": {
+      "num_cin": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 1.0,
+          "structured": 1.0,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9986,
+          "p10": 0.9996
+        },
+        "calibration": {
+          "pure_ocr": 0.0014,
+          "structured": 0.0014
+        }
+      },
+      "last_name": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.9667,
+          "structured": 0.9667,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0037,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0037,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0667,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0667,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9604,
+          "p10": 0.9079
+        },
+        "calibration": {
+          "pure_ocr": 0.0693,
+          "structured": 0.0693
+        }
+      },
+      "first_name": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 0.95,
+          "structured": 0.95
+        },
+        "emr": {
+          "pure_ocr": 0.9825,
+          "structured": 0.9825,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0044,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0044,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0175,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0175,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9438,
+          "p10": 0.8776
+        },
+        "calibration": {
+          "pure_ocr": 0.07,
+          "structured": 0.07
+        }
+      },
+      "full_name": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.8333,
+          "structured": 0.8333,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0165,
+            "p90": 0.0769
+          },
+          "structured": {
+            "mean": 0.0179,
+            "p90": 0.0769
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0567,
+            "p90": 0.25
+          },
+          "structured": {
+            "mean": 0.0567,
+            "p90": 0.25
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9394,
+          "p10": 0.8967
+        },
+        "calibration": {
+          "pure_ocr": 0.2009,
+          "structured": 0.2009
+        }
+      },
+      "dob": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.0,
+          "structured": 0.8833,
+          "gain": 0.8833
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.4764,
+            "p90": 0.7857
+          },
+          "structured": {
+            "mean": 0.0407,
+            "p90": 0.0769
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.7444,
+            "p90": 1.0
+          },
+          "structured": {
+            "mean": 0.0556,
+            "p90": 0.3333
+          }
+        },
+        "ocr_score": {
+          "mean": 0.8467,
+          "p10": 0.8011
+        },
+        "calibration": {
+          "pure_ocr": 0.8467,
+          "structured": 0.2248
+        }
+      },
+      "pob": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 0.9333,
+          "structured": 0.9333
+        },
+        "emr": {
+          "pure_ocr": 0.9821,
+          "structured": 0.9821,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0036,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0036,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0179,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0179,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.962,
+          "p10": 0.9032
+        },
+        "calibration": {
+          "pure_ocr": 0.0554,
+          "structured": 0.0554
+        }
+      }
+    },
+    "global": {
+      "n_images": 60,
+      "emr_pure_ocr_mean": 0.7941,
+      "emr_structured_mean": 0.9413,
+      "gain_emr_mean": 0.1472,
+      "cer_pure_ocr_mean": 0.0841,
+      "cer_structured_mean": 0.0117
+    }
+  },
+  "cin_verso": {
+    "fields": {
+      "mother_name": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.9833,
+          "structured": 1.0,
+          "gain": 0.0167
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0019,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0042,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9705,
+          "p10": 0.9409
+        },
+        "calibration": {
+          "pure_ocr": 0.0442,
+          "structured": 0.0295
+        }
+      },
+      "profession": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 1.0,
+          "structured": 1.0,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9633,
+          "p10": 0.9207
+        },
+        "calibration": {
+          "pure_ocr": 0.0367,
+          "structured": 0.0367
+        }
+      },
+      "address": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.0,
+          "structured": 0.95,
+          "gain": 0.95
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.3176,
+            "p90": 0.381
+          },
+          "structured": {
+            "mean": 0.0074,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.2311,
+            "p90": 0.25
+          },
+          "structured": {
+            "mean": 0.0094,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9332,
+          "p10": 0.8664
+        },
+        "calibration": {
+          "pure_ocr": 0.9332,
+          "structured": 0.1014
+        }
+      },
+      "issue_date": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.0,
+          "structured": 0.9833,
+          "gain": 0.9833
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.543,
+            "p90": 0.8182
+          },
+          "structured": {
+            "mean": 0.0051,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.7667,
+            "p90": 1.0
+          },
+          "structured": {
+            "mean": 0.0111,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.8528,
+          "p10": 0.81
+        },
+        "calibration": {
+          "pure_ocr": 0.8528,
+          "structured": 0.1591
+        }
+      },
+      "print_id": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 1.0,
+          "structured": 1.0,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9989,
+          "p10": 0.9978
+        },
+        "calibration": {
+          "pure_ocr": 0.0011,
+          "structured": 0.0011
+        }
+      }
+    },
+    "global": {
+      "n_images": 60,
+      "emr_pure_ocr_mean": 0.5967,
+      "emr_structured_mean": 0.9867,
+      "gain_emr_mean": 0.39,
+      "cer_pure_ocr_mean": 0.1725,
+      "cer_structured_mean": 0.0025
+    }
+  },
+  "passeport": {
+    "fields": {
+      "num_pass": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 1.0,
+          "structured": 1.0,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9997,
+          "p10": 0.9998
+        },
+        "calibration": {
+          "pure_ocr": 0.0003,
+          "structured": 0.0003
+        }
+      },
+      "num_cin": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 1.0,
+          "structured": 1.0,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9986,
+          "p10": 0.9998
+        },
+        "calibration": {
+          "pure_ocr": 0.0014,
+          "structured": 0.0014
+        }
+      },
+      "last_name": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.9833,
+          "structured": 0.9833,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0114,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0114,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0111,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0111,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9955,
+          "p10": 0.9899
+        },
+        "calibration": {
+          "pure_ocr": 0.0211,
+          "structured": 0.0211
+        }
+      },
+      "first_name": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.9833,
+          "structured": 0.9833,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.003,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.003,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0083,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0083,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9903,
+          "p10": 0.9973
+        },
+        "calibration": {
+          "pure_ocr": 0.0184,
+          "structured": 0.0184
+        }
+      },
+      "full_name": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.3333,
+          "structured": 0.8,
+          "gain": 0.4667
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.4579,
+            "p90": 0.8333
+          },
+          "structured": {
+            "mean": 0.046,
+            "p90": 0.0526
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.5972,
+            "p90": 1.0
+          },
+          "structured": {
+            "mean": 0.1278,
+            "p90": 0.5
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9355,
+          "p10": 0.9237
+        },
+        "calibration": {
+          "pure_ocr": 0.6244,
+          "structured": 0.2059
+        }
+      },
+      "dob": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.0,
+          "structured": 1.0,
+          "gain": 1.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.4067,
+            "p90": 1.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 1.0333,
+            "p90": 1.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9713,
+          "p10": 0.9204
+        },
+        "calibration": {
+          "pure_ocr": 0.9713,
+          "structured": 0.0287
+        }
+      },
+      "pob": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.8333,
+          "structured": 0.8333,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0739,
+            "p90": 0.3333
+          },
+          "structured": {
+            "mean": 0.0739,
+            "p90": 0.3333
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.14,
+            "p90": 1.0
+          },
+          "structured": {
+            "mean": 0.14,
+            "p90": 1.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.947,
+          "p10": 0.9
+        },
+        "calibration": {
+          "pure_ocr": 0.1744,
+          "structured": 0.1744
+        }
+      },
+      "issue_date": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.0,
+          "structured": 1.0,
+          "gain": 1.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.2267,
+            "p90": 0.2
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 1.0,
+            "p90": 1.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9972,
+          "p10": 0.9991
+        },
+        "calibration": {
+          "pure_ocr": 0.9972,
+          "structured": 0.0028
+        }
+      },
+      "expiry_date": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.0,
+          "structured": 1.0,
+          "gain": 1.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.2,
+            "p90": 0.2
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 1.0,
+            "p90": 1.0
+          },
+          "structured": {
+            "mean": 0.0,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9999,
+          "p10": 0.9999
+        },
+        "calibration": {
+          "pure_ocr": 0.9999,
+          "structured": 0.0
+        }
+      },
+      "profession": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 0.9833,
+          "structured": 0.9833
+        },
+        "emr": {
+          "pure_ocr": 0.7288,
+          "structured": 0.7797,
+          "gain": 0.0509
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.189,
+            "p90": 0.9091
+          },
+          "structured": {
+            "mean": 0.0905,
+            "p90": 0.3333
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.3008,
+            "p90": 1.0
+          },
+          "structured": {
+            "mean": 0.2571,
+            "p90": 1.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9318,
+          "p10": 0.8781
+        },
+        "calibration": {
+          "pure_ocr": 0.2519,
+          "structured": 0.2024
+        }
+      },
+      "address": {
+        "total_images": 60,
+        "detection_rate": {
+          "pure_ocr": 1.0,
+          "structured": 1.0
+        },
+        "emr": {
+          "pure_ocr": 0.9333,
+          "structured": 0.9333,
+          "gain": 0.0
+        },
+        "cer": {
+          "pure_ocr": {
+            "mean": 0.0562,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0362,
+            "p90": 0.0
+          }
+        },
+        "wer": {
+          "pure_ocr": {
+            "mean": 0.0833,
+            "p90": 0.0
+          },
+          "structured": {
+            "mean": 0.0667,
+            "p90": 0.0
+          }
+        },
+        "ocr_score": {
+          "mean": 0.9659,
+          "p10": 0.9303
+        },
+        "calibration": {
+          "pure_ocr": 0.074,
+          "structured": 0.074
+        }
+      }
+    },
+    "global": {
+      "n_images": 60,
+      "emr_pure_ocr_mean": 0.6178,
+      "emr_structured_mean": 0.9375,
+      "gain_emr_mean": 0.3197,
+      "cer_pure_ocr_mean": 0.1477,
+      "cer_structured_mean": 0.0237
+    }
+  }
+}

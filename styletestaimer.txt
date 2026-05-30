@@ -1,0 +1,197 @@
+Workflow Client — Ouverture de compte
+Vue d'ensemble
+Le parcours client d'ouverture de compte est une séquence mobile de 4 étapes entièrement guidée. Toutes les données (images, résultats OCR) sont stockées temporairement dans le navigateur pendant le parcours et ne sont envoyées en base qu'à la dernière étape, en une seule transaction.
+
+Étape 0 — Choix du compte et accueil
+Avant de démarrer, le client choisit le type de compte qu'il souhaite ouvrir : compte courant ou compte épargne. Il accède ensuite à une page d'accueil récapitulant les 4 étapes à venir, avec une explication du processus et une note de confidentialité.
+
+Étape 1 — Capture du document d'identité
+Le client choisit d'abord son type de document : carte d'identité nationale (CIN) ou passeport.
+
+Pour la CIN : deux captures successives sont nécessaires, le recto puis le verso. La caméra s'ouvre avec un cadre rectangulaire guide. À chaque frame envoyée au service de détection, le système vérifie que la carte est bien positionnée et suffisamment nette (5 frames consécutives valides requises). Dès que la capture est confirmée, l'image est uploadée vers MinIO.
+
+Pour le passeport : une seule capture, avec un cadre au format portrait (3:4).
+
+Immédiatement après chaque capture, le pipeline OCR est lancé en arrière-plan : les images sont envoyées au service OCR qui analyse les zones du document et extrait tous les champs textuels. Le résultat est stocké localement dans le navigateur sans interrompre la navigation.
+
+Étape 2 — Vérification et correction des informations
+Le client visualise les informations extraites automatiquement depuis son document. Les champs sont affichés séparément :
+
+Pour la CIN : d'abord les champs du recto (nom, prénom, numéro CIN, date et lieu de naissance), puis les champs du verso (nom de la mère, profession, adresse, date d'émission).
+Pour le passeport : tous les champs en une seule vue (nom latin, prénom latin, nom arabe, numéro de passeport, dates, lieu de naissance, profession, adresse).
+Si un champ est mal lu, le client peut le corriger manuellement directement dans l'interface. Les corrections sont tracées (ancienne valeur / nouvelle valeur) et intégrées dans les données qui seront soumises à l'étape 4. Les corrections sont également conservées pour l'affichage dans le tableau de bord admin, qui peut voir ce que le client a modifié.
+
+Étape 3 — Capture du selfie
+Un écran d'instructions précède la capture (éclairage, absence de couvre-chef et de lunettes). La caméra s'ouvre avec un cadre ovale centré.
+
+Le système détecte le visage en temps réel toutes les 300 ms. Lorsque le visage est bien positionné et le score de confiance suffisant (≥ 0,60 après 2 frames consécutives valides), le cadre passe au vert et le bouton de capture s'active.
+
+Le client visualise ensuite son selfie et peut choisir de le reprendre ou de le valider. Une fois validé, la photo est uploadée vers MinIO. La base de données n'est pas encore mise à jour à cette étape — l'upload MinIO est le seul enregistrement effectué, la persistance DB étant reportée à l'étape 4.
+
+Étape 4 — Confirmation et soumission
+Le client voit un récapitulatif final : sa photo de selfie, son nom et prénom, son numéro de document, le type de compte choisi, et les informations d'identité extraites. Il doit cocher deux cases de consentement :
+
+Certification que les informations fournies sont exactes.
+Acceptation des conditions générales et de la politique de confidentialité.
+En cliquant sur Soumettre ma demande, une seule requête est envoyée au serveur qui crée en une transaction :
+
+La demande KYC avec le type de compte et le statut EN_ATTENTE
+Les documents (recto/verso ou passeport) avec leurs chemins MinIO
+Les résultats OCR complets (brut + post-traité) et les corrections du client
+Le selfie
+Le crop YOLO du visage extrait du document (pour la comparaison faciale ultérieure)
+Le statut retourné est affiché sur une page de confirmation : vert si la demande est transmise normalement, orange si une vérification manuelle est nécessaire, rouge si la demande est bloquée. Un numéro de référence de dossier est affiché. Les données locales du parcours sont effacées du navigateur.
+
+Workflow Admin — Traitement d'une demande d'ouverture de compte
+Vue d'ensemble
+L'agent KYC reçoit les demandes dans un tableau de bord de supervision. Chaque dossier passe par une séquence de vérifications avant que l'agent ne prenne sa décision finale. Le workflow est semi-automatique : l'IA fournit les analyses, mais la décision finale appartient toujours à un être humain.
+
+Phase 1 — Réception et accès au dossier
+Les demandes en attente apparaissent dans une file de traitement triée par date de dépôt. L'agent ouvre un dossier et accède à sa page de revue complète, qui regroupe :
+
+Les informations du client (identité, type de compte demandé)
+Les images des documents capturés (recto, verso CIN ou passeport), affichées depuis MinIO
+Le selfie du client
+Les données OCR extraites et les éventuelles corrections apportées par le client
+L'ensemble des résultats de vérification automatique
+Phase 2 — Vérification des données OCR
+L'agent consulte les champs extraits par l'OCR côte à côte avec les images des documents. Si un champ est erroné, l'agent peut le corriger directement depuis l'interface. Chaque correction est enregistrée dans un historique de corrections horodaté, avec l'ancienne et la nouvelle valeur.
+
+Une correction par l'agent invalide la validation précédente : les résultats de filtrage sont supprimés et le système exige une nouvelle confirmation avant d'autoriser la décision finale. Cela garantit que la décision est toujours prise sur les données les plus récentes et les plus exactes.
+
+Phase 3 — Vérification de conformité du document (Security Check)
+Le système applique automatiquement une vérification de conformité réglementaire sur le document, conforme aux circulaires BCT 2017-08, 2018-09 et 2025-06. Les points vérifiés comprennent :
+
+Présence et cohérence de tous les champs obligatoires (numéro, nom, prénom, date de naissance, etc.)
+Présence de la photo d'identité
+Validité de la date d'expiration du document
+Cohérence interne des informations
+Chaque vérification produit un statut (réussi / échoué / avertissement), un poids dans le score final, et un détail de résultat. Un score de risque documentaire global est calculé.
+
+Phase 4 — Filtrage AML (Lutte contre le blanchiment)
+Lorsque l'agent confirme les données OCR (bouton Valider les données), le système lance automatiquement trois filtres en parallèle :
+
+Filtre liste noire : les données du client (nom, numéro CIN, date de naissance) sont comparées à la base des personnes blacklistées. La comparaison utilise à la fois une correspondance exacte sur le numéro de document et une similarité textuelle sur les noms. Les correspondances sont classées par type (exacte CIN, exacte nom + date, similitude forte, etc.) et accompagnées d'une recommandation.
+
+Filtre PPE (Personne Politiquement Exposée) : le même processus est appliqué contre la base des PPE. Les correspondances incluent des indicateurs supplémentaires : PPE actuel ou ancien, obligation de diligence renforcée, nécessité d'approbation hiérarchique.
+
+Filtre cross-client (doublons d'identité) : le système compare les données du nouveau client avec toutes les fiches identitaires déjà validées en base. L'objectif est de détecter des identités trop similaires entre clients différents, qui pourraient indiquer une usurpation d'identité ou une fraude documentaire. Ces alertes sont visibles dans un tableau séparé.
+
+Les alertes générées par ces trois filtres sont affichées dans la page de revue avec le détail des champs qui ont déclenché la correspondance, le score de similarité et la recommandation associée.
+
+Phase 5 — Vérification biométrique (Face Match)
+Le tableau de bord affiche côte à côte la photo extraite du document (recadrée par YOLO lors de l'OCR) et le selfie du client. Un score de similarité faciale est calculé et affiché, permettant à l'agent de vérifier que la personne qui a soumis la demande correspond bien à la personne sur le document.
+
+Le score de face match est enregistré en base et pris en compte dans le score de risque global.
+
+Phase 6 — Score de risque global
+Avant de prendre sa décision, l'agent peut calculer le score de risque global. Ce score agrège :
+
+Le résultat du filtrage AML (blacklist + PPE + cross-client)
+Le score de conformité documentaire
+Le score de similarité faciale
+La cohérence globale des données
+Le système propose une recommandation automatique (PASS / MANUAL_REVIEW / ENHANCED_DUE_DILIGENCE / BLOCK) avec le détail de chaque composante et son poids.
+
+Phase 7 — Commentaires et notes internes
+À tout moment, l'agent peut ajouter des commentaires internes sur le dossier. Un commentaire peut être attaché à un champ précis (par exemple une anomalie sur un champ OCR), ou être une note générale. Les catégories disponibles sont : note, préoccupation, vérification, résolution. Les commentaires sont horodatés et attribués à l'agent.
+
+Phase 8 — Décision finale
+L'agent prend la décision finale en choisissant l'une des trois options :
+
+Décision	Effet
+APPROUVÉ	Le compte peut être ouvert. La fiche identitaire est marquée comme vérifiée.
+REJETÉ	La demande est refusée avec un motif. La fiche est marquée comme rejetée.
+INCOMPLET	Des documents supplémentaires sont demandés. La demande reste en attente de complément.
+Un motif de refus peut être saisi pour les décisions REJETÉ et INCOMPLET, qui sera transmis au client.
+
+Description de la page de supervision (Dashboard Admin)
+La page de supervision est le point d'entrée de l'agent KYC. Elle offre trois vues principales :
+
+La file d'attente présente toutes les demandes dont le statut est EN_ATTENTE, triées de la plus ancienne à la plus récente. Pour chaque demande, l'agent voit le nom du client, le type de compte demandé, la date de dépôt et le type de document fourni. Un clic ouvre directement le dossier complet.
+
+La liste complète des demandes permet de consulter l'historique de toutes les demandes, quel que soit leur statut (en attente, approuvé, rejeté, incomplet). Un système de filtres permet de rechercher par statut, par date ou par nom de client. La liste est paginée.
+
+Les alertes de doublons d'identité cross-clients constituent une vue dédiée aux alertes générées par le filtre cross-client. Chaque alerte met en regard deux fiches clients dont les identités sont trop proches. L'agent peut visualiser les documents et informations des deux clients côte à côte, puis qualifier l'alerte comme : confirmée (vrai doublon), fausse alerte, ou résolue. Lorsqu'une alerte est qualifiée de fausse, le score de risque de la demande concernée est automatiquement recalculé pour tenir compte de cette exclusion.
+
+
+
+Description de la page de supervision du système IA
+Vue d'ensemble
+La page de supervision IA est une interface dédiée au suivi des performances des modèles d'intelligence artificielle déployés dans la plateforme. Elle n'est pas destinée au traitement des dossiers clients, mais au pilotage de la qualité des traitements automatiques. Elle agrège les données réelles issues de tous les documents traités et les présente sous forme de métriques, de graphiques et de tableaux de bord interactifs.
+
+Les deux modèles surveillés sont YOLOv11 (responsable de la détection et du recadrage des zones d'information sur les documents) et PaddleOCR PP-OCRv5 (responsable de la lecture et de l'extraction du texte dans ces zones).
+
+Sélecteurs en haut de page
+Sélecteur de type de document : l'agent choisit le type de document à analyser parmi trois options — CIN Recto, CIN Verso, ou Passeport. Chaque type dispose de ses propres labels (zones attendues sur le document) et de ses propres métriques. Le nombre total de documents traités pour chaque type est affiché directement sur le sélecteur.
+
+Sélecteur de période : l'agent filtre les données sur quatre fenêtres temporelles — aujourd'hui, les 7 derniers jours, les 30 derniers jours, ou l'ensemble de l'historique. Tous les indicateurs et graphiques se recalculent automatiquement selon la période choisie.
+
+Bloc 1 — Cartes de métriques globales (KPI)
+Trois cartes côte à côte résument les indicateurs clés du système, chacune avec des barres animées dont la hauteur représente visuellement le niveau de performance.
+
+Carte Système OCR — métriques globales : agrège les performances des deux modèles ensemble. Elle affiche la précision globale, le rappel global, le score F1 global, et la latence moyenne totale (temps YOLO + temps OCR combinés en millisecondes).
+
+Carte YOLOv11 : mesure spécifiquement le modèle de détection de zones. Elle affiche le mAP@50 (indicateur standard de précision de détection objet), la précision, le rappel, le score F1, et la latence moyenne du modèle YOLO seul.
+
+Carte PaddleOCR : mesure spécifiquement le moteur de lecture de texte. Elle affiche le taux de correction (proportion de champs que les clients ou agents ont dû corriger manuellement), la précision, le rappel, le score F1, et la latence moyenne du moteur OCR seul.
+
+Bloc 2 — Graphique d'évolution hebdomadaire
+Un graphique en courbes affiche l'évolution sur 7 jours de la confiance moyenne de YOLO (courbe bleue) et de PaddleOCR (courbe violette). Cet indicateur de tendance permet de détecter rapidement une dégradation des performances au fil du temps — par exemple après un changement de configuration ou une variation dans la qualité des documents soumis.
+
+Bloc 3 — Section YOLOv11 (Détection de zones)
+Cette section analyse en détail le comportement du modèle de détection, champ par champ, pour le type de document sélectionné.
+
+Taux de faux positifs global : affiché sous forme de badge en haut à droite de la section. Il indique la proportion de zones détectées qui correspondent à un label inconnu du modèle pour ce type de document — c'est-à-dire des détections parasites qui ne correspondent à aucun champ attendu.
+
+Graphique : Confiance YOLO par label : un graphique horizontal en barres montre le score de confiance moyen du modèle pour chaque champ du document (par exemple : num_cin, last_name, first_name, dob, pob, etc.). La couleur des barres indique la qualité : bleu foncé pour une confiance supérieure à 93%, bleu moyen entre 88% et 93%, bleu clair en dessous. Une ligne de référence est tracée à 90% pour visualiser le seuil de qualité cible.
+
+Graphique : Taux de zones manquantes : pour chaque champ attendu, ce graphique indique la proportion de documents dans lesquels ce champ n'a pas été détecté par YOLO. Un taux vert indique que le champ est rarement manqué (moins de 3%), orange qu'il est parfois absent (entre 3% et 10%), rouge qu'il est souvent manqué (au-delà de 10%). Une ligne de référence à 10% matérialise le seuil d'alerte.
+
+Bloc 4 — Section PaddleOCR (Extraction de texte)
+Cette section analyse en détail les performances du moteur de lecture, champ par champ.
+
+Taux de correction global : affiché sous forme de badge en haut à droite de la section. Il représente la proportion de champs pour lesquels une correction manuelle a été apportée (par le client à l'étape 2, ou par un agent lors de la revue). C'est l'indicateur le plus direct de la qualité de lecture du modèle en conditions réelles.
+
+Graphique : Confiance OCR par champ : un graphique horizontal en barres montre le score de confiance moyen retourné par PaddleOCR pour chaque champ lisible du document. Violet foncé pour une confiance supérieure à 90%, violet moyen entre 82% et 90%, violet clair en dessous. Une ligne de référence est tracée à 85%.
+
+Graphique : Taux de correction par champ : pour chaque champ, la proportion de fois où une correction a été nécessaire. Vert si le taux est inférieur à 8%, orange entre 8% et 18%, rouge au-delà. Un taux élevé sur un champ particulier signale un problème systématique — mauvaise lisibilité, mise en page atypique, ou limite du modèle sur ce type d'information. Une ligne de référence à 10% matérialise le seuil d'attention.
+
+Graphique de corrélation YOLO ↔ OCR : un nuage de points où chaque point représente un label (champ). L'axe horizontal indique le score de confiance YOLO pour ce label, l'axe vertical le score de confiance OCR correspondant. Ce graphique permet de voir si les deux modèles sont cohérents entre eux : un champ bien détecté par YOLO devrait aussi être bien lu par l'OCR. Un point qui s'écarte de la diagonale signale une incohérence — par exemple un champ que YOLO localise avec certitude mais que l'OCR lit difficilement, ce qui peut indiquer un problème de qualité d'image dans cette zone spécifique.
+
+Tableau : Taux de champs vides : sous le graphique, des badges colorés affichent pour chaque champ lisible le pourcentage de cas où l'OCR n'a extrait aucun texte (champ vide). Vert pour un taux inférieur à 3%, jaune entre 3% et 10%, rouge au-delà. Un champ vide signifie que le modèle a détecté la zone mais n'a pas réussi à y lire de texte — ce qui peut indiquer un problème de prétraitement de l'image ou une limite du modèle sur certains styles d'écriture.
+
+Ce que permet cette page
+La page de supervision IA donne au superviseur une vision complète et objective de la qualité des traitements automatiques, sans avoir à ouvrir des dossiers individuels. Elle permet de :
+
+Identifier les champs problématiques qui nécessitent une amélioration du modèle ou du prétraitement
+Détecter une dégradation des performances dans le temps
+Comparer les performances entre les trois types de documents
+Estimer l'effort de correction humain engendré par les erreurs OCR
+Vérifier la cohérence entre la détection YOLO et la lecture OCR pour chaque zone du document
+la facon qu tu fait la documentaion et le style decriture se nomme quoi
+Ce style s'appelle documentation fonctionnelle ou documentation métier.
+
+Plus précisément, les caractéristiques que j'ai utilisées correspondent à :
+
+Sur le fond :
+
+Description en prose, sans jargon technique
+Orientée vers le comportement observable et le rôle de chaque composant plutôt que vers le code
+Structurée en sections logiques qui suivent le flux réel d'utilisation
+Destinée à être lue par quelqu'un qui n'a pas accès au code source
+Sur la forme :
+
+Phrases complètes et paragraphes continus (pas de listes à puces partout)
+Titres hiérarchiques clairs
+Tableaux uniquement pour les données comparatives
+Pas de noms de variables, pas de noms de fichiers, pas de syntaxe technique
+Ce type de rédaction est utilisé dans les rapports de projets informatiques sous plusieurs appellations selon le contexte :
+
+Terme	Contexte
+Documentation fonctionnelle	Usage le plus courant en entreprise
+Spécification fonctionnelle	Quand elle est rédigée avant développement
+Description du système	Dans les rapports académiques (PFE, mémoire)
+Manuel utilisateur	Quand elle est orientée vers l'utilisateur final
+Note de conception fonctionnelle	Dans les projets d'ingénierie formels
+Dans le contexte d'un rapport de PFE, on parle généralement de description fonctionnelle du système — c'est la section qui explique ce que fait l'application, comment elle se comporte, et comment les acteurs interagissent avec elle, sans entrer dans les détails d'implémentation

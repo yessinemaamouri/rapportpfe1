@@ -700,3 +700,7 @@ Results saved to /content/drive/MyDrive/pfeKyc/passportFieldsDet_V1/yolo11m_pass
 
 ✅ Entraînement terminé.
 📁 Meilleur modèle : /content/drive/MyDrive/pfeKyc/passportFieldsDet_V1/yolo11m_passport_1280_v1/weights/best.pt
+
+xinRecto 5.123 hours+ 4 heures, 59 minutes et 58 secondes+3h 57m 08s.
+cinVerso 5.030 + 6 heures, 59 minutes et 57 secondes hours
+passeport 62 epochs completed in 4.177 hours.

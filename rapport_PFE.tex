@@ -4,9 +4,11 @@
 % PAQUETS ET CONFIGURATION
 % ============================================================
 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[french]{babel}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic]{Arial}
 \usepackage{lmodern}
 \usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm]{geometry}
 \usepackage{amssymb}
@@ -17,6 +19,7 @@
 \usepackage{fancyhdr}
 \usepackage{tcolorbox}
 \tcbuselibrary{skins,breakable}
+\usepackage{etoc}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{enumitem}
@@ -26,12 +29,17 @@
 \usepackage{fontawesome5}
 \usepackage{pifont}
 \usepackage{longtable}
+\usepackage{caption}
 
 % ============================================================
 % COULEURS DU PROJET
 % ============================================================
 
 \definecolor{bleu_principal}{RGB}{31, 78, 121}    % #1F4E79
+\definecolor{niveau1_color}{HTML}{1F4E79}
+\definecolor{niveau2_color}{HTML}{0769C1}
+\definecolor{niveau3_color}{HTML}{007BE9}
+\definecolor{niveau4_color}{HTML}{000000}
 \definecolor{bleu_clair}{RGB}{46, 117, 182}      % #2E75B6
 \definecolor{gris_fonce}{RGB}{64, 64, 64}        % #404040
 \definecolor{gris_leger}{RGB}{245, 245, 245}     % #F5F5F5
@@ -56,8 +64,38 @@
     pdftitle={Rapport PFE - KYC Automatisé},
     pdfauthor={BTE},
     bookmarksnumbered=true,
-    bookmarksopen=true
+    bookmarksopen=true,
+    hidelinks
 }
+
+% ============================================================
+% CONFIGURATION ETOC (sommaires de chapitre cliquables)
+% ============================================================
+
+% Profondeur : sections + sous-sections dans les sommaires locaux
+\etocsettocdepth{subsubsection}
+
+% Style des entrées dans les sommaires locaux
+\etocsetstyle{section}
+  {}
+  {\vspace{0.4em}\leavevmode\bfseries\etocnumber\hspace{0.5em}\etocname\dotfill\etocpage\par}
+  {}
+  {}
+
+\etocsetstyle{subsection}
+  {}
+  {\vspace{0.2em}\leavevmode\hspace{1.5em}\etocnumber\hspace{0.5em}\etocname\dotfill\etocpage\par}
+  {}
+  {}
+
+\etocsetstyle{subsubsection}
+  {}
+  {\vspace{0.1em}\leavevmode\hspace{3em}\small\etocnumber\hspace{0.5em}\etocname\dotfill\etocpage\par}
+  {}
+  {}
+
+% Pas de titre pour le sommaire local
+\etocsettocstyle{}{}
 
 % ============================================================
 % EN-TÊTES ET PIEDS DE PAGE
@@ -67,13 +105,19 @@
 \fancyhf{}
 \fancyhead[L]{\textit{\nouppercase{\leftmark}}}
 \fancyhead[R]{}
-\fancyfoot[C]{\thepage}
+\fancyfoot[L]{Faculté des sciences de Tunis}
+\fancyfoot[R]{Page \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
 
 % ============================================================
 % STYLE DES CHAPITRES (titlesec)
 % ============================================================
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
+\renewcommand{\theparagraph}{\alph{paragraph}.}
 
 \titleformat{\chapter}
   {\normalfont\LARGE\bfseries\color{bleu_principal}}
@@ -82,14 +126,11 @@
   {}
 
 \titlespacing*{\chapter}
-  {0pt}{0pt}{20pt}
-
-\titlespacing*{\chapter}
   {0pt}{-40pt}{20pt}
 
 % Style des sections
 \titleformat{\section}
-  {\normalfont\Large\bfseries\color{bleu_clair}}
+  {\normalfont\Large\bfseries\color{niveau1_color}}
   {\thesection}
   {0.5em}
   {}
@@ -100,13 +141,33 @@
 
 % Style des sous-sections
 \titleformat{\subsection}
-  {\normalfont\large\bfseries\color{gris_fonce}\itshape}
+  {\normalfont\large\bfseries\color{niveau2_color}}
   {\thesubsection}
   {0.5em}
   {}
 
 \titlespacing*{\subsection}
-  {0pt}{12pt}{8pt}
+  {0pt}{12pt}{6pt}
+
+% Style des sous-sous-sections
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\color{niveau3_color}}
+  {\thesubsubsection}
+  {0.5em}
+  {}
+
+\titlespacing*{\subsubsection}
+  {1em}{8pt}{4pt}
+
+% Style des paragraphes (niveau 4)
+\titleformat{\paragraph}[block]
+  {\normalfont\normalsize\bfseries\color{niveau4_color}}
+  {\theparagraph}
+  {0.5em}
+  {}
+
+\titlespacing*{\paragraph}
+  {2em}{6pt}{3pt}
 
 % ============================================================
 % PAGE DE COUVERTURE
@@ -170,12 +231,40 @@
       {\fontsize{14}{17}\selectfont\textcolor{bleu_clair}{\textit{#1}}}
     \fi
 
-    \vspace{2cm}
-
-    \begin{tcolorbox}[colback=bleu_clair!10, colframe=bleu_clair, boxrule=2pt, arc=4mm, left=1cm, right=1cm, top=1cm, bottom=1cm, width=0.75\textwidth]
-      #3
-    \end{tcolorbox}
+    \ifx&#3&\else
+      \vspace{2cm}
+      \begin{tcolorbox}[colback=bleu_clair!10, colframe=bleu_clair, boxrule=2pt, arc=4mm, left=1cm, right=1cm, top=1cm, bottom=1cm, width=0.75\textwidth]
+        #3
+      \end{tcolorbox}
+    \fi
   \end{center}
+  \clearpage
+}
+
+% ============================================================
+% PAGE DE PARTIE (fond blanc, texte bleu #1C1B70)
+% ============================================================
+
+\definecolor{partie_bleu}{HTML}{1C1B70}
+
+\newcommand{\pagepartie}[2]{%
+  \clearpage
+  \thispagestyle{empty}
+  \vspace*{\fill}
+  \begin{center}
+    {\color{partie_bleu}\rule{\linewidth}{1.2pt}}
+    \vspace{1.2cm}
+
+    {\fontsize{18}{22}\selectfont\textcolor{partie_bleu}{\textbf{Partie #1}}}
+
+    \vspace{0.8cm}
+
+    {\fontsize{22}{28}\selectfont\textcolor{partie_bleu}{\textbf{#2}}}
+
+    \vspace{1.2cm}
+    {\color{partie_bleu}\rule{\linewidth}{1.2pt}}
+  \end{center}
+  \vspace*{\fill}
   \clearpage
 }
 
@@ -196,66 +285,11 @@
 % CHAPITRE 1
 % ============================================================
 
-\pageplan{1}{
-  \begin{enumerate}[itemsep=1.2em]
-    \item Organisme d'accueil
-    \begin{enumerate}
-      \item Présentation de la BTE
-      \item Organigramme de la BTE
-    \end{enumerate}
-    \item Compréhension du métier KYC
-    \begin{enumerate}
-      \item KYC traditionnel vs KYC automatisé
-      \item Cadre réglementaire et normatif
-    \end{enumerate}
-    \item Position du problème
-    \begin{enumerate}
-      \item Étude de l'existant
-      \item Analyse critique de l'existant
-      \item Problématique retenue
-      \item Solution proposée
-    \end{enumerate}
-    \item Méthodologie adoptée --- approche hybride en deux incréments
-    \begin{enumerate}
-      \item Modèle incrémental
-      \item CRISP-ML(Q)
-      \item Modèle en cascade
-      \item Planification globale du projet
-    \end{enumerate}
-  \end{enumerate}
-}
-
 \input{ch1.tex}
 
 % ============================================================
 % CHAPITRE 2  (Spécification — hors partie)
 % ============================================================
-
-\pageplan[Spécification des Besoins et Architecture]{2}{
-  \begin{enumerate}[itemsep=1.2em]
-    \item Spécification des besoins
-    \begin{enumerate}
-      \item Identification des acteurs
-      \item Besoins fonctionnels
-      \item Besoins non fonctionnels
-    \end{enumerate}
-    \item Architecture globale de la solution
-    \begin{enumerate}
-      \item Architecture logique
-      \item Architecture physique
-    \end{enumerate}
-    \item Diagramme de cas d'utilisation global
-    \begin{enumerate}
-      \item Description des cas d'utilisation
-    \end{enumerate}
-    \item Conception UML
-    \begin{enumerate}
-      \item Diagramme de séquence
-      \item Diagramme de classes
-      \item Diagramme d'activité
-    \end{enumerate}
-  \end{enumerate}
-}
 
 \input{ch4.tex}
 
@@ -263,28 +297,12 @@
 % PARTIE I
 % ============================================================
 
-\part{Incrément 1 : Fondements IA et Réalisation du Pipeline}
+\addcontentsline{toc}{part}{Incrément 1 : Fondements IA et Réalisation du Pipeline}
+\pagepartie{I}{Incrément 1 : Fondements IA\\[0.4em]et Réalisation du Pipeline}
 
 % ============================================================
 % CHAPITRE 3
 % ============================================================
-
-\pageplan[Incrément 1 : Intelligence Artificielle \& Vision par Ordinateur]{3}{
-  \begin{enumerate}[itemsep=1.2em]
-    \item Fondements théoriques
-    \begin{enumerate}
-      \item Intelligence artificielle, machine learning et deep learning
-      \item Vision par ordinateur et réseaux de neurones
-      \item Détection d'objets
-      \item Reconnaissance optique de caractères (OCR)
-    \end{enumerate}
-    \item Choix technologiques
-    \begin{enumerate}
-      \item Modèle de détection : YOLO11m
-      \item Moteur OCR : PaddleOCR PP-OCRv5
-    \end{enumerate}
-  \end{enumerate}
-}
 
 \input{ch2.tex}
 
@@ -292,58 +310,26 @@
 % CHAPITRE 4
 % ============================================================
 
-\pageplan[Incrément 1 : Méthodologie CRISP-ML(Q) --- Réalisation du Module IA]{4}{
-  \begin{enumerate}[itemsep=1.2em]
-    \item Business understanding, data understanding \& collecte
-    \begin{enumerate}
-      \item Pipeline métier du système IA
-      \item Analyse des besoins documentaires
-      \item Collecte et composition du dataset
-    \end{enumerate}
-    \item Préparation des données (ingénierie des données)
-    \begin{enumerate}
-      \item Restauration et génération de données
-      \item Labellisation : construction de la vérité terrain
-      \item Augmentation contrôlée : simulation de la variabilité réelle
-    \end{enumerate}
-    \item Modélisation
-    \item Évaluation et assurance qualité
-    \item Déploiement et intégration
-    \item Surveillance et maintenance
-  \end{enumerate}
-}
-
 \input{ch3.tex}
 
 % ============================================================
 % PARTIE II
 % ============================================================
 
-\part{Incrément 2 : Réalisation du Système eKYC}
+\addcontentsline{toc}{part}{Incrément 2 : Réalisation du Système eKYC}
+\pagepartie{II}{Incrément 2 : Réalisation\\[0.4em]du Système eKYC}
 
 % ============================================================
 % CHAPITRE 5
 % ============================================================
 
-\pageplan[Incrément 2 : Réalisation Applicative et Tests]{5}{
-  \begin{enumerate}[itemsep=1.2em]
-    \item Environnement de développement \& stack technique
-    \item Réalisation des interfaces
-    \begin{enumerate}
-      \item Interface administrateur
-      \item Interface client
-    \end{enumerate}
-    \item Intégration du module IA dans l'application
-    \item Tests et validation
-    \begin{enumerate}
-      \item Tests fonctionnels
-      \item Tests d'intégration
-      \item Synthèse --- Système KYC complet opérationnel
-    \end{enumerate}
-  \end{enumerate}
-}
-
 \input{ch5.tex}
+
+% ============================================================
+% CHAPITRE 6
+% ============================================================
+
+\input{ch6.tex}
 
 % ============================================================
 % CONCLUSION GÉNÉRALE

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.26)  26 MAY 2026 00:06
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.5.30)  30 MAY 2026 23:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -11,98 +11,271 @@ Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count275
-\c@chapter=\count276
-\c@section=\count277
-\c@subsection=\count278
-\c@subsubsection=\count279
-\c@paragraph=\count280
-\c@subparagraph=\count281
-\c@figure=\count282
-\c@table=\count283
+\c@part=\count271
+\c@chapter=\count272
+\c@section=\count273
+\c@subsection=\count274
+\c@subsubsection=\count275
+\c@paragraph=\count276
+\c@subparagraph=\count277
+\c@figure=\count278
+\c@table=\count279
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
 )
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-12-24 L3 programming layer (loader) 
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
+ex.def
+File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
+\g__graphics_track_int=\count280
+\g__pdfannot_backend_int=\count281
+\g__pdfannot_backend_link_int=\count282
+))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex
+.sty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count283
+\l__fontspec_language_int=\count284
+\l__fontspec_strnum_int=\count285
+\l__fontspec_tmp_int=\count286
+\l__fontspec_tmpa_int=\count287
+\l__fontspec_tmpb_int=\count288
+\l__fontspec_tmpc_int=\count289
+\l__fontspec_em_int=\count290
+\l__fontspec_emdef_int=\count291
+\l__fontspec_strong_int=\count292
+\l__fontspec_strongdef_int=\count293
+\l__fontspec_tmpa_dim=\dimen149
+\l__fontspec_tmpb_dim=\dimen150
+\l__fontspec_tmpc_dim=\dimen151
+ (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 )
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks17
-\inpenc@posthook=\toks18
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))
 )
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
-TeX and XeLaTeX
-\babel@savecnt=\count284
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2068.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2070.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2072.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2073.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2074.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2076.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2101.
-\U@D=\dimen149
-\l@unhyphenated=\language79
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\polyglossia
+.sty
+Package: polyglossia 2026/04/18 v2.10 Modern multilingual typesetting with XeLa
+TeX and LuaLaTeX
 
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count285
-Package babel Info: Configuration files are deprecated, as
-(babel)             they can break document portability.
-(babel)             Reported on input line 4196.
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count294
 )
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/fr\babel
--french.tex)
-Package babel Info: Importing font and identification data for french
-(babel)             from babel-fr.ini. Reported on input line 4320.
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+\l_xpg_alias_keyvals_int=\count295
 
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/babel-french\french.l
-df
-Language: french 2025-08-15 v4.0e French support from the babel system
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-latex
+.ldf
+File: gloss-latex.ldf polyglossia: module for default language
+))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-frenc
+h.ldf
+File: gloss-french.ldf polyglossia: module for French
+\french@openbrackets=\XeTeXcharclass1
+\french@closebrackets=\XeTeXcharclass2
+\french@questionexclamation=\XeTeXcharclass3
+\french@punctthin=\XeTeXcharclass4
+\french@punctthick=\XeTeXcharclass5
+\french@punctguillstart=\XeTeXcharclass6
+\french@punctguillend=\XeTeXcharclass7
+)
 
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/babel-french\french3.
-ldf
-Language: french 2025-08-15 v3.7e French support from the babel system
-\FB@stdchar=\count286
-Package babel Info: Making : an active character on input line 273.
-Package babel Info: Making ; an active character on input line 274.
-Package babel Info: Making ! an active character on input line 275.
-Package babel Info: Making ? an active character on input line 276.
-\FBguill@level=\count287
-\FBold@everypar=\toks19
-\FB@Mht=\dimen150
-\mc@charclass=\count288
-\mc@charfam=\count289
-\mc@charslot=\count290
-\std@mcc=\count291
-\dec@mcc=\count292
-\FB@pardim=\dimen151
-\listindentFB=\dimen152
-\descindentFB=\dimen153
-\labelindentFB=\dimen154
-\labelwidthFB=\dimen155
-\leftmarginFB=\dimen156
-\parindentFFN=\dimen157
-\FBfnindent=\dimen158
-)))
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.sty)
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+Package polyglossia Info: Default language is french
+
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-arabi
+c.ldf
+File: gloss-arabic.ldf polyglossia: module for Arabic
+ (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\bidi.sty
+Package: bidi 2026/01/08 v26.01.08 (Release Iran) Bidirectional typesetting in 
+plain TeX and LaTeX
+
+****************************************************
+* 
+* bidi package (Bidirectional typesetting with
+* plain TeX and LaTeX formats in XeTeX and LuaTeX engines)
+* 
+* Description: A convenient interface for
+* typesetting bidirectional texts in plain TeX
+* and LaTeX. The package includes adaptations
+* for use with many other commonly-used packages.
+* 
+* Copyright (c) 2007--2026 Vafa Khalighi
+* Copyright (c) 2018--2020 bidi-tex GitHub organization
+* 
+* v26.01.08 (Release Iran), 2026/01/08
+* 
+* License: LaTeX Project Public License, version
+* 1.3c or higher (your choice)
+* 
+* Location on CTAN: /macros/unicodetex/generic/bidi
+* 
+* Issue tracker: https://github.com/xepersian/bidi/issues
+* 
+* Primary author of bidi package: Vafa Khalighi.
+* 
+****************************************************
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\biditools.sty
+Package: biditools 2025/12/19 v2.9 Programming tools for bidi package
+\@bidi@envbody=\toks17
+\@bidi@emptytoks=\toks18
+\bidi@poscount=\count296
+\bidi@tempcountb=\count297
+\bidi@temptoksa=\toks19
+\bidi@temptoksb=\toks20
+\bidi@dummies=\count298
+\bidi@are@these@correct=\toks21
+\bidi@toks@lista=\toks22
+\bidi@toks@listb=\toks23
+\bidi@stack@length=\count299
+\bidi@empty@stack=\toks24
+\bidi@looprepeat@depth=\count300
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
+Package: zref-abspage 2026-03-07 v2.37 Module abspage for zref (HO)
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
+Package: zref-base 2026-03-07 v2.37 Module base for zref (HO)
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count301
+Package zref Info: New property: abspage on input line 67.
+)
+\@bidi@copyins@=\insert252
+\bidi@typesethour=\count302
+\bidi@typesetminute=\count303
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\latex-xetex-bidi.d
+ef
+File: latex-xetex-bidi.def 2025/12/19 v1.5.6 bidi adaptations for `latex.ltx' f
+or XeTeX engine
+\bidi@n@everypar=\toks25
+LaTeX Info: Redefining \centerline on input line 317.
+LaTeX Info: Redefining \leftline on input line 326.
+LaTeX Info: Redefining \rightline on input line 327.
+LaTeX Info: Redefining \underline on input line 335.
+\bidi@column@check@number=\count304
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\footnote-xetex-bid
+i.def
+File: footnote-xetex-bidi.def 2025/09/30 v1.6 bidi footnote macros for XeTeX en
+gine
+\c@footdir@label=\count305
+\footdir@toks=\toks26
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\report-xetex-bidi.
+def
+File: report-xetex-bidi.def 2025/12/19 v1.3 bidi adaptations for standard repor
+t class for XeTeX engine
+))
+\bidi@digits=\count306
+\bidi@digits@charclass=\XeTeXcharclass8
+\bidi@sepmark@charclass=\XeTeXcharclass9
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\arabicnumbe
+rs.sty
+Package: arabicnumbers 2010/03/18 v0.2 Formatting of Arabic and Farsi digits an
+d of Arabic abjad numerals
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\hijrical.st
+y
+Package: hijrical 2010/07/12 v0.2 Islamic calendar
+ (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count307
+\calc@Bcount=\count308
+\calc@Adimen=\dimen152
+\calc@Bdimen=\dimen153
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count309
+\calc@Cskip=\skip53
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\cal-util.de
+f
+\c@tmpA=\count310
+\c@tmpB=\count311
+\c@tmpC=\count312
+\c@tmpD=\count313
+\c@tmpE=\count314
+\c@tmpF=\count315
+)
+\c@Hijriday=\count316
+\c@Hijrimonth=\count317
+\c@Hijriyear=\count318
+))
+
+Package fontspec Info: 
+(fontspec)             Font family 'Arial(0)' created for font 'Arial' with
+(fontspec)             options [Script=Arabic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=arab;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=arab;language=dflt;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=arab;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=arab;language=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=arab;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=arab;language=dflt;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=arab;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=arab;language=dflt;+smcp;"
+
+ (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -142,34 +315,37 @@ Package: geometry 2026/03/07 v6.0 Page Geometry
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
+\KV@toks@=\toks27
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
-))
-\Gm@cnth=\count293
-\Gm@cntv=\count294
-\c@Gm@tempcnt=\count295
-\Gm@bindingoffset=\dimen159
-\Gm@wd@mp=\dimen160
-\Gm@odd@mp=\dimen161
-\Gm@even@mp=\dimen162
-\Gm@layoutwidth=\dimen163
-\Gm@layoutheight=\dimen164
-\Gm@layouthoffset=\dimen165
-\Gm@layoutvoffset=\dimen166
-\Gm@dimlist=\toks21
+)
+\Gm@cnth=\count319
+\Gm@cntv=\count320
+\c@Gm@tempcnt=\count321
+\Gm@bindingoffset=\dimen154
+\Gm@wd@mp=\dimen155
+\Gm@odd@mp=\dimen156
+\Gm@even@mp=\dimen157
+\Gm@layoutwidth=\dimen158
+\Gm@layoutheight=\dimen159
+\Gm@layouthoffset=\dimen160
+\Gm@layoutvoffset=\dimen161
+\Gm@dimlist=\toks28
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\geometry-xetex-bid
+i.def
+File: geometry-xetex-bidi.def 2017/01/14 v0.2 bidi adaptations for geometry pac
+kage for XeTeX engine
+)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks22
+\@emptytoks=\toks29
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -189,48 +365,28 @@ Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 106.
+Package graphics Info: Driver file: xetex.def on input line 106.
 
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen167
-\Gin@req@width=\dimen168
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\graphicx-xetex-bid
+i.def
+File: graphicx-xetex-bidi.def 2017/06/17 v0.5 bidi adaptations for graphicx pac
+kage for XeTeX engine
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
-keys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
 ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-))
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -243,32 +399,24 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count296
-)
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count297
+\c@section@level=\count322
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
 ty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen169
-\Hy@linkcounter=\count298
-\Hy@pagecounter=\count299
+\@linkdim=\dimen164
+\Hy@linkcounter=\count323
+\Hy@pagecounter=\count324
  (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
 ) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count300
+\Hy@SavedSpaceFactor=\count325
  (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
 )
 Package hyperref Info: Hyper figures OFF on input line 4195.
 Package hyperref Info: Link nesting OFF on input line 4200.
@@ -277,14 +425,14 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count301
+\c@Hy@tempcnt=\count326
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen170
+\XeTeXLinkMargin=\dimen165
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -294,9 +442,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count302
-\Field@Width=\dimen171
-\Fld@charsize=\dimen172
+\Fld@menulength=\count327
+\Field@Width=\dimen166
+\Fld@charsize=\dimen167
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -304,16 +452,19 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count303
-\c@Item=\count304
-\c@Hfootnote=\count305
+\Hy@abspage=\count328
+\c@Item=\count329
+\c@Hfootnote=\count330
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
+Package hyperref Info: Driver (autodetected): hxetex.
 
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count306
-\c@bookmark@seq@number=\count307
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
+File: hxetex.def 2025-07-12 v7.01o Hyperref driver for XeTeX
+\pdfm@box=\box53
+\c@Hy@AnnotLevel=\count331
+\HyField@AnnotCount=\count332
+\Fld@listcount=\count333
+\c@bookmark@seq@number=\count334
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -326,7 +477,12 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip51
+\Hy@SectionHShift=\skip54
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\hyperref-xetex-bid
+i.def
+File: hyperref-xetex-bidi.def 2025/12/06 v1.5 bidi adaptations for hyperref pac
+kage for XeTeX engine
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
@@ -334,10 +490,9 @@ Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 274.
+Package xcolor Info: Driver file: xetex.def on input line 274.
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
@@ -349,48 +504,74 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen173
-\ar@mcellbox=\box53
-\extrarowheight=\dimen174
-\NC@list=\toks23
-\extratabsurround=\skip52
-\backup@length=\skip53
-\ar@cellbox=\box54
+\col@sep=\dimen168
+\ar@mcellbox=\box54
+\extrarowheight=\dimen169
+\NC@list=\toks30
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box55
 )
-\everycr=\toks24
-\minrowclearance=\skip54
-\rownum=\count308
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\array-xetex-bidi.d
+ef
+File: array-xetex-bidi.def 2025/12/06 v0.8 bidi adaptations for array package f
+or XeTeX engine
+)
+\everycr=\toks31
+\minrowclearance=\skip57
+\rownum=\count335
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\colortbl-xetex-bid
+i.def
+File: colortbl-xetex-bidi.def 2012/06/10 v0.2 bidi adaptations for colortbl pac
+kage for XeTeX engine
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\xcolor-xetex-bidi.
+def
+File: xcolor-xetex-bidi.def 2022/06/13 v0.3 bidi adaptations for xcolor package
+ for XeTeX engine
+LaTeX Info: Redefining \color on input line 49.
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box55
-\beforetitleunit=\skip55
-\aftertitleunit=\skip56
-\ttl@plus=\dimen175
-\ttl@minus=\dimen176
-\ttl@toksa=\toks25
-\titlewidth=\dimen177
-\titlewidthlast=\dimen178
-\titlewidthfirst=\dimen179
+\ttl@box=\box56
+\beforetitleunit=\skip58
+\aftertitleunit=\skip59
+\ttl@plus=\dimen170
+\ttl@minus=\dimen171
+\ttl@toksa=\toks32
+\titlewidth=\dimen172
+\titlewidthlast=\dimen173
+\titlewidthfirst=\dimen174
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\titlesec-xetex-bid
+i.def
+File: titlesec-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for titlesec pac
+kage for XeTeX engine
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip57
-\f@nch@offset@elh=\skip58
-\f@nch@offset@erh=\skip59
-\f@nch@offset@olh=\skip60
-\f@nch@offset@orh=\skip61
-\f@nch@offset@elf=\skip62
-\f@nch@offset@erf=\skip63
-\f@nch@offset@olf=\skip64
-\f@nch@offset@orf=\skip65
-\f@nch@height=\skip66
-\f@nch@footalignment=\skip67
-\f@nch@widthL=\skip68
-\f@nch@widthC=\skip69
-\f@nch@widthR=\skip70
-\@temptokenb=\toks26
+\f@nch@headwidth=\skip60
+\f@nch@offset@elh=\skip61
+\f@nch@offset@erh=\skip62
+\f@nch@offset@olh=\skip63
+\f@nch@offset@orh=\skip64
+\f@nch@offset@elf=\skip65
+\f@nch@offset@erf=\skip66
+\f@nch@offset@olf=\skip67
+\f@nch@offset@orf=\skip68
+\f@nch@height=\skip69
+\f@nch@footalignment=\skip70
+\f@nch@widthL=\skip71
+\f@nch@widthC=\skip72
+\f@nch@widthR=\skip73
+\@temptokenb=\toks33
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\fancyhdr-xetex-bid
+i.def
+File: fancyhdr-xetex-bidi.def 2025/09/03 v1.0 bidi adaptations for fancyhdr pac
+kage for XeTeX engine
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
@@ -402,13 +583,13 @@ sty
 y
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common.tex
-\pgfutil@everybye=\toks27
-\pgfutil@tempdima=\dimen180
-\pgfutil@tempdimb=\dimen181
+\pgfutil@everybye=\toks34
+\pgfutil@tempdima=\dimen175
+\pgfutil@tempdimb=\dimen176
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -latex.def
-\pgfutil@abb=\box56
+\pgfutil@abb=\box57
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
 code.tex
@@ -427,58 +608,69 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 .code.tex
-\pgfkeys@pathtoks=\toks28
-\pgfkeys@temptoks=\toks29
+\pgfkeys@pathtoks=\toks35
+\pgfkeys@temptoks=\toks36
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 libraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks30
+\pgfkeys@tmptoks=\toks37
 ))
-\pgf@x=\dimen182
-\pgf@y=\dimen183
-\pgf@xa=\dimen184
-\pgf@ya=\dimen185
-\pgf@xb=\dimen186
-\pgf@yb=\dimen187
-\pgf@xc=\dimen188
-\pgf@yc=\dimen189
-\pgf@xd=\dimen190
-\pgf@yd=\dimen191
+\pgf@x=\dimen177
+\pgf@y=\dimen178
+\pgf@xa=\dimen179
+\pgf@ya=\dimen180
+\pgf@xb=\dimen181
+\pgf@yb=\dimen182
+\pgf@xc=\dimen183
+\pgf@yc=\dimen184
+\pgf@xd=\dimen185
+\pgf@yd=\dimen186
 \w@pgf@writea=\write3
-\r@pgf@reada=\read3
-\c@pgf@counta=\count309
-\c@pgf@countb=\count310
-\c@pgf@countc=\count311
-\c@pgf@countd=\count312
-\t@pgf@toka=\toks31
-\t@pgf@tokb=\toks32
-\t@pgf@tokc=\toks33
-\pgf@sys@id@count=\count313
+\r@pgf@reada=\read2
+\c@pgf@counta=\count336
+\c@pgf@countb=\count337
+\c@pgf@countc=\count338
+\c@pgf@countd=\count339
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
+\pgf@sys@id@count=\count340
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
-Driver file for pgf: pgfsys-pdftex.def
+Driver file for pgf: pgfsys-xetex.def
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s-pdftex.def
-File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+s-xetex.def
+File: pgfsys-xetex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 s-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)
+\pgfsys@objnum=\count341
 )))
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count314
-\pgfsyssoftpath@bigbuffer@items=\count315
+\pgfsyssoftpath@smallbuffer@items=\count342
+\pgfsyssoftpath@bigbuffer@items=\count343
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\pgfsys-xetex-bidi.
+def
+File: pgfsys-xetex-bidi.def 2025/01/05 v0.1 bidi adaptations for pgfsys package
+ for XeTeX engine
+)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 e.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
@@ -489,12 +681,12 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 code.tex)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
-\pgfmath@dimen=\dimen192
-\pgfmath@count=\count316
-\pgfmath@box=\box57
-\pgfmath@toks=\toks34
-\pgfmath@stack@operand=\toks35
-\pgfmath@stack@operation=\toks36
+\pgfmath@dimen=\dimen187
+\pgfmath@count=\count344
+\pgfmath@box=\box58
+\pgfmath@toks=\toks41
+\pgfmath@stack@operand=\toks42
+\pgfmath@stack@operation=\toks43
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
 ions.code.tex)
@@ -518,59 +710,59 @@ ions.integerarithmetics.code.tex)
 code.tex)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count317
+\c@pgfmathroundto@lastzeros=\count345
 ))
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
 tex)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen193
-\pgf@picmaxx=\dimen194
-\pgf@picminy=\dimen195
-\pgf@picmaxy=\dimen196
-\pgf@pathminx=\dimen197
-\pgf@pathmaxx=\dimen198
-\pgf@pathminy=\dimen199
-\pgf@pathmaxy=\dimen256
-\pgf@xx=\dimen257
-\pgf@xy=\dimen258
-\pgf@yx=\dimen259
-\pgf@yy=\dimen260
-\pgf@zx=\dimen261
-\pgf@zy=\dimen262
+\pgf@picminx=\dimen188
+\pgf@picmaxx=\dimen189
+\pgf@picminy=\dimen190
+\pgf@picmaxy=\dimen191
+\pgf@pathminx=\dimen192
+\pgf@pathmaxx=\dimen193
+\pgf@pathminy=\dimen194
+\pgf@pathmaxy=\dimen195
+\pgf@xx=\dimen196
+\pgf@xy=\dimen197
+\pgf@yx=\dimen198
+\pgf@yy=\dimen199
+\pgf@zx=\dimen256
+\pgf@zy=\dimen257
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen263
-\pgf@path@lasty=\dimen264
+\pgf@path@lastx=\dimen258
+\pgf@path@lasty=\dimen259
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen265
-\pgf@shorten@start@additional=\dimen266
+\pgf@shorten@end@additional=\dimen260
+\pgf@shorten@start@additional=\dimen261
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box58
-\pgf@hbox=\box59
-\pgf@layerbox@main=\box60
-\pgf@picture@serial@count=\count318
+\pgfpic=\box59
+\pgf@hbox=\box60
+\pgf@layerbox@main=\box61
+\pgf@picture@serial@count=\count346
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen267
+\pgflinewidth=\dimen262
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 etransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen268
-\pgf@pt@y=\dimen269
-\pgf@pt@temp=\dimen270
+\pgf@pt@x=\dimen263
+\pgf@pt@y=\dimen264
+\pgf@pt@temp=\dimen265
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 equick.code.tex
@@ -587,14 +779,14 @@ File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 earrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen271
+\pgfarrowsep=\dimen266
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen272
-\pgf@sys@shading@range@num=\count319
-\pgf@shadingcount=\count320
+\pgf@max=\dimen267
+\pgf@sys@shading@range@num=\count347
+\pgf@shadingcount=\count348
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -603,7 +795,7 @@ File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box61
+\pgfexternal@startupbox=\box62
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 elayers.code.tex
@@ -624,7 +816,7 @@ File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 shapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box62
+\pgfnodeparttextbox=\box63
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 plot.code.tex
@@ -633,8 +825,8 @@ File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen273
-\pgf@nodesepend=\dimen274
+\pgf@nodesepstart=\dimen268
+\pgf@nodesepend=\dimen269
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-1-18.sty
@@ -652,10 +844,10 @@ ty
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
 code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen275
-\pgffor@skip=\dimen276
-\pgffor@stack=\toks37
-\pgffor@toks=\toks38
+\pgffor@iter=\dimen270
+\pgffor@skip=\dimen271
+\pgffor@stack=\toks44
+\pgffor@toks=\toks45
 ))
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z\tikz.code.tex
@@ -664,34 +856,34 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count321
-\pgfplotmarksize=\dimen277
+\pgf@plot@mark@count=\count349
+\pgfplotmarksize=\dimen272
 )
-\tikz@lastx=\dimen278
-\tikz@lasty=\dimen279
-\tikz@lastxsaved=\dimen280
-\tikz@lastysaved=\dimen281
-\tikz@lastmovetox=\dimen282
-\tikz@lastmovetoy=\dimen283
-\tikzleveldistance=\dimen284
-\tikzsiblingdistance=\dimen285
-\tikz@figbox=\box63
-\tikz@figbox@bg=\box64
-\tikz@tempbox=\box65
-\tikz@tempbox@bg=\box66
-\tikztreelevel=\count322
-\tikznumberofchildren=\count323
-\tikznumberofcurrentchild=\count324
-\tikz@fig@count=\count325
+\tikz@lastx=\dimen273
+\tikz@lasty=\dimen274
+\tikz@lastxsaved=\dimen275
+\tikz@lastysaved=\dimen276
+\tikz@lastmovetox=\dimen277
+\tikz@lastmovetoy=\dimen278
+\tikzleveldistance=\dimen279
+\tikzsiblingdistance=\dimen280
+\tikz@figbox=\box64
+\tikz@figbox@bg=\box65
+\tikz@tempbox=\box66
+\tikz@tempbox@bg=\box67
+\tikztreelevel=\count350
+\tikznumberofchildren=\count351
+\tikznumberofcurrentchild=\count352
+\tikz@fig@count=\count353
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count326
-\pgfmatrixcurrentcolumn=\count327
-\pgf@matrix@numberofcolumns=\count328
+\pgfmatrixcurrentrow=\count354
+\pgfmatrixcurrentcolumn=\count355
+\pgf@matrix@numberofcolumns=\count356
 )
-\tikz@expandcount=\count329
+\tikz@expandcount=\count357
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -699,9 +891,9 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks39
-\verbatim@line=\toks40
-\verbatim@in@stream=\read4
+\every@verbatim=\toks46
+\verbatim@line=\toks47
+\verbatim@in@stream=\read3
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -710,21 +902,26 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 ty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\@envbody=\toks41
+\@envbody=\toks48
 )
-\tcb@titlebox=\box67
-\tcb@upperbox=\box68
-\tcb@lowerbox=\box69
-\tcb@phantombox=\box70
-\c@tcbbreakpart=\count330
-\c@tcblayer=\count331
-\c@tcolorbox@number=\count332
-\l__tcobox_tmpa_box=\box71
-\l__tcobox_tmpa_dim=\dimen286
-\tcb@temp=\box72
+\tcb@titlebox=\box68
+\tcb@upperbox=\box69
+\tcb@lowerbox=\box70
+\tcb@phantombox=\box71
+\c@tcbbreakpart=\count358
+\c@tcblayer=\count359
+\c@tcolorbox@number=\count360
+\l__tcobox_tmpa_box=\box72
+\l__tcobox_tmpa_dim=\dimen281
 \tcb@temp=\box73
 \tcb@temp=\box74
 \tcb@temp=\box75
+\tcb@temp=\box76
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\tcolorbox-xetex-bi
+di.def
+File: tcolorbox-xetex-bidi.def 2018/11/11 v0.2 bidi adaptations for tcolorbox p
+ackage for XeTeX engine
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code
 .tex
@@ -737,9 +934,9 @@ Package: tikzfill.image 2026/04/23 v1.2.0 Image filling library for TikZ
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryfil
 l.image.code.tex
 File: tikzlibraryfill.image.code.tex 2026/04/23 v1.2.0 Image filling library
-\l__tikzfill_tmpa_dim=\dimen287
-\l__tikzfill_tmpb_dim=\dimen288
-\l__tikzfill_img_box=\box76
+\l__tikzfill_tmpa_dim=\dimen282
+\l__tikzfill_tmpb_dim=\dimen283
+\l__tikzfill_img_box=\box77
 ))
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsa
 w.code.tex
@@ -750,147 +947,240 @@ code.tex
 Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
 )
-Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box77
-\tcb@totalupperbox=\box78
-\tcb@totallowerbox=\box79
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box78
+\tcb@totalupperbox=\box79
+\tcb@totallowerbox=\box80
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/etoc\etoc.sty
+Package: etoc 2026/05/04 v1.2e Completely customisable TOCs (JFB)
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count361
+\mult@box=\box81
+\multicol@leftmargin=\dimen284
+\c@unbalance=\count362
+\c@collectmore=\count363
+\doublecol@number=\count364
+\multicoltolerance=\count365
+\multicolpretolerance=\count366
+\full@width=\dimen285
+\page@free=\dimen286
+\premulticols=\dimen287
+\postmulticols=\dimen288
+\multicolsep=\skip74
+\multicolbaselineskip=\skip75
+\partial@page=\box82
+\last@line=\box83
+\mc@boxedresult=\box84
+\maxbalancingoverflow=\dimen289
+\mult@rightbox=\box85
+\mult@grightbox=\box86
+\mult@firstbox=\box87
+\mult@gfirstbox=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\c@minrows=\count367
+\c@columnbadness=\count368
+\c@finalcolumnbadness=\count369
+\last@try=\dimen290
+\multicolovershoot=\dimen291
+\multicolundershoot=\dimen292
+\mult@nat@firstbox=\box125
+\colbreak@box=\box126
+\mc@col@check@num=\count370
+\g__mc_curr_col_int=\count371
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\multicol-xetex-bid
+i.def
+File: multicol-xetex-bidi.def 2025/09/30 v1.5 bidi adaptations for multicol pac
+kage for XeTeX engine
+)
+\Etoc@toctoks=\toks49
+\c@etoc@tocid=\count372
+\etoc@framed@titlebox=\box127
+\etoc@framed@contentsbox=\box128
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen289
-\lightrulewidth=\dimen290
-\cmidrulewidth=\dimen291
-\belowrulesep=\dimen292
-\belowbottomsep=\dimen293
-\aboverulesep=\dimen294
-\abovetopsep=\dimen295
-\cmidrulesep=\dimen296
-\cmidrulekern=\dimen297
-\defaultaddspace=\dimen298
-\@cmidla=\count333
-\@cmidlb=\count334
-\@aboverulesep=\dimen299
-\@belowrulesep=\dimen300
-\@thisruleclass=\count335
-\@lastruleclass=\count336
-\@thisrulewidth=\dimen301
+\heavyrulewidth=\dimen293
+\lightrulewidth=\dimen294
+\cmidrulewidth=\dimen295
+\belowrulesep=\dimen296
+\belowbottomsep=\dimen297
+\aboverulesep=\dimen298
+\abovetopsep=\dimen299
+\cmidrulesep=\dimen300
+\cmidrulekern=\dimen301
+\defaultaddspace=\dimen302
+\@cmidla=\count373
+\@cmidlb=\count374
+\@aboverulesep=\dimen303
+\@belowrulesep=\dimen304
+\@thisruleclass=\count375
+\@lastruleclass=\count376
+\@thisrulewidth=\dimen305
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip71
-\enit@outerparindent=\dimen302
-\enit@toks=\toks42
-\enit@inbox=\box80
-\enit@count@id=\count337
-\enitdp@description=\count338
+\labelindent=\skip76
+\enit@outerparindent=\dimen306
+\enit@toks=\toks50
+\enit@inbox=\box129
+\enit@count@id=\count377
+\enitdp@description=\count378
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count339
-\float@exts=\toks43
-\float@box=\box81
-\@float@everytoks=\toks44
-\@floatcapt=\box82
+\c@float@type=\count379
+\float@exts=\toks51
+\float@box=\box130
+\@float@everytoks=\toks52
+\@floatcapt=\box131
 )
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\float-xetex-bidi.d
+ef
+File: float-xetex-bidi.def 2013/04/04 v0.2 bidi adaptations for float package f
+or XeTeX engine
+) (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip72
-
+\@mathmargin=\skip77
 For additional information on amsmath, use the `?' option.
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks45
-\ex@=\dimen303
+\@emptytoks=\toks53
+\ex@=\dimen307
 ))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\amstext-xetex-bidi
+.def
+File: amstext-xetex-bidi.def 2016/09/12 v0.2 bidi adaptations for amstext packa
+ge for XeTeX engine
+)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen304
+\pmbraise@=\dimen308
 )
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count340
+\inf@bad=\count380
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count341
-\leftroot@=\count342
+\uproot@=\count381
+\leftroot@=\count382
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count343
-\DOTSCASE@=\count344
+\classnum@=\count383
+\DOTSCASE@=\count384
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box83
-\strutbox@=\box84
+\Mathstrutbox@=\box132
+\strutbox@=\box133
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen305
+\big@size=\dimen309
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count345
+\macc@depth=\count385
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count346
+\c@MaxMatrixCols=\count386
 \dotsspace@=\muskip18
-\c@parentequation=\count347
-\dspbrk@lvl=\count348
-\tag@help=\toks46
-\row@=\count349
-\column@=\count350
-\maxfields@=\count351
-\andhelp@=\toks47
-\eqnshift@=\dimen306
-\alignsep@=\dimen307
-\tagshift@=\dimen308
-\tagwidth@=\dimen309
-\totwidth@=\dimen310
-\lineht@=\dimen311
-\@envbody=\toks48
-\multlinegap=\skip73
-\multlinetaggap=\skip74
-\mathdisplay@stack=\toks49
+\c@parentequation=\count387
+\dspbrk@lvl=\count388
+\tag@help=\toks54
+\row@=\count389
+\column@=\count390
+\maxfields@=\count391
+\andhelp@=\toks55
+\eqnshift@=\dimen310
+\alignsep@=\dimen311
+\tagshift@=\dimen312
+\tagwidth@=\dimen313
+\totwidth@=\dimen314
+\lineht@=\dimen315
+\@envbody=\toks56
+\multlinegap=\skip78
+\multlinetaggap=\skip79
+\mathdisplay@stack=\toks57
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\amsmath-xetex-bidi
+.def
+File: amsmath-xetex-bidi.def 2020/05/16 v1.2 bidi adaptations for amsmath packa
+ge for XeTeX engine
+)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesom
 e5.sty
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2025-12-24 L3 programming layer (loader) 
-
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count352
-))
 Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
 eys2e.sty
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
-e.sty
-Package: xparse 2025-10-09 L3 Experimental document command parser
-)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesom
-e5-generic-helper.sty
-Package: fontawesome5-generic-helper 2022/05/02 v5.15.4 non-uTeX helper for fon
-tawesome5
+e5-utex-helper.sty
+Package: fontawesome5-utex-helper 2022/05/02 v5.15.4 uTeX helper for fontawesom
+e5
+LaTeX Font Info:    Trying to load font information for TU+fontawesomefree on i
+nput line 69.
 
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesom
-e5-mapping.def)))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\tufontawes
+omefree.fd)
+LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on
+ input line 70.
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\tufontawes
+omebrands.fd)))
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
 Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
 LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
@@ -907,67 +1197,107 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
-\LTleft=\skip75
-\LTright=\skip76
-\LTpre=\skip77
-\LTpost=\skip78
-\LTchunksize=\count353
-\LTcapwidth=\dimen312
-\LT@head=\box85
-\LT@firsthead=\box86
-\LT@foot=\box87
-\LT@lastfoot=\box88
-\LT@gbox=\box89
-\LT@cols=\count354
-\LT@rows=\count355
-\c@LT@tables=\count356
-\c@LT@chunks=\count357
-\LT@p@ftn=\toks50
+\LTleft=\skip80
+\LTright=\skip81
+\LTpre=\skip82
+\LTpost=\skip83
+\LTchunksize=\count392
+\LTcapwidth=\dimen316
+\LT@head=\box134
+\LT@firsthead=\box135
+\LT@foot=\box136
+\LT@lastfoot=\box137
+\LT@gbox=\box138
+\LT@cols=\count393
+\LT@rows=\count394
+\c@LT@tables=\count395
+\c@LT@chunks=\count396
+\LT@p@ftn=\toks58
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 60.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 60.
-Package french3.ldf Info: Setting StandardItemizeEnv=true for
-(french3.ldf)             compatibility with enumitem package,
-(french3.ldf)             reported on input line 186.
-Package french3.ldf Info: Setting StandardEnumerateEnv=true for
-(french3.ldf)             compatibility with enumitem package,
-(french3.ldf)             reported on input line 186.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 18
-6.
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\longtable-xetex-bi
+di.def
+File: longtable-xetex-bidi.def 2025/01/05 v0.8 bidi adaptations for longtable p
+ackage for XeTeX engine
+)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen317
+\captionmargin=\dimen318
+\caption@leftmargin=\dimen319
+\caption@rightmargin=\dimen320
+\caption@width=\dimen321
+\caption@indent=\dimen322
+\caption@parindent=\dimen323
+\caption@hangindent=\dimen324
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
+p \sbox \@tempboxa {#1: #2}\ifdim \wd \@tempboxa >\hsize \if@RTL \beginR \fi #1
+: #2\if@RTL \endR \fi \par \else \global \@minipagefalse \hb@xt@ \hsize {\if@RT
+L \beginR \fi \hfil \box \@tempboxa \hfil \if@RTL \endR \fi }\fi \vskip \belowc
+aptionskip  on input line 1175.
 )
-(rapport_PFE.aux
-Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 11.
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\caption3-xetex-bid
+i.def
+File: caption3-xetex-bidi.def 2013/04/01 v0.1 bidi adaptations for caption3 pac
+kage for XeTeX engine
 )
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count397
+\c@continuedfloat=\count398
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\caption-xetex-bidi
+.def
+File: caption-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for caption packa
+ge for XeTeX engine
+)
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 69.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 69.
+
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\float-xetex-bidi.d
+ef
+File: float-xetex-bidi.def 2013/04/04 v0.2 bidi adaptations for float package f
+or XeTeX engine
+) (rapport_PFE.aux)
 \openout1 = `rapport_PFE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Info: Redefining \degres on input line 186.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: xetex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -998,75 +1328,52 @@ LaTeX Info: Redefining \degres on input line 186.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count358
-\scratchdimen=\dimen313
-\scratchbox=\box90
-\nofMPsegments=\count359
-\nofMParguments=\count360
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count361
-\MPscratchDim=\dimen314
-\MPnumerator=\count362
-\makeMPintoPDFobject=\count363
-\everyMPtoPDFconversion=\toks52
-)
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
-Package hyperref Info: Link coloring OFF on input line 186.
- (rapport_PFE.out) (rapport_PFE.out)
+Package hyperref Info: Link coloring OFF on input line 275.
+(rapport_PFE.out) (rapport_PFE.out)
 \@outlinefile=\write4
 \openout4 = `rapport_PFE.out'.
 
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 189.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-89.
+\Etoc@tf=\read4
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 278.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+78.
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-89.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+78.
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-189.
+278.
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-189.
+278.
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11> on input line 189.
+(Font)              <11> on input line 278.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.69997> on input line 189.
+(Font)              <7.69997> on input line 278.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.5> on input line 189.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 189
+(Font)              <5.5> on input line 278.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 278
 .
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 189
+LaTeX Font Info:    Trying to load font information for U+msb on input line 278
 .
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1074,2181 +1381,1361 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [1
 
-{C:/Users/yessi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/yess
-i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
-(rapport_PFE.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 3.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.55 ...le et environnement}{67}{subsection.3.3.5}
-                                                  % [1
-
-
-])
+]
 \tf@toc=\write5
 \openout5 = `rapport_PFE.toc'.
 
-Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 193.
- [2] [3
+ [1
 
-
-] (ch1.tex
+] [2] [3] [4] [5] (ch1.tex
 Chapitre 1.
-<images/image_ch1/logo_bte.png, id=313, 273.02pt x 222.8325pt>
-File: images/image_ch1/logo_bte.png Graphic file (type png)
-<use images/image_ch1/logo_bte.png>
-Package pdftex.def Info: images/image_ch1/logo_bte.png  used on input line 17.
-(pdftex.def)             Requested size: 198.45662pt x 161.97614pt.
-
-LaTeX Warning: Reference `fig:ch1-logo-bte' on page 4 undefined on input line 2
-2.
-
-
-LaTeX Warning: Reference `fig:ch1-organigramme' on page 4 undefined on input li
-ne 31.
-
-[4
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.32 
-      <./images/image_ch1/logo_bte.png>]
-File: images/image_ch1/logo_bte.png Graphic file (type png)
-<use images/image_ch1/logo_bte.png>
-Package pdftex.def Info: images/image_ch1/logo_bte.png  used on input line 35.
-(pdftex.def)             Requested size: 330.76329pt x 269.97836pt.
- [5
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.57 ...raph{\hspace{1cm} a. Processus hors ligne}
-                                                  ]
-
-LaTeX Warning: Reference `fig:ch1-kyc-hors-ligne' on page 6 undefined on input 
-line 59.
-
-<images/image_ch1/SLIDE 1_ Hors ligne3.png, id=328, 1013.7875pt x 531.9875pt>
-File: images/image_ch1/SLIDE 1_ Hors ligne3.png Graphic file (type png)
-<use images/image_ch1/SLIDE 1_ Hors ligne3.png>
-Package pdftex.def Info: images/image_ch1/SLIDE 1_ Hors ligne3.png  used on inp
-ut line 63.
-(pdftex.def)             Requested size: 330.76329pt x 173.56764pt.
-
-LaTeX Warning: Reference `fig:ch1-kyc-en-ligne' on page 6 undefined on input li
-ne 70.
-
-<images/image_ch1/SLIDE 2_ En ligne.png, id=329, 1013.7875pt x 531.9875pt>
-File: images/image_ch1/SLIDE 2_ En ligne.png Graphic file (type png)
-<use images/image_ch1/SLIDE 2_ En ligne.png>
-Package pdftex.def Info: images/image_ch1/SLIDE 2_ En ligne.png  used on input 
-line 74.
-(pdftex.def)             Requested size: 330.76329pt x 173.56764pt.
 [6
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.82 
-     
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.82 
-      <./images/image_ch1/SLIDE 1_ Hors ligne3.png> <./images/image_ch1/SLIDE 2
-_ En ligne.png>]
-
-LaTeX Warning: Reference `fig:ch1-kyc-automatise' on page 7 undefined on input 
-line 91.
-
-<images/image_ch1/SLIDE 3_ Automatis.png, id=339, 1013.7875pt x 531.9875pt>
-File: images/image_ch1/SLIDE 3_ Automatis.png Graphic file (type png)
-<use images/image_ch1/SLIDE 3_ Automatis.png>
-Package pdftex.def Info: images/image_ch1/SLIDE 3_ Automatis.png  used on input
- line 95.
-(pdftex.def)             Requested size: 330.76329pt x 173.56764pt.
-[7
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.113   \item \textbf
-                     {Expérience client améliorée :} parcours 100\,\% dig...
- <./images/image_ch1/SLIDE 3_ Automatis.png>]
-
-LaTeX Warning: Reference `tab:normes-intl' on page 8 undefined on input line 12
-3.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 128.
-
-Underfull \hbox (badness 2393) in paragraph at lines 133--133
-[]|\T1/lmr/m/n/10.95 Groupe d'Ac-tion Fi-
- []
 
 
-Underfull \hbox (badness 5490) in paragraph at lines 133--133
-\T1/lmr/m/n/10.95 nan-ci�re (GAFI) ---
- []
-
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-35.
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 135.
-
-Underfull \hbox (badness 1248) in paragraph at lines 138--138
-[]|\T1/lmr/m/n/10.95 Applicable aux so-lu-tions trai-tant
- []
-
-
-Underfull \hbox (badness 1314) in paragraph at lines 138--138
-\T1/lmr/m/n/10.95 des don-n�es de res-sor-tis-sants ou
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-[]|[][]$\T1/lmtt/m/n/8 https : / / www . cnil . fr / fr /
- []
-
-
-Overfull \hbox (44.93898pt too wide) in paragraph at lines 139--140
-\T1/lmtt/m/n/8 reglement-[]europeen-[]protection-[]donnees$[][]| 
- []
-
-
-LaTeX Warning: Reference `tab:normes-natl' on page 8 undefined on input line 14
-8.
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-58.
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-[]|[][]$\T1/lmtt/m/n/8 https : / / www . ohchr . org /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-\T1/lmtt/m/n/8 sites / default / files /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-\T1/lmtt/m/n/8 lib-[]docs / HRBodies / UPR /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-\T1/lmtt/m/n/8 Documents / Session27 / TN /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--162
-\T1/lmr/m/n/10.95 Cen-trale de Tu-ni-sie
- []
-
-
-Underfull \hbox (badness 1852) in paragraph at lines 163--163
-\T1/lmr/m/n/10.95 pro-c�-dures de vi-gi-lance \T1/lmr/m/it/10.95 Know
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
-[]|[][]$\T1/lmtt/m/n/8 https : / / www . bct . gov . tn /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
-\T1/lmtt/m/n/8 bct / siteprod / page . jsp ? id =
- []
-
-
-Underfull \hbox (badness 8113) in paragraph at lines 166--166
-\T1/lmr/m/n/10.95 63 --- Ins-tance Na-
- []
-
-
-Underfull \hbox (badness 4779) in paragraph at lines 166--166
-\T1/lmr/m/n/10.95 tio-nale de Pro-tec-tion
- []
-
-
-Underfull \hbox (badness 7433) in paragraph at lines 166--166
-\T1/lmr/m/n/10.95 des Don-n�es Per-son-
- []
-
-
-Underfull \hbox (badness 1320) in paragraph at lines 167--167
-\T1/lmr/m/n/10.95 doit �tre d�-cla-r�e � l'INPDP.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
-[]|[][]$\T1/lmtt/m/n/8 https : / / www . inpdp . tn /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--170
-[]|\T1/lmr/m/n/10.95 Commission Tu-ni-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--170
-\T1/lmr/m/n/10.95 sienne des Ana-lyses
- []
-
-
-Underfull \hbox (badness 1122) in paragraph at lines 170--170
-\T1/lmr/m/n/10.95 Fi-nan-ci�res (CTAF) /
- []
-
-
-Underfull \hbox (badness 5802) in paragraph at lines 170--170
-\T1/lmr/m/n/10.95 du Mar-ch� Fi-nan-cier
- []
-
-
-Underfull \hbox (badness 1259) in paragraph at lines 171--171
-\T1/lmr/m/n/10.95 sant res-pec-ti-ve-ment la confor-
- []
-
-[8
-pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.182 
-      ]
-
-LaTeX Warning: Reference `fig:ch1-kyc-modes' on page 9 undefined on input line 
-196.
-
-[9{C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}
-pdfTeX warning (ext4): destination with the same identifier (name{table.1.2}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.197 
-      ]
-<images/image_ch1/KYC_Agence_Vs_NeoBte.png, id=381, 761.84625pt x 872.25874pt>
-File: images/image_ch1/KYC_Agence_Vs_NeoBte.png Graphic file (type png)
-<use images/image_ch1/KYC_Agence_Vs_NeoBte.png>
-Package pdftex.def Info: images/image_ch1/KYC_Agence_Vs_NeoBte.png  used on inp
-ut line 200.
-(pdftex.def)             Requested size: 330.76329pt x 378.69746pt.
- [10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.6}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.213 \paragraph{\hspace{1cm} b. NEUROPARSER}
-                                              <./images/image_ch1/KYC_Agence_Vs
-_NeoBte.png>]
-
-LaTeX Warning: Reference `tab:solutions-kyc' on page 11 undefined on input line
- 221.
-
-
-Overfull \hbox (37.3507pt too wide) in paragraph at lines 226--252
- [][] 
- []
-
-[11
-pdfTeX warning (ext4): destination with the same identifier (name{table.1.3}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.267   \item \textbf
-                     {Absence de passage à l'échelle :} le modèle manuel ...
 ]
-Overfull \hbox (3.16626pt too wide) in paragraph at lines 273--274
-[]\T1/lmr/bx/n/12 D�pendance cloud sys-t�-ma-tique : \T1/lmr/m/n/12 les trois p
-la-te-formes ana-ly-s�es trans-mettent
+File: images/image_ch1/logo_bte.png Graphic file (type bmp)
+<images/image_ch1/logo_bte.png>
+
+! Undefined control sequence.
+l.31 ...de cette dynamique est le lancement de \og
+                                                   NEO BTE \fg{} : une plate...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.31 ...amique est le lancement de \og NEO BTE \fg
+                                                  {} : une plateforme bancai...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[7
+
+]
+File: images copy/image_ch1/organigramme.png Graphic file (type bmp)
+<images copy/image_ch1/organigramme.png>
+
+! Undefined control sequence.
+l.53 ... KYC (\textit{Know Your Customer}), ou \og
+                                                   Connaissance du Client \f...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.53 ...tomer}), ou \og Connaissance du Client \fg
+                                                  {}, désigne l'ensemble des...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[8]
+File: images/image_ch1/SLIDE 1_ Hors ligne3.png Graphic file (type bmp)
+<images/image_ch1/SLIDE 1_ Hors ligne3.png>
+File: images/image_ch1/SLIDE 2_ En ligne.png Graphic file (type bmp)
+<images/image_ch1/SLIDE 2_ En ligne.png>
+ [9]
+File: images/image_ch1/SLIDE 3_ Automatis.png Graphic file (type bmp)
+<images/image_ch1/SLIDE 3_ Automatis.png>
+ [10]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 130.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 130.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 130.
+
+Underfull \hbox (badness 2393) in paragraph at lines 135--135
+[][]|\TU/lmr/m/n/10.95 Groupe d’Action Fi-[]
  []
 
 
-Overfull \hbox (0.63976pt too wide) in paragraph at lines 274--275
-[]\T1/lmr/bx/n/12 Inadaptation au contexte tu-ni-sien : \T1/lmr/m/n/12 le trai-
-te-ment bi-lingue arabe/latin, propre
+Underfull \hbox (badness 5504) in paragraph at lines 135--135
+[]\TU/lmr/m/n/10.95 nancière (GAFI) —[]
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 137.
+
+Underfull \hbox (badness 1242) in paragraph at lines 140--140
+[][]|\TU/lmr/m/n/10.95 Applicable aux solutions traitant[]
  []
 
 
-Overfull \hbox (18.6339pt too wide) in paragraph at lines 294--295
-[]\T1/lmr/m/n/12 Parall�lement, les so-lu-tions com-mer-ciales ana-ly-s�es s'av
-�rent in-adap-t�es aux contraintes
+Underfull \hbox (badness 1325) in paragraph at lines 140--140
+[]\TU/lmr/m/n/10.95 des données de ressortissants ou[]
  []
 
-[12] [13] [14]
 
-LaTeX Warning: Reference `fig:ch1-6-phases-crisp-mlq' on page 15 undefined on i
-nput line 377.
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][] [] [][] [] [][] []$[][]
+ []
 
-<images/image_ch1/crispMl_Q.png, id=410, 584.1825pt x 602.25pt>
-File: images/image_ch1/crispMl_Q.png Graphic file (type png)
-<use images/image_ch1/crispMl_Q.png>
-Package pdftex.def Info: images/image_ch1/crispMl_Q.png  used on input line 381
-.
-(pdftex.def)             Requested size: 330.76329pt x 341.00705pt.
-[15
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.389   \item \textbf
-                     {Modeling :} entraînement et optimisation des modèles...
- <./images/image_ch1/crispMl_Q.png>] [16]
 
-LaTeX Warning: Reference `fig:ch1-planning' on page 17 undefined on input line 
-418.
+Overfull \hbox (44.86502pt too wide) in paragraph at lines 141--142
+[][]$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][]$[][][]| []
+ []
 
-<images/image_ch1/plannification du travail.PNG, id=432, 1541.76pt x 949.5475pt
->
-File: images/image_ch1/plannification du travail.PNG Graphic file (type png)
-<use images/image_ch1/plannification du travail.PNG>
-Package pdftex.def Info: images/image_ch1/plannification du travail.PNG  used o
-n input line 422.
-(pdftex.def)             Requested size: 441.01773pt x 271.60909pt.
-) [17
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.229 
-       <./images/image_ch1/plannification du travail.PNG>] [18] [19
 
-] (ch4.tex
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][][] [] [][][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+[][]$[][][][][] [] [][][][][][][] [] [][][][][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+[][]$[][][][][][][][][] [] [][][][][][][][] [] [][][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+[][]$[][][][][][][][][] [] [][][][][][][][][] [] [][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[]\TU/lmr/m/n/10.95 Centrale de Tunisie[]
+ []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 165--165
+[]\TU/lmr/m/n/10.95 procédures de vigilance \TU/lmr/m/it/10.95 Know[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][] [] [][][] [] [][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+[][]$[][][] [] [][][][][][][][] [] [][][][] [] [][][] [] [][] []$[][]
+ []
+
+
+Underfull \hbox (badness 8151) in paragraph at lines 168--168
+[]\TU/lmr/m/n/10.95 63 — Instance Na-[]
+ []
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 168--168
+[]\TU/lmr/m/n/10.95 tionale de Protection[]
+ []
+
+
+Underfull \hbox (badness 7468) in paragraph at lines 168--168
+[]\TU/lmr/m/n/10.95 des Données Person-[]
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 169--169
+[]\TU/lmr/m/n/10.95 doit être déclarée à l’INPDP.[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
+[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][][] [] [][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[][]|\TU/lmr/m/n/10.95 Commission Tuni-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]\TU/lmr/m/n/10.95 sienne des Analyses[]
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 172--172
+[]\TU/lmr/m/n/10.95 Financières (CTAF) /[]
+ []
+
+
+Underfull \hbox (badness 5802) in paragraph at lines 172--172
+[]\TU/lmr/m/n/10.95 du Marché Financier[]
+ []
+
+[11] [12]
+File: images/image_ch1/KYC_Agence_Vs_NeoBte.png Graphic file (type bmp)
+<images/image_ch1/KYC_Agence_Vs_NeoBte.png>
+ [13]
+Overfull \hbox (37.0943pt too wide) in paragraph at lines 225--251
+ [][][][] 
+ []
+
+[14]
+Overfull \hbox (3.83417pt too wide) in paragraph at lines 272--273
+[][]\TU/lmr/bx/n/12 Dépendance cloud systématique : \TU/lmr/m/n/12 les trois pl
+ateformes analysées transmettent[]
+ []
+
+
+Overfull \hbox (1.36348pt too wide) in paragraph at lines 273--274
+[][]\TU/lmr/bx/n/12 Inadaptation au contexte tunisien : \TU/lmr/m/n/12 le trait
+ement bilingue arabe/latin, propre[]
+ []
+
+
+Overfull \hbox (19.0476pt too wide) in paragraph at lines 293--294
+[][]\TU/lmr/m/n/12 Parallèlement, les solutions commerciales analysées s’avèren
+t inadaptées aux contraintes[]
+ []
+
+[15] [16] [17]
+! Undefined control sequence.
+l.372 ...février 2021), le modèle introduit le \og
+                                                   Q \fg{} --- pour \textit{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.372 ...r 2021), le modèle introduit le \og Q \fg
+                                                  {} --- pour \textit{Qualit...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 376.
+File: images/image_ch1/crispMl_Q.png Graphic file (type bmp)
+<images/image_ch1/crispMl_Q.png>
+[18] [19] [20]
+File: images/image_ch1/plannification du travail.PNG Graphic file (type bmp)
+<images/image_ch1/plannification du travail.PNG>
+) (ch4.tex [21]
 Chapitre 2.
-[20
+[22
 
+]
+Underfull \hbox (badness 1057) in paragraph at lines 45--45
+[][]|\TU/lmr/bx/n/12 Responsable qua-[]
+ []
 
+[23
 
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.50 \end{itemize}
-                  ] [21]
+] [24]
 
 Package enumitem Warning: Negative labelwidth. This does not make much
-(enumitem)                sense, on input line 96.
+(enumitem)                sense, on input line 113.
 
-[22]
-<images/image_ch4/usecaseGlobale.png, id=481, 2319.66624pt x 2611.7575pt>
-File: images/image_ch4/usecaseGlobale.png Graphic file (type png)
-<use images/image_ch4/usecaseGlobale.png>
-Package pdftex.def Info: images/image_ch4/usecaseGlobale.png  used on input lin
-e 141.
-(pdftex.def)             Requested size: 441.01773pt x 496.51805pt.
- [23
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.152 
-       <./images/image_ch4/usecaseGlobale.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
-[]|\T1/lmr/bx/n/12 Acteurs se-con-
+[25]
+
+LaTeX Warning: Citation `bct2025circ06' on page 26 undefined on input line 120.
+
+
+[26]
+File: images/architectures/logique.png Graphic file (type bmp)
+<images/architectures/logique.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 153.
+See the caption package documentation for explanation.
+
+[27]
+File: images/architectures/physique.png Graphic file (type bmp)
+<images/architectures/physique.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 166.
+See the caption package documentation for explanation.
+
+File: images/image_ch4/usecaseGlobale.png Graphic file (type bmp)
+<images/image_ch4/usecaseGlobale.png>
+[28]
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.210   \hline
+              
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.211   S
+         cénario nominal     &
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> ... width\arrayrulewidth }\endtemplate 
+                                                  
+l.211   S
+         cénario nominal     &
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+[29] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
+[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--180
-[]|\T1/lmr/bx/n/12 Sc�nario no-mi-
+Underfull \hbox (badness 1009) in paragraph at lines 280--284
+[]\TU/lmr/bx/n/12 Étape 2 — Vérification des informations ex-[]
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 192--192
-[]|\T1/lmr/bx/n/12 Sc�narios al-ter-
+Underfull \hbox (badness 1983) in paragraph at lines 280--284
+[]\TU/lmr/bx/n/12 traites. \TU/lmr/m/n/12 L’utilisateur consulte les données ex
+traites[]
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 195--196
-\T1/lmr/m/n/12 passe non concor-dants) et in-vite
- []
-
-ignored error: Infinite glue shrinkage found in box being split [24]
-Underfull \hbox (badness 10000) in paragraph at lines 220--220
-[]|\T1/lmr/bx/n/12 Acteurs se-con-
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
+[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-[]|\T1/lmr/bx/n/12 Sc�nario no-mi-
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
+[][]
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 239--239
-[]|\T1/lmr/bx/n/12 Sc�narios al-ter-
+Underfull \hbox (badness 3780) in paragraph at lines 280--284
+[]\TU/lmr/bx/n/12 Étape 4 — Récapitulatif et soumission fi-[]
  []
 
-
-Underfull \hbox (badness 6691) in paragraph at lines 241--241
-[]|\T1/lmr/m/it/12 Identifiants in-cor-
+[31] [32]
+Underfull \hbox (badness 2376) in paragraph at lines 314--321
+[]\TU/lmr/m/n/12 - L’analyste lance le filtrage anti-blanchiment, qui[]
  []
 
-ignored error: Infinite glue shrinkage found in box being split [25]
-Underfull \hbox (badness 10000) in paragraph at lines 267--267
-[]|\T1/lmr/bx/n/12 Acteurs se-con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--275
-[]|\T1/lmr/bx/n/12 Sc�nario no-mi-
- []
-
-
-Underfull \hbox (badness 4981) in paragraph at lines 294--294
-[]|\T1/lmr/bx/n/12 Sc�narios al-ter-
- []
-
-
-Underfull \hbox (badness 2790) in paragraph at lines 298--298
-[]|\T1/lmr/m/it/12 �chec de sou-mis-
- []
-
-ignored error: Infinite glue shrinkage found in box being split [26]
-ignored error: Infinite glue shrinkage found in box being split [27]
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-[]|\T1/lmr/bx/n/12 Acteurs se-con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
-[]|\T1/lmr/bx/n/12 Sc�nario no-mi-
- []
-
-
-Underfull \hbox (badness 4981) in paragraph at lines 337--338
-[]\T1/lmr/m/n/12 L'analyste lance le fil-trage anti-blanchiment, qui
- []
-
-
-Underfull \hbox (badness 4981) in paragraph at lines 346--346
-[]|\T1/lmr/bx/n/12 Sc�narios al-ter-
- []
-
-ignored error: Infinite glue shrinkage found in box being split [28]
-ignored error: Infinite glue shrinkage found in box being split [29]
-Underfull \hbox (badness 10000) in paragraph at lines 375--375
-[]|\T1/lmr/bx/n/12 Acteurs se-con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
-[]|\T1/lmr/bx/n/12 Sc�nario no-mi-
- []
-
-
-Underfull \hbox (badness 4981) in paragraph at lines 397--397
-[]|\T1/lmr/bx/n/12 Sc�narios al-ter-
- []
-
-
-Underfull \hbox (badness 1242) in paragraph at lines 399--399
-[]|\T1/lmr/m/it/12 D�gradation d�-tec-
- []
-
-ignored error: Infinite glue shrinkage found in box being split [30]
-ignored error: Infinite glue shrinkage found in box being split [31]
-<conceptionImage/seq1.2.png, id=553, 1186.4325pt x 1460.45625pt>
-File: conceptionImage/seq1.2.png Graphic file (type png)
-<use conceptionImage/seq1.2.png>
-Package pdftex.def Info: conceptionImage/seq1.2.png  used on input line 424.
-(pdftex.def)             Requested size: 441.01773pt x 542.87854pt.
- [32]
-<conceptionImage/seq2.png, id=561, 565.11125pt x 613.29124pt>
-File: conceptionImage/seq2.png Graphic file (type png)
-<use conceptionImage/seq2.png>
-Package pdftex.def Info: conceptionImage/seq2.png  used on input line 435.
-(pdftex.def)             Requested size: 374.86775pt x 406.83223pt.
-
-[33
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.439 
-       <./conceptionImage/seq1.2.png (PNG copy)>]
-<conceptionImage/seq3.2.png, id=568, 1028.84375pt x 1146.2825pt>
-File: conceptionImage/seq3.2.png Graphic file (type png)
-<use conceptionImage/seq3.2.png>
-Package pdftex.def Info: conceptionImage/seq3.2.png  used on input line 446.
-(pdftex.def)             Requested size: 441.01773pt x 491.37016pt.
- [34
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.450 
-       <./conceptionImage/seq2.png (PNG copy)>]
-<conceptionImage/seq4.2.png, id=575, 1037.8775pt x 670.505pt>
-File: conceptionImage/seq4.2.png Graphic file (type png)
-<use conceptionImage/seq4.2.png>
-Package pdftex.def Info: conceptionImage/seq4.2.png  used on input line 457.
-(pdftex.def)             Requested size: 441.01773pt x 284.91481pt.
- [35
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.461 
-       <./conceptionImage/seq3.2.png (PNG copy)>]
-<conceptionImage/classe1.png, id=583, 7793.115pt x 5066.93pt>
-File: conceptionImage/classe1.png Graphic file (type png)
-<use conceptionImage/classe1.png>
-Package pdftex.def Info: conceptionImage/classe1.png  used on input line 474.
-(pdftex.def)             Requested size: 374.86775pt x 243.69696pt.
- [36
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.478 
-       <./conceptionImage/seq4.2.png (PNG copy)>]
-<conceptionImage/classe2.drawio.png, id=592, 1749.53625pt x 2120.92375pt>
-File: conceptionImage/classe2.drawio.png Graphic file (type png)
-<use conceptionImage/classe2.drawio.png>
-Package pdftex.def Info: conceptionImage/classe2.drawio.png  used on input line
- 485.
-(pdftex.def)             Requested size: 441.01773pt x 534.63097pt.
- [37
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.489 
-       <./conceptionImage/classe1.png>]
-<conceptionImage/classe3.drawio.png, id=600, 1227.58624pt x 1903.11pt>
-File: conceptionImage/classe3.drawio.png Graphic file (type png)
-<use conceptionImage/classe3.drawio.png>
-Package pdftex.def Info: conceptionImage/classe3.drawio.png  used on input line
- 496.
-(pdftex.def)             Requested size: 374.86775pt x 581.15916pt.
- [38
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.7}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.500 
-       <./conceptionImage/classe2.drawio.png>]
-Overfull \hbox (25.7727pt too wide) in paragraph at lines 503--504
-\T1/lmr/m/n/12 traites \T1/lmtt/m/n/12 ListeReference \T1/lmr/m/n/12 et \T1/lmt
-t/m/n/12 Match \T1/lmr/m/n/12 fac-to-risent les champs com-muns entre \T1/lmtt/
-m/n/12 Blacklist\T1/lmr/m/n/12 /\T1/lmtt/m/n/12 PpeList
- []
-
-<conceptionImage/classe4.drawio.png, id=608, 1977.3875pt x 3262.1875pt>
-File: conceptionImage/classe4.drawio.png Graphic file (type png)
-<use conceptionImage/classe4.drawio.png>
-Package pdftex.def Info: conceptionImage/classe4.drawio.png  used on input line
- 507.
-(pdftex.def)             Requested size: 441.01773pt x 727.5393pt.
-[39
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.8}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.510 \end{figure}
-                   <./conceptionImage/classe3.drawio.png>] [40]
-Overfull \vbox (70.43936pt too high) has occurred while \output is active []
-
-
-[41
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.511 
-       <./conceptionImage/classe4.drawio.png>]
-<conceptionImage/activite.png, id=627, 1575.8875pt x 2148.025pt>
-File: conceptionImage/activite.png Graphic file (type png)
-<use conceptionImage/activite.png>
-Package pdftex.def Info: conceptionImage/activite.png  used on input line 520.
-(pdftex.def)             Requested size: 374.86775pt x 510.94788pt.
-) [42
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.10})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.266 \part
-           {Incrément 1 : Fondements IA et Réalisation du Pipeline} <./concep
-tionImage/activite.png>] [43] [44
-
-]
-Underfull \hbox (badness 2418) in paragraph at lines 287--287
-[]\T1/lmr/m/n/12 Reconnaissance op-tique de ca-rac-t�res
- []
-
-[45
+[33] [34] [35]) [36] [37
 
 ] (ch2.tex
 Chapitre 3.
-<images/image_chap2/ia_ml_dl.png, id=657, 398.48875pt x 396.48125pt>
-File: images/image_chap2/ia_ml_dl.png Graphic file (type png)
-<use images/image_chap2/ia_ml_dl.png>
-Package pdftex.def Info: images/image_chap2/ia_ml_dl.png  used on input line 19
-.
-(pdftex.def)             Requested size: 330.76329pt x 329.10959pt.
-[46
+[38
 
 
+]
+File: images/image_chap2/ia_ml_dl.png Graphic file (type bmp)
+<images/image_chap2/ia_ml_dl.png>
+ [39
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.26 
-      <./images/image_chap2/ia_ml_dl.png>]
-<images/image_chap2/1742401020360.png, id=663, 1282.7925pt x 721.69624pt>
-File: images/image_chap2/1742401020360.png Graphic file (type png)
-<use images/image_chap2/1742401020360.png>
-Package pdftex.def Info: images/image_chap2/1742401020360.png  used on input li
-ne 51.
-(pdftex.def)             Requested size: 330.76329pt x 186.08388pt.
- [47]
-<images/image_chap2/detectionObjet.png, id=668, 1888.05376pt x 546.04pt>
-File: images/image_chap2/detectionObjet.png Graphic file (type png)
-<use images/image_chap2/detectionObjet.png>
-Package pdftex.def Info: images/image_chap2/detectionObjet.png  used on input l
-ine 81.
-(pdftex.def)             Requested size: 330.76329pt x 95.6584pt.
- [48
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.85 
-      <./images/image_chap2/1742401020360.png>]
-<images/image_chap2/onevtwoStage.png, id=676, 1244.65pt x 851.18pt>
-File: images/image_chap2/onevtwoStage.png Graphic file (type png)
-<use images/image_chap2/onevtwoStage.png>
-Package pdftex.def Info: images/image_chap2/onevtwoStage.png  used on input lin
-e 108.
-(pdftex.def)             Requested size: 198.45662pt x 135.71101pt.
- [49
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.116 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.116 
-       <./images/image_chap2/detectionObjet.png> <./images/image_chap2/onevtwoS
-tage.png>]
-<images/image_chap2/yoloLogo.png, id=685, 322.0833pt x 171.039pt>
-File: images/image_chap2/yoloLogo.png Graphic file (type png)
-<use images/image_chap2/yoloLogo.png>
-Package pdftex.def Info: images/image_chap2/yoloLogo.png  used on input line 12
-5.
-(pdftex.def)             Requested size: 198.45662pt x 105.388pt.
-<images/image_chap2/detection.png, id=686, 569.12625pt x 366.36874pt>
-File: images/image_chap2/detection.png Graphic file (type png)
-<use images/image_chap2/detection.png>
-Package pdftex.def Info: images/image_chap2/detection.png  used on input line 1
-35.
-(pdftex.def)             Requested size: 330.76329pt x 212.93565pt.
- [50
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.139 
-       <./images/image_chap2/yoloLogo.png>]
-<images/image_chap2/TimelineCycle-removebg-preview.png, id=693, 668.4975pt x 37
-6.40625pt>
+]
+File: images/image_chap2/1742401020360.png Graphic file (type bmp)
+<images/image_chap2/1742401020360.png>
+ [40]
+File: images/image_chap2/detectionObjet.png Graphic file (type bmp)
+<images/image_chap2/detectionObjet.png>
+ [41]
+File: images/image_chap2/onevtwoStage.png Graphic file (type bmp)
+<images/image_chap2/onevtwoStage.png>
+File: images/image_chap2/yoloLogo.png Graphic file (type bmp)
+<images/image_chap2/yoloLogo.png>
+ [42]
+File: images/image_chap2/detection.png Graphic file (type bmp)
+<images/image_chap2/detection.png>
+ [43]
 File: images/image_chap2/TimelineCycle-removebg-preview.png Graphic file (type 
-png)
-<use images/image_chap2/TimelineCycle-removebg-preview.png>
-Package pdftex.def Info: images/image_chap2/TimelineCycle-removebg-preview.png 
- used on input line 155.
-(pdftex.def)             Requested size: 396.91325pt x 223.49065pt.
- [51
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.159 
-      {C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathi
-t.enc}{C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-maths
-y.enc} <./images/image_chap2/detection.png>]
-<images/image_chap2/Latency.png, id=702, 1369.115pt x 599.23875pt>
-File: images/image_chap2/Latency.png Graphic file (type png)
-<use images/image_chap2/Latency.png>
-Package pdftex.def Info: images/image_chap2/Latency.png  used on input line 182
-.
-(pdftex.def)             Requested size: 330.76329pt x 144.77118pt.
- [52
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.186 
-       <./images/image_chap2/TimelineCycle-removebg-preview.png>]
-<images/image_chap2/optical-character-recognition.png, id=709, 175.2pt x 52.56p
-t>
-File: images/image_chap2/optical-character-recognition.png Graphic file (type p
-ng)
-<use images/image_chap2/optical-character-recognition.png>
-Package pdftex.def Info: images/image_chap2/optical-character-recognition.png  
-used on input line 202.
-(pdftex.def)             Requested size: 330.76329pt x 99.23541pt.
+bmp)
+<images/image_chap2/TimelineCycle-removebg-preview.png>
+File: images/image_chap2/Latency.png Graphic file (type bmp)
+<images/image_chap2/Latency.png>
+ [44]
+File: images/image_chap2/optical-character-recognition.png Graphic file (type b
+mp)
+<images/image_chap2/optical-character-recognition.png>
+ [45] [46]
+Overfull \hbox (15.73027pt too wide) in paragraph at lines 291--309
+ [][][][] 
+ []
+
+
+Overfull \hbox (29.74686pt too wide) in paragraph at lines 322--340
+ [][][][] 
+ []
+
+[47] [48] [49]) (ch3.tex [50]
+Chapitre 4.
+[51
+
+] [52]
+File: images/image_ch3/pipline_1_phase.jpg Graphic file (type bmp)
+<images/image_ch3/pipline_1_phase.jpg>
+File: images/image_ch3/pipline_2_phase.png Graphic file (type bmp)
+<images/image_ch3/pipline_2_phase.png>
  [53
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.206 
-       <./images/image_chap2/Latency.png>] [54
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.254 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.254 
-       <./images/image_chap2/optical-character-recognition.png>]
-Overfull \hbox (15.60316pt too wide) in paragraph at lines 286--304
- [][] 
+
+]
+Underfull \hbox (badness 5345) in paragraph at lines 59--59
+[][]|\TU/lmr/m/n/12 YOLOv11m + PP-[]
+ []
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 60--60
+[][]|\TU/lmr/m/n/12 YOLOv11m + PP-[]
+ []
+
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+[][]|\TU/lmr/m/n/12 Données propres,[]
+ []
+
+
+Underfull \hbox (badness 4181) in paragraph at lines 91--91
+[][]|\TU/lmr/m/n/12 Faible bruit, peu[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+[][]|\TU/lmr/m/n/12 Pré-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+[][]|\TU/lmr/m/n/12 Masquages agres-[]
+ []
+
+
+Overfull \hbox (2.31798pt too wide) in paragraph at lines 103--103
+ []|[]\TU/lmr/bx/n/17.28 Préparation des données (ingénierie des données)| []
  []
 
 [55]
-Overfull \hbox (29.71997pt too wide) in paragraph at lines 317--335
- [][] 
- []
-
-[56
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.347 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.347 
-      ] [57
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.4}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.391 
-      ]) [58] [59
-
-] (ch3.tex
-Chapitre 4.
-<images/image_ch3/pipline_1_phase.jpg, id=762, 1541.76pt x 1027.84pt>
-File: images/image_ch3/pipline_1_phase.jpg Graphic file (type jpg)
-<use images/image_ch3/pipline_1_phase.jpg>
-Package pdftex.def Info: images/image_ch3/pipline_1_phase.jpg  used on input li
-ne 19.
-(pdftex.def)             Requested size: 330.76329pt x 220.4951pt.
-<images/image_ch3/pipline_2_phase.png, id=763, 1780.6525pt x 890.32625pt>
-File: images/image_ch3/pipline_2_phase.png Graphic file (type png)
-<use images/image_ch3/pipline_2_phase.png>
-Package pdftex.def Info: images/image_ch3/pipline_2_phase.png  used on input li
-ne 28.
-(pdftex.def)             Requested size: 330.76329pt x 165.37346pt.
-[60
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.32 
-      <./images/image_ch3/pipline_1_phase.jpg>]
-Overfull \hbox (10.12683pt too wide) in paragraph at lines 43--56
- [][] 
- []
-
-[61
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.74   \item \textbf
-                    {Open Source (Roboflow Universe) :} extraction de jeux d...
-
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.74   \item \textbf
-                    {Open Source (Roboflow Universe) :} extraction de jeux d...
- <./images/image_ch3/pipline_2_phase.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
-[]|\T1/lmr/m/n/6 Conditions r�elles : bruit,
- []
-
-
-Overfull \hbox (15.35738pt too wide) in paragraph at lines 82--93
- [][] 
- []
-
-[62
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.2}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.128 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.3}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.128 
-      ]
-Overfull \hbox (3.27802pt too wide) in paragraph at lines 133--133
-|[]\T1/lmr/bx/n/17.28 Pr�paration des don-n�es (in-g�-nie-rie des don-n�es)| 
- []
-
-<images/image_ch3/Processus de_restauration_CIN Recto.png, id=785, 3678.74374pt
- x 901.3675pt>
 File: images/image_ch3/Processus de_restauration_CIN Recto.png Graphic file (ty
-pe png)
-<use images/image_ch3/Processus de_restauration_CIN Recto.png>
-Package pdftex.def Info: images/image_ch3/Processus de_restauration_CIN Recto.p
-ng  used on input line 156.
-(pdftex.def)             Requested size: 330.76329pt x 81.03705pt.
-<images/image_ch3/Simulation_de_contraintes_optiques réelles.png, id=786, 2494
-.31876pt x 676.5275pt>
-File: images/image_ch3/Simulation_de_contraintes_optiques réelles.png Graphic 
-file (type png)
-<use images/image_ch3/Simulation_de_contraintes_optiques réelles.png>
-Package pdftex.def Info: images/image_ch3/Simulation_de_contraintes_optiques r�
-�elles.png  used on input line 163.
-(pdftex.def)             Requested size: 330.76329pt x 89.70656pt.
-[63
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.167 
-       <./images/image_ch3/Processus de_restauration_CIN Recto.png>]
-<images/image_ch3/Pipeline_creation_template_verso.png, id=793, 3679.7475pt x 1
-133.23375pt>
+pe bmp)
+<images/image_ch3/Processus de_restauration_CIN Recto.png>
+File: images/image_ch3/Simulation_de_contraintes_optiques réelles.png Graphic f
+ile (type bmp)
+<images/image_ch3/Simulation_de_contraintes_optiques réelles.png>
+ [56]
 File: images/image_ch3/Pipeline_creation_template_verso.png Graphic file (type 
-png)
-<use images/image_ch3/Pipeline_creation_template_verso.png>
-Package pdftex.def Info: images/image_ch3/Pipeline_creation_template_verso.png 
- used on input line 180.
-(pdftex.def)             Requested size: 330.76329pt x 101.8483pt.
- [64
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.197   \item \textbf
-                     {CIN Recto :} address, cin, dob, first\_name, flag1, fl...
+bmp)
+<images/image_ch3/Pipeline_creation_template_verso.png>
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.197   \item \textbf
-                     {CIN Recto :} address, cin, dob, first\_name, flag1, fl...
- <./images/image_ch3/Simulation_de_contraintes_optiques réelles.png> <./images
-/image_ch3/Pipeline_creation_template_verso.png>]
-Overfull \hbox (16.37653pt too wide) in paragraph at lines 201--202
-[]\T1/lmr/bx/n/12 Passeport : \T1/lmr/m/n/12 ad-dress, dob, first_name, image, 
-last_name, num_cin, pob, num_pass. 
+Overfull \hbox (17.04338pt too wide) in paragraph at lines 171--172
+[][]\TU/lmr/bx/n/12 Passeport : \TU/lmr/m/n/12 address, dob, first_name, image,
+ last_name, num_cin, pob, num_pass. []
  []
 
-<images/image_ch3/roboflow.png, id=802, 825.83531pt x 395.22656pt>
-File: images/image_ch3/roboflow.png Graphic file (type png)
-<use images/image_ch3/roboflow.png>
-Package pdftex.def Info: images/image_ch3/roboflow.png  used on input line 222.
+[57]
+File: images/image_ch3/roboflow.png Graphic file (type bmp)
+<images/image_ch3/roboflow.png>
 
-(pdftex.def)             Requested size: 330.76329pt x 158.29889pt.
-[65
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.228 
-       <./images/image_ch3/roboflow.png>]
-Overfull \hbox (35.25548pt too wide) in paragraph at lines 240--256
- [][] 
+Overfull \hbox (4.45155pt too wide) in paragraph at lines 199--199
+ []|[]\TU/lmr/bx/n/14.4 Augmentation contrôlée : simulation de la variabilité r
+éelle| []
  []
 
-<images/image_ch3/rotation.png, id=812, 428.60126pt x 627.34375pt>
-File: images/image_ch3/rotation.png Graphic file (type png)
-<use images/image_ch3/rotation.png>
-Package pdftex.def Info: images/image_ch3/rotation.png  used on input line 270.
+[58]
+File: images/image_ch3/rotation.png Graphic file (type bmp)
+<images/image_ch3/rotation.png>
+ [59]
+File: images/image_ch3/lumino_grayscale.png Graphic file (type bmp)
+<images/image_ch3/lumino_grayscale.png>
+ [60]
+File: images/image_ch3/bruit_flou_gainCamera.png Graphic file (type bmp)
+<images/image_ch3/bruit_flou_gainCamera.png>
+ [61] [62]
+File: images/image_ch3/piplineIa.png Graphic file (type bmp)
+<images/image_ch3/piplineIa.png>
 
-(pdftex.def)             Requested size: 330.76329pt x 484.13786pt.
-[66
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.4}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.274 
-      ]
-<images/image_ch3/lumino_grayscale.png, id=820, 918.43124pt x 679.53876pt>
-File: images/image_ch3/lumino_grayscale.png Graphic file (type png)
-<use images/image_ch3/lumino_grayscale.png>
-Package pdftex.def Info: images/image_ch3/lumino_grayscale.png  used on input l
-ine 285.
-(pdftex.def)             Requested size: 330.76329pt x 244.72708pt.
- [67
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.289 
-       <./images/image_ch3/rotation.png>]
-<images/image_ch3/bruit_flou_gainCamera.png, id=828, 1287.81125pt x 703.62875pt
->
-File: images/image_ch3/bruit_flou_gainCamera.png Graphic file (type png)
-<use images/image_ch3/bruit_flou_gainCamera.png>
-Package pdftex.def Info: images/image_ch3/bruit_flou_gainCamera.png  used on in
-put line 300.
-(pdftex.def)             Requested size: 330.76329pt x 180.7167pt.
- [68
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.311 \end{itemize}
-                   
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.311 \end{itemize}
-                    <./images/image_ch3/lumino_grayscale.png> <./images/image_c
-h3/bruit_flou_gainCamera.png>]
-Overfull \hbox (51.4909pt too wide) in paragraph at lines 368--369
-\T1/lmr/m/n/12 de do-cu-ment parmi cinq classes (\T1/lmtt/m/n/12 CIN_RECTO\T1/l
-mr/m/n/12 , \T1/lmtt/m/n/12 CIN_VERSO\T1/lmr/m/n/12 , \T1/lmtt/m/n/12 PASSPORT\
-T1/lmr/m/n/12 , \T1/lmtt/m/n/12 ATTESTATION_TRAVAIL\T1/lmr/m/n/12 ,
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 379.
+See the caption package documentation for explanation.
+
+[63] [64]
+Underfull \hbox (badness 1975) in paragraph at lines 430--431
+[][]|\TU/lmr/m/n/12 Initialise les poids depuis un modèle pré-[]
  []
 
-[69
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.5}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.369   \item \textbf
-                     {Service de capture} (ports 8001/8006) : détecte la pr...
-] [70]
-ignored error: Infinite glue shrinkage found in box being split [71{C:/Users/ye
-ssi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 529.
 
-(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontaweso
-mefree2.fd) [72] [73{C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
-ps/fontawesome5/fa5free2.enc}]
-<images/image_ch3/results_recto/results.png, id=876, 867.24pt x 433.62pt>
-File: images/image_ch3/results_recto/results.png Graphic file (type png)
-<use images/image_ch3/results_recto/results.png>
-Package pdftex.def Info: images/image_ch3/results_recto/results.png  used on in
-put line 626.
-(pdftex.def)             Requested size: 441.01773pt x 220.50809pt.
- [74
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.632 
-       <./images/image_ch3/results_recto/results.png>]
-<images/image_ch3/results_recto/confusion_matrix.png, id=885, 867.24pt x 650.43
-pt>
-File: images/image_ch3/results_recto/confusion_matrix.png Graphic file (type pn
-g)
-<use images/image_ch3/results_recto/confusion_matrix.png>
-Package pdftex.def Info: images/image_ch3/results_recto/confusion_matrix.png  u
-sed on input line 635.
-(pdftex.def)             Requested size: 352.81552pt x 264.61368pt.
-
-Overfull \hbox (28.63574pt too wide) in paragraph at lines 640--641
-\T1/lmr/m/n/12 struc-tu-r�es (\T1/lmtt/m/n/12 flag1\T1/lmr/m/n/12 , \T1/lmtt/m/
-n/12 flag2\T1/lmr/m/n/12 , \T1/lmtt/m/n/12 num_cin\T1/lmr/m/n/12 ). Les confu-s
-ions les plus no-tables concernent \T1/lmtt/m/n/12 first_name
+Underfull \hbox (badness 1565) in paragraph at lines 440--441
+[][]|\TU/lmr/m/n/12 Algorithme d’optimisation. \TU/lmtt/m/n/12 AdamW \TU/lmr/m/
+n/12 offre une[]
  []
 
-[75
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.11})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.684 
-       <./images/image_ch3/results_recto/confusion_matrix.png>]
-<images/image_ch3/results_verso/results.png, id=896, 867.24pt x 433.62pt>
-File: images/image_ch3/results_verso/results.png Graphic file (type png)
-<use images/image_ch3/results_verso/results.png>
-Package pdftex.def Info: images/image_ch3/results_verso/results.png  used on in
-put line 689.
-(pdftex.def)             Requested size: 441.01773pt x 220.50809pt.
-<images/image_ch3/results_verso/confusion_matrix.png, id=898, 867.24pt x 650.43
-pt>
-File: images/image_ch3/results_verso/confusion_matrix.png Graphic file (type pn
-g)
-<use images/image_ch3/results_verso/confusion_matrix.png>
-Package pdftex.def Info: images/image_ch3/results_verso/confusion_matrix.png  u
-sed on input line 698.
-(pdftex.def)             Requested size: 352.81552pt x 264.61368pt.
- [76
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.7}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.701 \end{figure}
-                  
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.12})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.701 \end{figure}
-                   <./images/image_ch3/results_verso/results.png>] [77
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.13})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.742 
-       <./images/image_ch3/results_verso/confusion_matrix.png>]
-<images/image_ch3/results_passport/results.png, id=918, 867.24pt x 433.62pt>
-File: images/image_ch3/results_passport/results.png Graphic file (type png)
-<use images/image_ch3/results_passport/results.png>
-Package pdftex.def Info: images/image_ch3/results_passport/results.png  used on
- input line 747.
-(pdftex.def)             Requested size: 441.01773pt x 220.50809pt.
-<images/image_ch3/results_passport/confusion_matrix.png, id=920, 867.24pt x 650
-.43pt>
+
+Underfull \hbox (badness 1314) in paragraph at lines 480--481
+[][]|\TU/lmr/m/n/12 Désactive la mosaïque sur les $\OML/lmm/m/it/12 N$ \TU/lmr/
+m/n/12 dernières[]
+ []
+
+[65] [66]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 501.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 501.
+ [67] [68
+
+] [69] [70] [71]
+File: images copy/image_ch3/workflowPaddle.png Graphic file (type bmp)
+<images copy/image_ch3/workflowPaddle.png>
+ [72]
+Underfull \hbox (badness 1735) in paragraph at lines 761--761
+[][]|\TU/lmr/m/n/10.95 Score OCR faible ($\OML/lmm/m/it/10.95 <$[]
+ []
+
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ط in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no ج in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ج in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ح in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no د in font [lmmono10-regular]:!
+Missing character: There is no س in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ت in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no و in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ة in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ج in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no و in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no س in font [lmmono10-regular]:!
+Missing character: There is no ت in font [lmmono10-regular]:!
+Missing character: There is no ش in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no ق in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no و in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no ي in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no ه in font [lmmono10-regular]:!
+Missing character: There is no ج in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no س in font [lmmono10-regular]:!
+Missing character: There is no ت in font [lmmono10-regular]:!
+Missing character: There is no ق in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ل in font [lmmono10-regular]:!
+Missing character: There is no ع in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+Missing character: There is no ا in font [lmmono10-regular]:!
+Missing character: There is no ن in font [lmmono10-regular]:!
+Missing character: There is no س in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ت in font [lmmono10-regular]:!
+Missing character: There is no م in font [lmmono10-regular]:!
+Missing character: There is no ب in font [lmmono10-regular]:!
+Missing character: There is no ر in font [lmmono10-regular]:!
+[73] [74]
+
+LaTeX Warning: Reference `subsec:yolo11m-detection' on page 75 undefined on inp
+ut line 885.
+
+[75] [76]
+File: images/image_ch3/results_recto/results.png Graphic file (type bmp)
+<images/image_ch3/results_recto/results.png>
+ [77]
+Overfull \hbox (8.92628pt too wide) in paragraph at lines 1037--1039
+[]\TU/lmr/m/n/12 Ultralytics sauvegarde automatiquement le checkpoint \TU/lmtt/
+m/n/12 best.pt \TU/lmr/m/n/12 à l’époque où le mAP@50[]
+ []
+
+File: images/image_ch3/results_recto/confusion_matrix.png Graphic file (type bm
+p)
+<images/image_ch3/results_recto/confusion_matrix.png>
+[78]
+Overfull \hbox (28.7487pt too wide) in paragraph at lines 1047--1048
+[]\TU/lmr/m/n/12 structurées (\TU/lmtt/m/n/12 flag1\TU/lmr/m/n/12 , \TU/lmtt/m/
+n/12 flag2\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 num_cin\TU/lmr/m/n/12 ). Les confusi
+ons les plus notables concernent \TU/lmtt/m/n/12 first_name[]
+ []
+
+[79]
+File: images/image_ch3/results_verso/results.png Graphic file (type bmp)
+<images/image_ch3/results_verso/results.png>
+ [80]
+File: images/image_ch3/results_verso/confusion_matrix.png Graphic file (type bm
+p)
+<images/image_ch3/results_verso/confusion_matrix.png>
+ [81] [82]
+File: images/image_ch3/results_passport/results.png Graphic file (type bmp)
+<images/image_ch3/results_passport/results.png>
+ [83]
 File: images/image_ch3/results_passport/confusion_matrix.png Graphic file (type
- png)
-<use images/image_ch3/results_passport/confusion_matrix.png>
-Package pdftex.def Info: images/image_ch3/results_passport/confusion_matrix.png
-  used on input line 756.
-(pdftex.def)             Requested size: 352.81552pt x 264.61368pt.
- [78
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.8}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.760 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.14})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.760 
-       <./images/image_ch3/results_passport/results.png>] [79
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.15})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.810 
-       <./images/image_ch3/results_passport/confusion_matrix.png>]
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.826 ...r l'adresse verso (exclure le label « ا
-                                                  لعنوان » imprimé).
-? 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.826 ...l'adresse verso (exclure le label « ال
-                                                  عنوان » imprimé).
-? 
-
-! LaTeX Error: Unicode character ع (U+0639)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.826 ...adresse verso (exclure le label « الع
-                                                  نوان » imprimé).
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.826 ...resse verso (exclure le label « العن
-                                                  وان » imprimé).
-? 
-
-! LaTeX Error: Unicode character و (U+0648)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.826 ...sse verso (exclure le label « العنو
-                                                  ان » imprimé).
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.826 ...e verso (exclure le label « العنوا
-                                                  ن » imprimé).
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.826 ...verso (exclure le label « العنوان
-                                                   » imprimé).
-? 
-[80
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.9}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.832     \item A
-                 jout d'une bordure blanche de 40 pixels sur chaque côté.]
-Underfull \hbox (badness 10000) in paragraph at lines 862--862
-[]|\T1/lmr/m/n/10.95 Bords cou-p�s par
+ bmp)
+<images/image_ch3/results_passport/confusion_matrix.png>
+ [84]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1264--1269
+ [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 867--867
-[]|\T1/lmr/m/n/10.95 Score OCR faible ($\OML/lmm/m/it/10.95 <$
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1269--1274
+ [] [] [] [] [] 
  []
 
 
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.893     \texttt{nom} & \texttt{الطياري}
-                                                 & 0,9351 \\
-? 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.893     \texttt{nom} & \texttt{الطياري}
-                                                 & 0,9351 \\
-? 
-
-! LaTeX Error: Unicode character ط (U+0637)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.893     \texttt{nom} & \texttt{الطياري}
-                                                 & 0,9351 \\
-? 
-
-! LaTeX Error: Unicode character ي (U+064A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.893     \texttt{nom} & \texttt{الطياري}
-                                                 & 0,9351 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.893     \texttt{nom} & \texttt{الطياري}
-                                                 & 0,9351 \\
-? 
-
-! LaTeX Error: Unicode character ر (U+0631)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.893     \texttt{nom} & \texttt{الطياري}
-                                                 & 0,9351 \\
-? 
-
-! LaTeX Error: Unicode character ي (U+064A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.893     \texttt{nom} & \texttt{الطياري}
-                                                 & 0,9351 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.895     \texttt{prenom} & \texttt{المنجي}
-                                                  & 0,9958 \\
-? 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.895     \texttt{prenom} & \texttt{المنجي}
-                                                  & 0,9958 \\
-? 
-
-! LaTeX Error: Unicode character م (U+0645)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.895     \texttt{prenom} & \texttt{المنجي}
-                                                  & 0,9958 \\
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.895     \texttt{prenom} & \texttt{المنجي}
-                                                  & 0,9958 \\
-? 
-
-! LaTeX Error: Unicode character ج (U+062C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.895     \texttt{prenom} & \texttt{المنجي}
-                                                  & 0,9958 \\
-? 
-
-! LaTeX Error: Unicode character ي (U+064A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.895     \texttt{prenom} & \texttt{المنجي}
-                                                  & 0,9958 \\
-? 
-
-! LaTeX Error: Unicode character ب (U+0628)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ج (U+062C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ي (U+064A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ي (U+064A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ب (U+0628)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character م (U+0645)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character ح (U+062D)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character م (U+0645)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character د (U+062F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.898 ...xttt{بن الجيلاني بن محمد}
-                                                   & 0,9528 \\
-? 
-
-! LaTeX Error: Unicode character س (U+0633)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.900 ..._naissance} & \texttt{19562 سبتمبر}
-                                                   & 0,8746 \\
-? 
-
-! LaTeX Error: Unicode character ب (U+0628)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.900 ..._naissance} & \texttt{19562 سبتمبر}
-                                                   & 0,8746 \\
-? 
-
-! LaTeX Error: Unicode character ت (U+062A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.900 ..._naissance} & \texttt{19562 سبتمبر}
-                                                   & 0,8746 \\
-? 
-
-! LaTeX Error: Unicode character م (U+0645)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.900 ..._naissance} & \texttt{19562 سبتمبر}
-                                                   & 0,8746 \\
-? 
-
-! LaTeX Error: Unicode character ب (U+0628)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.900 ..._naissance} & \texttt{19562 سبتمبر}
-                                                   & 0,8746 \\
-? 
-
-! LaTeX Error: Unicode character ر (U+0631)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.900 ..._naissance} & \texttt{19562 سبتمبر}
-                                                   & 0,8746 \\
-? 
-
-! LaTeX Error: Unicode character م (U+0645)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.903 ...tt{lieu\_naissance} & \texttt{منوبة}
-                                                   & 0,9954 \\
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.903 ...tt{lieu\_naissance} & \texttt{منوبة}
-                                                   & 0,9954 \\
-? 
-
-! LaTeX Error: Unicode character و (U+0648)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.903 ...tt{lieu\_naissance} & \texttt{منوبة}
-                                                   & 0,9954 \\
-? 
-
-! LaTeX Error: Unicode character ب (U+0628)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.903 ...tt{lieu\_naissance} & \texttt{منوبة}
-                                                   & 0,9954 \\
-? 
-
-! LaTeX Error: Unicode character ة (U+0629)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.903 ...tt{lieu\_naissance} & \texttt{منوبة}
-                                                   & 0,9954 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.905 ...\_mere} & \texttt{الما جري نور}
-                                                   & 0,8840 \\
-? 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.905 ...\_mere} & \texttt{الما جري نور}
-                                                   & 0,8840 \\
-? 
-
-! LaTeX Error: Unicode character م (U+0645)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.905 ...\_mere} & \texttt{الما جري نور}
-                                                   & 0,8840 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.905 ...\_mere} & \texttt{الما جري نور}
-                                                   & 0,8840 \\
-? 
-
-! LaTeX Error: Unicode character ج (U+062C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.905 ...\_mere} & \texttt{الما جري نور}
-                                                   & 0,8840 \\
-? 
-
-! LaTeX Error: Unicode character ر (U+0631)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.905 ...\_mere} & \texttt{الما جري نور}
-                                                   & 0,8840 \\
-? 
-
-! LaTeX Error: Unicode character ي (U+064A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.905 ...\_mere} & \texttt{الما جري نور}
-                                                   & 0,8840 \\
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.905 ...\_mere} & \texttt{الما جري نور}
-                                                   & 0,8840 \\
-? 
-
-! LaTeX Error: Unicode character و (U+0648)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.905 ...\_mere} & \texttt{الما جري نور}
-                                                   & 0,8840 \\
-? 
-
-! LaTeX Error: Unicode character ر (U+0631)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.905 ...\_mere} & \texttt{الما جري نور}
-                                                   & 0,8840 \\
-? 
-
-! LaTeX Error: Unicode character م (U+0645)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character س (U+0633)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character ت (U+062A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character ش (U+0634)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character ر (U+0631)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character ق (U+0642)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character و (U+0648)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character ي (U+064A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 ...ion} & \texttt{مستشار قانوني}
-                                                   & 0,8915 \\
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ه (U+0647)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ج (U+062C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character س (U+0633)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ت (U+062A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ق (U+0642)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ع (U+0639)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character م (U+0645)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ر (U+0631)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character ن (U+0646)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.910 ...نهج الاستقلال العمران}
-                                                   & 0,8794 \\
-? 
-
-! LaTeX Error: Unicode character س (U+0633)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.913 ...issue\_date} & \texttt{2022 سبتمبر}
-                                                   & 0,9423 \\
-? 
-
-! LaTeX Error: Unicode character ب (U+0628)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.913 ...issue\_date} & \texttt{2022 سبتمبر}
-                                                   & 0,9423 \\
-? 
-
-! LaTeX Error: Unicode character ت (U+062A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.913 ...issue\_date} & \texttt{2022 سبتمبر}
-                                                   & 0,9423 \\
-? 
-
-! LaTeX Error: Unicode character م (U+0645)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.913 ...issue\_date} & \texttt{2022 سبتمبر}
-                                                   & 0,9423 \\
-? 
-
-! LaTeX Error: Unicode character ب (U+0628)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.913 ...issue\_date} & \texttt{2022 سبتمبر}
-                                                   & 0,9423 \\
-? 
-
-! LaTeX Error: Unicode character ر (U+0631)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.913 ...issue\_date} & \texttt{2022 سبتمبر}
-                                                   & 0,9423 \\
-? 
-[81
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.10}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.924 
-      ]
-ignored error: Infinite glue shrinkage found in box being split [82
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.11}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.975 \end{longtable}
-                     ]) [83] [84] [85
-
-]
-Underfull \hbox (badness 1117) in paragraph at lines 344--344
-[]\T1/lmr/m/n/12 Environnement de d�-ve-lop-pe-ment & stack
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1274--1300
+ [] [] [] [] [] 
  []
 
-[86
+[85]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1309--1314
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1314--1319
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1319--1341
+ [] [] [] [] [] 
+ []
+
+[86]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1350--1355
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1355--1360
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1360--1390
+ [] [] [] [] [] 
+ []
+
+Missing character: There is no أ in font [lmmono12-regular]:!
+Missing character: There is no إ in font [lmmono12-regular]:!
+Missing character: There is no آ in font [lmmono12-regular]:!
+Missing character: There is no ا in font [lmmono12-regular]:!
+
+Underfull \hbox (badness 1635) in paragraph at lines 1447--1448
+[]$\OML/lmm/m/it/12 EMR[]$\TU/lmr/m/n/12 . Un $\OT1/lmr/m/n/12 ^^A\OML/lmm/m/it
+/12 EMR$ \TU/lmr/m/n/12 positif confirme l’apport du module de post-[]
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 1473--1474
+[]\TU/lmr/m/n/12 Particulièrement utile pour les champs multi-mots (\TU/lmtt/m/
+n/12 full_name\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 address\TU/lmr/m/n/12 ,[]
+ []
+
+[87] [88]
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1507--1512
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1512--1517
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1517--1524
+ [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1532--1532
+[][]|\TU/lmr/bx/n/12 EMR[]
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 1532--1532
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1532--1533
+[][]|\TU/lmr/bx/n/12 Score[]
+ []
+
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1529--1534
+ [] [] [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1537--1537
+[][]|\TU/lmr/bx/n/12 EMR[]
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 1537--1537
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1537--1538
+[][]|\TU/lmr/bx/n/12 Score[]
+ []
+
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1534--1539
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1539--1554
+ [] [] [] [] [] [] [] 
+ []
+
+[89]
+Missing character: There is no ا in font [lmmono12-regular]:!
+Missing character: There is no ف in font [lmmono12-regular]:!
+Missing character: There is no ر in font [lmmono12-regular]:!
+Missing character: There is no ي in font [lmmono12-regular]:!
+Missing character: There is no ل in font [lmmono12-regular]:!
+Missing character: There is no أ in font [lmmono12-regular]:!
+Missing character: There is no ف in font [lmmono12-regular]:!
+Missing character: There is no ر in font [lmmono12-regular]:!
+Missing character: There is no ي in font [lmmono12-regular]:!
+Missing character: There is no ل in font [lmmono12-regular]:!
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1568--1573
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1573--1578
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1578--1585
+ [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1593--1593
+[][]|\TU/lmr/bx/n/12 EMR[]
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 1593--1593
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1593--1594
+[][]|\TU/lmr/bx/n/12 Score[]
+ []
+
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1590--1595
+ [] [] [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1598--1598
+[][]|\TU/lmr/bx/n/12 EMR[]
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 1598--1598
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1598--1599
+[][]|\TU/lmr/bx/n/12 Score[]
+ []
+
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1595--1600
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1600--1613
+ [] [] [] [] [] [] [] 
+ []
+
+[90]
+Missing character: There is no ا in font [lmmono12-regular]:!
+Missing character: There is no ل in font [lmmono12-regular]:!
+Missing character: There is no ع in font [lmmono12-regular]:!
+Missing character: There is no ن in font [lmmono12-regular]:!
+Missing character: There is no و in font [lmmono12-regular]:!
+Missing character: There is no ا in font [lmmono12-regular]:!
+Missing character: There is no ن in font [lmmono12-regular]:!
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1627--1632
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1632--1637
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1637--1644
+ [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1652--1652
+[][]|\TU/lmr/bx/n/12 EMR[]
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 1652--1652
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1652--1653
+[][]|\TU/lmr/bx/n/12 Score[]
+ []
+
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1649--1654
+ [] [] [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1657--1657
+[][]|\TU/lmr/bx/n/12 EMR[]
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 1657--1657
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1657--1658
+[][]|\TU/lmr/bx/n/12 Score[]
+ []
+
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1654--1659
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1659--1684
+ [] [] [] [] [] [] [] 
+ []
+
+[91]
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+[][]|\TU/lmr/bx/n/12 DR[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+[][]|\TU/lmr/bx/n/12 EMR[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
+[][]|\TU/lmr/bx/n/12 CER post-[]
+ []
+
+
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1698--1703
+ [] [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+[][]|\TU/lmr/bx/n/12 DR[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+[][]|\TU/lmr/bx/n/12 EMR[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+[][]|\TU/lmr/bx/n/12 EMR post-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1707
+[][]|\TU/lmr/bx/n/12 CER post-[]
+ []
+
+
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1703--1708
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1708--1717
+ [] [] [] [] [] [] 
+ []
+
+[92]
+File: testImages/rectoquality/recto1.png Graphic file (type bmp)
+<testImages/rectoquality/recto1.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1740.
+See the caption package documentation for explanation.
+
+File: testImages/rectoquality/recto2.png Graphic file (type bmp)
+<testImages/rectoquality/recto2.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1747.
+See the caption package documentation for explanation.
+
+Missing character: There is no م in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no م in font [lmroman12-regular]:mapping=tex-text;!
+File: testImages/rectoquality/recto3.png Graphic file (type bmp)
+<testImages/rectoquality/recto3.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1754.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1763--1770
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1770--1777
+ [] [] [] [] 
+ []
+
+Missing character: There is no م in font [lmroman10-bolditalic]:mapping=tex-tex
+t;!
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1777--1801
+ [] [] [] [] 
+ []
+
+[93]
+Underfull \hbox (badness 10000) in paragraph at lines 1808--1809
+[][]|[]\TU/lmr/bx/n/12 Temps total[]
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1814.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 1805--1814
+ [][][] 
+ []
+
+File: testImages/versoquality/verso1.png Graphic file (type bmp)
+<testImages/versoquality/verso1.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1832.
+See the caption package documentation for explanation.
+
+File: testImages/versoquality/verso2.png Graphic file (type bmp)
+<testImages/versoquality/verso2.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1839.
+See the caption package documentation for explanation.
+
+Missing character: There is no ن in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ا in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ب in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ل in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ن in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ا in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ب in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ل in font [lmroman12-regular]:mapping=tex-text;!
+File: testImages/versoquality/verso3.png Graphic file (type bmp)
+<testImages/versoquality/verso3.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1846.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1855--1862
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1862--1869
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1869--1890
+ [] [] [] [] 
+ []
+
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 1897--1898
+[][]|[]\TU/lmr/bx/n/12 Temps total[]
+ []
+
+
+Underfull \hbox (badness 6461) in paragraph at lines 1901--1901
+[][]|\TU/lmr/m/n/12 Verso 3 (surexposi-[]
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1903.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 1894--1903
+ [][][] 
+ []
+
+[95]
+File: testImages/passQuality/passebonne.jpg Graphic file (type bmp)
+<testImages/passQuality/passebonne.jpg>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1921.
+See the caption package documentation for explanation.
+
+File: testImages/passQuality/passmotif.png Graphic file (type bmp)
+<testImages/passQuality/passmotif.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1928.
+See the caption package documentation for explanation.
+
+File: testImages/passQuality/passsoleil.png Graphic file (type bmp)
+<testImages/passQuality/passsoleil.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1935.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1944--1951
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1951--1958
+ [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 2376) in paragraph at lines 1988--1988
+[][]|\TU/lmr/m/n/12 19/05/1995 []$\OMS/lmsy/m/n/10.95  $ \TU/lmr/m/n/10.95 OCR 
+bruité par motifs[]
+ []
+
+
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1958--1997
+ [] [] [] [] 
+ []
+
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 2004--2005
+[][]|[]\TU/lmr/bx/n/12 Temps total[]
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2010.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 2001--2010
+ [][][] 
+ []
+
+[97]
+Overfull \hbox (8.05006pt too wide) in paragraph at lines 2016--2017
+[][]\TU/lmr/bx/n/12 Passeport avec reflet. \TU/lmr/m/n/12 Le reflet localisé ma
+sque entièrement les champs \TU/lmtt/m/n/12 first_name[]
+ []
+
+File: images/image_ch3/integration_ia.png Graphic file (type bmp)
+<images/image_ch3/integration_ia.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2042.
+See the caption package documentation for explanation.
+
+[98]
+Underfull \hbox (badness 5231) in paragraph at lines 2063--2064
+[][]|\TU/lmr/m/n/12 Localise les champs textuels par YO-[]
+ []
+
+[99]) [100] [101
 
 ] (ch5.tex
 Chapitre 5.
-) [87
+[102
 
 
-] (rapport_PFE.bbl [88
+]
 
-]) [89
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 26.
+
+
+Overfull \hbox (74.04079pt too wide) in paragraph at lines 28--29
+[]\TU/lmtt/m/n/12 SuperviseurIA \TU/lmr/m/n/12 et \TU/lmtt/m/n/12 Admin\TU/lmr/
+m/n/12 . La classe \TU/lmtt/m/n/12 Client \TU/lmr/m/n/12 est reliée à la fiche 
+identitaire (\TU/lmtt/m/n/12 InformationUtilisateur\TU/lmr/m/n/12 ),[]
+ []
+
+File: conceptionImage/classe1F.png Graphic file (type bmp)
+<conceptionImage/classe1F.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 33.
+See the caption package documentation for explanation.
+
+[103
+
+] [104] [105]
+File: conceptionImage/classe2F.png Graphic file (type bmp)
+<conceptionImage/classe2F.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 89.
+See the caption package documentation for explanation.
+
+[106]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 126.
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+[]|\TU/lmr/bx/n/12 –[]
+ []
+
+
+Overfull \hbox (14.27136pt too wide) in paragraph at lines 126--127
+[]\TU/lmtt/b/n/12 getPourDocument() \TU/lmr/bx/n/12 :[]
+ []
+
+
+Overfull \hbox (38.71536pt too wide) in paragraph at lines 144--144
+[][]\TU/lmr/bx/it/12 InformationUtilisateur[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+[][]\TU/lmr/bx/it/12 AnalysteKYC[]
+ []
+
+[107] [108] [109]
+File: conceptionImage/classe3F.png Graphic file (type bmp)
+<conceptionImage/classe3F.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 165.
+See the caption package documentation for explanation.
+
+[110]
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+[][]\TU/lmr/bx/it/12 DocumentKYC[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
+[][]\TU/lmr/bx/it/12 DemandeKYC[]
+ []
+
+
+Underfull \hbox (badness 7832) in paragraph at lines 209--209
+[][]\TU/lmr/bx/it/12 Utilisateur \TU/lmr/m/n/10.95 (ex-[]
+ []
+
+[111] [112]
+Overfull \hbox (1.85161pt too wide) in paragraph at lines 219--220
+[]\TU/lmr/m/n/12 de même, la classe \TU/lmtt/m/n/12 Match \TU/lmr/m/n/12 factor
+ise les champs de correspondance entre \TU/lmtt/m/n/12 BlackListMatch\TU/lmr/m/
+n/12 ,[]
+ []
+
+File: conceptionImage/classe4F.png Graphic file (type bmp)
+<conceptionImage/classe4F.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 224.
+See the caption package documentation for explanation.
+
+[113]
+Underfull \hbox (badness 2173) in paragraph at lines 252--253
+[][]|\TU/lmr/m/n/12 Classe abstraite qui factorise les résultats de corres-[]
+ []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 252--253
+[]\TU/lmr/m/n/12 sociée. Héritée par \TU/lmtt/m/n/12 BlackListMatch\TU/lmr/m/n/
+12 , \TU/lmtt/m/n/12 PpeListMatch \TU/lmr/m/n/12 et[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--273
+[][]\TU/lmr/bx/it/12 AnalysteKYC[]
+ []
+
+
+Overfull \hbox (38.71536pt too wide) in paragraph at lines 276--276
+[][]\TU/lmr/bx/it/12 InformationUtilisateur[]
+ []
+
+[114] [115]
+File: conceptionImage/activite.png Graphic file (type bmp)
+<conceptionImage/activite.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 294.
+See the caption package documentation for explanation.
+
+[116] [117]
+File: conceptionImage/seq_workflow_agentkyc.png Graphic file (type bmp)
+<conceptionImage/seq_workflow_agentkyc.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 320.
+See the caption package documentation for explanation.
+
+[118] [119]) (ch6.tex [120]
+Chapitre 6.
+[121
+
+]
+File: images/image_ch5/archi_globale.png Graphic file (type bmp)
+<images/image_ch5/archi_globale.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 36.
+See the caption package documentation for explanation.
+
+[122
+
+]
+Overfull \hbox (35.77354pt too wide) in alignment at lines 49--53
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (35.77354pt too wide) in alignment at lines 53--57
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (35.77354pt too wide) in alignment at lines 57--72
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.23622pt too wide) in paragraph at lines 108--108
+[][]|\TU/lmtt/m/n/12 identity_duplicate_alerts| []
+ []
+
+[123] [124] [125]
+File: images/image-ch6/Diagramme de contrat d'interface système.png Graphic fil
+e (type bmp)
+<images/image-ch6/Diagramme de contrat d'interface système.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 164.
+See the caption package documentation for explanation.
+
+[126]
+File: images/image-ch6/ChatGPT Image 30 mai 2026, 03_02_18.png Graphic file (ty
+pe bmp)
+<images/image-ch6/ChatGPT Image 30 mai 2026, 03_02_18.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 178.
+See the caption package documentation for explanation.
+
+[127]
+File: images/image_ch5/communicationIa.png Graphic file (type bmp)
+<images/image_ch5/communicationIa.png>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 198.
+See the caption package documentation for explanation.
+
+[128] [129]) [130] (rapport_PFE.bbl [131
+
+]) [132
 
 ] (rapport_PFE.aux)
  ***********
@@ -3259,170 +2746,16 @@ L3 programming layer <2025-12-24>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `rapport_PFE.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `rapport_PFE.out':
-(rerunfilecheck)             Before: 5BE29CE27BD263433F7524F9BEC21892;14020
-(rerunfilecheck)             After:  DF7353E6613882D680F64078040AE293;17798.
+Package rerunfilecheck Info: File `rapport_PFE.out' has not changed.
+(rerunfilecheck)             Checksum: 2819A7C8D287A99B15EBA738370DB29D;40604.
  ) 
 Here is how much of TeX's memory you used:
- 32132 strings out of 467871
- 644205 string characters out of 5418376
- 1050183 words of memory out of 5000000
- 60113 multiletter control sequences out of 15000+600000
- 766156 words of font info for 124 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 98i,16n,108p,905b,1259s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 35755 strings out of 402987
+ 758274 string characters out of 5448524
+ 1318075 words of memory out of 5000000
+ 63772 multiletter control sequences out of 15000+600000
+ 683269 words of font info for 154 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 98i,16n,108p,1702b,1253s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{table.3.12} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.3.11} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.3.10} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.3.9} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.3.15} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.3.14} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.3.8} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.3.13} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.3.12} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.3.7} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.3.11} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.3.10} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.3.6} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.1.10} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.1.9} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.4.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.4.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.4.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.6} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.5} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.4} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.3.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.3.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.3.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.3.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.3.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.3} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.2.1.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.1.1.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-<C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/F
-ontAwesome5Free-Solid.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmbx10.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmbx12.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmbx6.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmbxi10.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmcsc10.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmmi10.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmmi12.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmr10.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmr12.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmr17.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmr6.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmr8.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmri10.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmri12.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmsy10.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmtt10.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmtt12.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmtt8.pfb><C:/Users/yessi/AppData/Local/Programs/MiKTeX/fonts/type1/ur
-w/zapfding/uzdr.pfb>
-Output written on rapport_PFE.pdf (90 pages, 17021649 bytes).
-PDF statistics:
- 1198 PDF objects out of 1200 (max. 8388607)
- 369 named destinations out of 1000 (max. 500000)
- 650 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+Output written on rapport_PFE.pdf (133 pages).

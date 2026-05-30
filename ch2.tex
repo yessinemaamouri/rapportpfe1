@@ -1,5 +1,10 @@
 \chapter{Fondements Théoriques et Choix Technologiques}
 \label{chap:fondements-techniques}
+\vspace{1em}
+\noindent\textbf{\large Sommaire}
+\vspace{0.5em}
+\localtableofcontents
+\clearpage
 
 La mise en œuvre d'un système d'automatisation du processus KYC repose sur un socle théorique et technologique solide. Ce chapitre pose les bases conceptuelles nécessaires à la compréhension des choix effectués, depuis les fondements de l'intelligence artificielle et de la vision par ordinateur jusqu'aux technologies retenues. Une fois ce cadre établi, il devient possible de justifier rigoureusement la sélection des outils constituant le pipeline IA du projet.
 
@@ -83,7 +88,7 @@ La détection d'objets est une tâche centrale de la vision par ordinateur qui c
   \label{fig:ch2-detection-objets}
 \end{figure}
 
-\subsubsection*{Niveaux de complexité des tâches de vision}
+\subsubsection{Niveaux de complexité des tâches de vision}
 
 Pour bien situer la détection d'objets dans le spectre des tâches de vision par ordinateur, il est utile de les classer par ordre de complexité croissante :
 
@@ -99,7 +104,7 @@ Pour bien situer la détection d'objets dans le spectre des tâches de vision pa
   \item \textbf{Segmentation d'instance :} identifier et délimiter chaque objet distinct --- par exemple, séparer deux cartes d'identité disposées côte à côte.
 \end{itemize}
 
-\subsubsection*{Méthodes de détection : One-Stage vs Two-Stage}
+\subsubsection{Méthodes de détection : One-Stage vs Two-Stage}
 
 Les méthodes de détection d'objets basées sur le Deep Learning se répartissent en deux grandes familles architecturales, dont le choix est guidé par le compromis entre vitesse d'inférence et précision.
 
@@ -118,7 +123,7 @@ Ces méthodes utilisent un réseau unique qui mappe directement l'image d'entré
 
 Elles procèdent en deux étapes distinctes : une première génère des propositions de régions d'intérêt (Region Proposals), et une seconde affine et classifie ces propositions. Leur précision est généralement supérieure, au prix d'une latence plus élevée et d'un coût computationnel important. Exemples : Faster R-CNN, R-CNN.
 
-\subsubsection*{YOLO (You Only Look Once)}
+\subsubsection{YOLO (You Only Look Once)}
 
 \begin{figure}[H]
   \centering
@@ -193,7 +198,7 @@ La reconnaissance optique de caractères (OCR --- Optical Character Recognition)
 
 Dans le cadre des systèmes KYC, l'OCR joue un rôle central en permettant d'extraire les informations présentes sur les documents d'identité : nom, prénom, date de naissance, numéro d'identification, etc.
 
-\subsubsection*{Pipeline OCR : processus pas à pas}
+\subsubsection{Pipeline OCR : processus pas à pas}
 
 Le pipeline OCR se compose de cinq étapes séquentielles qui transforment une image brute en texte structuré exploitable :
 
@@ -218,7 +223,7 @@ Le pipeline OCR se compose de cinq étapes séquentielles qui transforment une i
 
 Ce processus permet de transformer une image contenant du texte en un format exploitable par un système informatique.
 
-\subsubsection*{Benchmark des moteurs OCR open source}
+\subsubsection{Benchmark des moteurs OCR open source}
 
 Plusieurs solutions OCR open source ont été développées, présentant des performances variables en termes de précision, de robustesse et de vitesse. Les approches basées sur le Deep Learning, telles que PaddleOCR, se révèlent généralement plus performantes en conditions réelles (flou, bruit, faible éclairage), ce qui les rend particulièrement adaptées aux systèmes KYC.
 
@@ -263,7 +268,7 @@ Les fondements théoriques présentés précédemment guident naturellement vers
 \subsection{Modèle de détection : YOLO11m}
 \label{subsec:yolo11m}
 
-\subsubsection*{Présentation de YOLO11}
+\subsubsection{Présentation de YOLO11}
 
 YOLO11 est la dernière génération de modèles de détection d'objets en temps réel développée par Ultralytics, publiée en septembre 2024. Il introduit plusieurs innovations architecturales majeures par rapport à ses prédécesseurs :
 
@@ -277,7 +282,7 @@ YOLO11 est la dernière génération de modèles de détection d'objets en temps
 
 La famille YOLO11 propose cinq variantes (n, s, m, l, x) couvrant un spectre allant des dispositifs embarqués aux serveurs GPU haute performance.
 
-\subsubsection*{Comparaison des variantes YOLO11}
+\subsubsection{Comparaison des variantes YOLO11}
 
 Le tableau suivant présente les performances benchmarkées sur le dataset COCO (mAP50-95) pour chaque variante, en précisant le nombre de paramètres et la vitesse d'inférence CPU.
 
@@ -307,7 +312,7 @@ Le tableau suivant présente les performances benchmarkées sur le dataset COCO 
 
 La variante YOLO11m offre le meilleur équilibre entre précision et complexité computationnelle pour notre contexte d'application. Les variantes légères (n, s) privilégient la vitesse au détriment de la précision, tandis que les modèles lourds (l, x) engendrent des coûts incompatibles avec les contraintes d'un système bancaire opérationnel.
 
-\subsubsection*{Justification du choix : YOLO11m vs YOLOv8m}
+\subsubsection{Justification du choix : YOLO11m vs YOLOv8m}
 
 Le tableau ci-dessous compare YOLO11m à YOLOv8m, qui constitue la génération précédente la plus répandue en production.
 
@@ -341,13 +346,13 @@ YOLO11m a été retenu car il offre le meilleur compromis entre précision (mAP 
 \subsection{Moteur OCR : PaddleOCR PP-OCRv5}
 \label{subsec:pp-ocrv5}
 
-\subsubsection*{Présentation de PP-OCRv5}
+\subsubsection{Présentation de PP-OCRv5}
 
 PP-OCRv5 est la cinquième génération du pipeline OCR de PaddlePaddle (Baidu), publiée dans le cadre de PaddleOCR 3.0 en 2024. Il représente une évolution majeure conçue spécifiquement pour la reconnaissance de texte dans des environnements variés et multilingues, incluant des documents réels, du texte manuscrit et des images capturées en conditions non contrôlées.
 
 L'architecture repose sur un pipeline à deux étages : détection des zones de texte (PP-OCRv5\_det), puis reconnaissance caractère par caractère (PP-OCRv5\_rec), disponible en variante mobile (optimisée CPU) et serveur (optimisée GPU).
 
-\subsubsection*{Performances et évolution par rapport aux versions précédentes}
+\subsubsection{Performances et évolution par rapport aux versions précédentes}
 
 \begin{table}[H]
   \centering
@@ -377,23 +382,23 @@ L'architecture repose sur un pipeline à deux étages : détection des zones de 
   \label{tab:pp-ocr-evolution}
 \end{table}
 
-\subsubsection*{Critères de sélection pour le contexte tunisien}
+\subsubsection{Critères de sélection pour le contexte tunisien}
 
 Le choix de PP-OCRv5 s'appuie sur quatre critères directement liés aux contraintes du projet KYC de la BTE.
 
-\paragraph{a) Support natif de l'arabe}
+\paragraph{Support natif de l'arabe}
 
 PP-OCRv5 couvre 106 langues, dont l'arabe, le français et l'anglais, avec un dataset arabe dédié de 2\,676 images d'entraînement. L'arabe étant une langue à écriture cursive et de droite à gauche (RTL), la majorité des solutions OCR classiques échouent sur ce type de texte. PP-OCRv5 intègre nativement cette complexité, le rendant parfaitement adapté aux documents d'identité tunisiens bilingues (arabe / français).
 
-\paragraph{b) Amélioration de précision documentée}
+\paragraph{Amélioration de précision documentée}
 
 Comparé à PP-OCRv3, PP-OCRv5 atteint une amélioration de plus de 30\% en précision pour la reconnaissance multilingue, et +13 points de pourcentage d'amélioration globale par rapport à PP-OCRv4. Ces gains sont particulièrement significatifs sur les scénarios de texte déformé, incliné ou manuscrit --- conditions précisément rencontrées lors de la capture mobile d'images KYC.
 
-\paragraph{c) Performance face aux grands modèles de vision (VLM)}
+\paragraph{Performance face aux grands modèles de vision (VLM)}
 
 Dans les benchmarks publiés sur OmniDocBench, PP-OCRv5 surpasse des modèles de grande taille tels que GPT-4o, Gemini 2.5 Pro et Qwen2.5-VL sur les tâches OCR spécialisées, tout en utilisant moins de 100 millions de paramètres. Cette efficacité est essentielle pour un déploiement on-premise dans un environnement bancaire aux ressources définies.
 
-\paragraph{d) Licence open source et facilité d'intégration}
+\paragraph{Licence open source et facilité d'intégration}
 
 PP-OCRv5 est distribué sous licence Apache 2.0, sans restriction commerciale. Il dispose d'une API Python claire et d'une intégration native avec PaddlePaddle 3.0, permettant une incorporation directe dans le pipeline KYC de la banque, sans dépendance à des services cloud tiers.
 

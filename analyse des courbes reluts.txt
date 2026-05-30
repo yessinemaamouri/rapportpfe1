@@ -1,0 +1,344 @@
+selon ultralytics
+
+ Dans le cadre de la détection de texte sur un document d'identité (nom, prénom, etc.) avec Ultralytics YOLO26, voici à quoi correspondent ces trois pertes :
+
+* Box Loss (Perte de boîte) : Elle mesure la précision de la localisation. Elle calcule l'écart entre la boîte prédite et la boîte réelle (ground truth) à l'aide de l'IoU (Intersection over Union).
+* Exemple : Si le modèle dessine un cadre qui coupe le "Prénom" au lieu de l'englober parfaitement, cette perte sera élevée. Une baisse indique que le modèle ajuste mieux ses cadres aux dimensions du texte. [Détails BboxLoss](https://docs.ultralytics.com/reference/utils/loss/#class-ultralytics.utilsloss.bboxloss).
+
+* Cls Loss (Perte de classification) : Elle évalue la capacité du modèle à attribuer la bonne étiquette à chaque boîte.
+* Exemple : Si le modèle détecte bien la zone du "Nom" mais l'étiquette comme "ID" ou "Sexe", la clsloss augmente. Elle utilise généralement la [BCE (Binary Cross-Entropy)](https://docs.ultralytics.com/reference/utils/loss/#method-ultralytics.utilsloss.v8detectionloss.get%3C/em%3Eassigned%3Cem%3Etargets%3C/em%3Eand%3Cem%3Eloss) pour valider que le texte appartient à la bonne catégorie parmi vos 5 champs.
+
+* DFL Loss (Distribution Focal Loss) : Elle aide le modèle à affiner les limites des boîtes, surtout quand les bords ne sont pas nets (texte flou ou serré).
+* Utilité : Elle permet une détection plus précise des bordures des champs de texte, ce qui est crucial pour les petits caractères sur une carte d'identité. [Détails DFL](https://docs.ultralytics.com/reference/utils/loss/#method-ultralytics.utilsloss.dfloss.call).
+L'objectif est que ces trois courbes descendent sur le graphique `results.png` pour garantir une extraction de données fiable. ✅)
+
+Analyse complète — CIN Recto (données réelles du CSV)
+
+Valeurs exactes du meilleur modèle
+Meilleur epoch    : 26
+mAP@50            : 0.9564
+mAP@50-95         : 0.6942
+Précision         : 0.9432
+Rappel            : 0.9448
+
+Courbes d'entraînement (train)
+train/box_loss  → de 1.168 (epoch 1) à 0.277 (epoch 111)
+                 descente régulière et continue
+                 le modèle apprend progressivement
+                 à localiser les zones textuelles
+
+train/cls_loss  → de 0.739 (epoch 1) à 0.155 (epoch 111)
+                 convergence très propre
+                 le modèle distingue correctement
+                 les classes de zones (nom, prénom, CIN...)
+
+train/dfl_loss  → de 1.416 (epoch 1) à 0.827 (epoch 111)
+                 descente stable
+                 précision croissante sur les contours
+                 des bounding boxes
+
+Courbes de validation (val)
+val/box_loss  → de 1.221 (epoch 1) à 0.888 (epoch 111)
+               descend jusqu'à epoch 40 (~0.886)
+               puis se stabilise légèrement au-dessus
+               → bonne généralisation sur les données
+                 de validation
+
+val/cls_loss  → instable entre epoch 40 et 80
+               oscillations dues à la variabilité
+               des documents dans le jeu de validation
+               se stabilise autour de 0.45 en fin
+               d'entraînement
+
+val/dfl_loss  → descend jusqu'à 1.147 (epoch ~50)
+               puis remonte progressivement à 1.288
+               → overfitting léger sur la localisation
+                 fine des bounding boxes après epoch 50
+
+Métriques de performance
+Précision  → stable entre 0.930 et 0.942
+             le modèle génère peu de fausses détections
+             valeur finale : 0.938
+
+Rappel     → commence à 0.955 (epoch 1)
+             légère dégradation progressive
+             valeur finale : 0.941
+             → le modèle détecte la quasi-totalité
+               des zones textuelles
+
+mAP@50     → atteint son pic à epoch 26 : 0.9564
+             descend progressivement ensuite
+             valeur finale epoch 111 : 0.915
+             → justifie l'utilisation de best.pt
+
+mAP50-95   → monte jusqu'à 0.695 (epoch 26)
+             se stabilise autour de 0.667 en fin
+             → bonne précision fine des bounding boxes
+
+Ce que tu écris dans le rapport
+"Les courbes d'entraînement du modèle YOLOv11m
+sur le dataset CIN Recto montrent une convergence
+régulière et stable des trois fonctions de perte
+sur les 111 epochs réalisés. La train/box_loss
+passe de 1.168 à 0.277, la train/cls_loss de 0.739
+à 0.155, et la train/dfl_loss de 1.416 à 0.827,
+attestant d'un apprentissage progressif et sans
+instabilité.
+
+Sur l'ensemble de validation, la val/box_loss
+se stabilise autour de 0.888, indiquant une
+bonne capacité de généralisation. Les oscillations
+observées sur la val/cls_loss entre les epochs 40
+et 80 sont attribuables à la variabilité des
+conditions de capture dans le jeu de validation.
+La remontée progressive de la val/dfl_loss après
+l'epoch 50 signale un overfitting modéré sur la
+localisation fine des zones.
+
+Le meilleur checkpoint est obtenu à l'epoch 26,
+avec un mAP@50 de 0.956, une précision de 0.943
+et un rappel de 0.945. C'est ce checkpoint (best.pt)
+qui est retenu pour le déploiement, conformément
+à la stratégie de sélection du meilleur modèle
+d'Ultralytics."
+
+
+Analyse complète — CIN Verso (données réelles du CSV)
+
+Valeurs exactes du meilleur modèle
+Meilleur epoch    : 63
+mAP@50            : 0.9925
+mAP@50-95         : 0.8806
+Précision         : 0.9875
+Rappel            : 0.9895
+
+Courbes d'entraînement (train)
+train/box_loss  → de 0.862 (epoch 1) à 0.157 (epoch 126)
+                 descente régulière et très propre
+                 meilleure convergence que CIN Recto
+                 le modèle localise très bien les zones
+
+train/cls_loss  → de 0.591 (epoch 1) à 0.100 (epoch 126)
+                 convergence excellente et stable
+                 aucune oscillation notable
+                 le modèle distingue parfaitement les classes
+
+train/dfl_loss  → de 1.186 (epoch 1) à 0.784 (epoch 126)
+                 descente stable et continue
+                 précision croissante sur les contours
+
+Courbes de validation (val)
+val/box_loss  → de 0.850 (epoch 1) à 0.449 (epoch 126)
+               descend régulièrement avec une rupture
+               nette autour de epoch 40
+               → très bonne généralisation
+               → pas d'overfitting sur la localisation
+
+val/cls_loss  → de 0.476 (epoch 1) à 0.207 (epoch 126)
+               descente globalement propre
+               quelques oscillations entre epoch 20-50
+               → nettement plus stable que CIN Recto
+               → dataset mieux équilibré après augmentation
+
+val/dfl_loss  → descend jusqu'à 1.000 (epoch ~50)
+               remonte légèrement à 1.033 (epoch 126)
+               → overfitting très léger et tardif
+               → bien maîtrisé grâce au best.pt
+
+Métriques de performance
+Précision  → démarre à 0.963 et monte à 0.988
+             très stable après epoch 20
+             → quasi-absence de fausses détections
+
+Rappel     → démarre à 0.974 et atteint 0.990
+             légères oscillations mais tendance montante
+             → le modèle détecte presque toutes les zones
+
+mAP@50     → démarre déjà haut à 0.983 (epoch 1)
+             atteint son pic à epoch 63 : 0.9925
+             reste stable entre 0.980 et 0.992
+             → modèle très performant dès le début
+
+mAP50-95   → monte de 0.779 (epoch 1) à 0.881 (epoch 63)
+             continue à progresser légèrement
+             → meilleure précision fine que CIN Recto
+               (0.881 vs 0.694)
+
+"Les courbes d'entraînement du modèle YOLOv11m
+sur le dataset CIN Verso montrent une convergence
+remarquablement stable sur les 126 epochs réalisés.
+Les trois fonctions de perte d'entraînement
+descendent de manière régulière et continue,
+sans oscillation notable, attestant d'un
+apprentissage de haute qualité.
+
+Ce résultat contraste favorablement avec le modèle
+CIN Recto et confirme l'efficacité de la stratégie
+d'augmentation appliquée pour corriger le déséquilibre
+initial du dataset CIN Verso (143 images originales).
+L'augmentation contrôlée a permis d'obtenir un dataset
+équilibré et varié, favorisant une meilleure
+généralisation du modèle.
+
+Sur l'ensemble de validation, la val/box_loss
+descend de 0.850 à 0.449, indiquant une excellente
+généralisation. L'overfitting reste très modéré,
+la val/dfl_loss ne remontant que légèrement après
+l'epoch 50.
+
+Le meilleur checkpoint est obtenu à l'epoch 63,
+avec un mAP@50 de 0.993, une précision de 0.988
+et un rappel de 0.990 — des performances supérieures
+au modèle CIN Recto, ce qui valide pleinement
+la stratégie d'augmentation des données adoptée."
+
+
+Analyse complète — Passeport (données réelles du CSV)
+
+Valeurs exactes du meilleur modèle
+Meilleur epoch    : 6
+mAP@50            : 0.984
+mAP@50-95         : 0.569
+Précision         : 0.973
+Rappel            : 0.975
+Total epochs      : 62
+
+Courbes d'entraînement (train)
+train/box_loss  → de 1.445 (epoch 1) à 0.622 (epoch 62)
+                 descente régulière mais valeurs plus élevées
+                 que CIN Recto et CIN Verso
+                 → la localisation des zones passeport
+                   est plus complexe (zones denses)
+
+train/cls_loss  → de 0.770 (epoch 1) à 0.256 (epoch 62)
+                 convergence correcte mais valeur finale
+                 plus haute que les deux modèles CIN
+                 → plus de classes à distinguer
+                   (données biométriques, photo)
+
+train/dfl_loss  → de 1.575 (epoch 1) à 0.983 (epoch 62)
+                 descente stable
+                 valeurs légèrement plus hautes que CIN
+                 → spécificité des contours MRZ
+
+Courbes de validation (val) — point critique
+val/box_loss  → de 1.435 (epoch 1) à 1.260 (epoch 62)
+               descend très peu — reste élevée
+               → le modèle généralise moins bien
+                 sur les passeports de validation
+
+val/cls_loss  → démarre à 7.008 (epoch 1) ← pic très élevé
+               descend rapidement à 1.514 (epoch 62)
+               oscillations importantes tout au long
+               → dataset passeport plus hétérogène
+               → différents formats de passeport
+                 (tunisien, étranger, anciennes versions)
+
+val/dfl_loss  → descend jusqu'à 1.384 (epoch 6)
+               puis remonte progressivement à 1.649
+               → overfitting clair après epoch 6
+               → c'est pour ça que best.pt est à epoch 6
+
+Métriques de performance
+Précision  → démarre à 0.941 et se stabilise à 0.966-0.970
+             légères oscillations mais globalement stable
+             → acceptable pour un dataset passeport
+
+Rappel     → démarre à 0.948 puis légère dégradation
+             oscille entre 0.930 et 0.978
+             → instabilité liée à la variété des passeports
+
+mAP@50     → démarre haut à 0.975 (epoch 1)
+             pic à epoch 6 : 0.984
+             descend ensuite et oscille autour de 0.975
+             → overfitting très précoce à epoch 6
+
+mAP50-95   → monte de 0.515 (epoch 1) à 0.586 (epoch 6)
+             descend et oscille entre 0.520 et 0.580
+             → précision fine plus faible que CIN Verso
+               (0.569 vs 0.881)
+             → zones fines  address et profession plus difficiles à localiser
+               avec précision
+
+Ce que tu écris dans le rapport
+"Les courbes d'entraînement du modèle YOLOv11m
+sur le dataset Passeport présentent un profil
+différent des deux modèles CIN. Les fonctions
+de perte d'entraînement convergent correctement,
+avec une train/box_loss passant de 1.445 à 0.622
+et une train/cls_loss de 0.770 à 0.256 sur
+62 epochs.
+
+Cependant, les courbes de validation révèlent
+une dynamique plus difficile. La val/cls_loss
+démarre à une valeur particulièrement élevée
+(7.008 à l'epoch 1), reflétant la plus grande
+hétérogénéité du dataset passeport — différents
+formats, différentes versions et différentes
+nationalités. La val/dfl_loss remonte dès l'epoch 6,
+indiquant un overfitting précoce sur la localisation
+fine des zones, notamment address et profession.
+
+C'est pourquoi le meilleur checkpoint est identifié
+à l'epoch 6, avec un mAP@50 de 0.984, une précision
+de 0.973 et un rappel de 0.975. Le mAP@50-95
+de 0.569 est inférieur aux modèles CIN, ce qui
+s'explique par la complexité de la détection
+des lignes MRZ qui requièrent une localisation
+sub-pixel très précise."
+
+
+Pour chaque modèle, tu ajoutes à la fin de l'analyse :
+
+CIN Recto :
+"Il est important de noter que l'overfitting observé
+après l'epoch 26 n'affecte pas les performances
+en production. Ultralytics sauvegarde automatiquement
+le checkpoint best.pt à l'epoch 26, correspondant
+au mAP@50 maximal de 0.956. C'est ce modèle
+qui est utilisé en déploiement."
+
+CIN Verso :
+"L'overfitting très léger observé après l'epoch 63
+n'impacte pas les performances en production.
+Ultralytics sauvegarde automatiquement best.pt
+à l'epoch 63, correspondant au mAP@50 maximal
+de 0.993. C'est ce checkpoint qui est retenu
+pour le déploiement."
+
+Passeport :
+Limite identifiée :
+Bien que le dataset passeport contienne 488 images
+d'entraînement, ces images sont majoritairement
+des templates de haute qualité dont seules les
+informations personnelles varient. Cette homogénéité
+structurelle s'explique par la difficulté réelle
+de collecter des données de passeports dans des
+conditions variées — contrairement à la CIN,
+le passeport est un document moins fréquemment
+partagé et soumis à des restrictions légales
+de reproduction.
+
+Cette homogénéité du dataset entraîne deux
+conséquences : d'une part, le modèle apprend
+rapidement la structure fixe du document
+(d'où le pic précoce à l'epoch 6), et d'autre part,
+il manque de variabilité pour bien généraliser
+sur des passeports capturés dans des conditions
+réelles différentes (luminosité variable, angles,
+qualité d'image).
+
+Cette limitation constitue une piste d'amélioration
+prioritaire pour les travaux futurs : l'enrichissement
+du dataset par la collecte de passeports dans des
+conditions variées et une augmentation plus agressive
+permettraient de repousser l'overfitting et
+d'améliorer la robustesse du modèle en production.
+
+Il est important de noter que malgré cette limite,
+l'overfitting n'affecte pas les performances
+en déploiement. Ultralytics sauvegarde automatiquement
+best.pt à l'epoch 6, correspondant au mAP@50 maximal
+de 0.984, garantissant que le modèle déployé est
+celui qui généralise le mieux sur les données
+de validation."

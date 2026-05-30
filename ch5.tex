@@ -1,66 +1,336 @@
 % =============================================
-% CHAPITRE À COMPLÉTER — INCRÉMENT 2
+% CHAPITRE 5 — CONCEPTION DU SYSTÈME
 % =============================================
 
-\chapter{Réalisation Applicative et Tests}
-\label{chap:realisation-applicative}
+\chapter{Conception du Système}
+\label{chap:conception}
+\vspace{1em}
+\noindent\textbf{\large Sommaire}
+\vspace{0.5em}
+\localtableofcontents
+\clearpage
 
-% [Contenu à rédiger ultérieurement]
+La conception du système eKYC suit le modèle en cascade et couvre trois dimensions complémentaires : la structure statique des données (diagrammes de classes), le comportement dynamique du système (diagramme d'activité) et les interactions entre composants (diagramme de séquence).
+
+%=============================================================
+\section{Diagramme de classes}
+\label{sec:diagramme-classes}
+%=============================================================
+
+La conception du système repose sur quatre diagrammes de classes qui couvrent l'ensemble des entités métier de la plateforme. Chaque module est modélisé indépendamment pour garantir la lisibilité et faciliter les évolutions futures.
+
+% Macro pour espacer proprement dans les cellules
+\newcommand{\mline}[1]{\par\smallskip\noindent #1}
+
+% ─── Module 1 ───────────────────────────────────────────────
+\subsubsection{M1 --- Utilisateurs et authentification}
+
+Ce module modélise les comptes d'authentification de la plateforme. La classe parente \texttt{Utilisateur} regroupe les attributs d'identification communs et est reliée au journal d'audit (\texttt{AuditLog}). Quatre classes en héritent : \texttt{Client}, \texttt{AnalysteKYC}, \texttt{SuperviseurIA} et \texttt{Admin}. La classe \texttt{Client} est reliée à la fiche identitaire (\texttt{InformationUtilisateur}), comme illustré par la Figure~\ref{fig:ch5-classe1}. Le Tableau~\ref{tab:ch5-classes-d1} décrit le rôle de chaque classe.
+
+\vspace{0.5em}
+\begin{center}
+  \includegraphics[width=0.9\textwidth]{conceptionImage/classe1F.png}
+  \captionof{figure}{Diagramme de classes — M1 : Utilisateurs et authentification}
+  \label{fig:ch5-classe1}
+\end{center}
+\vspace{0.5em}
+
+\setlength{\extrarowheight}{6pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{|>{\bfseries\columncolor{bleu_clair!15}}p{3.5cm}|p{10.7cm}|}
+  \hline
+  \rowcolor{bleu_clair!30}
+  \textbf{Nom de la classe} & \textbf{Description} \\
+  \hline
+  \endfirsthead
+  \hline
+  \rowcolor{bleu_clair!30}
+  \textbf{Nom de la classe} & \textbf{Description} \\
+  \hline
+  \endhead
+  Utilisateur &
+    Classe parente abstraite du domaine. Regroupe les attributs d'identification communs à tous les profils (identifiant, email, mot de passe hashé, token JWT).
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{register()} : crée un nouveau compte avec le mot de passe hashé.}
+    \mline{-- \texttt{login()} : vérifie les identifiants et retourne un token JWT signé.}
+    \mline{-- \texttt{logout()} : invalide la session en cours.}
+    \mline{-- \texttt{refreshToken()} : renouvelle le token d'accès à partir d'un token de rafraîchissement valide.} \\
+  \hline
+  Client &
+    Hérite de \texttt{Utilisateur}. Représente un particulier souhaitant ouvrir un compte bancaire. Peut soumettre des dossiers KYC et demander des services bancaires après validation. \\
+  \hline
+  AnalysteKYC &
+    Hérite de \texttt{Utilisateur}. Agent opérationnel chargé d'examiner les dossiers, de valider les données OCR et de prendre la décision finale sur chaque demande. \\
+  \hline
+  SuperviseurIA &
+    Hérite de \texttt{Utilisateur}. Profil technique dédié à la surveillance des performances des modèles IA. N'accède à aucune donnée personnelle du client. \\
+  \hline
+  Admin &
+    Hérite de \texttt{Utilisateur}. Profil à droits étendus cumulant les fonctionnalités de \texttt{AnalysteKYC} et de \texttt{SuperviseurIA}. Accède au journal d'audit dans son intégralité. \\
+  \hline
+  \parbox[t]{3.5cm}{\bfseries Information\\Utilisateur}&
+    Fiche identitaire permanente du client, créée lors de la première validation d'un dossier KYC. Centralise toutes les données personnelles extraites des documents et validées par un agent. Constitue le point d'entrée des vérifications de conformité AML. \\
+  \hline
+  AuditLog &
+    Trace immuable de chaque action effectuée sur la plateforme. Chaque entrée est horodatée, associée à l'utilisateur auteur de l'action, et conserve les valeurs avant et après modification pour permettre tout contrôle réglementaire. \\
+  \hline
+  \caption{Description des classes — M1 : Utilisateurs et authentification}
+  \label{tab:ch5-classes-d1}
+\end{longtable}
+
+% ─── Module 2 ───────────────────────────────────────────────
+\subsubsection{M2 --- Dossier KYC}
+
+Ce module représente les entités liées à la demande d'ouverture de compte. La classe \texttt{DemandeKYC} est le nœud central autour duquel s'organisent tous les documents, résultats de traitement et décisions. Elle porte le statut d'avancement (\texttt{EN\_ATTENTE}, \texttt{EN\_COURS}, \texttt{APPROUVE}, \texttt{REJETE}, \texttt{INCOMPLET}), le niveau de risque calculé et la décision finale de l'agent, comme illustré par la Figure~\ref{fig:ch5-classe2}. Le Tableau~\ref{tab:ch5-classes-d2} décrit le rôle de chaque classe.
+
+\vspace{0.5em}
+\begin{center}
+  \includegraphics[width=\textwidth]{conceptionImage/classe2F.png}
+  \captionof{figure}{Diagramme de classes — M2 : Dossier KYC}
+  \label{fig:ch5-classe2}
+\end{center}
+\vspace{0.5em}
+
+\setlength{\extrarowheight}{6pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{|>{\bfseries\columncolor{bleu_clair!15}}p{3.5cm}|p{10.7cm}|}
+  \hline
+  \rowcolor{bleu_clair!30}
+  \textbf{Nom de la classe} & \textbf{Description} \\
+  \hline
+  \endfirsthead
+  \hline
+  \rowcolor{bleu_clair!30}
+  \textbf{Nom de la classe} & \textbf{Description} \\
+  \hline
+  \endhead
+  DemandeKYC &
+    Entité centrale du domaine. Représente un dossier de demande d'ouverture de compte soumis par un client. Centralise les références aux documents, au selfie, au crop du visage et aux résultats de traitement.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{soumettreFull()} : crée l'intégralité du dossier (documents, selfie, données OCR) en une seule transaction atomique.}
+    \mline{-- \texttt{validerDonnées()} : extrait les informations OCR, crée ou met à jour la fiche identitaire et déclenche le filtrage AML.}
+    \mline{-- \texttt{getDetailsDemande()} : retourne le dossier complet incluant documents, résultat OCR et selfie.}
+    \mline{-- \texttt{getDemandes()} : retourne la liste paginée des demandes avec les informations de base du client.}
+    \mline{-- \texttt{submitDecision()} : enregistre la décision finale de l'agent et met à jour le statut du dossier.} \\
+  \hline
+  DocumentKYC &
+    Représente un document d'identité soumis par le client (CIN recto, CIN verso ou passeport). Stocke uniquement l'URL MinIO du fichier binaire, sans conserver l'image en base de données.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{creer()} : crée l'entrée du document et retourne le nœud complet associé.}
+    \mline{-- \texttt{getPourDocument()} : retourne le résultat OCR associé à ce document.} \\
+  \hline
+  CompteBancaire &
+    Représente un compte bancaire ouvert au nom d'un client à l'issue d'un processus KYC validé. Chaque compte est lié à un utilisateur et peut être de type courant ou épargne.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{generateRib()} : Génère automatiquement un numéro de compte unique au format RIB tunisien fictif de 20 caractères lors de la création du compte.}\\
+    \mline{-- \texttt{getPourDocument()} : retourne le résultat OCR associé à ce document.} \\
+  \hline
+  Selfie &
+    Représente le selfie biométrique capturé par le client lors de l'étape 3 du parcours KYC. Porte le score de correspondance faciale calculé par comparaison avec la photo extraite du document.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{enregistrerFaceMatch()} : sauvegarde le selfie dans MinIO et persiste le score de correspondance faciale.} \\
+  \hline
+  CropVisage &
+    Représente le recadrage automatique du visage extrait depuis le document par le modèle YOLOv11m. Utilisé comme référence pour la comparaison biométrique avec le selfie.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{creer()} : sauvegarde le crop dans MinIO et crée l'entrée en base de données avec le score de confiance YOLO.} \\
+  \hline
+  Commentaire &
+    Enregistre les annotations rédigées par les agents sur un dossier, éventuellement associées à un champ OCR spécifique pour signaler une anomalie précise.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{ajouter()} : crée un commentaire d'agent sur le dossier.}
+    \mline{-- \texttt{getPourDemande()} : retourne la liste des commentaires liés à un dossier.} \\
+  \hline
+  \parbox[t]{3.5cm}{\bfseries\itshape InformationUtilisateur \textnormal{\small(externe)}} &
+    Ici représentée comme une \textbf{classe externe} provenant du module Authentification. Fiche identitaire du client référencée par la demande KYC pour associer les données personnelles au dossier sans les dupliquer. \\
+  \hline
+  \parbox[t]{3.5cm}{\bfseries\itshape AnalysteKYC \textnormal{\small(externe)}} &
+    Ici représentée comme une \textbf{classe externe} provenant du module Authentification. Référencée dans la demande pour identifier l'agent responsable du traitement et de la décision finale. \\
+  \hline
+  \parbox[t]{3.5cm}{\bfseries\itshape Client \textnormal{\small(externe)}} &
+    Ici représentée comme une \textbf{classe externe} provenant du module Authentification. Identifie le demandeur propriétaire du dossier KYC. \\
+  \hline
+  \caption{Description des classes — M2 : Dossier KYC}
+  \label{tab:ch5-classes-d2}
+\end{longtable}
+
+% ─── Module 3 ───────────────────────────────────────────────
+\subsubsection{M3 --- Pipeline OCR}
+
+Ce module couvre les entités produites par le traitement automatique des documents. La classe \texttt{OcrResult} est immuable après insertion : toute correction ultérieure est enregistrée séparément dans \texttt{OcrCorrection} pour assurer la traçabilité complète des modifications. La classe \texttt{ScoreValidation} consolide le score de risque global en combinant quatre composantes pondérées, comme illustré par la Figure~\ref{fig:ch5-classe3}. Le Tableau~\ref{tab:ch5-classes-d3} décrit le rôle de chaque classe.
+
+\vspace{0.5em}
+\begin{center}
+  \includegraphics[width=0.85\textwidth]{conceptionImage/classe3F.png}
+  \captionof{figure}{Diagramme de classes — M3 : Pipeline OCR}
+  \label{fig:ch5-classe3}
+\end{center}
+\vspace{0.5em}
+
+\setlength{\extrarowheight}{6pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{|>{\bfseries\columncolor{bleu_clair!15}}p{3.5cm}|p{10.7cm}|}
+  \hline
+  \rowcolor{bleu_clair!30}
+  \textbf{Nom de la classe} & \textbf{Description} \\
+  \hline
+  \endfirsthead
+  \hline
+  \rowcolor{bleu_clair!30}
+  \textbf{Nom de la classe} & \textbf{Description} \\
+  \hline
+  \endhead
+  OcrResult &
+    Stocke le résultat brut et immuable retourné par le pipeline OCR (YOLOv11m + PaddleOCR) après traitement d'un document. Conserve le score de confiance global et les temps d'exécution de chaque modèle.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{creer()} : exécute le pipeline OCR et sauvegarde le résultat brut en base de données.}
+    \mline{-- \texttt{getParDocument()} : retourne le résultat OCR associé à un document donné.}
+    \mline{-- \texttt{getChampsStructurés()} : retourne les champs extraits sous forme de dictionnaire structuré.} \\
+  \hline
+  OcrCorrection &
+    Enregistre chaque correction manuelle apportée à un champ OCR, qu'elle soit effectuée par le client (étape 2) ou par l'agent (page de review). Chaque entrée est immuable pour des raisons de traçabilité réglementaire.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{inserer()} : enregistre une correction en conservant l'ancienne et la nouvelle valeur du champ modifié.}
+    \mline{-- \texttt{getParDemande()} : retourne toutes les corrections liées à une demande.}
+    \mline{-- \texttt{appliquerCorrections()} : fusionne les champs OCR bruts avec les corrections pour produire le dictionnaire final utilisé lors du filtrage AML.} \\
+  \hline
+  ScoreValidation &
+    Consolide le score de risque global d'une demande en combinant quatre composantes pondérées : filtrage AML (35\,\%), doublons cross-clients (25\,\%), correspondance faciale (20\,\%) et vérification des champs du document (20\,\%).
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{creer()} : calcule et persiste le score de risque global avec le niveau de risque et la recommandation finale.}
+    \mline{-- \texttt{getParDemande()} : retourne le score de validation associé à une demande.} \\
+  \hline
+  \parbox[t]{3.5cm}{\bfseries\itshape DocumentKYC \textnormal{\small(externe)}} &
+    Ici représentée comme une \textbf{classe externe} provenant du module Dossier KYC. Référencée par \texttt{OcrResult} pour associer chaque résultat OCR au document traité. \\
+  \hline
+  \parbox[t]{3.5cm}{\bfseries\itshape DemandeKYC \textnormal{\small(externe)}} &
+    Ici représentée comme une \textbf{classe externe} provenant du module Dossier KYC. Référencée par \texttt{OcrCorrection} et \texttt{ScoreValidation} pour rattacher corrections et score global au dossier concerné. \\
+  \hline
+  \parbox[t]{3.5cm}{\bfseries\itshape Utilisateur \textnormal{\small(externe)}} &
+    Ici représentée comme une \textbf{classe externe} provenant du module Authentification. Référencée pour identifier l'auteur des corrections manuelles (client ou agent). \\
+  \hline
+  \caption{Description des classes — M3 : Pipeline OCR}
+  \label{tab:ch5-classes-d3}
+\end{longtable}
+
+% ─── Module 4 ───────────────────────────────────────────────
+\subsubsection{M4 --- Screening AML}
+
+Ce module modélise le sous-système de vérification anti-blanchiment. La classe abstraite \texttt{ListeReference} factorise les attributs communs entre \texttt{BlackList} et \texttt{PpeList}~; de même, la classe \texttt{Match} factorise les champs de correspondance entre \texttt{BlackListMatch}, \texttt{PpeListMatch} et \texttt{IdentityDuplicateAlert}, comme illustré par la Figure~\ref{fig:ch5-classe4}. Le Tableau~\ref{tab:ch5-classes-d4} décrit le rôle de chaque classe.
+
+\vspace{0.5em}
+\begin{center}
+  \includegraphics[width=\textwidth]{conceptionImage/classe4F.png}
+  \captionof{figure}{Diagramme de classes — M4 : Screening AML}
+  \label{fig:ch5-classe4}
+\end{center}
+\vspace{0.5em}
+
+\setlength{\extrarowheight}{6pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{|>{\bfseries\columncolor{bleu_clair!15}}p{3.5cm}|p{10.7cm}|}
+  \hline
+  \rowcolor{bleu_clair!30}
+  \textbf{Nom de la classe} & \textbf{Description} \\
+  \hline
+  \endfirsthead
+  \hline
+  \rowcolor{bleu_clair!30}
+  \textbf{Nom de la classe} & \textbf{Description} \\
+  \hline
+  \endhead
+  ListeReference &
+    Classe abstraite qui factorise les attributs identitaires communs aux listes de référence (nom, prénom, CIN, date de naissance, nationalité). Expose une méthode \texttt{run()} qui compare une fiche identitaire contre l'ensemble des entrées actives de la liste. \\
+  \hline
+  BlackList &
+    Spécialisation de \texttt{ListeReference}. Contient les personnes interdites d'accès aux services bancaires, issues de sources officielles (CTAF, ONU, OFAC, INTERPOL). Chaque entrée porte un niveau de risque et une date d'expiration optionnelle. \\
+  \hline
+  PpeList &
+    Spécialisation de \texttt{ListeReference}. Contient les Personnes Politiquement Exposées. Chaque entrée précise la fonction exercée, la catégorie (ministre, député, magistrat…) et la période d'activité. \\
+  \hline
+  Match &
+    Classe abstraite qui factorise les résultats de correspondance : score de similarité global, liste des champs ayant déclenché la correspondance et recommandation associée. Héritée par \texttt{BlackListMatch}, \texttt{PpeListMatch} et \texttt{IdentityDuplicateAlert}.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{getUserInformation()} : retourne la fiche identitaire du client ayant déclenché la correspondance.} \\
+  \hline
+  BlackListMatch &
+    Enregistre une correspondance détectée entre la fiche identitaire d'un client et une entrée de la liste noire lors du filtrage AML.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{creer()} : sauvegarde la correspondance avec les scores détaillés par champ et la recommandation associée (\texttt{BLOCK}, \texttt{MANUAL\_REVIEW}, \texttt{SOFT\_FLAG}).} \\
+  \hline
+  PpeListMatch &
+    Enregistre une correspondance détectée entre la fiche identitaire d'un client et une entrée de la liste PPE.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{creer()} : sauvegarde la correspondance avec les indicateurs spécifiques aux PPE (due diligence renforcée requise, validation de direction nécessaire).} \\
+  \hline
+  \parbox[t]{3.5cm}{\bfseries Identity\\DuplicateAlert} &
+    Signale un doublon identitaire détecté entre un nouveau client et un client déjà enregistré dans la base, afin de prévenir les ouvertures de comptes multiples sous des identités similaires.
+    \mline{\textbf{Méthodes :}}
+    \mline{-- \texttt{creer()} : crée une alerte avec le score de similarité faciale entre les selfies des deux clients.}
+    \mline{-- \texttt{résoudre()} : permet à un agent de clôturer l'alerte avec un statut (\texttt{CONFIRMED}, \texttt{FALSE\_POSITIVE}, \texttt{RESOLVED}) et une note de résolution.}
+    \mline{-- \texttt{getAlerts()} : retourne la liste des alertes actives.} \\
+  \hline
+  \parbox[t]{3.5cm}{\bfseries\itshape AnalysteKYC \textnormal{\small(externe)}} &
+    Ici représentée comme une \textbf{classe externe} provenant du module Authentification. Référencée pour identifier l'agent ayant résolu une alerte de doublon identitaire. \\
+  \hline
+  \parbox[t]{3.5cm}{\bfseries\itshape InformationUtilisateur \textnormal{\small(externe)}} &
+    Ici représentée comme une \textbf{classe externe} provenant du module Authentification. Constitue le point d'entrée de toutes les vérifications de conformité AML : filtrage blacklist, filtrage PPE et détection de doublons cross-clients. \\
+  \hline
+  \caption{Description des classes — M4 : Screening AML}
+  \label{tab:ch5-classes-d4}
+\end{longtable}
 
 
 %=============================================================
-\section{Environnement de développement \& stack technique}
-\label{sec:env-dev-stack}
+\section{Diagramme d'activité}
+\label{sec:diagramme-activite}
 %=============================================================
 
-% [Contenu à rédiger ultérieurement]
+Le diagramme d'activité (Figure~\ref{fig:ch5-activite}) modélise le workflow du client lors de l'ouverture d'un compte. Il implique cinq acteurs : le Client, l'Interface (frontend Next.js), le Système IA (services de capture et OCR), MinIO (stockage objet) et le Backend (API FastAPI).
 
+\vspace{0.5em}
+\begin{center}
+  \includegraphics[width=0.85\textwidth]{conceptionImage/activite.png}
+  \captionof{figure}{Diagramme d'activité — Workflow client : ouverture de compte}
+  \label{fig:ch5-activite}
+\end{center}
+\vspace{0.5em}
 
-%=============================================================
-\section{Réalisation des interfaces}
-\label{sec:realisation-interfaces}
-%=============================================================
+Le processus se déroule en quatre phases séquentielles.
 
-\subsection{Interface administrateur}
-\label{subsec:interface-admin}
+\textbf{Phase 1 — Capture du document.} Le client présente son document devant la caméra. L'interface envoie les frames au service IA toutes les 300~ms. Le service analyse chaque frame~; le bouton de capture est initialement désactivé et ne s'active que lorsque le service IA confirme que le document est valide. Le client déclenche alors manuellement la capture. L'image est sauvegardée dans MinIO et le service OCR est lancé en arrière-plan.
 
-% [Contenu à rédiger ultérieurement]
+\textbf{Phase 2 — Vérification OCR.} L'interface interroge le service OCR toutes les 500~ms jusqu'à obtenir le résultat (polling). Une fois disponibles, les champs extraits sont présentés dans un formulaire éditable. Le client corrige les erreurs éventuelles~; ces corrections sont sauvegardées localement sans aucune écriture en base de données à ce stade.
 
-\subsection{Interface client}
-\label{subsec:interface-client}
+\textbf{Phase 3 — Capture selfie.} Le client se positionne devant la caméra. La détection s'effectue toutes les 300~ms avec un seuil de confiance de 0,60. Après deux frames consécutives valides, le selfie est capturé et sauvegardé dans MinIO, sans persistance en base de données.
 
-% [Contenu à rédiger ultérieurement]
-
-
-%=============================================================
-\section{Intégration du module IA dans l'application}
-\label{sec:integration-ia}
-%=============================================================
-
-% [Contenu à rédiger ultérieurement]
+\textbf{Phase 4 — Confirmation et soumission.} L'interface lit toutes les données stockées localement (URLs des images, résultat OCR corrigé, selfie) et les transmet au backend en une seule requête. Le backend crée le dossier complet en une transaction unique et retourne un numéro de dossier au client.
 
 
 %=============================================================
-\section{Tests et validation}
-\label{sec:tests-validation}
+\section{Diagramme de séquence}
+\label{sec:diagramme-sequence}
 %=============================================================
 
-\subsection{Tests fonctionnels}
-\label{subsec:tests-fonctionnels}
+Le diagramme de séquence (Figure~\ref{fig:ch5-sequence}) modélise le workflow de l'analyste KYC lors du traitement d'un dossier. Il implique cinq participants : l'Analyste KYC, l'IHM Administration, le Serveur Backend, la Base de données et le Système IA.
 
-% [Contenu à rédiger ultérieurement]
+\vspace{0.5em}
+\begin{center}
+  \includegraphics[width=\textwidth]{conceptionImage/seq_workflow_agentkyc.png}
+  \captionof{figure}{Diagramme de séquence — Workflow analyste KYC : traitement d'un dossier}
+  \label{fig:ch5-sequence}
+\end{center}
+\vspace{0.5em}
 
-\subsection{Tests d'intégration}
-\label{subsec:tests-integration}
+Le flux se déroule en trois phases.
 
-% [Contenu à rédiger ultérieurement]
+\textbf{Phase 1 — Consultation du dossier.} L'analyste consulte la liste des demandes en attente, sélectionne un dossier et visualise la fiche complète du client avec les images des documents, le résultat OCR structuré, les corrections apportées par le client, le score de correspondance faciale et les éventuelles alertes AML.
 
-\subsection{Synthèse --- système KYC complet opérationnel}
-\label{subsec:synthese-kyc}
+\textbf{Phase 2 — Validation des données.} L'analyste contrôle les champs extraits par l'OCR et effectue les corrections nécessaires directement dans l'interface. Lors de la validation, le backend sauvegarde la fiche identitaire du client, vérifie la cohérence documentaire, et déclenche automatiquement le filtrage AML : comparaison contre la liste noire, la liste des PPE et la base des clients existants pour détecter d'éventuels doublons. Le résultat du filtrage et le score de risque global sont retournés à l'analyste.
 
-% [Contenu à rédiger ultérieurement]
+\textbf{Phase 3 — Décision finale.} L'analyste sélectionne une décision parmi trois options : \texttt{APPROUVÉ}, \texttt{REJETÉ} ou \texttt{INCOMPLET}. Une double authentification est requise avant la soumission~; si elle réussit, la décision est enregistrée, le statut du dossier est mis à jour et le client est notifié.
 
 
 \section*{Conclusion du chapitre}
 
-Ce chapitre sera complété lors de la phase de développement applicatif (Incrément 2).
+Ce chapitre a présenté la conception complète du système eKYC à travers quatre diagrammes de classes couvrant les domaines métier, un diagramme d'activité modélisant le parcours client et un diagramme de séquence décrivant le workflow de l'analyste KYC. Ces artefacts de conception constituent la base de la réalisation présentée dans le chapitre suivant.
