@@ -1,4 +1,79 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{ocr_benchmark_ijraset}
+Multilingual handwritten ocr: Comparison tesseract, mmocr, paddleocr, easyocr.
+\newblock {\em IJRASET}.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{ocr_benchmark_acl2024}
+Open-source ocr libraries: A comprehensive study for low resource language.
+\newblock In {\em ACL Anthology}, 2024.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{ocr_benchmark_arxiv2025}
+Evaluating ocr performance: Tesseract, easyocr, paddleocr, trocr benchmark.
+\newblock \url{https://arxiv.org/abs/2510.03570}, 2025.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{bct2018circulaire}
+{Banque Centrale de Tunisie}.
+\newblock Circulaire aux banques n°2018-09 --- règles de contrôle interne et
+  de conformité.
+\newblock Technical report, Banque Centrale de Tunisie, 2018.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{bct2025circ06}
+{Banque Centrale de Tunisie}.
+\newblock Circulaire aux banques n°2025-06 --- règles minimales régissant
+  l'enrôlement électronique des clients.
+\newblock Technical report, Banque Centrale de Tunisie, février 2025.
+
+\bibitem{ocr_benchmark_cisdem2025}
+{Cisdem / Medium}.
+\newblock Thorough comparison of 6 free and open source ocr tools 2025.
+\newblock \url{https://cisdem.com}, 2025.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{faceki2026}
+{FACEKI}.
+\newblock Faceki --- biometric identity verification.
+\newblock \url{https://faceki.com/}.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{ocr_benchmark_intuition}
+{IntuitionLabs}.
+\newblock Technical analysis of modern non-llm ocr engines.
+\newblock \url{https://intuitionlabs.ai}, 2 2026.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{ocr_benchmark_koncile2026}
+{Koncile}.
+\newblock Paddleocr vs tesseract: Which is the best open source ocr?
+\newblock \url{https://koncile.ai}, 2026.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{microsoft_ocr_pipeline}
+{Microsoft Learn}.
+\newblock Introduction à l'extraction d'informations --- vision par
+  ordinateur.
+\newblock
+  \url{https://learn.microsoft.com/fr-fr/training/modules/introduction-information-extraction/3-vision-extraction}.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{neuroparser2026}
+{Neurodata Group}.
+\newblock Tunisian id card ocr using neuroparser python api sdk.
+\newblock
+  \url{https://medium.com/@neurodatagroup/tunisian-id-card-ocr-using-neuroparser-python-api-sdk-b827658850be}.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{yolo11medium2024}
+Nikhil Rao.
+\newblock Yolov11 explained: Next-level object detection with enhanced speed
+  and accuracy.
+\newblock
+  \url{https://medium.com/@nikhil-rao-20/yolov11-explained-next-level-object-detection-with-enhanced-speed-and-accuracy-2dbe2d376f71}.
+\newblock Consulté le 18/03/2026.
 
 \bibitem{studer2021crispmlq}
 Stefan Studer, Thanh~Binh Bui, Christian Drescher, Alexander Hanuschkin, Ludwig
@@ -6,5 +81,17 @@ Stefan Studer, Thanh~Binh Bui, Christian Drescher, Alexander Hanuschkin, Ludwig
 \newblock Towards {CRISP-ML(Q)}: A machine learning process model with quality
   assurance methodology.
 \newblock {\em arXiv preprint arXiv:2003.05155}, 2021.
+
+\bibitem{ultralytics_docs}
+{Ultralytics}.
+\newblock Yolo documentation --- ultralytics.
+\newblock \url{https://docs.ultralytics.com/}.
+\newblock Consulté le 18/03/2026.
+
+\bibitem{uqudo2026}
+{uqudo}.
+\newblock uqudo --- identity verification platform.
+\newblock \url{https://uqudo.com/}.
+\newblock Consulté le 18/03/2026.
 
 \end{thebibliography}

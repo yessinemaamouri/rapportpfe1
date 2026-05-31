@@ -10,12 +10,164 @@
 \localtableofcontents
 \clearpage
 
+Ce chapitre présente la réalisation concrète de la plateforme eKYC, de l'environnement de développement jusqu'au déploiement et à l'évaluation. Il décrit d'abord l'infrastructure applicative qui structure l'ensemble des composants, puis l'intégration des services IA au sein de cette infrastructure. Les interfaces client et administrateur, ainsi que l'évaluation de la conformité aux exigences de la Banque Centrale de Tunisie, complètent cette vision de bout en bout.
+
 %=============================================================
 \section{Environnement et outils de développement}
 \label{sec:env-dev}
 %=============================================================
 
-% [Contenu à rédiger ultérieurement]
+Cette section présente l'ensemble des outils et technologies mobilisés pour la réalisation du projet, depuis l'environnement matériel et logiciel de développement jusqu'aux bibliothèques utilisées dans chaque couche du système.
+
+\subsection{Environnement de développement}
+\label{subsec:env-materiel}
+
+L'ensemble du projet a été développé et testé sur un environnement local sous Windows 11. Aucun environnement cloud n'a été utilisé pour le développement applicatif, à l'exception de l'entraînement des modèles IA qui a nécessité des ressources GPU dédiées. Le Tableau~\ref{tab:ch6-env-materiel} présente la configuration matérielle utilisée.
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{5cm}|p{9.5cm}|}
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Composant}} & \textcolor{white}{\textbf{Détail}} \\
+  \hline
+  \endfirsthead
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Composant}} & \textcolor{white}{\textbf{Détail}} \\
+  \hline
+  \endhead
+  Système d'exploitation & Windows 11 Home 64 bits \\ \hline
+  Processeur             & AMD Ryzen 5 5600H --- 3.30 GHz \\ \hline
+  Mémoire RAM            & 16 Go (13,9 Go utilisable) \\ \hline
+  GPU principal          & NVIDIA GeForce RTX 3050 Ti Laptop GPU --- 4 Go VRAM \\ \hline
+  GPU intégré            & AMD Radeon Graphics --- 2 Go \\ \hline
+  Stockage               & 477 Go SSD \\ \hline
+  \caption{Configuration matérielle de l'environnement de développement}
+  \label{tab:ch6-env-materiel}
+\end{longtable}
+
+Le GPU NVIDIA RTX 3050 Ti a été utilisé pour l'inférence des modèles YOLOv11m et PaddleOCR en local. L'entraînement des modèles, plus gourmand en ressources, a été réalisé sur Google Colab pour bénéficier de GPU T4/A100 plus puissants.
+
+\subsection{Outils de développement}
+\label{subsec:outils-dev}
+
+Les outils présentés dans cette sous-section couvrent l'édition de code, la conception des interfaces, la gestion des données et l'entraînement des modèles IA.
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Outil}} & \textcolor{white}{\textbf{Rôle}} \\
+  \hline
+  \endfirsthead
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Outil}} & \textcolor{white}{\textbf{Rôle}} \\
+  \hline
+  \endhead
+  Visual Studio Code  & Éditeur principal pour le développement backend, frontend et services IA \\ \hline
+  Figma               & Conception des interfaces utilisateur (maquettes client et dashboard admin) \\ \hline
+  DBeaver             & Visualisation et gestion de la base de données PostgreSQL en local \\ \hline
+  PostgreSQL          & Base de données relationnelle principale \\ \hline
+  MinIO               & Serveur de stockage de fichiers local (images, documents, selfies) \\ \hline
+  Google Colab        & Entraînement des modèles YOLOv11m sur GPU (T4 / A100) \\ \hline
+  Roboflow            & Annotation des datasets d'images (CIN recto, CIN verso, passeport) et export au format YOLO \\ \hline
+  \caption{Outils de développement utilisés}
+  \label{tab:ch6-outils}
+\end{longtable}
+
+\subsection{Bibliothèques et frameworks}
+\label{subsec:bibliotheques}
+
+Le système est organisé en plusieurs couches techniques, chacune s'appuyant sur un ensemble de bibliothèques spécialisées. Les tableaux suivants les présentent couche par couche.
+
+\subsubsection{Frontend}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{9.5cm}|}
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Bibliothèque}} & \textcolor{white}{\textbf{Version}} & \textcolor{white}{\textbf{Rôle}} \\
+  \hline
+  \endfirsthead
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Bibliothèque}} & \textcolor{white}{\textbf{Version}} & \textcolor{white}{\textbf{Rôle}} \\
+  \hline
+  \endhead
+  Next.js         & 14.2      & Framework React — interface client et dashboard admin \\ \hline
+  TypeScript      & 5         & Typage statique \\ \hline
+  Tailwind CSS    & 3.4       & Styles et mise en page \\ \hline
+  Lucide React    & 1.14      & Bibliothèque d'icônes \\ \hline
+  react-webcam    & 7.2       & Accès à la caméra du client dans le navigateur \\ \hline
+  next-auth       & 5.0 beta  & Gestion des sessions d'authentification \\ \hline
+  \caption{Bibliothèques frontend}
+  \label{tab:ch6-frontend}
+\end{longtable}
+
+\subsubsection{Backend (Python 3.11 64 bits)}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{4.5cm}|p{10cm}|}
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Bibliothèque}} & \textcolor{white}{\textbf{Rôle}} \\
+  \hline
+  \endfirsthead
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Bibliothèque}} & \textcolor{white}{\textbf{Rôle}} \\
+  \hline
+  \endhead
+  FastAPI                    & Framework API REST --- routes, validation, documentation automatique \\ \hline
+  SQLAlchemy                 & ORM --- mapping des modèles Python vers les tables PostgreSQL \\ \hline
+  Alembic                    & Migrations de schéma base de données \\ \hline
+  Pydantic                   & Validation des données entrantes et sortantes \\ \hline
+  python-jose                & Génération et vérification des tokens JWT \\ \hline
+  passlib / bcrypt           & Hachage sécurisé des mots de passe \\ \hline
+  httpx                      & Appels HTTP vers les services IA \\ \hline
+  minio                      & Client Python pour le stockage MinIO \\ \hline
+  redis                      & Client Python pour la blacklist des tokens JWT \\ \hline
+  loguru                     & Journalisation des logs applicatifs \\ \hline
+  jellyfish / doublemetaphone & Comparaison phonétique des noms pour le filtrage AML \\ \hline
+  \caption{Bibliothèques backend}
+  \label{tab:ch6-backend}
+\end{longtable}
+
+\subsubsection{Services IA}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{4.5cm}|p{10cm}|}
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Bibliothèque}} & \textcolor{white}{\textbf{Rôle}} \\
+  \hline
+  \endfirsthead
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Bibliothèque}} & \textcolor{white}{\textbf{Rôle}} \\
+  \hline
+  \endhead
+  Ultralytics (YOLOv11) & Détection des zones de champs sur les documents et détection visage \\ \hline
+  OpenCV                & Traitement d'images (redimensionnement, conversion, crop) \\ \hline
+  Pillow                & Manipulation des images Python \\ \hline
+  NumPy                 & Calculs matriciels sur les images \\ \hline
+  websockets            & Communication WebSocket temps réel pour la capture guidée \\ \hline
+  PaddleOCR             & Moteur de reconnaissance de caractères (arabe + français) \\ \hline
+  PaddlePaddle GPU      & Framework deep learning sous-jacent de PaddleOCR --- exécution sur GPU \\ \hline
+  face-recognition      & Comparaison des embeddings biométriques entre deux visages \\ \hline
+  \caption{Bibliothèques des services IA}
+  \label{tab:ch6-ia}
+\end{longtable}
+
+\subsection{Gestion du projet}
+\label{subsec:gestion-projet}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Outil}} & \textcolor{white}{\textbf{Rôle}} \\
+  \hline
+  \endfirsthead
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Outil}} & \textcolor{white}{\textbf{Rôle}} \\
+  \hline
+  \endhead
+  Turborepo & Orchestration du monorepo --- gestion des dépendances et des tâches de build entre les applications \\ \hline
+  Git       & Gestion de versions du code source \\ \hline
+  \caption{Outils de gestion du projet}
+  \label{tab:ch6-gestion}
+\end{longtable}
 
 
 %=============================================================
@@ -76,7 +228,7 @@ Ces six groupes de routes couvrent l'ensemble des interactions entre les interfa
 \subsection{Persistance et stockage}
 \label{subsec:persistance-stockage}
 
-La plateforme repose sur deux systèmes de persistance complémentaires : \textbf{PostgreSQL} pour les données structurées et \textbf{MinIO} pour les fichiers binaires.
+La plateforme repose sur deux systèmes de persistance complémentaires : \textbf{PostgreSQL} pour les données structurées et \textbf{MinIO} pour les fichiers binaires. Les deux sous-sections suivantes décrivent le rôle et le contenu de chacun.
 
 \subsubsection{Base de données PostgreSQL}
 
@@ -114,8 +266,10 @@ PostgreSQL est la base de données relationnelle principale du système. Toutes 
   \texttt{demande\_carte}              & Demandes de carte bancaire \\ \hline
   \texttt{demande\_chequier}           & Demandes de chéquier \\ \hline
   \caption{Schéma des tables principales --- PostgreSQL}
+  \label{tab:bdd-tables}
 \end{longtable}
-\label{tab:bdd-tables}
+
+PostgreSQL centralise ainsi toutes les informations métier sous forme structurée. Les fichiers binaires associés à ces enregistrements sont quant à eux gérés par un système dédié, présenté ci-après.
 
 \subsubsection{Stockage objet MinIO}
 
@@ -149,10 +303,12 @@ PostgreSQL et MinIO jouent ainsi des rôles complémentaires sans être directem
 \label{sec:integration-ia}
 %=============================================================
 
+L'infrastructure applicative étant posée, cette section décrit comment les services IA développés lors du premier incrément s'y intègrent pour former un système unifié. Elle présente d'abord la stratégie d'intégration par contrat d'interface, puis détaille les flux de communication effectifs entre chaque couche du système.
+
 \subsection{De deux incréments à un système unifié}
 \label{subsec:integration-increments}
 
-Le développement de la plateforme eKYC a suivi deux incréments parallèles et complémentaires : un incrément dédié aux modules d'intelligence artificielle (capture, OCR, comparaison biométrique) et un incrément dédié au système applicatif (backend, interfaces client et administrateur, base de données). Menés de façon indépendante, ces deux incréments convergent à la soumission du dossier KYC pour former un \textbf{système eKYC unifié} : le pipeline IA produit les données d'identité et les scores biométriques, le système applicatif les reçoit, les persiste et les soumet à la décision d'un agent. La question centrale de l'intégration était de définir comment ces deux incréments allaient se rejoindre sans créer de dépendance forte entre eux.
+Le développement de la plateforme eKYC a suivi deux incréments parallèles et complémentaires : un incrément dédié aux modules d'intelligence artificielle (capture, OCR, comparaison biométrique) et un incrément dédié au système applicatif (backend, interfaces client et administrateur, base de données). Menés de façon indépendante, ces deux incréments convergent à la soumission du dossier KYC pour former un \textbf{système eKYC unifié} : le pipeline IA produit les données d'identité et les scores biométriques, le système applicatif les reçoit, les persiste et les soumet à la décision d'un agent. La question centrale de l'intégration était de définir comment ces deux incréments allaient se rejoindre sans créer de dépendance forte entre eux. Les trois sous-sections suivantes décrivent respectivement le contrat d'interface retenu, le point de jonction effectif, et les bénéfices de cette approche.
 
 \subsubsection{Le contrat d'interface comme point de jonction}
 
@@ -184,13 +340,15 @@ Jusqu'à ce point, l'interface client orchestre les appels aux modules IA, colle
 
 \subsubsection{Bénéfices de cette approche}
 
-Ce mode d'intégration a apporté deux avantages concrets pendant le développement. D'abord, il a été possible de tester chaque incrément séparément : les modules IA pouvaient être évalués sur des jeux d'images indépendamment du backend, et le backend pouvait être développé avec des données OCR fictives avant que les vrais modèles soient prêts. Ensuite, cette séparation rend le système évolutif : remplacer un modèle OCR par une version plus performante ne nécessite aucune modification du backend, tant que le format de la réponse reste identique. Cette architecture étant posée, la section suivante détaille les flux de communication effectifs entre chaque couche du système.
+Ce mode d'intégration a apporté deux avantages concrets pendant le développement. D'abord, il a été possible de tester chaque incrément séparément : les modules IA pouvaient être évalués sur des jeux d'images indépendamment du backend, et le backend pouvait être développé avec des données OCR fictives avant que les vrais modèles soient prêts. Ensuite, cette séparation rend le système évolutif : remplacer un modèle OCR par une version plus performante ne nécessite aucune modification du backend, tant que le format de la réponse reste identique.
+
+Cette stratégie d'intégration étant posée, la sous-section suivante détaille les flux de communication effectifs entre chaque couche du système au moment de l'exécution.
 
 %-------------------------------------------------------------
 \subsection{Communication entre les couches}
 \label{subsec:communication-couches}
 
-Au-delà du contrat d'interface qui définit les formats d'échange, le système IA est structuré en un ensemble de modules indépendants, chacun accessible via une adresse réseau locale dédiée. Cette organisation permet de faire évoluer, remplacer ou redémarrer un module sans affecter les autres composants du système. La Figure~\ref{fig:ch6-communication-ia} illustre les flux de communication entre chaque couche.
+Au-delà du contrat d'interface qui définit les formats d'échange, le système IA est structuré en un ensemble de modules indépendants, chacun accessible via une adresse réseau locale dédiée. Cette organisation permet de faire évoluer, remplacer ou redémarrer un module sans affecter les autres composants du système. La Figure~\ref{fig:ch6-communication-ia} illustre les flux de communication entre chaque couche, présentés dans les paragraphes qui suivent.
 
 \vspace{0.6em}
 \begin{center}
@@ -215,6 +373,8 @@ n'intervient qu'à deux moments précis : lors de la soumission du dossier, où 
 \paragraph{Le module de comparaison biométrique}
 est le seul service IA appelé exclusivement par le backend : il compare le visage extrait du document avec le selfie pour détecter toute tentative d'usurpation d'identité entre plusieurs dossiers.
 
+MinIO joue un rôle transversal à l'ensemble de ces échanges, comme détaillé ci-après.
+
 \subsubsection{Rôle de MinIO comme intermédiaire universel}
 
 Transversalement à toutes ces couches, MinIO constitue le seul point de passage des images entre tous les acteurs du système. Aucune image n'est transmise directement d'un service à un autre sous forme de fichier — chaque composant dépose ou récupère les images via MinIO en utilisant une adresse URL. Cette approche simplifie les échanges, évite de transférer des fichiers volumineux dans les requêtes réseau, et garantit que chaque image est archivée de façon centralisée dès sa création.
@@ -234,26 +394,6 @@ Transversalement à toutes ces couches, MinIO constitue le seul point de passage
 
 % [Contenu à rédiger ultérieurement]
 
-
-%=============================================================
-\section{Évaluation selon les exigences BCT}
-\label{sec:evaluation-bct}
-%=============================================================
-
-\subsection{Métriques imposées}
-\label{subsec:metriques-bct}
-
-% [Contenu à rédiger ultérieurement]
-
-\subsection{Résultats obtenus}
-\label{subsec:resultats-bct}
-
-% [Contenu à rédiger ultérieurement]
-
-\subsection{Conclusion}
-\label{subsec:conclusion-bct}
-
-% [Contenu à rédiger ultérieurement]
 
 
 \section*{Conclusion du chapitre}

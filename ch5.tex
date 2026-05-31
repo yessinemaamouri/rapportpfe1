@@ -10,20 +10,21 @@
 \localtableofcontents
 \clearpage
 
-La conception du système eKYC suit le modèle en cascade et couvre trois dimensions complémentaires : la structure statique des données (diagrammes de classes), le comportement dynamique du système (diagramme d'activité) et les interactions entre composants (diagramme de séquence).
+Ce chapitre présente la conception complète du système eKYC à travers trois types de modélisation complémentaires. La structure statique est d'abord formalisée par quatre diagrammes de classes couvrant l'ensemble des entités métier. Le comportement dynamique est ensuite décrit par un diagramme d'activité modélisant le parcours client. Enfin, les interactions entre composants sont détaillées par un diagramme de séquence illustrant le workflow de l'analyste KYC. Ces artefacts de conception constituent le référentiel sur lequel s'appuie la réalisation présentée au chapitre suivant.
+
+% Macro pour espacer proprement dans les cellules
+\newcommand{\mline}[1]{\par\smallskip\noindent #1}
 
 %=============================================================
 \section{Diagramme de classes}
 \label{sec:diagramme-classes}
 %=============================================================
 
-La conception du système repose sur quatre diagrammes de classes qui couvrent l'ensemble des entités métier de la plateforme. Chaque module est modélisé indépendamment pour garantir la lisibilité et faciliter les évolutions futures.
-
-% Macro pour espacer proprement dans les cellules
-\newcommand{\mline}[1]{\par\smallskip\noindent #1}
+La conception du système repose sur quatre diagrammes de classes qui couvrent l'ensemble des entités métier de la plateforme. Chaque module est modélisé indépendamment pour garantir la lisibilité, la séparation des responsabilités et faciliter les évolutions futures. Les quatre modules abordés successivement sont : la gestion des utilisateurs et de l'authentification, le dossier KYC, le pipeline OCR, et le screening AML.
 
 % ─── Module 1 ───────────────────────────────────────────────
-\subsubsection{M1 --- Utilisateurs et authentification}
+\subsection{M1 --- Utilisateurs et authentification}
+\label{subsec:module1}
 
 Ce module modélise les comptes d'authentification de la plateforme. La classe parente \texttt{Utilisateur} regroupe les attributs d'identification communs et est reliée au journal d'audit (\texttt{AuditLog}). Quatre classes en héritent : \texttt{Client}, \texttt{AnalysteKYC}, \texttt{SuperviseurIA} et \texttt{Admin}. La classe \texttt{Client} est reliée à la fiche identitaire (\texttt{InformationUtilisateur}), comme illustré par la Figure~\ref{fig:ch5-classe1}. Le Tableau~\ref{tab:ch5-classes-d1} décrit le rôle de chaque classe.
 
@@ -78,8 +79,11 @@ Ce module modélise les comptes d'authentification de la plateforme. La classe p
   \label{tab:ch5-classes-d1}
 \end{longtable}
 
+Les entités d'authentification ainsi définies servent de socle partagé aux modules suivants. Le module M2 modélise comment ces utilisateurs interagissent avec le dossier KYC au cœur du processus.
+
 % ─── Module 2 ───────────────────────────────────────────────
-\subsubsection{M2 --- Dossier KYC}
+\subsection{M2 --- Dossier KYC}
+\label{subsec:module2}
 
 Ce module représente les entités liées à la demande d'ouverture de compte. La classe \texttt{DemandeKYC} est le nœud central autour duquel s'organisent tous les documents, résultats de traitement et décisions. Elle porte le statut d'avancement (\texttt{EN\_ATTENTE}, \texttt{EN\_COURS}, \texttt{APPROUVE}, \texttt{REJETE}, \texttt{INCOMPLET}), le niveau de risque calculé et la décision finale de l'agent, comme illustré par la Figure~\ref{fig:ch5-classe2}. Le Tableau~\ref{tab:ch5-classes-d2} décrit le rôle de chaque classe.
 
@@ -154,8 +158,11 @@ Ce module représente les entités liées à la demande d'ouverture de compte. L
   \label{tab:ch5-classes-d2}
 \end{longtable}
 
+Une fois le dossier constitué, le système déclenche automatiquement le pipeline de traitement IA. Le module M3 modélise les entités produites par ce traitement OCR et la consolidation du score de risque.
+
 % ─── Module 3 ───────────────────────────────────────────────
-\subsubsection{M3 --- Pipeline OCR}
+\subsection{M3 --- Pipeline OCR}
+\label{subsec:module3}
 
 Ce module couvre les entités produites par le traitement automatique des documents. La classe \texttt{OcrResult} est immuable après insertion : toute correction ultérieure est enregistrée séparément dans \texttt{OcrCorrection} pour assurer la traçabilité complète des modifications. La classe \texttt{ScoreValidation} consolide le score de risque global en combinant quatre composantes pondérées, comme illustré par la Figure~\ref{fig:ch5-classe3}. Le Tableau~\ref{tab:ch5-classes-d3} décrit le rôle de chaque classe.
 
@@ -213,8 +220,11 @@ Ce module couvre les entités produites par le traitement automatique des docume
   \label{tab:ch5-classes-d3}
 \end{longtable}
 
+Le score de risque consolidé par M3 alimente directement le sous-système de vérification anti-blanchiment. Le module M4 modélise les entités de ce screening AML, dernière couche de sécurité avant la décision finale de l'agent.
+
 % ─── Module 4 ───────────────────────────────────────────────
-\subsubsection{M4 --- Screening AML}
+\subsection{M4 --- Screening AML}
+\label{subsec:module4}
 
 Ce module modélise le sous-système de vérification anti-blanchiment. La classe abstraite \texttt{ListeReference} factorise les attributs communs entre \texttt{BlackList} et \texttt{PpeList}~; de même, la classe \texttt{Match} factorise les champs de correspondance entre \texttt{BlackListMatch}, \texttt{PpeListMatch} et \texttt{IdentityDuplicateAlert}, comme illustré par la Figure~\ref{fig:ch5-classe4}. Le Tableau~\ref{tab:ch5-classes-d4} décrit le rôle de chaque classe.
 
@@ -280,6 +290,7 @@ Ce module modélise le sous-système de vérification anti-blanchiment. La class
   \label{tab:ch5-classes-d4}
 \end{longtable}
 
+Les quatre modules de classes ainsi définis couvrent la totalité du domaine métier de la plateforme. La section suivante modélise le comportement dynamique du système à travers le diagramme d'activité du parcours client.
 
 %=============================================================
 \section{Diagramme d'activité}
@@ -306,6 +317,7 @@ Le processus se déroule en quatre phases séquentielles.
 
 \textbf{Phase 4 — Confirmation et soumission.} L'interface lit toutes les données stockées localement (URLs des images, résultat OCR corrigé, selfie) et les transmet au backend en une seule requête. Le backend crée le dossier complet en une transaction unique et retourne un numéro de dossier au client.
 
+Une fois le dossier soumis, il entre dans le circuit de traitement des agents. La section suivante modélise les interactions entre les composants du système lors de ce traitement, à travers le diagramme de séquence de l'analyste KYC.
 
 %=============================================================
 \section{Diagramme de séquence}
@@ -333,4 +345,4 @@ Le flux se déroule en trois phases.
 
 \section*{Conclusion du chapitre}
 
-Ce chapitre a présenté la conception complète du système eKYC à travers quatre diagrammes de classes couvrant les domaines métier, un diagramme d'activité modélisant le parcours client et un diagramme de séquence décrivant le workflow de l'analyste KYC. Ces artefacts de conception constituent la base de la réalisation présentée dans le chapitre suivant.
+Ce chapitre a établi la conception complète du système eKYC à travers trois niveaux de modélisation complémentaires. Les quatre diagrammes de classes ont formalisé la structure statique du domaine en séparant clairement les responsabilités entre authentification, gestion du dossier KYC, pipeline OCR et screening AML. Le diagramme d'activité a décrit le parcours client en quatre phases séquentielles intégrant capture, vérification et soumission. Le diagramme de séquence a détaillé les échanges entre composants lors du traitement par l'analyste. Ces artefacts constituent le référentiel de conception sur lequel s'appuie la réalisation applicative présentée dans le chapitre suivant.

@@ -1,4 +1,4 @@
-\chapter{Méthodologie CRISP-ML(Q) --- Réalisation du Module IA}
+\chapter{Réalisation du Module IA}
 \label{chap:increment-ia}
 \vspace{1em}
 \noindent\textbf{\large Sommaire}
@@ -109,6 +109,8 @@ Les données collectées sur les réseaux sociaux, bien que cruciales pour le r�
 \subsection{Restauration et génération de données}
 \label{subsec:restauration-generation}
 
+Les masques de confidentialité présents sur les données réelles rendent ces images inexploitables en l'état pour la supervision. Deux stratégies complémentaires ont été déployées pour transformer ces données brutes en vérité terrain de haute précision : une restauration par Deep Inpainting pour le recto, et une génération automatisée par Data Factory pour le verso.
+
 \subsubsection{CIN recto --- restauration par Deep Inpainting}
 
 Pour le recto, l'enjeu était double : conserver l'authenticité visuelle de la photo d'identité et du fond, tout en rendant le numéro de carte exploitable par l'OCR. Le processus se déroule en trois phases :
@@ -124,14 +126,14 @@ Pour le recto, l'enjeu était double : conserver l'authenticité visuelle de la 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{images/image_ch3/Processus de_restauration_CIN Recto.png}
-  \caption{\textit{Figure 3.1 --- Processus de restauration CIN Recto}}
+  \caption{Processus de restauration de la CIN Recto}
   \label{fig:ch3-restauration-recto}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{images/image_ch3/Simulation_de_contraintes_optiques réelles.png}
-  \caption{\textit{Figure 3.2 --- Simulation de contraintes optiques réelles}}
+  \caption{Simulation des contraintes optiques réelles appliquées au dataset}
   \label{fig:ch3-contraintes-optiques}
 \end{figure}
 
@@ -148,7 +150,7 @@ Le verso, dont la densité textuelle est plus élevée, nécessitait une approch
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{images/image_ch3/Pipeline_creation_template_verso.png}
-  \caption{\textit{Figure 3.3 --- Pipeline de création du template Verso}}
+  \caption{Pipeline de création du template CIN Verso}
   \label{fig:ch3-template-verso}
 \end{figure}
 
@@ -199,7 +201,7 @@ Le dataset ainsi labellisé constitue une base d'apprentissage rigoureuse. Cepen
 \subsection{Augmentation contrôlée : simulation de la variabilité réelle}
 \label{subsec:augmentation}
 
-Plutôt qu'une augmentation aléatoire, nous avons appliqué une stratégie différenciée selon la complexité de chaque tâche pour éviter le surapprentissage via la plateforme Roboflow, simulant les contraintes physiques du monde réel tout en évitant le surapprentissage.
+Plutôt qu'une augmentation aléatoire, nous avons appliqué une stratégie différenciée selon la complexité de chaque tâche, via la plateforme Roboflow, simulant les contraintes physiques du monde réel tout en évitant le surapprentissage. Les sous-sections suivantes détaillent les coefficients retenus par pipeline, puis les paramètres d'augmentation et leurs impacts visuels.
 
 \subsubsection{Coefficients d'augmentation différenciés}
 
@@ -358,6 +360,8 @@ Le dataset ainsi constitué --- restauré, labellisé, augmenté et partitionné
 \label{sec:modelisation}
 %=============================================================
 
+Le dataset ainsi constitué, restauré, labellisé et augmenté, constitue le socle sur lequel reposent les décisions de modélisation. Cette section décrit l'architecture du pipeline IA retenu et les paramètres d'entraînement pour chacun des modèles développés, en distinguant les deux branches du système selon la nature du document traité.
+
 Le dataset ainsi constitué --- restauré, labellisé et augmenté --- constitue le socle sur lequel reposent les décisions de modélisation. Cette section décrit l'architecture du pipeline IA retenu et les paramètres d'entraînement pour chacun des modèles développés.
 
 %-------------------------------------------------------------
@@ -513,6 +517,8 @@ Avant toute extraction, le système doit s'assurer que le document présenté es
   \item \texttt{capture-face} : selfie biométrique.
 \end{itemize}
 
+Cette architecture à trois services spécialisés permet d'adapter le comportement du verrou qualité à chaque type de capture. Les deux sous-sections suivantes détaillent les objectifs de cette étape puis les paramètres d'entraînement retenus.
+
 \subsubsection{Objectifs de l'étape de détection}
 
 Cette étape remplit deux fonctions complémentaires avant d'autoriser l'entrée dans le pipeline d'extraction.
@@ -611,11 +617,11 @@ Ce service constitue le verrou qualité d'entrée du pipeline.
 \label{subsec:yolov11m-champs}
 %-------------------------------------------------------------
 
-Comme établi au chapitre 2, YOLOv11m a été retenu pour sa supériorité en précision de localisation sur des objets de petite taille dans des images à haute résolution. Il intervient ici non pour détecter des objets génériques, mais pour localiser avec précision chaque champ textuel sur un document d'identité.
+Comme établi au chapitre 2, YOLOv11m a été retenu pour sa supériorité en précision de localisation sur des objets de petite taille dans des images à haute résolution. Il intervient ici non pour détecter des objets génériques, mais pour localiser avec précision chaque champ textuel sur un document d'identité. Cette sous-section présente la stratégie de spécialisation adoptée, suivie des paramètres d'entraînement retenus pour chacun des trois modèles.
 
 \subsubsection{Stratégie : trois modèles spécialisés}
 
-La décision de former trois modèles distincts --- un par type de document --- répond à une contrainte fondamentale : les ontologies de classes sont incompatibles entre documents.
+La décision de former trois modèles distincts, un par type de document, répond à une contrainte fondamentale : les ontologies de classes sont incompatibles entre documents.
 
 \begin{itemize}
   \item \textbf{CIN Recto} : 12 classes incluant \texttt{last\_name}, \texttt{first\_name}, \texttt{full\_name}, \texttt{num\_cin}, \texttt{dob}, \texttt{pob}, \texttt{image}, \texttt{header\_text}, \texttt{flag1}, \texttt{flag2}. La disposition est arabe de droite à gauche, avec des zones de texte compactes.
@@ -767,61 +773,21 @@ La résolution des crops varie fortement selon la taille du champ sur le documen
 
 \subsubsection{Post-traitement et structuration JSON}
 
-% ── Bloc OCR ─────────────────────────────────────────────────
+Une fois l'OCR exécuté, le pipeline produit un objet JSON structuré conservé en base de données. Cet objet regroupe six informations distinctes : les champs extraits sous leur forme brute telle que retournée par PaddleOCR (\texttt{structured\_raw}), les mêmes champs après normalisation et post-traitement (\texttt{structured}), la liste des détections YOLO brutes avec les scores de confiance par champ (\texttt{raw\_detections}), le score de confiance OCR global (\texttt{confidence}), l'URL du crop de visage extrait par YOLO (\texttt{face\_crop\_url}), ainsi que les temps d'exécution séparés pour YOLO (\texttt{yolo\_elapsed\_ms}) et PaddleOCR (\texttt{ocr\_elapsed\_ms}). La Figure~\ref{fig:ch3-json-structure} illustre la structure complète de cet objet.
 
-
-\medskip
-\noindent Le Tableau~\ref{tab:ch3-json-sortie} illustre la structure JSON finale générée pour une CIN, telle qu'observée dans les fichiers de test réels du projet.
-
-\begin{table}[H]
+\begin{figure}[H]
   \centering
-  \small
-  \begin{tabular}{|l|l|c|}
-    \toprule
-    \rowcolor{bleu_principal}
-    \textcolor{white}{\textbf{Champ JSON}} & \textcolor{white}{\textbf{Exemple de valeur}} & \textcolor{white}{\textbf{Score OCR}} \\
-    \midrule
-    \texttt{cin\_number} & \texttt{00696358} & 0,9999 \\
-    \midrule
-    \rowcolor{gris_leger}
-    \texttt{nom} & \texttt{الطياري} & 0,9351 \\
-    \midrule
-    \texttt{prenom} & \texttt{المنجي} & 0,9958 \\
-    \midrule
-    \rowcolor{gris_leger}
-    \texttt{nom\_complet} & \texttt{بن الجيلاني بن محمد} & 0,9528 \\
-    \midrule
-    \texttt{date\_naissance} & \texttt{19562 سبتمبر} & 0,8746 \\
-    \midrule
-    \rowcolor{gris_leger}
-    \texttt{lieu\_naissance} & \texttt{منوبة} & 0,9954 \\
-    \midrule
-    \texttt{nom\_mere} & \texttt{الما جري نور} & 0,8840 \\
-    \midrule
-    \rowcolor{gris_leger}
-    \texttt{profession} & \texttt{مستشار قانوني} & 0,8915 \\
-    \midrule
-    \texttt{adresse} & \texttt{نهج الاستقلال العمران} & 0,8794 \\
-    \midrule
-    \rowcolor{gris_leger}
-    \texttt{issue\_date} & \texttt{2022 سبتمبر} & 0,9423 \\
-    \midrule
-    \texttt{print\_id} & \texttt{01815766} & 1,0000 \\
-    \midrule
-    \rowcolor{gris_leger}
-    \textbf{Score global} & & \textbf{0,922} \\
-    \bottomrule
-  \end{tabular}
-  \caption{Exemple de sortie JSON structurée --- CIN (extrait réel du projet)}
-  \label{tab:ch3-json-sortie}
-\end{table}
+  \includegraphics[width=0.85\textwidth]{images/image_ch3/json.png}
+  \caption{Structure JSON retournée par le pipeline OCR}
+  \label{fig:ch3-json-structure}
+\end{figure}
 
 %-------------------------------------------------------------
 \subsection{Configuration matérielle et environnement}
 \label{subsec:config-materielle}
 %-------------------------------------------------------------
 
-L'ensemble des entraînements a été réalisé sur Google Colab Pro avec un GPU NVIDIA Tesla T4 (16 Go VRAM), en utilisant le framework Ultralytics dans sa version compatible YOLOv11. Le Tableau~\ref{tab:ch3-config-materielle} résume la configuration complète.
+L'ensemble des entraînements a été réalisé sur Google Colab  avec un GPU NVIDIA Tesla T4 (16 Go VRAM), en utilisant le framework Ultralytics dans sa version compatible YOLOv11. Le Tableau~\ref{tab:ch3-config-materielle} résume la configuration complète.
 
 \small
 \begin{longtable}{|l|l|}
@@ -835,7 +801,7 @@ L'ensemble des entraînements a été réalisé sur Google Colab Pro avec un GPU
   GPU (entraînement) & NVIDIA Tesla T4 --- 16 Go VRAM \\
   \midrule
   \rowcolor{gris_leger}
-  Environnement & Google Colab Pro \\
+  Environnement & Google Colab  \\
   \midrule
   Framework détection & Ultralytics (YOLOv11m) \\
   \midrule
@@ -857,12 +823,12 @@ L'ensemble des entraînements a été réalisé sur Google Colab Pro avec un GPU
   \rowcolor{gris_leger}
   Résolution d'inférence (capture) & 640 $\times$ 640 px \\
   \midrule
-  Temps d'entraînement CIN Recto & \textnormal{[À COMPLÉTER]} \\
+  Temps d'entraînement CIN Recto & $\approx$ 14h 04min (3 sessions : 5h 07min + 4h 59min + 3h 57min) \\
   \midrule
   \rowcolor{gris_leger}
-  Temps d'entraînement CIN Verso & \textnormal{[À COMPLÉTER]} \\
+  Temps d'entraînement CIN Verso & $\approx$ 12h 02min (2 sessions : 5h 02min + 6h 59min) \\
   \midrule
-  Temps d'entraînement Passeport & \textnormal{[À COMPLÉTER]} \\
+  Temps d'entraînement Passeport & $\approx$ 4h 10min (62 époques, 1 session) \\
   \bottomrule
   \caption{Configuration matérielle et environnement d'entraînement}
   \label{tab:ch3-config-materielle}
@@ -1011,6 +977,8 @@ Les résultats présentés dans cette section correspondent aux courbes de perte
 \noindent Pour chaque modèle, Ultralytics génère automatiquement les courbes d'évolution des pertes et métriques ainsi que la matrice de confusion, présentées ci-dessous.
 
 \subsubsection{CIN --- Recto et Verso}
+
+Les deux faces de la carte d'identité nationale ont été entraînées séparément, chacune sur son propre dataset et ses propres classes. Les résultats présentés ci-après couvrent successivement le recto, qui concentre les champs d'identification principaux, puis le verso, dominé par les données d'état civil et les éléments de sécurité.
 
 \paragraph{CIN Recto}
 Le modèle CIN Recto est le premier des trois modèles entraînés. Il traite le recto de la carte d'identité nationale tunisienne, qui contient dix champs textuels à localiser simultanément, comme illustré par la Figure~\ref{fig:ch3-results-recto}.
@@ -1161,6 +1129,8 @@ Le Tableau~\ref{tab:ch3-metrics-verso} présente les métriques détaillées par
   \label{tab:ch3-metrics-verso}
 \end{table}
 
+Le modèle CIN Verso confirme ainsi les bénéfices d'une stratégie d'augmentation bien calibrée sur un dataset de taille modeste. Le passeport, avec sa mise en page plus dense et sa variété documentaire réduite, présente un profil d'entraînement différent, analysé ci-après.
+
 \subsubsection{Passeport}
 
 \paragraph{Passeport}
@@ -1299,7 +1269,7 @@ Les modèles YOLOv11m ont été évalués sur le jeu de test indépendant consti
   \label{tab:yolo-test-recto}
 \end{longtable}
 
-\noindent Le modèle CIN Recto atteint une précision globale de 0,996 et un rappel de 0,980 sur le jeu de test, confirmant la robustesse acquise à l'entraînement. Les champs numériques (\texttt{num\_cin}) et les éléments graphiques (\texttt{flag1}, \texttt{flag2}, \texttt{header\_text}) obtiennent un F1 parfait de 1,000. Le champ \texttt{pob} (lieu de naissance) enregistre le rappel le plus faible (0,914)~: cette zone est petite et positionnée en bas de la carte, souvent proche du bord de la CIN, ce qui rend sa localisation plus sensible aux variations de cadrage. Le \texttt{full\_name} présente une légère baisse de précision (0,957) due à sa structure arabe multi-tokens dont les bounding boxes peuvent se chevaucher avec les champs adjacents. Le mAP50-95 global de 0,656 reflète la densité des champs sur ce document.
+\noindent Le modèle CIN Recto atteint une précision globale de 0,996 et un rappel de 0,980 sur le jeu de test, confirmant la robustesse acquise à l'entraînement. Les champs numériques (\texttt{num\_cin}) et les éléments graphiques (\texttt{flag1}, \texttt{flag2}, \texttt{header\_text}) obtiennent un F1 parfait de 1,000. Le champ \texttt{pob} (lieu de naissance) enregistre le rappel le plus faible (0,914)~: cette zone est petite et positionnée en bas de la carte, souvent proche du bord de la CIN, ce qui rend sa localisation plus sensible aux variations de cadrage. Le \texttt{full\_name} présente une légère baisse de précision (0,957) due à sa structure arabe multi-tokens dont les bounding boxes peuvent se chevaucher avec les champs adjacents. Le mAP50-95 global de 0,656 reflète la densité des champs sur ce document. Le verso, avec sa mise en page plus régulière, offre des conditions de détection plus favorables, comme le montrent les résultats ci-après.
 
 \subsubsection{CIN Verso (60 images, 8 classes)}
 
@@ -1340,7 +1310,7 @@ Les modèles YOLOv11m ont été évalués sur le jeu de test indépendant consti
   \label{tab:yolo-test-verso}
 \end{longtable}
 
-\noindent Le modèle CIN Verso obtient les meilleures performances des trois : rappel parfait de 1,000 sur toutes les classes, précision globale de 0,998 et mAP50 de 0,995. Le mAP50-95 exceptionnel de 0,906 confirme la précision chirurgicale de la localisation, facilitée par la mise en page régulière du verso. La légère baisse de précision de \texttt{finger\_print} (0,983) s'explique par la variabilité morphologique des empreintes qui peut générer des bords de bounding box légèrement flottants, sans affecter l'utilité du crop pour le pipeline OCR.
+\noindent Le modèle CIN Verso obtient les meilleures performances des trois : rappel parfait de 1,000 sur toutes les classes, précision globale de 0,998 et mAP50 de 0,995. Le mAP50-95 exceptionnel de 0,906 confirme la précision chirurgicale de la localisation, facilitée par la mise en page régulière du verso. La légère baisse de précision de \texttt{finger\_print} (0,983) s'explique par la variabilité morphologique des empreintes qui peut générer des bords de bounding box légèrement flottants, sans affecter l'utilité du crop pour le pipeline OCR. Le passeport, document plus complexe avec douze classes et un fond sécurisé texturé, présente des résultats contrastés analysés dans la sous-section suivante.
 
 \subsubsection{Passeport (53 images, 12 classes)}
 
@@ -1389,7 +1359,7 @@ Les modèles YOLOv11m ont été évalués sur le jeu de test indépendant consti
   \label{tab:yolo-test-passport}
 \end{longtable}
 
-\noindent Le modèle Passeport présente des performances solides sur la majorité des champs. Le champ \textit{profession} constitue le point faible le plus marqué (Précision~0,670, Rappel~0,585, mAP50~0,512)~: ce champ est de petite taille et imprimé sur le fond texturé et sécurisé du passeport, ce qui brouille les contrastes locaux et rend la localisation nettement plus difficile que sur la CIN. Les champs \texttt{first\_name} (rappel 0,849) et \texttt{address} (rappel 0,896) souffrent de contraintes similaires~: leur zone est comprimée dans la mise en page dense du passeport et étroitement serrée entre plusieurs autres champs, augmentant le risque de confusion de bounding boxes adjacentes. Le mAP50-95 global de 0,545 est le plus faible des trois modèles, reflet de la densité et de la complexité visuelle du document passeport par rapport à la CIN. Ces résultats de détection étant établis, la section suivante définit les métriques utilisées pour évaluer la qualité de la transcription textuelle par PaddleOCR PP-OCRv5. [Transition ajoutée]
+\noindent Le modèle Passeport présente des performances solides sur la majorité des champs. Le champ \textit{profession} constitue le point faible le plus marqué (Précision~0,670, Rappel~0,585, mAP50~0,512)~: ce champ est de petite taille et imprimé sur le fond texturé et sécurisé du passeport, ce qui brouille les contrastes locaux et rend la localisation nettement plus difficile que sur la CIN. Les champs \texttt{first\_name} (rappel 0,849) et \texttt{address} (rappel 0,896) souffrent de contraintes similaires~: leur zone est comprimée dans la mise en page dense du passeport et étroitement serrée entre plusieurs autres champs, augmentant le risque de confusion de bounding boxes adjacentes. Le mAP50-95 global de 0,545 est le plus faible des trois modèles, reflet de la densité et de la complexité visuelle du document passeport par rapport à la CIN. Ces résultats de détection étant établis, la section suivante définit les métriques utilisées pour évaluer la qualité de la transcription textuelle par PaddleOCR PP-OCRv5.
 
 %-------------------------------------------------------------
 \subsection{Métriques d'évaluation du pipeline OCR}
@@ -1494,12 +1464,12 @@ Les modèles YOLOv11m ont été évalués sur le jeu de test indépendant consti
 \label{subsec:resultats-ocr}
 %-------------------------------------------------------------
 
-Ces métriques étant définies, les sections suivantes présentent les résultats obtenus pour chacun des trois types de documents, en distinguant systématiquement les performances avant et après post-traitement. [Transition ajoutée]
+Ces métriques étant définies, les sections suivantes présentent les résultats obtenus pour chacun des trois types de documents, en distinguant systématiquement les performances avant et après post-traitement.
 
 %--- 1. CIN Recto ---
 \subsubsection{CIN Recto (6 champs, 60 images)}
 
-\noindent Le Tableau~\ref{tab:ocr-global-recto} synthétise l'apport global du post-traitement sur le recto, et le Tableau~\ref{tab:ocr-champs-recto} détaille les résultats par champ. [Référence tableau ajoutée]
+\noindent Le Tableau~\ref{tab:ocr-global-recto} synthétise l'apport global du post-traitement sur le recto, et le Tableau~\ref{tab:ocr-champs-recto} détaille les résultats par champ.
 
 \renewcommand{\arraystretch}{1.35}
 \setlength{\LTleft}{0pt plus 1fill}
@@ -1687,7 +1657,7 @@ Le passeport, avec ses 11 champs et sa mise en page dense, présente une complex
 
 \medskip
 
-Ces résultats par document permettent désormais une comparaison transversale des trois pipelines, présentée dans la synthèse ci-après. [Transition ajoutée]
+Ces résultats par document permettent désormais une comparaison transversale des trois pipelines, présentée dans la synthèse ci-après.
 
 %-------------------------------------------------------------
 \subsection{Synthèse comparative}
@@ -1720,7 +1690,7 @@ Ces résultats par document permettent désormais une comparaison transversale d
 
 \medskip
 
-Si les métriques globales confirment les bonnes performances du pipeline, une analyse qualitative sur des images de conditions dégradées permet d'identifier les limites réelles du système et les causes précises des erreurs résiduelles. [Transition ajoutée]
+Si les métriques globales confirment les bonnes performances du pipeline, une analyse qualitative sur des images de conditions dégradées permet d'identifier les limites réelles du système et les causes précises des erreurs résiduelles.
 
 %-------------------------------------------------------------
 \subsection{Analyse qualitative des erreurs}
@@ -1821,6 +1791,8 @@ Les métriques globales présentées dans les sections précédentes reflètent 
 
 \textbf{Recto 3 --- Mouvement + flou.} Les erreurs sont majoritairement de nature YOLO : quatre champs sur six ne sont pas détectés, le mouvement ayant dégradé les contrastes locaux nécessaires à la localisation. Seuls \texttt{num\_cin} et \texttt{last\_name} sont détectés, ce dernier avec un score YOLO très faible de 0,36.
 
+Le verso de la carte, avec ses champs plus larges et son fond moins texturé, réagit différemment aux mêmes dégradations, comme l'illustre l'analyse ci-après.
+
 %════════ CIN VERSO ════════════════════════════════════════
 \subsubsection{CIN Verso --- Analyse sur trois niveaux de qualité}
 
@@ -1909,6 +1881,8 @@ Les métriques globales présentées dans les sections précédentes reflètent 
 \textbf{Verso 2 --- Flash sur l'adresse.} Le flash localisé sur la fin du champ \texttt{address} produit une troncature OCR : la partie «\textarabic{نابل}» de l'adresse est surexposée, PaddleOCR ne peut pas extraire ce segment et la bounding box s'arrête avant la fin du texte réel. Les autres champs ne sont pas affectés.
 
 \textbf{Verso 3 --- Surexposition sévère.} Les champs \texttt{address} et \texttt{profession} ne sont pas détectés par YOLO car la surexposition efface complètement le contraste local nécessaire à la localisation. Seuls les champs imprimés en noir gras (\texttt{print\_id}, \texttt{issue\_date}) résistent à cette dégradation. Le champ \texttt{mother\_name} est détecté mais présente un espace parasite (\textarabic{صو فية} au lieu de \textarabic{صوفية}) dû à la compression de l'image.
+
+Le passeport, avec son fond sécurisé texturé et sa densité de champs supérieure, se révèle encore plus sensible aux dégradations optiques, comme le montrent les résultats suivants.
 
 %════════ PASSEPORT ════════════════════════════════════════
 \subsubsection{Passeport --- Analyse sur trois niveaux de qualité}
@@ -2082,9 +2056,75 @@ Le Tableau~\ref{tab:services-ia} décrit les 7 modules du système, leur port d'
 \label{sec:surveillance-maintenance}
 %=============================================================
 
-Cette section abordera la stratégie de surveillance du modèle en production, notamment la détection de la dérive des données (\textit{model drift}) en cas d'évolution des formats de documents, ainsi que le protocole de ré-entraînement prévu.
+Cette section décrit la stratégie de surveillance des modèles IA en production et le protocole de maintenance associé. Elle présente d'abord le tableau de bord de monitoring intégré à la plateforme, puis les mécanismes de détection de dérive et le protocole de ré-entraînement prévu.
 
-À compléter.
+\subsection{Surveillance des modèles IA en production}
+\label{subsec:monitoring-production}
+
+La plateforme intègre un tableau de bord de supervision IA accessible aux superviseurs depuis le dashboard administrateur. Cette page de monitoring permet de suivre en temps réel les performances des modèles YOLOv11m et PaddleOCR sur les documents traités en production, sans avoir à consulter les logs bruts ou à relancer des évaluations manuelles.
+
+\subsubsection{Indicateurs de surveillance}
+
+La surveillance est organisée par type de document (CIN Recto, CIN Verso, Passeport) et par période (7 jours, 30 jours, 90 jours). Pour chaque combinaison, le superviseur dispose de deux niveaux d'indicateurs.
+
+Au niveau global, le Tableau~\ref{tab:ch3-monitoring-global} présente les métriques suivies pour l'ensemble du pipeline.
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{5cm}|p{9.5cm}|}
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Indicateur}} & \textcolor{white}{\textbf{Description}} \\
+  \hline
+  \endfirsthead
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Indicateur}} & \textcolor{white}{\textbf{Description}} \\
+  \hline
+  \endhead
+  Documents traités       & Volume total par type de document sur la période \\ \hline
+  Confiance YOLO moyenne  & Score de détection moyen des zones de champs \\ \hline
+  Confiance OCR moyenne   & Score de reconnaissance de texte moyen par champ \\ \hline
+  Taux de correction      & Proportion de champs corrigés manuellement par les agents ou clients \\ \hline
+  Taux de faux positifs   & Proportion de détections YOLO sans champ réel correspondant \\ \hline
+  Taux de non-détection   & Proportion de documents où aucun champ n'a été détecté \\ \hline
+  Latence YOLO            & Temps d'inférence moyen de détection (ms) \\ \hline
+  Latence OCR             & Temps d'inférence moyen de reconnaissance (ms) \\ \hline
+  \caption{Indicateurs globaux du tableau de bord de monitoring IA}
+  \label{tab:ch3-monitoring-global}
+\end{longtable}
+
+Au niveau champ, pour chaque champ de chaque type de document, le superviseur visualise la confiance YOLO, la confiance OCR, le taux de correction et le taux de champs vides, permettant d'identifier précisément quel champ se dégrade en premier.
+
+\subsubsection{Comparaison production vs référence}
+
+La page de monitoring croise les métriques de production avec les métriques de référence calculées lors de l'évaluation initiale des modèles sur les jeux de données annotés. Cette comparaison permet de détecter une dérive de performance : si la confiance moyenne d'un champ en production s'éloigne significativement de la valeur de référence, cela signale un changement dans les documents réels traités (nouveau format, qualité d'image différente, nouveau type de scan). La sous-section suivante détaille les mécanismes de détection et le protocole de réponse associé.
+
+\subsection{Stratégie de maintenance et ré-entraînement}
+\label{subsec:maintenance-reentrainement}
+
+Cette sous-section décrit comment la plateforme détecte une dégradation des modèles et le protocole mis en place pour y remédier.
+
+\subsubsection{Détection de la dérive des données (\textit{model drift})}
+
+Une dérive des données survient lorsque les documents présentés par les clients en production diffèrent des documents utilisés lors de l'entraînement des modèles. Cela peut être causé par une évolution du format de la CIN tunisienne, l'introduction d'un nouveau design de passeport, ou une variation de la qualité des scans selon les appareils utilisés. Les signaux d'alerte d'une dérive sont directement observables sur la page de monitoring :
+
+\begin{itemize}
+  \item Baisse progressive de la confiance YOLO sur un ou plusieurs champs.
+  \item Hausse du taux de correction sur des champs qui étaient stables.
+  \item Hausse du taux de non-détection sur un type de document particulier.
+\end{itemize}
+
+\subsubsection{Protocole de ré-entraînement}
+
+Lorsqu'une dérive est détectée, le protocole de ré-entraînement suit cinq étapes séquentielles :
+
+\begin{enumerate}
+  \item \textbf{Collecte :} extraction des images de production pour lesquelles le taux de correction est élevé ou la confiance faible, en conservant l'anonymisation des données clients.
+  \item \textbf{Annotation :} annotation des nouvelles images sur Roboflow pour enrichir le dataset existant.
+  \item \textbf{Ré-entraînement :} relancement de l'entraînement YOLOv11m sur Google Colab avec le dataset augmenté, en repartant des poids existants (\textit{fine-tuning}) pour accélérer la convergence.
+  \item \textbf{Évaluation :} validation du nouveau modèle sur le jeu de test annoté en utilisant les métriques mAP@50, précision et rappel par classe.
+  \item \textbf{Déploiement :} remplacement du fichier de poids dans le service IA concerné sans modification du reste de la plateforme, grâce à l'architecture modulaire.
+\end{enumerate}
+
+Cette procédure peut être appliquée indépendamment pour chacun des trois modèles (CIN Recto, CIN Verso, Passeport) sans impacter les autres services.
 
 
 \section*{Conclusion du chapitre}

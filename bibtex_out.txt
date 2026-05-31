@@ -1,0 +1,11 @@
+This is BibTeX, Version 0.99e (MiKTeX 25.12)
+The top-level auxiliary file: rapport_PFE.aux
+The style file: plain.bst
+Database file #1: references.bib
+Warning--to sort, need author or key in ocr_benchmark_acl2024
+Warning--to sort, need author or key in ocr_benchmark_arxiv2025
+Warning--to sort, need author or key in ocr_benchmark_ijraset
+Warning--empty author in ocr_benchmark_ijraset
+Warning--empty year in ocr_benchmark_ijraset
+Warning--empty author in ocr_benchmark_acl2024
+(There were 6 warnings)

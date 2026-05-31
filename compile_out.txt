@@ -340,111 +340,132 @@ See the caption package documentation for explanation.
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\caption-xetex-bidi
 .def)
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/textpos\textpos.sty
+Grid set 16 x 16 = 37.34424pt x 52.81541pt
+TextBlockOrigin set to 0pt x 0pt
+)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\float-xetex-bidi.d
 ef) (rapport_PFE.aux)
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 (rapport_PFE.out) (rapport_PFE.out)
+! Undefined control sequence.
+<recently read> \og 
+                    
+l.329 \couverture
+                 
+! Undefined control sequence.
+\couverture ...matique\\ \og Computer Science \fg 
+                                                  {} Spécialité : Génie Logi...
+l.329 \couverture
+                 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
-[1] [1] [2] [3] [4] [5] (ch1.tex
+[1] [1] [2] [3]
+
+LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
+(Font)              using `TU/lmr/bx/n' instead on input line 339.
+
+
+Overfull \hbox (11.99997pt too wide) in alignment at lines 344--390
+ [] [] 
+[4] [5] (ch1.tex
 Chapitre 1.
 [6]
 ! Undefined control sequence.
-l.31 ...de cette dynamique est le lancement de \og
+l.22 ...de cette dynamique est le lancement de \og
                                                    NEO BTE \fg{} : une plate...
 
 ! Undefined control sequence.
-l.31 ...amique est le lancement de \og NEO BTE \fg
+l.22 ...amique est le lancement de \og NEO BTE \fg
                                                   {} : une plateforme bancai...
 
 [7]
 ! Undefined control sequence.
-l.53 ... KYC (\textit{Know Your Customer}), ou \og
+l.49 ... KYC (\textit{Know Your Customer}), ou \og
                                                    Connaissance du Client \f...
 
 ! Undefined control sequence.
-l.53 ...tomer}), ou \og Connaissance du Client \fg
+l.49 ...tomer}), ou \og Connaissance du Client \fg
                                                   {}, désigne l'ensemble des...
 
 [8] [9] [10]
-Underfull \hbox (badness 2393) in paragraph at lines 135--135
-[][]|\TU/lmr/m/n/10.95 Groupe d’Action Fi-[]
+Underfull \hbox (badness 3635) in paragraph at lines 126--126
+[][]|\TU/lmr/m/n/12 Organisme international fixant[]
 
-Underfull \hbox (badness 5504) in paragraph at lines 135--135
-[]\TU/lmr/m/n/10.95 nancière (GAFI) —[]
+Underfull \hbox (badness 2626) in paragraph at lines 126--126
+[]\TU/lmr/m/n/12 les standards mondiaux LCB-[]
 
-Underfull \hbox (badness 1242) in paragraph at lines 140--140
-[][]|\TU/lmr/m/n/10.95 Applicable aux solutions traitant[]
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+[][]|\TU/lmr/m/n/12 Règlement Général[]
 
-Underfull \hbox (badness 1325) in paragraph at lines 140--140
-[]\TU/lmr/m/n/10.95 des données de ressortissants ou[]
+Underfull \hbox (badness 3118) in paragraph at lines 130--130
+[][]|\TU/lmr/m/n/12 Applicable aux solutions trai-[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
-[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][] [] [][] [] [][] []$[][]
+Underfull \hbox (badness 2065) in paragraph at lines 153--153
+[]\TU/lmr/m/n/12 banques tunisiennes l’identi-[]
 
-Overfull \hbox (44.86502pt too wide) in paragraph at lines 141--142
-[][]$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][]$[][][]| []
+Underfull \hbox (badness 3189) in paragraph at lines 153--153
+[]\TU/lmr/m/n/12 fication rigoureuse de leurs[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][][] [] [][][] []$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[][]|\TU/lmr/m/n/12 Circulaire de la[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[][]$[][][][][] [] [][][][][][][] [] [][][][][] []$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]\TU/lmr/m/n/12 Banque Centrale[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[][]$[][][][][][][][][] [] [][][][][][][][] [] [][][] []$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]\TU/lmr/m/n/12 de Tunisie (BCT)[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[][]$[][][][][][][][][] [] [][][][][][][][][] [] [][] []$[][]
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-[]\TU/lmr/m/n/10.95 Centrale de Tunisie[]
-
-Underfull \hbox (badness 1867) in paragraph at lines 165--165
-[]\TU/lmr/m/n/10.95 procédures de vigilance \TU/lmr/m/it/10.95 Know[]
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 [][]|[][][]$[][][][][] [] [] [] [][][] [] [][][] [] [][][] [] [][] []$[][]
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
-[][]$[][][] [] [][][][][][][][] [] [][][][] [] [][][] [] [][] []$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+[][]$[][][] [] [][][][][][][][] [] [][][][][][][][][] []$[][]
 
-Underfull \hbox (badness 8151) in paragraph at lines 168--168
-[]\TU/lmr/m/n/10.95 63 — Instance Na-[]
+Underfull \hbox (badness 1048) in paragraph at lines 160--160
+[]\TU/lmr/m/n/12 Données Personnelles[]
 
-Underfull \hbox (badness 4779) in paragraph at lines 168--168
-[]\TU/lmr/m/n/10.95 tionale de Protection[]
-
-Underfull \hbox (badness 7468) in paragraph at lines 168--168
-[]\TU/lmr/m/n/10.95 des Données Person-[]
-
-Underfull \hbox (badness 1325) in paragraph at lines 169--169
-[]\TU/lmr/m/n/10.95 doit être déclarée à l’INPDP.[]
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 [][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][][] [] [][] []$[][]
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
-[][]|\TU/lmr/m/n/10.95 Commission Tuni-[]
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[][]|\TU/lmr/m/n/12 Commission Tuni-[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
-[]\TU/lmr/m/n/10.95 sienne des Analyses[]
+Underfull \hbox (badness 3701) in paragraph at lines 164--164
+[]\TU/lmr/m/n/12 sienne des Analyses[]
 
-Underfull \hbox (badness 1127) in paragraph at lines 172--172
-[]\TU/lmr/m/n/10.95 Financières (CTAF) /[]
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[]\TU/lmr/m/n/12 Financières (CTAF)[]
 
-Underfull \hbox (badness 5802) in paragraph at lines 172--172
-[]\TU/lmr/m/n/10.95 du Marché Financier[]
-[11] [12] [13]
-Overfull \hbox (37.0943pt too wide) in paragraph at lines 225--251
- [][][][] 
-[14]
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[]\TU/lmr/m/n/12 / Banque Centrale[]
+
+Underfull \hbox (badness 1107) in paragraph at lines 164--164
+[]\TU/lmr/m/n/12 de Tunisie (BCT) /[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[]\TU/lmr/m/n/12 Conseil du Marché[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[][]|\TU/lmr/m/n/12 Principaux régulateurs su-[]
+
+Underfull \hbox (badness 6428) in paragraph at lines 165--165
+[]\TU/lmr/m/n/12 pervisant respectivement la[]
+
+Underfull \hbox (badness 6110) in paragraph at lines 165--165
+[]\TU/lmr/m/n/12 conformité LCB-FT et les[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]\TU/lmr/m/n/12 rapports de transactions[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]\TU/lmr/m/n/12 suspectes, les institutions[]
+[11] [12] [13] [14]
 Overfull \hbox (3.83417pt too wide) in paragraph at lines 272--273
 [][]\TU/lmr/bx/n/12 Dépendance cloud systématique : \TU/lmr/m/n/12 les trois pl
 ateformes analysées transmettent[]
@@ -452,101 +473,128 @@ ateformes analysées transmettent[]
 Overfull \hbox (1.36348pt too wide) in paragraph at lines 273--274
 [][]\TU/lmr/bx/n/12 Inadaptation au contexte tunisien : \TU/lmr/m/n/12 le trait
 ement bilingue arabe/latin, propre[]
-
-Overfull \hbox (19.0476pt too wide) in paragraph at lines 293--294
-[][]\TU/lmr/m/n/12 Parallèlement, les solutions commerciales analysées s’avèren
-t inadaptées aux contraintes[]
-[15] [16] [17]
+[15] [16]
 ! Undefined control sequence.
-l.372 ...février 2021), le modèle introduit le \og
-                                                   Q \fg{} --- pour \textit{...
+l.318 ...021crispmlq} , le modèle introduit le \og
+                                                   Q \fg{} pour \textit{Qual...
 
 ! Undefined control sequence.
-l.372 ...r 2021), le modèle introduit le \og Q \fg
-                                                  {} --- pour \textit{Qualit...
+l.318 ...spmlq} , le modèle introduit le \og Q \fg
+                                                  {} pour \textit{Quality} c...
 
-[18] [19] [20]) (ch4.tex [21]
+[17] [18] [19]) [20] (ch4.tex [21]
 Chapitre 2.
 [22]
-Underfull \hbox (badness 1057) in paragraph at lines 45--45
+Underfull \hbox (badness 1057) in paragraph at lines 46--46
 [][]|\TU/lmr/bx/n/12 Responsable qua-[]
 [23] [24]
 
 Package enumitem Warning: Negative labelwidth. This does not make much
-(enumitem)                sense, on input line 113.
+(enumitem)                sense, on input line 114.
 
-[25]
-
-LaTeX Warning: Citation `bct2025circ06' on page 26 undefined on input line 120.
-
-
-[26]
+[25] [26]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 153.
+(caption)                particular \caption on input line 156.
 See the caption package documentation for explanation.
 
 [27]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 166.
+(caption)                particular \caption on input line 171.
 See the caption package documentation for explanation.
 
-[28]
+[28] [29]
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.210   \hline
+l.218   \hline
               
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.211   S
+l.219   S
          cénario nominal     &
 ! Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
-l.211   S
+l.219   S
          cénario nominal     &
-[29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+[30] [31]
+Underfull \hbox (badness 10000) in paragraph at lines 292--296
 [][]
 
-Underfull \hbox (badness 1009) in paragraph at lines 280--284
-[]\TU/lmr/bx/n/12 Étape 2 — Vérification des informations ex-[]
+Underfull \hbox (badness 2393) in paragraph at lines 292--296
+[]\TU/lmr/bx/n/12 Étape 2 : Vérification des informations ex-[]
 
-Underfull \hbox (badness 1983) in paragraph at lines 280--284
+Underfull \hbox (badness 1983) in paragraph at lines 292--296
 []\TU/lmr/bx/n/12 traites. \TU/lmr/m/n/12 L’utilisateur consulte les données ex
 traites[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 292--296
 [][]
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 292--296
 [][]
 
-Underfull \hbox (badness 3780) in paragraph at lines 280--284
-[]\TU/lmr/bx/n/12 Étape 4 — Récapitulatif et soumission fi-[]
-[31] [32]
-Underfull \hbox (badness 2376) in paragraph at lines 314--321
+Underfull \hbox (badness 1303) in paragraph at lines 292--296
+[]\TU/lmr/bx/n/12 Étape 4 : Récapitulatif et soumission finale.[]
+
+Underfull \hbox (badness 1755) in paragraph at lines 292--296
+[]\TU/lmr/m/n/12 L’utilisateur vérifie l’ensemble des informations col-[]
+[32] [33]
+Underfull \hbox (badness 2376) in paragraph at lines 328--335
 []\TU/lmr/m/n/12 - L’analyste lance le filtrage anti-blanchiment, qui[]
-[33] [34] [35]) [36] [37] (ch2.tex
+[34] [35] [36]) [37] [38] (ch2.tex
 Chapitre 3.
-[38] [39] [40] [41] [42] [43] [44] [45] [46]
-Overfull \hbox (15.73027pt too wide) in paragraph at lines 291--309
+[39] [40] [41] [42] [43]
+! Undefined control sequence.
+<argument> ...}\ignorespaces Logo officiel de l\x 
+                                                  27architecture YOLO~\cite ...
+l.143 ...rchitecture YOLO~\cite{ultralytics_docs}}
+                                                  
+! Undefined control sequence.
+<argument> Logo officiel de l\x 
+                                27architecture YOLO~\cite {ultralytics_docs}
+l.143 ...rchitecture YOLO~\cite{ultralytics_docs}}
+                                                  
+! Undefined control sequence.
+<argument> Logo officiel de l\x 
+                                27architecture YOLO~\cite {ultralytics_docs}
+l.143 ...rchitecture YOLO~\cite{ultralytics_docs}}
+                                                  
+[44] [45] [46] [47] [48]
+Overfull \hbox (15.73027pt too wide) in paragraph at lines 305--323
  [][][][] 
+[49]
+Overfull \hbox (29.74686pt too wide) in paragraph at lines 336--354
+ [][][][] 
+[50]
 
-Overfull \hbox (29.74686pt too wide) in paragraph at lines 322--340
- [][][][] 
-[47] [48] [49]) (ch3.tex [50]
+LaTeX Warning: Citation `paddlepaddle_hf' on page 51 undefined on input line 36
+7.
+
+
+LaTeX Warning: Citation `paddlepaddle_hf' on page 51 undefined on input line 37
+1.
+
+
+LaTeX Warning: Citation `paddlepaddle_hf' on page 51 undefined on input line 40
+1.
+
+
+LaTeX Warning: Citation `paddlepaddle_hf' on page 51 undefined on input line 40
+1.
+
+[51] [52]) (ch3.tex [53]
 Chapitre 4.
-[51] [52] [53]
+[54] [55] [56]
 Underfull \hbox (badness 5345) in paragraph at lines 59--59
 [][]|\TU/lmr/m/n/12 YOLOv11m + PP-[]
 
 Underfull \hbox (badness 5345) in paragraph at lines 60--60
 [][]|\TU/lmr/m/n/12 YOLOv11m + PP-[]
-[54]
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 91--91
 [][]|\TU/lmr/m/n/12 Données propres,[]
 
@@ -561,211 +609,133 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--92
 
 Overfull \hbox (2.31798pt too wide) in paragraph at lines 103--103
  []|[]\TU/lmr/bx/n/17.28 Préparation des données (ingénierie des données)| []
-[55] [56]
-Overfull \hbox (17.04338pt too wide) in paragraph at lines 171--172
+[58] [59]
+Overfull \hbox (17.04338pt too wide) in paragraph at lines 173--174
 [][]\TU/lmr/bx/n/12 Passeport : \TU/lmr/m/n/12 address, dob, first_name, image,
  last_name, num_cin, pob, num_pass. []
-[57]
-Overfull \hbox (4.45155pt too wide) in paragraph at lines 199--199
+[60]
+Overfull \hbox (4.45155pt too wide) in paragraph at lines 201--201
  []|[]\TU/lmr/bx/n/14.4 Augmentation contrôlée : simulation de la variabilité r
 éelle| []
-[58] [59] [60] [61] [62]
+[61] [62] [63] [64] [65]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 379.
+(caption)                particular \caption on input line 383.
 See the caption package documentation for explanation.
 
-[63] [64]
-Underfull \hbox (badness 1975) in paragraph at lines 430--431
+[66] [67]
+Underfull \hbox (badness 1975) in paragraph at lines 434--435
 [][]|\TU/lmr/m/n/12 Initialise les poids depuis un modèle pré-[]
 
-Underfull \hbox (badness 1565) in paragraph at lines 440--441
+Underfull \hbox (badness 1565) in paragraph at lines 444--445
 [][]|\TU/lmr/m/n/12 Algorithme d’optimisation. \TU/lmtt/m/n/12 AdamW \TU/lmr/m/
 n/12 offre une[]
 
-Underfull \hbox (badness 1314) in paragraph at lines 480--481
+Underfull \hbox (badness 1314) in paragraph at lines 484--485
 [][]|\TU/lmr/m/n/12 Désactive la mosaïque sur les $\OML/lmm/m/it/12 N$ \TU/lmr/
 m/n/12 dernières[]
-[65] [66] [67] [68] [69] [70] [71] [72]
-Underfull \hbox (badness 1735) in paragraph at lines 761--761
+[68] [69] [70] [71] [72] [73] [74] [75]
+Underfull \hbox (badness 1735) in paragraph at lines 767--767
 [][]|\TU/lmr/m/n/10.95 Score OCR faible ($\OML/lmm/m/it/10.95 <$[]
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ط in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no ج in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ج in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ح in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no د in font [lmmono10-regular]:!
-Missing character: There is no س in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ت in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no و in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ة in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ج in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no و in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no س in font [lmmono10-regular]:!
-Missing character: There is no ت in font [lmmono10-regular]:!
-Missing character: There is no ش in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no ق in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no و in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no ه in font [lmmono10-regular]:!
-Missing character: There is no ج in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no س in font [lmmono10-regular]:!
-Missing character: There is no ت in font [lmmono10-regular]:!
-Missing character: There is no ق in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ع in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no س in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ت in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-[73] [74]
+[76]
+Overfull \hbox (41.17798pt too wide) in alignment at lines 793--796
+ [] [] 
 
-LaTeX Warning: Reference `subsec:yolo11m-detection' on page 75 undefined on inp
-ut line 885.
+Overfull \hbox (41.17798pt too wide) in alignment at lines 796--799
+ [] [] 
 
-[75] [76] [77]
-Overfull \hbox (8.92628pt too wide) in paragraph at lines 1037--1039
+Overfull \hbox (41.17798pt too wide) in alignment at lines 799--835
+ [] [] 
+[77]
+
+LaTeX Warning: Reference `subsec:yolo11m-detection' on page 78 undefined on inp
+ut line 851.
+
+[78] [79] [80]
+Overfull \hbox (8.92628pt too wide) in paragraph at lines 1005--1007
 []\TU/lmr/m/n/12 Ultralytics sauvegarde automatiquement le checkpoint \TU/lmtt/
 m/n/12 best.pt \TU/lmr/m/n/12 à l’époque où le mAP@50[]
-[78]
-Overfull \hbox (28.7487pt too wide) in paragraph at lines 1047--1048
+[81]
+Overfull \hbox (28.7487pt too wide) in paragraph at lines 1015--1016
 []\TU/lmr/m/n/12 structurées (\TU/lmtt/m/n/12 flag1\TU/lmr/m/n/12 , \TU/lmtt/m/
 n/12 flag2\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 num_cin\TU/lmr/m/n/12 ). Les confusi
 ons les plus notables concernent \TU/lmtt/m/n/12 first_name[]
-[79] [80] [81] [82] [83] [84]
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1264--1269
+[82] [83] [84] [85] [86] [87]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1234--1239
  [] [] [] [] [] 
 
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1269--1274
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1239--1244
  [] [] [] [] [] 
 
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1274--1300
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1244--1270
  [] [] [] [] [] 
-[85]
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1309--1314
- [] [] [] [] [] 
-
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1314--1319
+[88]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1279--1284
  [] [] [] [] [] 
 
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1319--1341
- [] [] [] [] [] 
-[86]
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1350--1355
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1284--1289
  [] [] [] [] [] 
 
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1355--1360
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1289--1311
+ [] [] [] [] [] 
+[89]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1320--1325
  [] [] [] [] [] 
 
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1360--1390
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1325--1330
  [] [] [] [] [] 
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1330--1360
+ [] [] [] [] [] 
+[90]
 Missing character: There is no أ in font [lmmono12-regular]:!
 Missing character: There is no إ in font [lmmono12-regular]:!
 Missing character: There is no آ in font [lmmono12-regular]:!
 Missing character: There is no ا in font [lmmono12-regular]:!
 
-Underfull \hbox (badness 1635) in paragraph at lines 1447--1448
+Underfull \hbox (badness 1635) in paragraph at lines 1417--1418
 []$\OML/lmm/m/it/12 EMR[]$\TU/lmr/m/n/12 . Un $\OT1/lmr/m/n/12 ^^A\OML/lmm/m/it
 /12 EMR$ \TU/lmr/m/n/12 positif confirme l’apport du module de post-[]
 
-Underfull \hbox (badness 1502) in paragraph at lines 1473--1474
+Underfull \hbox (badness 1502) in paragraph at lines 1443--1444
 []\TU/lmr/m/n/12 Particulièrement utile pour les champs multi-mots (\TU/lmtt/m/
 n/12 full_name\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 address\TU/lmr/m/n/12 ,[]
-[87] [88]
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1507--1512
+[91]
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1477--1482
  [] [] [] [] 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1512--1517
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1482--1487
  [] [] [] [] 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1517--1524
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1487--1494
  [] [] [] [] 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1532--1532
+[92]
+Underfull \hbox (badness 10000) in paragraph at lines 1502--1502
 [][]|\TU/lmr/bx/n/12 EMR[]
 
-Underfull \hbox (badness 1231) in paragraph at lines 1532--1532
+Underfull \hbox (badness 1231) in paragraph at lines 1502--1502
 [][]|\TU/lmr/bx/n/12 EMR post-[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1532--1533
+Underfull \hbox (badness 10000) in paragraph at lines 1502--1503
 [][]|\TU/lmr/bx/n/12 Score[]
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1529--1534
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1499--1504
  [] [] [] [] [] [] [] 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1537--1537
+Underfull \hbox (badness 10000) in paragraph at lines 1507--1507
 [][]|\TU/lmr/bx/n/12 EMR[]
 
-Underfull \hbox (badness 1231) in paragraph at lines 1537--1537
+Underfull \hbox (badness 1231) in paragraph at lines 1507--1507
 [][]|\TU/lmr/bx/n/12 EMR post-[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1537--1538
+Underfull \hbox (badness 10000) in paragraph at lines 1507--1508
 [][]|\TU/lmr/bx/n/12 Score[]
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1534--1539
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1504--1509
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1539--1554
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1509--1524
  [] [] [] [] [] [] [] 
-[89]
 Missing character: There is no ا in font [lmmono12-regular]:!
 Missing character: There is no ف in font [lmmono12-regular]:!
 Missing character: There is no ر in font [lmmono12-regular]:!
@@ -777,42 +747,42 @@ Missing character: There is no ر in font [lmmono12-regular]:!
 Missing character: There is no ي in font [lmmono12-regular]:!
 Missing character: There is no ل in font [lmmono12-regular]:!
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1568--1573
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1538--1543
  [] [] [] [] 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1573--1578
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1543--1548
  [] [] [] [] 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1578--1585
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1548--1555
  [] [] [] [] 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1593--1593
+Underfull \hbox (badness 10000) in paragraph at lines 1563--1563
 [][]|\TU/lmr/bx/n/12 EMR[]
 
-Underfull \hbox (badness 1231) in paragraph at lines 1593--1593
+Underfull \hbox (badness 1231) in paragraph at lines 1563--1563
 [][]|\TU/lmr/bx/n/12 EMR post-[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1593--1594
+Underfull \hbox (badness 10000) in paragraph at lines 1563--1564
 [][]|\TU/lmr/bx/n/12 Score[]
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1590--1595
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1560--1565
  [] [] [] [] [] [] [] 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1598--1598
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
 [][]|\TU/lmr/bx/n/12 EMR[]
 
-Underfull \hbox (badness 1231) in paragraph at lines 1598--1598
+Underfull \hbox (badness 1231) in paragraph at lines 1568--1568
 [][]|\TU/lmr/bx/n/12 EMR post-[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1598--1599
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1569
 [][]|\TU/lmr/bx/n/12 Score[]
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1595--1600
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1565--1570
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1600--1613
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1570--1583
  [] [] [] [] [] [] [] 
-[90]
+[93]
 Missing character: There is no ا in font [lmmono12-regular]:!
 Missing character: There is no ل in font [lmmono12-regular]:!
 Missing character: There is no ع in font [lmmono12-regular]:!
@@ -821,122 +791,122 @@ Missing character: There is no و in font [lmmono12-regular]:!
 Missing character: There is no ا in font [lmmono12-regular]:!
 Missing character: There is no ن in font [lmmono12-regular]:!
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1627--1632
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1597--1602
  [] [] [] [] 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1632--1637
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1602--1607
  [] [] [] [] 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1637--1644
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1607--1614
  [] [] [] [] 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1652
+Underfull \hbox (badness 10000) in paragraph at lines 1622--1622
 [][]|\TU/lmr/bx/n/12 EMR[]
 
-Underfull \hbox (badness 1231) in paragraph at lines 1652--1652
+Underfull \hbox (badness 1231) in paragraph at lines 1622--1622
 [][]|\TU/lmr/bx/n/12 EMR post-[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1622--1623
 [][]|\TU/lmr/bx/n/12 Score[]
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1649--1654
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1619--1624
  [] [] [] [] [] [] [] 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1657--1657
+Underfull \hbox (badness 10000) in paragraph at lines 1627--1627
 [][]|\TU/lmr/bx/n/12 EMR[]
 
-Underfull \hbox (badness 1231) in paragraph at lines 1657--1657
+Underfull \hbox (badness 1231) in paragraph at lines 1627--1627
 [][]|\TU/lmr/bx/n/12 EMR post-[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1657--1658
+Underfull \hbox (badness 10000) in paragraph at lines 1627--1628
 [][]|\TU/lmr/bx/n/12 Score[]
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1654--1659
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1624--1629
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1659--1684
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1629--1654
  [] [] [] [] [] [] [] 
-[91]
-Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1671
 [][]|\TU/lmr/bx/n/12 DR[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1671
 [][]|\TU/lmr/bx/n/12 EMR[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1671
 [][]|\TU/lmr/bx/n/12 EMR post-[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1672
 [][]|\TU/lmr/bx/n/12 CER post-[]
 
-Overfull \hbox (34.96622pt too wide) in alignment at lines 1698--1703
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1668--1673
  [] [] [] [] [] [] 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1676
 [][]|\TU/lmr/bx/n/12 DR[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1676
 [][]|\TU/lmr/bx/n/12 EMR[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1676
 [][]|\TU/lmr/bx/n/12 EMR post-[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1707
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1677
 [][]|\TU/lmr/bx/n/12 CER post-[]
 
-Overfull \hbox (34.96622pt too wide) in alignment at lines 1703--1708
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1673--1678
  [] [] [] [] [] [] 
 
-Overfull \hbox (34.96622pt too wide) in alignment at lines 1708--1717
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1678--1687
  [] [] [] [] [] [] 
-[92]
+[95]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1740.
+(caption)                particular \caption on input line 1710.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1747.
+(caption)                particular \caption on input line 1717.
 See the caption package documentation for explanation.
 
 Missing character: There is no م in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no م in font [lmroman12-regular]:mapping=tex-text;!
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1754.
+(caption)                particular \caption on input line 1724.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1763--1770
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1733--1740
  [] [] [] [] 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1770--1777
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1740--1747
  [] [] [] [] 
 Missing character: There is no م in font [lmroman10-bolditalic]:mapping=tex-tex
 t;!
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1777--1801
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1747--1771
  [] [] [] [] 
-[93]
-Underfull \hbox (badness 10000) in paragraph at lines 1808--1809
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 1778--1779
 [][]|[]\TU/lmr/bx/n/12 Temps total[]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1814.
+(caption)                particular \caption on input line 1784.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (7.3208pt too wide) in paragraph at lines 1805--1814
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 1775--1784
  [][][] 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1832.
+(caption)                particular \caption on input line 1804.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1839.
+(caption)                particular \caption on input line 1811.
 See the caption package documentation for explanation.
 
 Missing character: There is no ن in font [lmroman12-regular]:mapping=tex-text;!
@@ -949,212 +919,263 @@ Missing character: There is no ب in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ل in font [lmroman12-regular]:mapping=tex-text;!
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1846.
+(caption)                particular \caption on input line 1818.
 See the caption package documentation for explanation.
 
-
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1855--1862
+[97]
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1827--1834
  [] [] [] [] 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1862--1869
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1834--1841
  [] [] [] [] 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1869--1890
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1841--1862
  [] [] [] [] 
-[94]
-Underfull \hbox (badness 10000) in paragraph at lines 1897--1898
+
+Underfull \hbox (badness 10000) in paragraph at lines 1869--1870
 [][]|[]\TU/lmr/bx/n/12 Temps total[]
 
-Underfull \hbox (badness 6461) in paragraph at lines 1901--1901
+Underfull \hbox (badness 6461) in paragraph at lines 1873--1873
 [][]|\TU/lmr/m/n/12 Verso 3 (surexposi-[]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1903.
+(caption)                particular \caption on input line 1875.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (7.3208pt too wide) in paragraph at lines 1894--1903
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 1866--1875
  [][][] 
-[95]
+[98]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1921.
+(caption)                particular \caption on input line 1895.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1928.
+(caption)                particular \caption on input line 1902.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1935.
+(caption)                particular \caption on input line 1909.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1944--1951
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1918--1925
  [] [] [] [] 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1951--1958
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1925--1932
  [] [] [] [] 
 
-Underfull \hbox (badness 2376) in paragraph at lines 1988--1988
+Underfull \hbox (badness 2376) in paragraph at lines 1962--1962
 [][]|\TU/lmr/m/n/12 19/05/1995 []$\OMS/lmsy/m/n/10.95  $ \TU/lmr/m/n/10.95 OCR 
 bruité par motifs[]
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1958--1997
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1932--1971
  [] [] [] [] 
-[96]
-Underfull \hbox (badness 10000) in paragraph at lines 2004--2005
+[99] [100]
+Underfull \hbox (badness 10000) in paragraph at lines 1978--1979
 [][]|[]\TU/lmr/bx/n/12 Temps total[]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2010.
+(caption)                particular \caption on input line 1984.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (7.3208pt too wide) in paragraph at lines 2001--2010
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 1975--1984
  [][][] 
-[97]
-Overfull \hbox (8.05006pt too wide) in paragraph at lines 2016--2017
+
+Overfull \hbox (8.05006pt too wide) in paragraph at lines 1990--1991
 [][]\TU/lmr/bx/n/12 Passeport avec reflet. \TU/lmr/m/n/12 Le reflet localisé ma
 sque entièrement les champs \TU/lmtt/m/n/12 first_name[]
+[101]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2042.
+(caption)                particular \caption on input line 2016.
 See the caption package documentation for explanation.
 
-[98]
-Underfull \hbox (badness 5231) in paragraph at lines 2063--2064
+
+Underfull \hbox (badness 5231) in paragraph at lines 2037--2038
 [][]|\TU/lmr/m/n/12 Localise les champs textuels par YO-[]
-[99]) [100] [101] (ch5.tex
+[102] [103] [104]) [105] [106] (ch5.tex
 Chapitre 5.
-[102]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 26.
-
-
-Overfull \hbox (74.04079pt too wide) in paragraph at lines 28--29
+[107]
+Overfull \hbox (74.04079pt too wide) in paragraph at lines 29--30
 []\TU/lmtt/m/n/12 SuperviseurIA \TU/lmr/m/n/12 et \TU/lmtt/m/n/12 Admin\TU/lmr/
 m/n/12 . La classe \TU/lmtt/m/n/12 Client \TU/lmr/m/n/12 est reliée à la fiche 
 identitaire (\TU/lmtt/m/n/12 InformationUtilisateur\TU/lmr/m/n/12 ),[]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 33.
+(caption)                particular \caption on input line 34.
 See the caption package documentation for explanation.
 
-[103] [104] [105]
+[108] [109] [110]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 89.
+(caption)                particular \caption on input line 93.
 See the caption package documentation for explanation.
 
-[106]
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+[111]
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 []|\TU/lmr/bx/n/12 –[]
 
-Overfull \hbox (14.27136pt too wide) in paragraph at lines 126--127
+Overfull \hbox (14.27136pt too wide) in paragraph at lines 130--131
 []\TU/lmtt/b/n/12 getPourDocument() \TU/lmr/bx/n/12 :[]
 
-Overfull \hbox (38.71536pt too wide) in paragraph at lines 144--144
+Overfull \hbox (38.71536pt too wide) in paragraph at lines 148--148
 [][]\TU/lmr/bx/it/12 InformationUtilisateur[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
 [][]\TU/lmr/bx/it/12 AnalysteKYC[]
-[107] [108] [109]
+[112] [113] [114]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 165.
+(caption)                particular \caption on input line 172.
 See the caption package documentation for explanation.
 
-[110]
-Underfull \hbox (badness 10000) in paragraph at lines 203--203
+[115]
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 [][]\TU/lmr/bx/it/12 DocumentKYC[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--206
+Underfull \hbox (badness 10000) in paragraph at lines 213--213
 [][]\TU/lmr/bx/it/12 DemandeKYC[]
 
-Underfull \hbox (badness 7832) in paragraph at lines 209--209
+Underfull \hbox (badness 7832) in paragraph at lines 216--216
 [][]\TU/lmr/bx/it/12 Utilisateur \TU/lmr/m/n/10.95 (ex-[]
-[111] [112]
-Overfull \hbox (1.85161pt too wide) in paragraph at lines 219--220
+[116] [117]
+Overfull \hbox (1.85161pt too wide) in paragraph at lines 229--230
 []\TU/lmr/m/n/12 de même, la classe \TU/lmtt/m/n/12 Match \TU/lmr/m/n/12 factor
 ise les champs de correspondance entre \TU/lmtt/m/n/12 BlackListMatch\TU/lmr/m/
 n/12 ,[]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 224.
+(caption)                particular \caption on input line 234.
 See the caption package documentation for explanation.
 
-[113]
-Underfull \hbox (badness 2173) in paragraph at lines 252--253
+[118]
+Underfull \hbox (badness 2173) in paragraph at lines 262--263
 [][]|\TU/lmr/m/n/12 Classe abstraite qui factorise les résultats de corres-[]
 
-Underfull \hbox (badness 1515) in paragraph at lines 252--253
+Underfull \hbox (badness 1515) in paragraph at lines 262--263
 []\TU/lmr/m/n/12 sociée. Héritée par \TU/lmtt/m/n/12 BlackListMatch\TU/lmr/m/n/
 12 , \TU/lmtt/m/n/12 PpeListMatch \TU/lmr/m/n/12 et[]
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 [][]\TU/lmr/bx/it/12 AnalysteKYC[]
 
-Overfull \hbox (38.71536pt too wide) in paragraph at lines 276--276
+Overfull \hbox (38.71536pt too wide) in paragraph at lines 286--286
 [][]\TU/lmr/bx/it/12 InformationUtilisateur[]
-[114] [115]
+[119] [120] [121]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 294.
+(caption)                particular \caption on input line 305.
 See the caption package documentation for explanation.
 
-[116] [117]
+[122]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 332.
+See the caption package documentation for explanation.
+
+[123] [124]) (ch6.tex [125]
+Chapitre 6.
+[126] [127]
+Overfull \hbox (1.40887pt too wide) in paragraph at lines 85--85
+[][]|[]\TU/lmr/bx/n/12 Version[]| []
+
+Overfull \hbox (9.14719pt too wide) in alignment at lines 83--87
+ [] [] [] 
+
+Overfull \hbox (1.40887pt too wide) in paragraph at lines 89--89
+[][]|[]\TU/lmr/bx/n/12 Version[]| []
+
+Overfull \hbox (9.14719pt too wide) in alignment at lines 87--91
+ [] [] [] 
+
+Overfull \hbox (9.14719pt too wide) in alignment at lines 91--100
+ [] [] [] 
+[128]
+Underfull \hbox (badness 2726) in paragraph at lines 124--124
+[][]|\TU/lmr/m/n/12 jellyfish / doublemeta-[]
+[129] [130]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 188.
+See the caption package documentation for explanation.
+
+[131]
+Overfull \hbox (35.77354pt too wide) in alignment at lines 201--205
+ [] [] [] [] 
+
+Overfull \hbox (35.77354pt too wide) in alignment at lines 205--209
+ [] [] [] [] 
+
+Overfull \hbox (35.77354pt too wide) in alignment at lines 209--224
+ [] [] [] [] 
+
+Overfull \hbox (12.23622pt too wide) in paragraph at lines 260--260
+[][]|\TU/lmtt/m/n/12 identity_duplicate_alerts| []
+[132] [133] [134]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 320.
 See the caption package documentation for explanation.
 
-[118] [119]) (ch6.tex [120]
-Chapitre 6.
-[121]
+[135]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 36.
+(caption)                particular \caption on input line 334.
 See the caption package documentation for explanation.
 
-[122]
-Overfull \hbox (35.77354pt too wide) in alignment at lines 49--53
- [] [] [] [] 
-
-Overfull \hbox (35.77354pt too wide) in alignment at lines 53--57
- [] [] [] [] 
-
-Overfull \hbox (35.77354pt too wide) in alignment at lines 57--72
- [] [] [] [] 
-
-Overfull \hbox (12.23622pt too wide) in paragraph at lines 108--108
-[][]|\TU/lmtt/m/n/12 identity_duplicate_alerts| []
-[123] [124] [125]
+[136]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 164.
+(caption)                particular \caption on input line 356.
 See the caption package documentation for explanation.
 
-[126]
+[137] [138]) [139] (rapport_PFE.bbl [140]
+Underfull \hbox (badness 4441) in paragraph at lines 56--62
+[][]\TU/lmr/m/n/12 Microsoft Learn.  Introduction à l’extraction d’informations
+ — vision[]
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 178.
-See the caption package documentation for explanation.
+Underfull \hbox (badness 1215) in paragraph at lines 56--62
+[]\TU/lmr/m/n/12 par ordinateur.  [][]$[][][][][] [] [] [] [][][][][] [] [][][]
+[][][][][][] [] [][][] [] [][][][][][] [] [][][][][][][][] [] [][][][][][][] []
+$[][]
 
-[127]
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
+[][]\TU/lmr/m/n/12 Neurodata Group.  Tunisian id card ocr using neuropar-[]
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 198.
-See the caption package documentation for explanation.
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
+[]\TU/lmr/m/n/12 ser python api sdk.  [][]$[][][][][] [] [] [] [][][][][][] [] 
+[][][] [] [][][][][][][][][][][][][][][] []$[][]
 
-[128] [129]) [130] (rapport_PFE.bbl [131]) [132] (rapport_PFE.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
+[][]$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$[]
+[]\TU/lmr/m/n/12 .[]
+[141]
+Underfull \hbox (badness 2653) in paragraph at lines 71--77
+[][]\TU/lmr/m/n/12 Nikhil Rao.  Yolov11 explained : Next-level object detection
+ with en-[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--77
+[]\TU/lmr/m/n/12 hanced speed and accuracy.  [][]$[][][][][] [] [] [] [][][][][
+][] [] [][][] [] [][][][][][][][][][][][][][][][] []$[][]
+
+Overfull \hbox (154.40161pt too wide) in paragraph at lines 71--77
+[][]$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][]$[][]\TU/lmr/m/n/12 .[]
+) [142] (rapport_PFE.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 
 LaTeX Warning: There were undefined references.
 
  )
 (see the transcript file for additional information)
-Output written on rapport_PFE.pdf (133 pages).
+Output written on rapport_PFE.pdf (143 pages).
 Transcript written on rapport_PFE.log.

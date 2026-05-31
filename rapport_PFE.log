@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.5.30)  30 MAY 2026 23:23
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.5.30)  31 MAY 2026 05:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1263,8 +1263,25 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 File: caption-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for caption packa
 ge for XeTeX engine
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 69.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 69.
+(C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/textpos\textpos.sty
+Package: textpos 2022/07/23 v1.10.1
+Package textpos Info: choosing support for LaTeX3 on input line 60.
+\TP@textbox=\box139
+\TP@holdbox=\box140
+\TPHorizModule=\dimen325
+\TPVertModule=\dimen326
+\TP@margin=\dimen327
+\TP@absmargin=\dimen328
+
+Grid set 16 x 16 = 37.34424pt x 52.81541pt
+\TPboxrulesize=\dimen329
+\TP@ox=\dimen330
+\TP@oy=\dimen331
+\TP@tbargs=\toks59
+TextBlockOrigin set to 0pt x 0pt
+)
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 70.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 70.
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/bidi\float-xetex-bidi.d
 ef
@@ -1273,26 +1290,26 @@ or XeTeX engine
 ) (rapport_PFE.aux)
 \openout1 = `rapport_PFE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1328,7 +1345,7 @@ LaTeX Font Info:    ... okay on input line 275.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 275.
+Package hyperref Info: Link coloring OFF on input line 322.
 (rapport_PFE.out) (rapport_PFE.out)
 \@outlinefile=\write4
 \openout4 = `rapport_PFE.out'.
@@ -1336,49 +1353,67 @@ Package hyperref Info: Link coloring OFF on input line 275.
 \Etoc@tf=\read4
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 278.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-78.
+File: images/FST.png Graphic file (type bmp)
+<images/FST.png>
+File: images/UTM.png Graphic file (type bmp)
+<images/UTM.png>
 
+! Undefined control sequence.
+<recently read> \og 
+                    
+l.325 \couverture
+                 
+? 
+! Undefined control sequence.
+\couverture ...matique\\ \og Computer Science \fg 
+                                                  {} Spécialité : Génie Logi...
+l.325 \couverture
+                 
+? 
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
+25.
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-78.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
+25.
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-278.
+325.
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-278.
+325.
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11> on input line 278.
+(Font)              <12> on input line 325.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.69997> on input line 278.
+(Font)              <8> on input line 325.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.5> on input line 278.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 278
+(Font)              <6> on input line 325.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 325
 .
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 278
+LaTeX Font Info:    Trying to load font information for U+msb on input line 325
 .
 
 (C:\Users\yessi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+File: images/image_ch1/logo_bte.png Graphic file (type bmp)
+<images/image_ch1/logo_bte.png>
+
 [1
 
 ]
@@ -1387,33 +1422,36 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [1
 
-] [2] [3] [4] [5] (ch1.tex
+] [2] [3]
+Overfull \hbox (11.99997pt too wide) in alignment at lines 344--390
+ [] [] 
+ []
+
+[4
+
+
+] [5] (ch1.tex
 Chapitre 1.
+
+LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
+(Font)              using `TU/lmr/bx/n' instead on input line 1.
+
 [6
 
 
 ]
+! Undefined control sequence.
+l.22 ...de cette dynamique est le lancement de \og
+                                                   NEO BTE \fg{} : une plate...
+
+? 
+! Undefined control sequence.
+l.22 ...amique est le lancement de \og NEO BTE \fg
+                                                  {} : une plateforme bancai...
+
+? 
 File: images/image_ch1/logo_bte.png Graphic file (type bmp)
 <images/image_ch1/logo_bte.png>
-
-! Undefined control sequence.
-l.31 ...de cette dynamique est le lancement de \og
-                                                   NEO BTE \fg{} : une plate...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.31 ...amique est le lancement de \og NEO BTE \fg
-                                                  {} : une plateforme bancai...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 [7
 
 ]
@@ -1421,23 +1459,15 @@ File: images copy/image_ch1/organigramme.png Graphic file (type bmp)
 <images copy/image_ch1/organigramme.png>
 
 ! Undefined control sequence.
-l.53 ... KYC (\textit{Know Your Customer}), ou \og
+l.49 ... KYC (\textit{Know Your Customer}), ou \og
                                                    Connaissance du Client \f...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
+? 
 ! Undefined control sequence.
-l.53 ...tomer}), ou \og Connaissance du Client \fg
+l.49 ...tomer}), ou \og Connaissance du Client \fg
                                                   {}, désigne l'ensemble des...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
+? 
 [8]
 File: images/image_ch1/SLIDE 1_ Hors ligne3.png Graphic file (type bmp)
 <images/image_ch1/SLIDE 1_ Hors ligne3.png>
@@ -1447,139 +1477,134 @@ File: images/image_ch1/SLIDE 2_ En ligne.png Graphic file (type bmp)
 File: images/image_ch1/SLIDE 3_ Automatis.png Graphic file (type bmp)
 <images/image_ch1/SLIDE 3_ Automatis.png>
  [10]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 130.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 130.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 130.
-
-Underfull \hbox (badness 2393) in paragraph at lines 135--135
-[][]|\TU/lmr/m/n/10.95 Groupe d’Action Fi-[]
+Underfull \hbox (badness 3635) in paragraph at lines 126--126
+[][]|\TU/lmr/m/n/12 Organisme international fixant[]
  []
 
 
-Underfull \hbox (badness 5504) in paragraph at lines 135--135
-[]\TU/lmr/m/n/10.95 nancière (GAFI) —[]
+Underfull \hbox (badness 2626) in paragraph at lines 126--126
+[]\TU/lmr/m/n/12 les standards mondiaux LCB-[]
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 137.
+(Font)              <5> on input line 127.
 
-Underfull \hbox (badness 1242) in paragraph at lines 140--140
-[][]|\TU/lmr/m/n/10.95 Applicable aux solutions traitant[]
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+[][]|\TU/lmr/m/n/12 Règlement Général[]
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 140--140
-[]\TU/lmr/m/n/10.95 des données de ressortissants ou[]
+Underfull \hbox (badness 3118) in paragraph at lines 130--130
+[][]|\TU/lmr/m/n/12 Applicable aux solutions trai-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
-[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][] [] [][] [] [][] []$[][]
+Underfull \hbox (badness 2065) in paragraph at lines 153--153
+[]\TU/lmr/m/n/12 banques tunisiennes l’identi-[]
  []
 
 
-Overfull \hbox (44.86502pt too wide) in paragraph at lines 141--142
-[][]$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][]$[][][]| []
+Underfull \hbox (badness 3189) in paragraph at lines 153--153
+[]\TU/lmr/m/n/12 fication rigoureuse de leurs[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][][] [] [][][] []$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[][]|\TU/lmr/m/n/12 Circulaire de la[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[][]$[][][][][] [] [][][][][][][] [] [][][][][] []$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]\TU/lmr/m/n/12 Banque Centrale[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[][]$[][][][][][][][][] [] [][][][][][][][] [] [][][] []$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]\TU/lmr/m/n/12 de Tunisie (BCT)[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[][]$[][][][][][][][][] [] [][][][][][][][][] [] [][] []$[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-[]\TU/lmr/m/n/10.95 Centrale de Tunisie[]
- []
-
-
-Underfull \hbox (badness 1867) in paragraph at lines 165--165
-[]\TU/lmr/m/n/10.95 procédures de vigilance \TU/lmr/m/it/10.95 Know[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 [][]|[][][]$[][][][][] [] [] [] [][][] [] [][][] [] [][][] [] [][] []$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
-[][]$[][][] [] [][][][][][][][] [] [][][][] [] [][][] [] [][] []$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+[][]$[][][] [] [][][][][][][][] [] [][][][][][][][][] []$[][]
  []
 
 
-Underfull \hbox (badness 8151) in paragraph at lines 168--168
-[]\TU/lmr/m/n/10.95 63 — Instance Na-[]
+Underfull \hbox (badness 1048) in paragraph at lines 160--160
+[]\TU/lmr/m/n/12 Données Personnelles[]
  []
 
 
-Underfull \hbox (badness 4779) in paragraph at lines 168--168
-[]\TU/lmr/m/n/10.95 tionale de Protection[]
- []
-
-
-Underfull \hbox (badness 7468) in paragraph at lines 168--168
-[]\TU/lmr/m/n/10.95 des Données Person-[]
- []
-
-
-Underfull \hbox (badness 1325) in paragraph at lines 169--169
-[]\TU/lmr/m/n/10.95 doit être déclarée à l’INPDP.[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 [][]|[][][]$[][][][][] [] [] [] [][][] [] [][][][][] [] [][] []$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
-[][]|\TU/lmr/m/n/10.95 Commission Tuni-[]
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[][]|\TU/lmr/m/n/12 Commission Tuni-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
-[]\TU/lmr/m/n/10.95 sienne des Analyses[]
+Underfull \hbox (badness 3701) in paragraph at lines 164--164
+[]\TU/lmr/m/n/12 sienne des Analyses[]
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 172--172
-[]\TU/lmr/m/n/10.95 Financières (CTAF) /[]
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[]\TU/lmr/m/n/12 Financières (CTAF)[]
  []
 
 
-Underfull \hbox (badness 5802) in paragraph at lines 172--172
-[]\TU/lmr/m/n/10.95 du Marché Financier[]
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[]\TU/lmr/m/n/12 / Banque Centrale[]
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 164--164
+[]\TU/lmr/m/n/12 de Tunisie (BCT) /[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[]\TU/lmr/m/n/12 Conseil du Marché[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[][]|\TU/lmr/m/n/12 Principaux régulateurs su-[]
+ []
+
+
+Underfull \hbox (badness 6428) in paragraph at lines 165--165
+[]\TU/lmr/m/n/12 pervisant respectivement la[]
+ []
+
+
+Underfull \hbox (badness 6110) in paragraph at lines 165--165
+[]\TU/lmr/m/n/12 conformité LCB-FT et les[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]\TU/lmr/m/n/12 rapports de transactions[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]\TU/lmr/m/n/12 suspectes, les institutions[]
  []
 
 [11] [12]
 File: images/image_ch1/KYC_Agence_Vs_NeoBte.png Graphic file (type bmp)
 <images/image_ch1/KYC_Agence_Vs_NeoBte.png>
  [13]
-Overfull \hbox (37.0943pt too wide) in paragraph at lines 225--251
- [][][][] 
- []
-
-[14]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 237.
+ [14]
 Overfull \hbox (3.83417pt too wide) in paragraph at lines 272--273
 [][]\TU/lmr/bx/n/12 Dépendance cloud systématique : \TU/lmr/m/n/12 les trois pl
 ateformes analysées transmettent[]
@@ -1591,44 +1616,29 @@ Overfull \hbox (1.36348pt too wide) in paragraph at lines 273--274
 ement bilingue arabe/latin, propre[]
  []
 
-
-Overfull \hbox (19.0476pt too wide) in paragraph at lines 293--294
-[][]\TU/lmr/m/n/12 Parallèlement, les solutions commerciales analysées s’avèren
-t inadaptées aux contraintes[]
- []
-
-[15] [16] [17]
+[15] [16]
 ! Undefined control sequence.
-l.372 ...février 2021), le modèle introduit le \og
-                                                   Q \fg{} --- pour \textit{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+l.318 ...021crispmlq} , le modèle introduit le \og
+                                                   Q \fg{} pour \textit{Qual...
 
+? 
 ! Undefined control sequence.
-l.372 ...r 2021), le modèle introduit le \og Q \fg
-                                                  {} --- pour \textit{Qualit...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+l.318 ...spmlq} , le modèle introduit le \og Q \fg
+                                                  {} pour \textit{Quality} c...
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 376.
+? 
+[17]
 File: images/image_ch1/crispMl_Q.png Graphic file (type bmp)
 <images/image_ch1/crispMl_Q.png>
-[18] [19] [20]
+ [18] [19]
 File: images/image_ch1/plannification du travail.PNG Graphic file (type bmp)
 <images/image_ch1/plannification du travail.PNG>
-) (ch4.tex [21]
+) [20] (ch4.tex [21]
 Chapitre 2.
 [22
 
 ]
-Underfull \hbox (badness 1057) in paragraph at lines 45--45
+Underfull \hbox (badness 1057) in paragraph at lines 46--46
 [][]|\TU/lmr/bx/n/12 Responsable qua-[]
  []
 
@@ -1637,20 +1647,15 @@ Underfull \hbox (badness 1057) in paragraph at lines 45--45
 ] [24]
 
 Package enumitem Warning: Negative labelwidth. This does not make much
-(enumitem)                sense, on input line 113.
+(enumitem)                sense, on input line 114.
 
-[25]
-
-LaTeX Warning: Citation `bct2025circ06' on page 26 undefined on input line 120.
-
-
-[26]
+[25] [26]
 File: images/architectures/logique.png Graphic file (type bmp)
 <images/architectures/logique.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 153.
+(caption)                particular \caption on input line 156.
 See the caption package documentation for explanation.
 
 [27]
@@ -1659,129 +1664,170 @@ File: images/architectures/physique.png Graphic file (type bmp)
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 166.
+(caption)                particular \caption on input line 171.
 See the caption package documentation for explanation.
 
+[28]
 File: images/image_ch4/usecaseGlobale.png Graphic file (type bmp)
 <images/image_ch4/usecaseGlobale.png>
-[28]
+ [29]
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.210   \hline
+l.218   \hline
               
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
+? 
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.211   S
+l.219   S
          cénario nominal     &
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
+? 
 ! Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
-l.211   S
+l.219   S
          cénario nominal     &
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-[29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+? 
+[30] [31]
+Underfull \hbox (badness 10000) in paragraph at lines 292--296
 [][]
  []
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 280--284
-[]\TU/lmr/bx/n/12 Étape 2 — Vérification des informations ex-[]
+Underfull \hbox (badness 2393) in paragraph at lines 292--296
+[]\TU/lmr/bx/n/12 Étape 2 : Vérification des informations ex-[]
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 280--284
+Underfull \hbox (badness 1983) in paragraph at lines 292--296
 []\TU/lmr/bx/n/12 traites. \TU/lmr/m/n/12 L’utilisateur consulte les données ex
 traites[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 292--296
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 292--296
 [][]
  []
 
 
-Underfull \hbox (badness 3780) in paragraph at lines 280--284
-[]\TU/lmr/bx/n/12 Étape 4 — Récapitulatif et soumission fi-[]
+Underfull \hbox (badness 1303) in paragraph at lines 292--296
+[]\TU/lmr/bx/n/12 Étape 4 : Récapitulatif et soumission finale.[]
  []
 
-[31] [32]
-Underfull \hbox (badness 2376) in paragraph at lines 314--321
+
+Underfull \hbox (badness 1755) in paragraph at lines 292--296
+[]\TU/lmr/m/n/12 L’utilisateur vérifie l’ensemble des informations col-[]
+ []
+
+[32] [33]
+Underfull \hbox (badness 2376) in paragraph at lines 328--335
 []\TU/lmr/m/n/12 - L’analyste lance le filtrage anti-blanchiment, qui[]
  []
 
-[33] [34] [35]) [36] [37
+[34] [35] [36]) [37]
+File: images/ornement.png Graphic file (type bmp)
+<images/ornement.png>
+File: images/ornement.png Graphic file (type bmp)
+<images/ornement.png>
+ [38
 
 ] (ch2.tex
 Chapitre 3.
-[38
+[39
 
 
 ]
 File: images/image_chap2/ia_ml_dl.png Graphic file (type bmp)
 <images/image_chap2/ia_ml_dl.png>
- [39
+ [40
 
 ]
 File: images/image_chap2/1742401020360.png Graphic file (type bmp)
 <images/image_chap2/1742401020360.png>
- [40]
+ [41]
 File: images/image_chap2/detectionObjet.png Graphic file (type bmp)
 <images/image_chap2/detectionObjet.png>
- [41]
+ [42]
 File: images/image_chap2/onevtwoStage.png Graphic file (type bmp)
 <images/image_chap2/onevtwoStage.png>
+ [43]
 File: images/image_chap2/yoloLogo.png Graphic file (type bmp)
 <images/image_chap2/yoloLogo.png>
- [42]
+
+! Undefined control sequence.
+<argument> ...}\ignorespaces Logo officiel de l\x 
+                                                  27architecture YOLO~\cite ...
+l.143 ...rchitecture YOLO~\cite{ultralytics_docs}}
+                                                  
+? 
+! Undefined control sequence.
+<argument> Logo officiel de l\x 
+                                27architecture YOLO~\cite {ultralytics_docs}
+l.143 ...rchitecture YOLO~\cite{ultralytics_docs}}
+                                                  
+? 
+! Undefined control sequence.
+<argument> Logo officiel de l\x 
+                                27architecture YOLO~\cite {ultralytics_docs}
+l.143 ...rchitecture YOLO~\cite{ultralytics_docs}}
+                                                  
+? 
 File: images/image_chap2/detection.png Graphic file (type bmp)
 <images/image_chap2/detection.png>
- [43]
+[44]
 File: images/image_chap2/TimelineCycle-removebg-preview.png Graphic file (type 
 bmp)
 <images/image_chap2/TimelineCycle-removebg-preview.png>
+ [45]
 File: images/image_chap2/Latency.png Graphic file (type bmp)
 <images/image_chap2/Latency.png>
- [44]
+ [46]
 File: images/image_chap2/optical-character-recognition.png Graphic file (type b
 mp)
 <images/image_chap2/optical-character-recognition.png>
- [45] [46]
-Overfull \hbox (15.73027pt too wide) in paragraph at lines 291--309
+ [47] [48]
+Overfull \hbox (15.73027pt too wide) in paragraph at lines 305--323
  [][][][] 
  []
 
-
-Overfull \hbox (29.74686pt too wide) in paragraph at lines 322--340
+[49]
+Overfull \hbox (29.74686pt too wide) in paragraph at lines 336--354
  [][][][] 
  []
 
-[47] [48] [49]) (ch3.tex [50]
+[50]
+
+LaTeX Warning: Citation `paddlepaddle_hf' on page 51 undefined on input line 36
+7.
+
+
+LaTeX Warning: Citation `paddlepaddle_hf' on page 51 undefined on input line 37
+1.
+
+
+LaTeX Warning: Citation `paddlepaddle_hf' on page 51 undefined on input line 40
+1.
+
+
+LaTeX Warning: Citation `paddlepaddle_hf' on page 51 undefined on input line 40
+1.
+
+[51] [52]) (ch3.tex [53]
 Chapitre 4.
-[51
+[54
 
-] [52]
+] [55]
 File: images/image_ch3/pipline_1_phase.jpg Graphic file (type bmp)
 <images/image_ch3/pipline_1_phase.jpg>
 File: images/image_ch3/pipline_2_phase.png Graphic file (type bmp)
 <images/image_ch3/pipline_2_phase.png>
- [53
+ [56
 
 ]
 Underfull \hbox (badness 5345) in paragraph at lines 59--59
@@ -1793,7 +1839,7 @@ Underfull \hbox (badness 5345) in paragraph at lines 60--60
 [][]|\TU/lmr/m/n/12 YOLOv11m + PP-[]
  []
 
-[54]
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 91--91
 [][]|\TU/lmr/m/n/12 Données propres,[]
  []
@@ -1818,179 +1864,110 @@ Overfull \hbox (2.31798pt too wide) in paragraph at lines 103--103
  []|[]\TU/lmr/bx/n/17.28 Préparation des données (ingénierie des données)| []
  []
 
-[55]
+[58]
 File: images/image_ch3/Processus de_restauration_CIN Recto.png Graphic file (ty
 pe bmp)
 <images/image_ch3/Processus de_restauration_CIN Recto.png>
 File: images/image_ch3/Simulation_de_contraintes_optiques réelles.png Graphic f
 ile (type bmp)
 <images/image_ch3/Simulation_de_contraintes_optiques réelles.png>
- [56]
+ [59]
 File: images/image_ch3/Pipeline_creation_template_verso.png Graphic file (type 
 bmp)
 <images/image_ch3/Pipeline_creation_template_verso.png>
 
-Overfull \hbox (17.04338pt too wide) in paragraph at lines 171--172
+Overfull \hbox (17.04338pt too wide) in paragraph at lines 173--174
 [][]\TU/lmr/bx/n/12 Passeport : \TU/lmr/m/n/12 address, dob, first_name, image,
  last_name, num_cin, pob, num_pass. []
  []
 
-[57]
+[60]
 File: images/image_ch3/roboflow.png Graphic file (type bmp)
 <images/image_ch3/roboflow.png>
 
-Overfull \hbox (4.45155pt too wide) in paragraph at lines 199--199
+Overfull \hbox (4.45155pt too wide) in paragraph at lines 201--201
  []|[]\TU/lmr/bx/n/14.4 Augmentation contrôlée : simulation de la variabilité r
 éelle| []
  []
 
-[58]
+[61]
 File: images/image_ch3/rotation.png Graphic file (type bmp)
 <images/image_ch3/rotation.png>
- [59]
+ [62]
 File: images/image_ch3/lumino_grayscale.png Graphic file (type bmp)
 <images/image_ch3/lumino_grayscale.png>
- [60]
+ [63]
 File: images/image_ch3/bruit_flou_gainCamera.png Graphic file (type bmp)
 <images/image_ch3/bruit_flou_gainCamera.png>
- [61] [62]
+ [64] [65]
 File: images/image_ch3/piplineIa.png Graphic file (type bmp)
 <images/image_ch3/piplineIa.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 379.
+(caption)                particular \caption on input line 383.
 See the caption package documentation for explanation.
 
-[63] [64]
-Underfull \hbox (badness 1975) in paragraph at lines 430--431
+[66] [67]
+Underfull \hbox (badness 1975) in paragraph at lines 434--435
 [][]|\TU/lmr/m/n/12 Initialise les poids depuis un modèle pré-[]
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 440--441
+Underfull \hbox (badness 1565) in paragraph at lines 444--445
 [][]|\TU/lmr/m/n/12 Algorithme d’optimisation. \TU/lmtt/m/n/12 AdamW \TU/lmr/m/
 n/12 offre une[]
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 480--481
+Underfull \hbox (badness 1314) in paragraph at lines 484--485
 [][]|\TU/lmr/m/n/12 Désactive la mosaïque sur les $\OML/lmm/m/it/12 N$ \TU/lmr/
 m/n/12 dernières[]
  []
 
-[65] [66]
+[68] [69]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 501.
+(Font)              <10> on input line 505.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 501.
- [67] [68
+(Font)              <7> on input line 505.
+ [70] [71
 
-] [69] [70] [71]
+] [72] [73] [74]
 File: images copy/image_ch3/workflowPaddle.png Graphic file (type bmp)
 <images copy/image_ch3/workflowPaddle.png>
- [72]
-Underfull \hbox (badness 1735) in paragraph at lines 761--761
+ [75]
+Underfull \hbox (badness 1735) in paragraph at lines 767--767
 [][]|\TU/lmr/m/n/10.95 Score OCR faible ($\OML/lmm/m/it/10.95 <$[]
  []
 
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ط in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no ج in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ج in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ح in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no د in font [lmmono10-regular]:!
-Missing character: There is no س in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ت in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no و in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ة in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ج in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no و in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no س in font [lmmono10-regular]:!
-Missing character: There is no ت in font [lmmono10-regular]:!
-Missing character: There is no ش in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no ق in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no و in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no ي in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no ه in font [lmmono10-regular]:!
-Missing character: There is no ج in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no س in font [lmmono10-regular]:!
-Missing character: There is no ت in font [lmmono10-regular]:!
-Missing character: There is no ق in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ل in font [lmmono10-regular]:!
-Missing character: There is no ع in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-Missing character: There is no ا in font [lmmono10-regular]:!
-Missing character: There is no ن in font [lmmono10-regular]:!
-Missing character: There is no س in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ت in font [lmmono10-regular]:!
-Missing character: There is no م in font [lmmono10-regular]:!
-Missing character: There is no ب in font [lmmono10-regular]:!
-Missing character: There is no ر in font [lmmono10-regular]:!
-[73] [74]
+[76]
+File: images/image_ch3/json.png Graphic file (type bmp)
+<images/image_ch3/json.png>
 
-LaTeX Warning: Reference `subsec:yolo11m-detection' on page 75 undefined on inp
-ut line 885.
+Overfull \hbox (41.17798pt too wide) in alignment at lines 793--796
+ [] [] 
+ []
 
-[75] [76]
+
+Overfull \hbox (41.17798pt too wide) in alignment at lines 796--799
+ [] [] 
+ []
+
+
+Overfull \hbox (41.17798pt too wide) in alignment at lines 799--835
+ [] [] 
+ []
+
+[77]
+
+LaTeX Warning: Reference `subsec:yolo11m-detection' on page 78 undefined on inp
+ut line 851.
+
+[78] [79]
 File: images/image_ch3/results_recto/results.png Graphic file (type bmp)
 <images/image_ch3/results_recto/results.png>
- [77]
-Overfull \hbox (8.92628pt too wide) in paragraph at lines 1037--1039
+ [80]
+Overfull \hbox (8.92628pt too wide) in paragraph at lines 1005--1007
 []\TU/lmr/m/n/12 Ultralytics sauvegarde automatiquement le checkpoint \TU/lmtt/
 m/n/12 best.pt \TU/lmr/m/n/12 à l’époque où le mAP@50[]
  []
@@ -1998,149 +1975,149 @@ m/n/12 best.pt \TU/lmr/m/n/12 à l’époque où le mAP@50[]
 File: images/image_ch3/results_recto/confusion_matrix.png Graphic file (type bm
 p)
 <images/image_ch3/results_recto/confusion_matrix.png>
-[78]
-Overfull \hbox (28.7487pt too wide) in paragraph at lines 1047--1048
+[81]
+Overfull \hbox (28.7487pt too wide) in paragraph at lines 1015--1016
 []\TU/lmr/m/n/12 structurées (\TU/lmtt/m/n/12 flag1\TU/lmr/m/n/12 , \TU/lmtt/m/
 n/12 flag2\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 num_cin\TU/lmr/m/n/12 ). Les confusi
 ons les plus notables concernent \TU/lmtt/m/n/12 first_name[]
  []
 
-[79]
+[82]
 File: images/image_ch3/results_verso/results.png Graphic file (type bmp)
 <images/image_ch3/results_verso/results.png>
- [80]
+ [83]
 File: images/image_ch3/results_verso/confusion_matrix.png Graphic file (type bm
 p)
 <images/image_ch3/results_verso/confusion_matrix.png>
- [81] [82]
+ [84] [85]
 File: images/image_ch3/results_passport/results.png Graphic file (type bmp)
 <images/image_ch3/results_passport/results.png>
- [83]
+ [86]
 File: images/image_ch3/results_passport/confusion_matrix.png Graphic file (type
  bmp)
 <images/image_ch3/results_passport/confusion_matrix.png>
- [84]
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1264--1269
+ [87]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1234--1239
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1269--1274
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1239--1244
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1274--1300
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1244--1270
  [] [] [] [] [] 
  []
 
-[85]
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1309--1314
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1314--1319
+[88]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1279--1284
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1319--1341
- [] [] [] [] [] 
- []
-
-[86]
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1350--1355
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1284--1289
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1355--1360
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1289--1311
+ [] [] [] [] [] 
+ []
+
+[89]
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1320--1325
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (42.48262pt too wide) in alignment at lines 1360--1390
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1325--1330
  [] [] [] [] [] 
  []
 
+
+Overfull \hbox (42.48262pt too wide) in alignment at lines 1330--1360
+ [] [] [] [] [] 
+ []
+
+[90]
 Missing character: There is no أ in font [lmmono12-regular]:!
 Missing character: There is no إ in font [lmmono12-regular]:!
 Missing character: There is no آ in font [lmmono12-regular]:!
 Missing character: There is no ا in font [lmmono12-regular]:!
 
-Underfull \hbox (badness 1635) in paragraph at lines 1447--1448
+Underfull \hbox (badness 1635) in paragraph at lines 1417--1418
 []$\OML/lmm/m/it/12 EMR[]$\TU/lmr/m/n/12 . Un $\OT1/lmr/m/n/12 ^^A\OML/lmm/m/it
 /12 EMR$ \TU/lmr/m/n/12 positif confirme l’apport du module de post-[]
  []
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 1473--1474
+Underfull \hbox (badness 1502) in paragraph at lines 1443--1444
 []\TU/lmr/m/n/12 Particulièrement utile pour les champs multi-mots (\TU/lmtt/m/
 n/12 full_name\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 address\TU/lmr/m/n/12 ,[]
  []
 
-[87] [88]
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1507--1512
+[91]
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1477--1482
  [] [] [] [] 
  []
 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1512--1517
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1482--1487
  [] [] [] [] 
  []
 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1517--1524
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1487--1494
  [] [] [] [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1532--1532
+[92]
+Underfull \hbox (badness 10000) in paragraph at lines 1502--1502
 [][]|\TU/lmr/bx/n/12 EMR[]
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1532--1532
+Underfull \hbox (badness 1231) in paragraph at lines 1502--1502
 [][]|\TU/lmr/bx/n/12 EMR post-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1532--1533
+Underfull \hbox (badness 10000) in paragraph at lines 1502--1503
 [][]|\TU/lmr/bx/n/12 Score[]
  []
 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1529--1534
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1499--1504
  [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1537--1537
+Underfull \hbox (badness 10000) in paragraph at lines 1507--1507
 [][]|\TU/lmr/bx/n/12 EMR[]
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1537--1537
+Underfull \hbox (badness 1231) in paragraph at lines 1507--1507
 [][]|\TU/lmr/bx/n/12 EMR post-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1537--1538
+Underfull \hbox (badness 10000) in paragraph at lines 1507--1508
 [][]|\TU/lmr/bx/n/12 Score[]
  []
 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1534--1539
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1504--1509
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1539--1554
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1509--1524
  [] [] [] [] [] [] [] 
  []
 
-[89]
 Missing character: There is no ا in font [lmmono12-regular]:!
 Missing character: There is no ف in font [lmmono12-regular]:!
 Missing character: There is no ر in font [lmmono12-regular]:!
@@ -2152,66 +2129,66 @@ Missing character: There is no ر in font [lmmono12-regular]:!
 Missing character: There is no ي in font [lmmono12-regular]:!
 Missing character: There is no ل in font [lmmono12-regular]:!
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1568--1573
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1538--1543
  [] [] [] [] 
  []
 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1573--1578
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1543--1548
  [] [] [] [] 
  []
 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1578--1585
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1548--1555
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1593--1593
+Underfull \hbox (badness 10000) in paragraph at lines 1563--1563
 [][]|\TU/lmr/bx/n/12 EMR[]
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1593--1593
+Underfull \hbox (badness 1231) in paragraph at lines 1563--1563
 [][]|\TU/lmr/bx/n/12 EMR post-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1593--1594
+Underfull \hbox (badness 10000) in paragraph at lines 1563--1564
 [][]|\TU/lmr/bx/n/12 Score[]
  []
 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1590--1595
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1560--1565
  [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1598--1598
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
 [][]|\TU/lmr/bx/n/12 EMR[]
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1598--1598
+Underfull \hbox (badness 1231) in paragraph at lines 1568--1568
 [][]|\TU/lmr/bx/n/12 EMR post-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1598--1599
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1569
 [][]|\TU/lmr/bx/n/12 Score[]
  []
 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1595--1600
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1565--1570
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1600--1613
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1570--1583
  [] [] [] [] [] [] [] 
  []
 
-[90]
+[93]
 Missing character: There is no ا in font [lmmono12-regular]:!
 Missing character: There is no ل in font [lmmono12-regular]:!
 Missing character: There is no ع in font [lmmono12-regular]:!
@@ -2220,134 +2197,134 @@ Missing character: There is no و in font [lmmono12-regular]:!
 Missing character: There is no ا in font [lmmono12-regular]:!
 Missing character: There is no ن in font [lmmono12-regular]:!
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1627--1632
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1597--1602
  [] [] [] [] 
  []
 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1632--1637
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1602--1607
  [] [] [] [] 
  []
 
 
-Overfull \hbox (7.3208pt too wide) in alignment at lines 1637--1644
+Overfull \hbox (7.3208pt too wide) in alignment at lines 1607--1614
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1652
+Underfull \hbox (badness 10000) in paragraph at lines 1622--1622
 [][]|\TU/lmr/bx/n/12 EMR[]
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1652--1652
+Underfull \hbox (badness 1231) in paragraph at lines 1622--1622
 [][]|\TU/lmr/bx/n/12 EMR post-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1622--1623
 [][]|\TU/lmr/bx/n/12 Score[]
  []
 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1649--1654
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1619--1624
  [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1657--1657
+Underfull \hbox (badness 10000) in paragraph at lines 1627--1627
 [][]|\TU/lmr/bx/n/12 EMR[]
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1657--1657
+Underfull \hbox (badness 1231) in paragraph at lines 1627--1627
 [][]|\TU/lmr/bx/n/12 EMR post-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1657--1658
+Underfull \hbox (badness 10000) in paragraph at lines 1627--1628
 [][]|\TU/lmr/bx/n/12 Score[]
  []
 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1654--1659
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1624--1629
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (30.29482pt too wide) in alignment at lines 1659--1684
+Overfull \hbox (30.29482pt too wide) in alignment at lines 1629--1654
  [] [] [] [] [] [] [] 
  []
 
-[91]
-Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1671
 [][]|\TU/lmr/bx/n/12 DR[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1671
 [][]|\TU/lmr/bx/n/12 EMR[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1701--1701
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1671
 [][]|\TU/lmr/bx/n/12 EMR post-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1672
 [][]|\TU/lmr/bx/n/12 CER post-[]
  []
 
 
-Overfull \hbox (34.96622pt too wide) in alignment at lines 1698--1703
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1668--1673
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1676
 [][]|\TU/lmr/bx/n/12 DR[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1676
 [][]|\TU/lmr/bx/n/12 EMR[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1676
 [][]|\TU/lmr/bx/n/12 EMR post-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1707
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1677
 [][]|\TU/lmr/bx/n/12 CER post-[]
  []
 
 
-Overfull \hbox (34.96622pt too wide) in alignment at lines 1703--1708
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1673--1678
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (34.96622pt too wide) in alignment at lines 1708--1717
+Overfull \hbox (34.96622pt too wide) in alignment at lines 1678--1687
  [] [] [] [] [] [] 
  []
 
-[92]
+[95]
 File: testImages/rectoquality/recto1.png Graphic file (type bmp)
 <testImages/rectoquality/recto1.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1740.
+(caption)                particular \caption on input line 1710.
 See the caption package documentation for explanation.
 
 File: testImages/rectoquality/recto2.png Graphic file (type bmp)
 <testImages/rectoquality/recto2.png>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1747.
+(caption)                particular \caption on input line 1717.
 See the caption package documentation for explanation.
 
 Missing character: There is no م in font [lmroman12-regular]:mapping=tex-text;!
@@ -2356,38 +2333,38 @@ File: testImages/rectoquality/recto3.png Graphic file (type bmp)
 <testImages/rectoquality/recto3.png>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1754.
+(caption)                particular \caption on input line 1724.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1763--1770
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1733--1740
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1770--1777
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1740--1747
  [] [] [] [] 
  []
 
 Missing character: There is no م in font [lmroman10-bolditalic]:mapping=tex-tex
 t;!
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1777--1801
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1747--1771
  [] [] [] [] 
  []
 
-[93]
-Underfull \hbox (badness 10000) in paragraph at lines 1808--1809
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 1778--1779
 [][]|[]\TU/lmr/bx/n/12 Temps total[]
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1814.
+(caption)                particular \caption on input line 1784.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (7.3208pt too wide) in paragraph at lines 1805--1814
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 1775--1784
  [][][] 
  []
 
@@ -2395,14 +2372,14 @@ File: testImages/versoquality/verso1.png Graphic file (type bmp)
 <testImages/versoquality/verso1.png>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1832.
+(caption)                particular \caption on input line 1804.
 See the caption package documentation for explanation.
 
 File: testImages/versoquality/verso2.png Graphic file (type bmp)
 <testImages/versoquality/verso2.png>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1839.
+(caption)                particular \caption on input line 1811.
 See the caption package documentation for explanation.
 
 Missing character: There is no ن in font [lmroman12-regular]:mapping=tex-text;!
@@ -2417,135 +2394,137 @@ File: testImages/versoquality/verso3.png Graphic file (type bmp)
 <testImages/versoquality/verso3.png>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1846.
+(caption)                particular \caption on input line 1818.
 See the caption package documentation for explanation.
 
-
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1855--1862
+[97]
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1827--1834
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1862--1869
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1834--1841
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1869--1890
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1841--1862
  [] [] [] [] 
  []
 
-[94]
-Underfull \hbox (badness 10000) in paragraph at lines 1897--1898
+
+Underfull \hbox (badness 10000) in paragraph at lines 1869--1870
 [][]|[]\TU/lmr/bx/n/12 Temps total[]
  []
 
 
-Underfull \hbox (badness 6461) in paragraph at lines 1901--1901
+Underfull \hbox (badness 6461) in paragraph at lines 1873--1873
 [][]|\TU/lmr/m/n/12 Verso 3 (surexposi-[]
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1903.
+(caption)                particular \caption on input line 1875.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (7.3208pt too wide) in paragraph at lines 1894--1903
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 1866--1875
  [][][] 
  []
 
-[95]
+[98]
 File: testImages/passQuality/passebonne.jpg Graphic file (type bmp)
 <testImages/passQuality/passebonne.jpg>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1921.
+(caption)                particular \caption on input line 1895.
 See the caption package documentation for explanation.
 
 File: testImages/passQuality/passmotif.png Graphic file (type bmp)
 <testImages/passQuality/passmotif.png>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1928.
+(caption)                particular \caption on input line 1902.
 See the caption package documentation for explanation.
 
 File: testImages/passQuality/passsoleil.png Graphic file (type bmp)
 <testImages/passQuality/passsoleil.png>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1935.
+(caption)                particular \caption on input line 1909.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1944--1951
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1918--1925
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1951--1958
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1925--1932
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 1988--1988
+Underfull \hbox (badness 2376) in paragraph at lines 1962--1962
 [][]|\TU/lmr/m/n/12 19/05/1995 []$\OMS/lmsy/m/n/10.95  $ \TU/lmr/m/n/10.95 OCR 
 bruité par motifs[]
  []
 
 
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1958--1997
+Overfull \hbox (10.16624pt too wide) in alignment at lines 1932--1971
  [] [] [] [] 
  []
 
-[96]
-Underfull \hbox (badness 10000) in paragraph at lines 2004--2005
+[99] [100]
+Underfull \hbox (badness 10000) in paragraph at lines 1978--1979
 [][]|[]\TU/lmr/bx/n/12 Temps total[]
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2010.
+(caption)                particular \caption on input line 1984.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (7.3208pt too wide) in paragraph at lines 2001--2010
+Overfull \hbox (7.3208pt too wide) in paragraph at lines 1975--1984
  [][][] 
  []
 
-[97]
-Overfull \hbox (8.05006pt too wide) in paragraph at lines 2016--2017
+
+Overfull \hbox (8.05006pt too wide) in paragraph at lines 1990--1991
 [][]\TU/lmr/bx/n/12 Passeport avec reflet. \TU/lmr/m/n/12 Le reflet localisé ma
 sque entièrement les champs \TU/lmtt/m/n/12 first_name[]
  []
 
+[101]
 File: images/image_ch3/integration_ia.png Graphic file (type bmp)
 <images/image_ch3/integration_ia.png>
 
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2042.
+(caption)                particular \caption on input line 2016.
 See the caption package documentation for explanation.
 
-[98]
-Underfull \hbox (badness 5231) in paragraph at lines 2063--2064
+
+Underfull \hbox (badness 5231) in paragraph at lines 2037--2038
 [][]|\TU/lmr/m/n/12 Localise les champs textuels par YO-[]
  []
 
-[99]) [100] [101
+[102] [103] [104]) [105]
+File: images/ornement.png Graphic file (type bmp)
+<images/ornement.png>
+File: images/ornement.png Graphic file (type bmp)
+<images/ornement.png>
+ [106
 
 ] (ch5.tex
 Chapitre 5.
-[102
+[107
 
 
 ]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 26.
-
-
-Overfull \hbox (74.04079pt too wide) in paragraph at lines 28--29
+Overfull \hbox (74.04079pt too wide) in paragraph at lines 29--30
 []\TU/lmtt/m/n/12 SuperviseurIA \TU/lmr/m/n/12 et \TU/lmtt/m/n/12 Admin\TU/lmr/
 m/n/12 . La classe \TU/lmtt/m/n/12 Client \TU/lmr/m/n/12 est reliée à la fiche 
 identitaire (\TU/lmtt/m/n/12 InformationUtilisateur\TU/lmr/m/n/12 ),[]
@@ -2555,69 +2534,69 @@ File: conceptionImage/classe1F.png Graphic file (type bmp)
 <conceptionImage/classe1F.png>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 33.
+(caption)                particular \caption on input line 34.
 See the caption package documentation for explanation.
 
-[103
+[108
 
-] [104] [105]
+] [109] [110]
 File: conceptionImage/classe2F.png Graphic file (type bmp)
 <conceptionImage/classe2F.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 89.
+(caption)                particular \caption on input line 93.
 See the caption package documentation for explanation.
 
-[106]
+[111]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 126.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 130.
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 []|\TU/lmr/bx/n/12 –[]
  []
 
 
-Overfull \hbox (14.27136pt too wide) in paragraph at lines 126--127
+Overfull \hbox (14.27136pt too wide) in paragraph at lines 130--131
 []\TU/lmtt/b/n/12 getPourDocument() \TU/lmr/bx/n/12 :[]
  []
 
 
-Overfull \hbox (38.71536pt too wide) in paragraph at lines 144--144
+Overfull \hbox (38.71536pt too wide) in paragraph at lines 148--148
 [][]\TU/lmr/bx/it/12 InformationUtilisateur[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
 [][]\TU/lmr/bx/it/12 AnalysteKYC[]
  []
 
-[107] [108] [109]
+[112] [113] [114]
 File: conceptionImage/classe3F.png Graphic file (type bmp)
 <conceptionImage/classe3F.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 165.
+(caption)                particular \caption on input line 172.
 See the caption package documentation for explanation.
 
-[110]
-Underfull \hbox (badness 10000) in paragraph at lines 203--203
+[115]
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 [][]\TU/lmr/bx/it/12 DocumentKYC[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--206
+Underfull \hbox (badness 10000) in paragraph at lines 213--213
 [][]\TU/lmr/bx/it/12 DemandeKYC[]
  []
 
 
-Underfull \hbox (badness 7832) in paragraph at lines 209--209
+Underfull \hbox (badness 7832) in paragraph at lines 216--216
 [][]\TU/lmr/bx/it/12 Utilisateur \TU/lmr/m/n/10.95 (ex-[]
  []
 
-[111] [112]
-Overfull \hbox (1.85161pt too wide) in paragraph at lines 219--220
+[116] [117]
+Overfull \hbox (1.85161pt too wide) in paragraph at lines 229--230
 []\TU/lmr/m/n/12 de même, la classe \TU/lmtt/m/n/12 Match \TU/lmr/m/n/12 factor
 ise les champs de correspondance entre \TU/lmtt/m/n/12 BlackListMatch\TU/lmr/m/
 n/12 ,[]
@@ -2627,135 +2606,227 @@ File: conceptionImage/classe4F.png Graphic file (type bmp)
 <conceptionImage/classe4F.png>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 224.
+(caption)                particular \caption on input line 234.
 See the caption package documentation for explanation.
 
-[113]
-Underfull \hbox (badness 2173) in paragraph at lines 252--253
+[118]
+Underfull \hbox (badness 2173) in paragraph at lines 262--263
 [][]|\TU/lmr/m/n/12 Classe abstraite qui factorise les résultats de corres-[]
  []
 
 
-Underfull \hbox (badness 1515) in paragraph at lines 252--253
+Underfull \hbox (badness 1515) in paragraph at lines 262--263
 []\TU/lmr/m/n/12 sociée. Héritée par \TU/lmtt/m/n/12 BlackListMatch\TU/lmr/m/n/
 12 , \TU/lmtt/m/n/12 PpeListMatch \TU/lmr/m/n/12 et[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 [][]\TU/lmr/bx/it/12 AnalysteKYC[]
  []
 
 
-Overfull \hbox (38.71536pt too wide) in paragraph at lines 276--276
+Overfull \hbox (38.71536pt too wide) in paragraph at lines 286--286
 [][]\TU/lmr/bx/it/12 InformationUtilisateur[]
  []
 
-[114] [115]
+[119] [120] [121]
 File: conceptionImage/activite.png Graphic file (type bmp)
 <conceptionImage/activite.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 294.
+(caption)                particular \caption on input line 305.
 See the caption package documentation for explanation.
 
-[116] [117]
+[122]
 File: conceptionImage/seq_workflow_agentkyc.png Graphic file (type bmp)
 <conceptionImage/seq_workflow_agentkyc.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 320.
+(caption)                particular \caption on input line 332.
 See the caption package documentation for explanation.
 
-[118] [119]) (ch6.tex [120]
+[123] [124]) (ch6.tex [125]
 Chapitre 6.
-[121
+[126
+
+] [127
 
 ]
+Overfull \hbox (1.40887pt too wide) in paragraph at lines 85--85
+[][]|[]\TU/lmr/bx/n/12 Version[]| []
+ []
+
+
+Overfull \hbox (9.14719pt too wide) in alignment at lines 83--87
+ [] [] [] 
+ []
+
+
+Overfull \hbox (1.40887pt too wide) in paragraph at lines 89--89
+[][]|[]\TU/lmr/bx/n/12 Version[]| []
+ []
+
+
+Overfull \hbox (9.14719pt too wide) in alignment at lines 87--91
+ [] [] [] 
+ []
+
+
+Overfull \hbox (9.14719pt too wide) in alignment at lines 91--100
+ [] [] [] 
+ []
+
+[128]
+Underfull \hbox (badness 2726) in paragraph at lines 124--124
+[][]|\TU/lmr/m/n/12 jellyfish / doublemeta-[]
+ []
+
+[129] [130]
 File: images/image_ch5/archi_globale.png Graphic file (type bmp)
 <images/image_ch5/archi_globale.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 36.
+(caption)                particular \caption on input line 188.
 See the caption package documentation for explanation.
 
-[122
-
-]
-Overfull \hbox (35.77354pt too wide) in alignment at lines 49--53
+[131]
+Overfull \hbox (35.77354pt too wide) in alignment at lines 201--205
  [] [] [] [] 
  []
 
 
-Overfull \hbox (35.77354pt too wide) in alignment at lines 53--57
+Overfull \hbox (35.77354pt too wide) in alignment at lines 205--209
  [] [] [] [] 
  []
 
 
-Overfull \hbox (35.77354pt too wide) in alignment at lines 57--72
+Overfull \hbox (35.77354pt too wide) in alignment at lines 209--224
  [] [] [] [] 
  []
 
 
-Overfull \hbox (12.23622pt too wide) in paragraph at lines 108--108
+Overfull \hbox (12.23622pt too wide) in paragraph at lines 260--260
 [][]|\TU/lmtt/m/n/12 identity_duplicate_alerts| []
  []
 
-[123] [124] [125]
+[132] [133] [134]
 File: images/image-ch6/Diagramme de contrat d'interface système.png Graphic fil
 e (type bmp)
 <images/image-ch6/Diagramme de contrat d'interface système.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 164.
+(caption)                particular \caption on input line 320.
 See the caption package documentation for explanation.
 
-[126]
+[135]
 File: images/image-ch6/ChatGPT Image 30 mai 2026, 03_02_18.png Graphic file (ty
 pe bmp)
 <images/image-ch6/ChatGPT Image 30 mai 2026, 03_02_18.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 178.
+(caption)                particular \caption on input line 334.
 See the caption package documentation for explanation.
 
-[127]
+[136]
 File: images/image_ch5/communicationIa.png Graphic file (type bmp)
 <images/image_ch5/communicationIa.png>
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 198.
+(caption)                particular \caption on input line 356.
 See the caption package documentation for explanation.
 
-[128] [129]) [130] (rapport_PFE.bbl [131
+[137] [138]) [139] (rapport_PFE.bbl [140
 
-]) [132
+]
+Underfull \hbox (badness 4441) in paragraph at lines 56--62
+[][]\TU/lmr/m/n/12 Microsoft Learn.  Introduction à l’extraction d’informations
+ — vision[]
+ []
 
-] (rapport_PFE.aux)
+
+Underfull \hbox (badness 1215) in paragraph at lines 56--62
+[]\TU/lmr/m/n/12 par ordinateur.  [][]$[][][][][] [] [] [] [][][][][] [] [][][]
+[][][][][][] [] [][][] [] [][][][][][] [] [][][][][][][][] [] [][][][][][][] []
+$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
+[][]\TU/lmr/m/n/12 Neurodata Group.  Tunisian id card ocr using neuropar-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
+[]\TU/lmr/m/n/12 ser python api sdk.  [][]$[][][][][] [] [] [] [][][][][][] [] 
+[][][] [] [][][][][][][][][][][][][][][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
+[][]$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$[]
+[]\TU/lmr/m/n/12 .[]
+ []
+
+[141
+
+]
+Underfull \hbox (badness 2653) in paragraph at lines 71--77
+[][]\TU/lmr/m/n/12 Nikhil Rao.  Yolov11 explained : Next-level object detection
+ with en-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--77
+[]\TU/lmr/m/n/12 hanced speed and accuracy.  [][]$[][][][][] [] [] [] [][][][][
+][] [] [][][] [] [][][][][][][][][][][][][][][][] []$[][]
+ []
+
+
+Overfull \hbox (154.40161pt too wide) in paragraph at lines 71--77
+[][]$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][]$[][]\TU/lmr/m/n/12 .[]
+ []
+
+) [142] (rapport_PFE.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 
 
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `rapport_PFE.out' has not changed.
-(rerunfilecheck)             Checksum: 2819A7C8D287A99B15EBA738370DB29D;40604.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `rapport_PFE.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `rapport_PFE.out':
+(rerunfilecheck)             Before: 3D5A249AD96D7E6903080CA4AF992C57;22674
+(rerunfilecheck)             After:  D07DC01AE87B91ED2C42897C642767CF;22676.
  ) 
 Here is how much of TeX's memory you used:
- 35755 strings out of 402987
- 758274 string characters out of 5448524
- 1318075 words of memory out of 5000000
- 63772 multiletter control sequences out of 15000+600000
- 683269 words of font info for 154 fonts, out of 8000000 for 9000
+ 35900 strings out of 402987
+ 760995 string characters out of 5448524
+ 1311732 words of memory out of 5000000
+ 63915 multiletter control sequences out of 15000+600000
+ 671167 words of font info for 132 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,16n,108p,1702b,1253s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,14n,108p,1702b,1253s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on rapport_PFE.pdf (133 pages).
+Output written on rapport_PFE.pdf (143 pages).

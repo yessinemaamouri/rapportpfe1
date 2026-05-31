@@ -30,6 +30,7 @@
 \usepackage{pifont}
 \usepackage{longtable}
 \usepackage{caption}
+\usepackage[absolute,overlay]{textpos}
 
 % ============================================================
 % COULEURS DU PROJET
@@ -73,7 +74,7 @@
 % ============================================================
 
 % Profondeur : sections + sous-sections dans les sommaires locaux
-\etocsettocdepth{subsubsection}
+\etocsettocdepth{subsection}
 
 % Style des entrées dans les sommaires locaux
 \etocsetstyle{section}
@@ -84,13 +85,13 @@
 
 \etocsetstyle{subsection}
   {}
-  {\vspace{0.2em}\leavevmode\hspace{1.5em}\etocnumber\hspace{0.5em}\etocname\dotfill\etocpage\par}
+  {\vspace{0.2em}\leavevmode\normalfont\hspace{1.5em}\etocnumber\hspace{0.5em}\etocname\dotfill\etocpage\par}
   {}
   {}
 
 \etocsetstyle{subsubsection}
   {}
-  {\vspace{0.1em}\leavevmode\hspace{3em}\small\etocnumber\hspace{0.5em}\etocname\dotfill\etocpage\par}
+  {}
   {}
   {}
 
@@ -115,18 +116,28 @@
 % ============================================================
 
 \setcounter{secnumdepth}{4}
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{2}
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
 \renewcommand{\theparagraph}{\alph{paragraph}.}
 
-\titleformat{\chapter}
+\titleformat{\chapter}[block]
   {\normalfont\LARGE\bfseries\color{bleu_principal}}
-  {\thechapter.}
-  {1em}
   {}
+  {0pt}
+  {%
+    \begin{flushright}
+      \colorbox{bleu_principal}{%
+        \parbox[b][2.5cm][c]{2.5cm}{%
+          \centering
+          \rotatebox{90}{\textcolor{white}{\small\scshape Chapitre}}\hspace{4pt}%
+          \textcolor{white}{\fontsize{60}{60}\selectfont\thechapter}%
+        }%
+      }\\[8pt]
+    \end{flushright}%
+  }
 
 \titlespacing*{\chapter}
-  {0pt}{-40pt}{20pt}
+  {0pt}{-20pt}{20pt}
 
 % Style des sections
 \titleformat{\section}
@@ -176,40 +187,90 @@
 \newcommand{\couverture}{%
   \begin{titlepage}
     \centering
-    \vspace*{3cm}
-    
-    {\fontsize{28}{34}\selectfont\textbf{\textcolor{bleu_principal}{Rapport de Projet de Fin d'Études}}}
-    
-    \vspace{2cm}
-    
-    {\fontsize{24}{28}\selectfont\textbf{Automatisation du Processus KYC}}
-    
-    \vspace{1.5cm}
-    
-    {\fontsize{16}{19}\selectfont Solution d'Intelligence Artificielle pour la Vérification d'Identité Client}
-    
-    \vspace{3cm}
-    
-    {\fontsize{14}{17}\selectfont\textbf{Banque de Tunisie et des Émirats (BTE)}}
-    
+    \begin{textblock*}{4.5cm}(17mm,25mm)
+      \includegraphics[width=3cm]{images/FST.png}
+    \end{textblock*}
+    \begin{textblock*}{4cm}(152mm,20mm)
+      \includegraphics[width=2.5cm]{images/UTM.png}
+    \end{textblock*}
     \vspace{1cm}
-    
-    {\fontsize{12}{14}\selectfont Établissement : Faculté des Sciences de Tunis}
-    
-    \vspace{3cm}
-    
-    {\fontsize{14}{17}\selectfont\textbf{Année académique 2025-2026}}
-    
+
+    {République Tunisienne\\
+    Ministère de l'Enseignement Supérieur \\ 
+    et de la Recherche Scientifique\\
+    Université de Tunis El Manar\\
+    Faculté des Sciences de Tunis\\
+    Département des Sciences de l'Informatique}
+
+    \vspace{0.2cm}
+    \rule{\textwidth}{0.1pt}
+    \vspace{0.5cm}
+
+    {\Large \textbf{RAPPORT DE PROJET DE FIN D'ÉTUDES}}
+
+    \vspace{1cm}
+
+    {Présenté en vue de l'obtention du\\
+    Diplôme de Licence en Science de l'Informatique\\
+    \og Computer Science \fg{} Spécialité : Génie Logiciel et Système d'Information}
+
+    \vspace{0.5cm}
+
+    Par\\
+    \vspace{0.25cm}
+    {\Large Maamouri Yessine}
+
     \vfill
-    
-    {\fontsize{11}{13}\selectfont
-      \begin{tabular}{ll}
-        \textbf{Encadrant académique :} & [À compléter] \\
-        \textbf{Encadrant professionnel :} & Équipe DCIO - BTE \\
-        \textbf{Période de stage :} & [À compléter] \\
-      \end{tabular}
+
+    \textcolor{bleu_principal}{\rule{\textwidth}{1.6pt}}\vspace*{-\baselineskip}\vspace{2.7pt}
+    \textcolor{bleu_principal}{\rule{\textwidth}{0.4pt}}
+
+    \vspace{0.75\baselineskip}
+
+    {\Large \textbf{Conception et développement d'une plateforme KYC automatisée basée sur l'intelligence artificielle pour la validation des clients bancaires}}
+
+    \textcolor{bleu_principal}{\rule{\textwidth}{0.4pt}}\vspace*{-\baselineskip}\vspace{3.6pt}
+    \textcolor{bleu_principal}{\rule{\textwidth}{1.6pt}}
+
+    \vspace{0.75\baselineskip}
+
+    \begin{minipage}{0.45\textwidth}
+      \raggedright
+      {\large \textbf{Organisme d'accueil :}\\
+      Siège de la Banque de Tunisie\\
+      et des Émirats (BTE)}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+      \raggedleft
+      \includegraphics[width=3.5cm]{images/image_ch1/logo_bte.png}
+    \end{minipage}
+
+    \vspace{0.5cm}
+
+    \begin{flushleft}
+      {\normalsize {Soutenu le} : \hspace{0.5em}/06/2026, devant le jury :}\\[4pt]
+      {\normalsize \textbf{Président} : Mme. Naama Amdouni}\\
+      {\normalsize \textbf{Rapporteur} : Mme. Manel Zekri}\\
+      {\normalsize \textbf{Encadrant Académique} : Mme. Anissa Omrane}\\
+      {\normalsize \textbf{Encadrant Professionnel} : M. Ala Eddine Karoui }
+    \end{flushleft}
+
+    \vfill
+
+    \fbox{
+      \begin{minipage}{150pt}
+        \centering
+        \vspace{8pt}
+        {\Large GLSI - 2025/2026}
+        \vspace{8pt}
+      \end{minipage}
     }
-    
+
+    \vspace{1cm}
+
+    {\large Année Universitaire : 2025-2026}
+
   \end{titlepage}
   \clearpage
 }
@@ -221,23 +282,16 @@
 \newcommand{\pageplan}[3][]{%
   \clearpage
   \thispagestyle{empty}
-  \vspace*{3cm}
-
+  \vspace*{\fill}
   \begin{center}
-    \textbf{\fontsize{32}{38}\selectfont\textcolor{bleu_principal}{CHAPITRE #2}}
-
+    \includegraphics[width=7cm]{images/ornement.png}\\[0.8cm]
+    {\fontsize{18}{22}\selectfont\textcolor{bleu_principal}{\textbf{Chapitre #2 :}}}\\[0.4cm]
     \ifx&#1&\else
-      \vspace{0.6cm}
-      {\fontsize{14}{17}\selectfont\textcolor{bleu_clair}{\textit{#1}}}
+      {\fontsize{20}{26}\selectfont\textcolor{bleu_principal}{\textbf{#1}}}\\[0.8cm]
     \fi
-
-    \ifx&#3&\else
-      \vspace{2cm}
-      \begin{tcolorbox}[colback=bleu_clair!10, colframe=bleu_clair, boxrule=2pt, arc=4mm, left=1cm, right=1cm, top=1cm, bottom=1cm, width=0.75\textwidth]
-        #3
-      \end{tcolorbox}
-    \fi
+    \includegraphics[width=7cm]{images/ornement.png}
   \end{center}
+  \vspace*{\fill}
   \clearpage
 }
 
@@ -252,17 +306,10 @@
   \thispagestyle{empty}
   \vspace*{\fill}
   \begin{center}
-    {\color{partie_bleu}\rule{\linewidth}{1.2pt}}
-    \vspace{1.2cm}
-
-    {\fontsize{18}{22}\selectfont\textcolor{partie_bleu}{\textbf{Partie #1}}}
-
-    \vspace{0.8cm}
-
-    {\fontsize{22}{28}\selectfont\textcolor{partie_bleu}{\textbf{#2}}}
-
-    \vspace{1.2cm}
-    {\color{partie_bleu}\rule{\linewidth}{1.2pt}}
+    \includegraphics[width=7cm]{images/ornement.png}\\[0.8cm]
+    {\fontsize{18}{22}\selectfont\textcolor{bleu_principal}{\textbf{Partie #1}}}\\[0.4cm]
+    {\fontsize{22}{28}\selectfont\textcolor{bleu_principal}{\textbf{#2}}}\\[0.8cm]
+    \includegraphics[width=7cm]{images/ornement.png}
   \end{center}
   \vspace*{\fill}
   \clearpage
@@ -279,6 +326,68 @@
 
 % Table des matières
 \tableofcontents
+\clearpage
+
+% ============================================================
+% LISTE DES ABRÉVIATIONS
+% ============================================================
+
+\clearpage
+\thispagestyle{fancy}
+\addcontentsline{toc}{chapter}{Liste des Abréviations}
+\begin{center}
+  {\LARGE\bfseries\color{bleu_principal} Liste des Abréviations}
+\end{center}
+\vspace{1em}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{longtable}{@{}>{\bfseries}p{3.5cm}p{12cm}@{}}
+  ADIA    & Abu Dhabi Investment Authority \\
+  AML     & Anti-Money Laundering (Lutte contre le Blanchiment d'Argent) \\
+  API     & Application Programming Interface (Interface de Programmation d'Application) \\
+  BCT     & Banque Centrale de Tunisie \\
+  BTE     & Banque de Tunisie et des Émirats \\
+  CER     & Character Error Rate (Taux d'Erreur Caractère) \\
+  CIN     & Carte d'Identité Nationale \\
+  CMF     & Conseil du Marché Financier \\
+  CNN     & Convolutional Neural Network (Réseau de Neurones Convolutif) \\
+  COCO    & Common Objects in Context \\
+  CPU     & Central Processing Unit (Unité Centrale de Traitement) \\
+  CRISP-DM   & Cross-Industry Standard Process for Data Mining \\
+  CRISP-ML(Q) & Cross-Industry Standard Process for Machine Learning with Quality \\
+  CTAF    & Commission Tunisienne des Analyses Financières \\
+  DCIO    & Direction Centrale de l'Informatique et de l'Organisation \\
+  DL      & Deep Learning (Apprentissage Profond) \\
+  DR      & Detection Rate (Taux de Détection) \\
+  EMR     & Exact Match Rate (Taux de Correspondance Exacte) \\
+  GAFI    & Groupe d'Action Financière \\
+  GPU     & Graphics Processing Unit (Unité de Traitement Graphique) \\
+  HTTPS   & HyperText Transfer Protocol Secure \\
+  IA      & Intelligence Artificielle \\
+  IHM     & Interface Homme-Machine \\
+  INPDP   & Instance Nationale de Protection des Données Personnelles \\
+  IoU     & Intersection over Union \\
+  JSON    & JavaScript Object Notation \\
+  JWT     & JSON Web Token \\
+  KYC     & Know Your Customer (Connaissance du Client) \\
+  LCB-FT  & Lutte Contre le Blanchiment et le Financement du Terrorisme \\
+  LSTM    & Long Short-Term Memory \\
+  mAP     & mean Average Precision (Précision Moyenne Globale) \\
+  ML      & Machine Learning (Apprentissage Automatique) \\
+  MRZ     & Machine Readable Zone (Zone Lisible par Machine) \\
+  OCR     & Optical Character Recognition (Reconnaissance Optique de Caractères) \\
+  PPE     & Personne Politiquement Exposée \\
+  REST    & Representational State Transfer \\
+  RGPD    & Règlement Général sur la Protection des Données \\
+  RIB     & Relevé d'Identité Bancaire \\
+  RTL     & Right-To-Left (Écriture de Droite à Gauche) \\
+  SPPF    & Spatial Pyramid Pooling Fast \\
+  URL     & Uniform Resource Locator \\
+  VLM     & Vision-Language Model (Modèle Vision-Langage) \\
+  VRAM    & Video Random Access Memory \\
+  WER     & Word Error Rate (Taux d'Erreur Mot) \\
+  YOLO    & You Only Look Once \\
+\end{longtable}
 \clearpage
 
 % ============================================================

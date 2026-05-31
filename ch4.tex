@@ -10,6 +10,7 @@
 \localtableofcontents
 \clearpage
 
+Ce chapitre pose les fondements de la phase de réalisation du système eKYC. Il commence par identifier les acteurs impliqués et formaliser l'ensemble des besoins fonctionnels et non fonctionnels de la plateforme, puis décrit l'architecture logique et physique retenue pour y répondre. L'ensemble est consolidé par un diagramme de cas d'utilisation global et la description détaillée de chaque interaction, constituant ainsi le référentiel de conception sur lequel s'appuient les chapitres de réalisation suivants.
 
 %=============================================================
 \section{Spécification des besoins}
@@ -55,16 +56,16 @@ Le système eKYC développé dans ce projet met en interaction plusieurs acteurs
 
 Les exigences fonctionnelles définissent les fonctionnalités clés que le système doit fournir pour satisfaire les besoins des utilisateurs.
 
-\subsubsection{S'inscrire}
+\paragraph*{S'inscrire}
 \begin{itemize}
   \item Créer un compte sur l'application (inscription classique).
 \end{itemize}
-\subsubsection{S'authentifier}
+\paragraph*{S'authentifier}
 \begin{itemize} 
   \item Se connecter à la plateforme avec ses identifiants. 
 \end{itemize}
 
-\subsubsection{Soumettre et suivre un dossier KYC}
+\paragraph*{Soumettre et suivre un dossier KYC}
 \begin{itemize}
   \item Initier un dossier KYC et choisir le type de document à soumettre (CIN ou passeport).
   \item Capturer son document guidé par un retour visuel en temps réel~; le système détecte automatiquement la présence, le type et la qualité du document via YOLOv8n avant de déclencher la capture.
@@ -73,7 +74,7 @@ Les exigences fonctionnelles définissent les fonctionnalités clés que le syst
   \item Suivre l'état de son dossier .
 \end{itemize}
 
-\subsubsection{Demander des services bancaires}
+\paragraph*{Demander des services bancaires}
 
 \noindent Une fois son dossier KYC approuvé et son compte bancaire courant ouvert, le client peut :
 
@@ -84,7 +85,7 @@ Les exigences fonctionnelles définissent les fonctionnalités clés que le syst
   \item Suivre l'état de ses demandes en cours.
 \end{itemize}
 
-\subsubsection{Traiter les dossiers KYC}
+\paragraph*{Traiter les dossiers KYC}
 \begin{itemize}
   \item Consulter la file de traitement des dossiers en attente.
   \item Accéder au détail d'un dossier : données extraites, score de risque, résultat de la comparaison biométrique et alertes AML.
@@ -94,7 +95,7 @@ Les exigences fonctionnelles définissent les fonctionnalités clés que le syst
   \item demander des informations complémentaires au client en précisant les pièces manquantes ou les corrections à apporter.
 \end{itemize}
 
-\subsubsection{Administrer et surveiller la plateforme}
+\paragraph*{Administrer et surveiller la plateforme}
 \begin{itemize}
   \item Consulter le registre global de tous les dossiers, tous statuts confondus.
   \item Consulter le journal d'audit immuable de toutes les actions effectuées.
@@ -110,7 +111,7 @@ Les exigences fonctionnelles définissent les fonctionnalités clés que le syst
 
 Les besoins non fonctionnels définissent les caractéristiques essentielles que doit respecter le système, indépendamment des fonctionnalités métier.
 
-\begin{description}[style=nextline, leftmargin=0pt, labelwidth=!, font=\bfseries\color{bleu_clair}]
+\begin{description}[style=nextline, leftmargin=0pt, labelwidth=!, font=\bfseries\color{black}]
 
   \item[Sécurité]
   Bien que le cadre de ce projet académique n'impose pas de contraintes de sécurité formelles, nous avons fait le choix d'intégrer des mécanismes de sécurité qui se rapprochent au maximum des standards appliqués en environnement bancaire réel. La plateforme manipule des données d'identité sensibles comme les numéros de CIN, les photos de documents et les selfies, ce qui nous a guidés vers l'adoption de bonnes pratiques dès la conception. L'authentification repose sur des tokens JWT dont la durée de validité est limitée à 60 minutes, les mots de passe sont stockés sous forme hachée avec l'algorithme bcrypt, et les tokens sont révoqués immédiatement à la déconnexion. Les agents et administrateurs disposent d'un circuit d'authentification distinct des clients. Une double authentification est mise en place pour les actions critiques : toute décision sur un dossier nécessite une confirmation du mot de passe avant d'être enregistrée. Toutes les actions sensibles comme la connexion, la décision sur un dossier et la modification de paramètres sont tracées dans un journal d'audit horodaté et non modifiable.
@@ -142,6 +143,8 @@ Les besoins non fonctionnels définissent les caractéristiques essentielles que
 \label{sec:architecture-globale}
 %=============================================================
 
+L'architecture de la plateforme eKYC est conçue pour répondre simultanément aux contraintes de performance, de souveraineté des données et de modularité. Elle se décline en deux niveaux complémentaires : une vue logique qui organise les composants fonctionnels du système, et une vue physique qui décrit leur déploiement matériel concret.
+
 \subsection{Architecture logique}
 \label{subsec:architecture-logique}
 
@@ -154,6 +157,8 @@ Les besoins non fonctionnels définissent les caractéristiques essentielles que
   \label{fig:ch4-archi-logique}
 \end{center}
 \vspace{0.6em}
+
+Cette organisation en quatre couches garantit une séparation claire des responsabilités. La vue physique ci-après précise comment ces couches se déploient concrètement sur l'infrastructure matérielle.
 
 \subsection{Architecture physique}
 \label{subsec:architecture-physique}
@@ -168,6 +173,7 @@ l'architecture physique de la plateforme eKYC, présentée dans la Figure~\ref{f
 \end{center}
 \vspace{0.6em}
 
+Les deux vues architecturales ainsi établies servent de base à la modélisation des interactions entre acteurs et système, formalisée dans la section suivante sous forme de diagrammes de cas d'utilisation.
 
 %=============================================================
 \section{Diagramme de cas d'utilisation global}
@@ -182,6 +188,8 @@ Le diagramme de cas d'utilisation global illustrée par la Figure~\ref{fig:uc-gl
     \caption{Diagramme de cas d'utilisation global du système eKYC}
     \label{fig:uc-global}
 \end{figure}
+
+Ce diagramme constitue la vue d'ensemble des interactions du système. Les sous-sections suivantes détaillent chaque cas d'utilisation sous forme de tableaux structurés couvrant l'objectif, les préconditions, le scénario nominal et les alternatives.
 
 %-------------------------------------------------------------
 \subsection{Description des cas d'utilisation}
@@ -227,6 +235,8 @@ Les tableaux suivants décrivent de manière détaillée les principaux cas d'ut
   \label{tab:uc1}
 \end{longtable}
 
+Une fois le compte créé, l'utilisateur peut accéder à la plateforme via le mécanisme d'authentification décrit dans UC2.
+
 % ────────────────────────────────────────────────
 % UC2 — S'authentifier
 % ────────────────────────────────────────────────
@@ -259,6 +269,8 @@ Les tableaux suivants décrivent de manière détaillée les principaux cas d'ut
   \label{tab:uc2}
 \end{longtable}
 
+Authentifié, l'utilisateur peut alors initier son parcours KYC, décrit dans UC3.
+
 % ────────────────────────────────────────────────
 % UC3 — Soumettre une demande KYC
 % ────────────────────────────────────────────────
@@ -277,10 +289,10 @@ Les tableaux suivants décrivent de manière détaillée les principaux cas d'ut
     - Il dispose d'un document d'identité valide (carte d'identité nationale ou passeport) et d'un accès à la caméra de son appareil. \\
   \hline
   Scénario nominal     &
-    \textbf{Étape 1 — Capture du document d'identité.} L'utilisateur choisit le type de document (carte d'identité nationale en deux captures recto/verso, ou passeport en une seule capture). La caméra s'ouvre avec un cadre guide adapté. Le système analyse chaque image en temps réel~; le bouton de capture est initialement désactivé et ne s'active que lorsque le service IA confirme que le document détecté est valide (CIN ou passeport reconnu). L'utilisateur déclenche alors manuellement la capture. L'extraction des données textuelles est déclenchée en arrière-plan. \newline\newline
-    \textbf{Étape 2 — Vérification des informations extraites.} L'utilisateur consulte les données extraites depuis son document. Il peut corriger manuellement tout champ inexact ; chaque correction est enregistrée et transmise à l'analyste KYC. \newline\newline
-    \textbf{Étape 3 — Capture du selfie .} La caméra s'ouvre avec un cadre ovale centré. Le système détecte le visage en temps réel et active la capture dès que le cadrage est satisfaisant. \newline\newline
-    \textbf{Étape 4 — Récapitulatif et soumission finale.} L'utilisateur vérifie l'ensemble des informations collectées, coche les cases de consentement et soumet sa demande. Le dossier complet est enregistré en base de données avec le statut « en attente » et un numéro de référence est communiqué à l'utilisateur. \\
+    \textbf{Étape 1 : Capture du document d'identité.} L'utilisateur choisit le type de document (carte d'identité nationale en deux captures recto/verso, ou passeport en une seule capture). La caméra s'ouvre avec un cadre guide adapté. Le système analyse chaque image en temps réel~; le bouton de capture est initialement désactivé et ne s'active que lorsque le service IA confirme que le document détecté est valide (CIN ou passeport reconnu). L'utilisateur déclenche alors manuellement la capture. L'extraction des données textuelles est déclenchée en arrière-plan. \newline\newline
+    \textbf{Étape 2 : Vérification des informations extraites.} L'utilisateur consulte les données extraites depuis son document. Il peut corriger manuellement tout champ inexact ; chaque correction est enregistrée et transmise à l'analyste KYC. \newline\newline
+    \textbf{Étape 3 : Capture du selfie .} La caméra s'ouvre avec un cadre ovale centré. Le système détecte le visage en temps réel et active la capture dès que le cadrage est satisfaisant. \newline\newline
+    \textbf{Étape 4 : Récapitulatif et soumission finale.} L'utilisateur vérifie l'ensemble des informations collectées, coche les cases de consentement et soumet sa demande. Le dossier complet est enregistré en base de données avec le statut « en attente » et un numéro de référence est communiqué à l'utilisateur. \\
   \hline
   Post-conditions      & Un dossier KYC complet est créé avec le statut « en attente ». L'utilisateur peut suivre l'évolution de son dossier depuis son espace personnel. \\
   \hline
@@ -292,6 +304,8 @@ Les tableaux suivants décrivent de manière détaillée les principaux cas d'ut
   \caption{UC3 --- Soumettre une demande d'ouverture de compte bancaire}
   \label{tab:uc3}
 \end{longtable}
+
+Une fois le dossier soumis par le client, il entre dans la file de traitement de l'analyste KYC, dont les actions sont formalisées dans UC4.
 
 % ────────────────────────────────────────────────
 % UC4 — Traiter un dossier KYC
@@ -330,6 +344,8 @@ Les tableaux suivants décrivent de manière détaillée les principaux cas d'ut
   \label{tab:uc4}
 \end{longtable}
 
+En parallèle du traitement des dossiers, le responsable qualité IA assure la supervision continue des modèles via UC5.
+
 % ────────────────────────────────────────────────
 % UC5 — Surveiller les performances des modèles IA
 % ────────────────────────────────────────────────
@@ -367,4 +383,4 @@ Les tableaux suivants décrivent de manière détaillée les principaux cas d'ut
 \end{longtable}
 \section*{Conclusion du chapitre}
 
-Ce chapitre a défini les acteurs et les besoins du système eKYC, constituant ainsi le socle de la phase de conception et de réalisation présentée au chapitre suivant.
+Ce chapitre a établi le référentiel complet de la plateforme eKYC : identification des quatre profils d'acteurs, formalisation des besoins fonctionnels couvrant l'ensemble du parcours client et des fonctions d'administration, et définition des contraintes non fonctionnelles en matière de sécurité, de confidentialité, de conformité réglementaire et de performance. L'architecture logique et physique retenue traduit ces exigences en une organisation modulaire et souveraine, tandis que les diagrammes de cas d'utilisation en formalisent les interactions. Ces éléments constituent le socle sur lequel s'appuient la conception détaillée et la réalisation présentées dans les chapitres suivants.

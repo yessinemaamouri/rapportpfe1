@@ -14,6 +14,8 @@ La mise en œuvre d'un système d'automatisation du processus KYC repose sur un 
 \label{sec:fondements-theoriques}
 %=============================================================
 
+Cette section pose les bases conceptuelles indispensables à la compréhension du pipeline IA développé dans ce projet. Elle couvre successivement les notions d'intelligence artificielle, de vision par ordinateur et de détection d'objets, en insistant sur les mécanismes qui les relient et qui justifient leur usage conjoint dans un système KYC.
+
 \subsection{Intelligence artificielle, machine learning et deep learning}
 \label{subsec:ia-ml-dl}
 
@@ -22,7 +24,7 @@ Avant d'aborder la vision par ordinateur, il convient de présenter la hiérarch
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{images/image_chap2/ia_ml_dl.png}
-  \caption{\textit{Figure 2.1 --- Relation hiérarchique entre IA, ML et Deep Learning}}
+  \caption{Relation hiérarchique entre Intelligence Artificielle, Machine Learning et Deep Learning}
   \label{fig:ch2-ia-ml-dl}
 \end{figure}
 
@@ -33,6 +35,8 @@ Avant d'aborder la vision par ordinateur, il convient de présenter la hiérarch
 
   \item \textbf{Deep Learning (DL) :} évolution du ML fondée sur des réseaux de neurones profonds, capables de traiter des données complexes (images, audio, texte). Le Deep Learning constitue aujourd'hui le moteur principal des systèmes de vision par ordinateur.
 \end{itemize}
+
+C'est précisément cette capacité du Deep Learning à traiter des données visuelles complexes qui fonde la discipline de la vision par ordinateur, présentée dans la sous-section suivante.
 
 \subsection{Vision par ordinateur et réseaux de neurones}
 \label{subsec:vision-ordinateur}
@@ -54,7 +58,7 @@ Ces applications reposent sur les réseaux de neurones artificiels, brique fonda
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{images/image_chap2/1742401020360.png}
-  \caption{\textit{Figure 2.2 --- Propagation avant et rétropropagation dans un réseau de neurones}}
+  \caption{Propagation avant et rétropropagation dans un réseau de neurones}
   \label{fig:ch2-neurones}
 \end{figure}
 
@@ -76,6 +80,8 @@ Le fonctionnement repose sur deux phases complémentaires et itératives :
   \item \textbf{Rétropropagation (Backpropagation) :} le système calcule l'erreur via une fonction de perte et remonte le réseau pour ajuster les poids grâce à un optimiseur, permettant au modèle d'apprendre de ses erreurs de manière itérative.
 \end{itemize}
 
+Ces réseaux de neurones constituent le socle de toutes les tâches de vision par ordinateur, dont la plus centrale pour ce projet est la détection d'objets, détaillée dans la sous-section suivante.
+
 \subsection{Détection d'objets}
 \label{subsec:detection-objets}
 
@@ -84,9 +90,11 @@ La détection d'objets est une tâche centrale de la vision par ordinateur qui c
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{images/image_chap2/detectionObjet.png}
-  \caption{\textit{Figure 2.3 --- Illustration de la détection d'objets}}
+  \caption{\textit{Illustration de la détection d'objets}}
   \label{fig:ch2-detection-objets}
 \end{figure}
+
+Pour comprendre la place de la détection d'objets dans l'écosystème de la vision par ordinateur, il est utile de la situer parmi les différents niveaux de complexité des tâches visuelles, puis d'examiner les deux grandes familles de méthodes de détection avant de présenter YOLO, le modèle retenu pour ce projet.
 
 \subsubsection{Niveaux de complexité des tâches de vision}
 
@@ -103,6 +111,8 @@ Pour bien situer la détection d'objets dans le spectre des tâches de vision pa
 
   \item \textbf{Segmentation d'instance :} identifier et délimiter chaque objet distinct --- par exemple, séparer deux cartes d'identité disposées côte à côte.
 \end{itemize}
+
+La détection d'objets, placée au centre de ce spectre, est la tâche retenue dans ce projet. Deux grandes familles architecturales permettent de la réaliser, chacune avec ses compromis en termes de vitesse et de précision.
 
 \subsubsection{Méthodes de détection : One-Stage vs Two-Stage}
 
@@ -123,12 +133,14 @@ Ces méthodes utilisent un réseau unique qui mappe directement l'image d'entré
 
 Elles procèdent en deux étapes distinctes : une première génère des propositions de régions d'intérêt (Region Proposals), et une seconde affine et classifie ces propositions. Leur précision est généralement supérieure, au prix d'une latence plus élevée et d'un coût computationnel important. Exemples : Faster R-CNN, R-CNN.
 
+C'est dans la famille One-Stage que s'inscrit l'algorithme YOLO, retenu pour ce projet en raison de son excellence en détection temps réel, présenté ci-après.
+
 \subsubsection{YOLO (You Only Look Once)}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.45\textwidth]{images/image_chap2/yoloLogo.png}
-  \caption{\textit{Figure 2.5 --- Logo YOLO}}
+  \caption{Logo officiel de l\x27architecture YOLO~\cite{ultralytics_docs}}
   \label{fig:ch2-yolo-logo}
 \end{figure}
 
@@ -138,11 +150,11 @@ YOLO (You Only Look Once) est un algorithme de détection d'objets appartenant �
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{images/image_chap2/detection.png}
-  \caption{\textit{Principe de fonctionnement de YOLO}}
+  \caption{Principe de fonctionnement de YOLO~\cite{ultralytics_docs}}
   \label{fig:Principe de fonctionnement de YOLO }
 \end{figure}
 
-Comme illustré ci-après, YOLO adopte une approche globale et unifiée :
+Comme illustré par la Figure~\ref{fig:Principe de fonctionnement de YOLO }, YOLO adopte une approche globale et unifiée :
 
 \begin{itemize}
   \item L'image est divisée en une grille de cellules $S \times S$.
@@ -153,12 +165,12 @@ Comme illustré ci-après, YOLO adopte une approche globale et unifiée :
 
 \paragraph{Évolution de l'architecture YOLO}
 
-Depuis l'introduction de YOLOv1, le modèle a connu de nombreuses itérations, chacune améliorant la précédente en termes de précision, de rapidité et d'efficacité.
+Depuis l'introduction de YOLOv1, le modèle a connu de nombreuses itérations, chacune améliorant la précédente en termes de précision, de rapidité et d'efficacité~\cite{yolo11medium2024}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.90\textwidth]{images/image_chap2/TimelineCycle-removebg-preview.png}
-  \caption{\textit{Figure 2.6 --- Chronologie de l'évolution des architectures YOLO (V1 à V11)}}
+  \caption{\textit{Chronologie de l'évolution des architectures YOLO (V1 à V11)}}
   \label{fig:ch2-yolo-evolution}
 \end{figure}
 
@@ -185,11 +197,11 @@ Depuis l'introduction de YOLOv1, le modèle a connu de nombreuses itérations, c
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{images/image_chap2/Latency.png}
-  \caption{\textit{Comparaison mAP50-95 / latence des modèles YOLO sur le dataset COCO}}
+  \caption{Comparaison mAP50-95 / latence des modèles YOLO sur le dataset COCO~\cite{ultralytics_docs}}
   \label{fig:ch2-yolo-comparaison}
 \end{figure}
 
-La figure ci-dessus compare les modèles YOLO à l'aide de la métrique mAP50-95 (mean Average Precision) sur le dataset COCO, en fonction de leur latence d'inférence. Les versions récentes offrent de meilleures performances, avec une précision accrue et une latence réduite. YOLO11 se distingue notamment par son efficacité : plus léger que ses homologues à haute précision, il conserve un excellent niveau de mAP, le rendant particulièrement adapté aux applications en temps réel.
+La Figure~\ref{fig:ch2-yolo-comparaison} compare les modèles YOLO à l'aide de la métrique mAP50-95 (mean Average Precision) sur le dataset COCO, en fonction de leur latence d'inférence. Les versions récentes offrent de meilleures performances, avec une précision accrue et une latence réduite. YOLO11 se distingue notamment par son efficacité : plus léger que ses homologues à haute précision, il conserve un excellent niveau de mAP, le rendant particulièrement adapté aux applications en temps réel.
 
 \subsection{Reconnaissance optique de caractères (OCR)}
 \label{subsec:ocr}
@@ -200,12 +212,12 @@ Dans le cadre des systèmes KYC, l'OCR joue un rôle central en permettant d'ext
 
 \subsubsection{Pipeline OCR : processus pas à pas}
 
-Le pipeline OCR se compose de cinq étapes séquentielles qui transforment une image brute en texte structuré exploitable :
+Le pipeline OCR se compose de cinq étapes séquentielles qui transforment une image brute en texte structuré exploitable~\cite{microsoft_ocr_pipeline} :
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{images/image_chap2/optical-character-recognition.png}
-  \caption{\textit{Figure 2.8 --- Pipeline OCR en cinq étapes}}
+  \caption{Pipeline OCR en cinq étapes~\cite{microsoft_ocr_pipeline}}
   \label{fig:ch2-ocr-pipeline}
 \end{figure}
 
@@ -221,7 +233,7 @@ Le pipeline OCR se compose de cinq étapes séquentielles qui transforment une i
   \item \textbf{Étape 5 --- Post-traitement et sortie :} structuration et correction des données extraites.
 \end{itemize}
 
-Ce processus permet de transformer une image contenant du texte en un format exploitable par un système informatique.
+Ce processus permet de transformer une image contenant du texte en un format exploitable par un système informatique. Pour choisir le moteur le plus adapté au contexte KYC bilingue arabe/français, une analyse comparative des principales solutions open source a été réalisée.
 
 \subsubsection{Benchmark des moteurs OCR open source}
 
@@ -251,7 +263,7 @@ Plusieurs solutions OCR open source ont été développées, présentant des per
     TrOCR & ViT + BEiT & ~91\% & 2--4\% & Lent (GPU) & Non off. & Oui & MIT \\
     \bottomrule
   \end{tabular}
-  \caption{Benchmark des principaux moteurs OCR open source (mise à jour 2025)}
+  \caption{Benchmark des principaux moteurs OCR open source (mise à jour 2025)~\cite{ocr_benchmark_intuition,ocr_benchmark_acl2024,ocr_benchmark_arxiv2025,ocr_benchmark_koncile2026,ocr_benchmark_cisdem2025,ocr_benchmark_ijraset}}
   \label{tab:ocr-benchmark}
 \end{table}
 
@@ -268,9 +280,11 @@ Les fondements théoriques présentés précédemment guident naturellement vers
 \subsection{Modèle de détection : YOLO11m}
 \label{subsec:yolo11m}
 
+Cette sous-section présente le modèle YOLO11m retenu pour la détection des champs textuels sur les documents d'identité. Toutes les valeurs de performance, paramètres et benchmarks cités proviennent de la documentation officielle Ultralytics~\cite{ultralytics_docs}.
+
 \subsubsection{Présentation de YOLO11}
 
-YOLO11 est la dernière génération de modèles de détection d'objets en temps réel développée par Ultralytics, publiée en septembre 2024. Il introduit plusieurs innovations architecturales majeures par rapport à ses prédécesseurs :
+YOLO11 est la dernière génération de modèles de détection d'objets en temps réel développée par Ultralytics, publiée en septembre 2024~\cite{ultralytics_docs}. Il introduit plusieurs innovations architecturales majeures par rapport à ses prédécesseurs :
 
 \begin{itemize}
   \item \textbf{Bloc C3K2 (Cross Stage Partial with Kernel Size 2) :} extraction de caractéristiques spatiales plus riche.
@@ -284,7 +298,7 @@ La famille YOLO11 propose cinq variantes (n, s, m, l, x) couvrant un spectre all
 
 \subsubsection{Comparaison des variantes YOLO11}
 
-Le tableau suivant présente les performances benchmarkées sur le dataset COCO (mAP50-95) pour chaque variante, en précisant le nombre de paramètres et la vitesse d'inférence CPU.
+Le Tableau~\ref{tab:yolo11-variantes} présente les performances benchmarkées sur le dataset COCO (mAP50-95) pour chaque variante, en précisant le nombre de paramètres et la vitesse d'inférence CPU.
 
 \begin{table}[H]
   \centering
@@ -306,7 +320,7 @@ Le tableau suivant présente les performances benchmarkées sur le dataset COCO 
     YOLO11x & 56,9 M & 194,9 & 54,7\% & 462,8 & Précision maximale \\
     \bottomrule
   \end{tabular}
-  \caption{Comparaison des variantes YOLO11 sur COCO val2017}
+  \caption{Comparaison des variantes YOLO11 sur COCO val2017~\cite{ultralytics_docs}}
   \label{tab:yolo11-variantes}
 \end{table}
 
@@ -314,7 +328,7 @@ La variante YOLO11m offre le meilleur équilibre entre précision et complexité
 
 \subsubsection{Justification du choix : YOLO11m vs YOLOv8m}
 
-Le tableau ci-dessous compare YOLO11m à YOLOv8m, qui constitue la génération précédente la plus répandue en production.
+Le Tableau~\ref{tab:yolo11-vs-yolov8} compare YOLO11m à YOLOv8m, qui constitue la génération précédente la plus répandue en production.
 
 \begin{table}[H]
   \centering
@@ -337,7 +351,7 @@ Le tableau ci-dessous compare YOLO11m à YOLOv8m, qui constitue la génération 
     Déploiement & Edge / Cloud / GPU & Edge / Cloud / GPU & Équivalent \\
     \bottomrule
   \end{tabular}
-  \caption{YOLO11m vs YOLOv8m : gains en précision et efficacité}
+  \caption{YOLO11m vs YOLOv8m : gains en précision et efficacité~\cite{ultralytics_docs}}
   \label{tab:yolo11-vs-yolov8}
 \end{table}
 
@@ -346,11 +360,17 @@ YOLO11m a été retenu car il offre le meilleur compromis entre précision (mAP 
 \subsection{Moteur OCR : PaddleOCR PP-OCRv5}
 \label{subsec:pp-ocrv5}
 
+Cette sous-section présente le moteur OCR retenu pour l'extraction de texte sur les documents d'identité tunisiens. Elle couvre d'abord la plateforme PaddleOCR et son écosystème, puis détaille les apports spécifiques de la version PP-OCRv5 et les critères qui ont orienté ce choix pour le contexte bilingue du projet.
+
+\subsubsection{PaddleOCR}
+
+PaddleOCR est une boîte à outils OCR open source développée par Baidu dans le cadre de la plateforme de deep learning PaddlePaddle~\cite{paddlepaddle_hf}. Elle offre un ensemble complet de modèles pré-entraînés couvrant la détection de texte, la reconnaissance de caractères et l'analyse de mise en page pour plus de 80 langues. Légère, modulaire et compatible avec les déploiements embarqués comme les serveurs GPU, PaddleOCR s'est imposée comme l'une des solutions OCR open source les plus utilisées en production, notamment grâce à ses performances sur les scripts asiatiques et moyen-orientaux. La version PP-OCRv5, la plus récente, constitue une avancée significative dont les caractéristiques sont présentées ci-après.
+
 \subsubsection{Présentation de PP-OCRv5}
 
-PP-OCRv5 est la cinquième génération du pipeline OCR de PaddlePaddle (Baidu), publiée dans le cadre de PaddleOCR 3.0 en 2024. Il représente une évolution majeure conçue spécifiquement pour la reconnaissance de texte dans des environnements variés et multilingues, incluant des documents réels, du texte manuscrit et des images capturées en conditions non contrôlées.
+PP-OCRv5 est la cinquième génération du pipeline OCR de PaddlePaddle (Baidu), publiée dans le cadre de PaddleOCR 3.0 en 2024~\cite{paddlepaddle_hf}. Il représente une évolution majeure conçue spécifiquement pour la reconnaissance de texte dans des environnements variés et multilingues, incluant des documents réels, du texte manuscrit et des images capturées en conditions non contrôlées.
 
-L'architecture repose sur un pipeline à deux étages : détection des zones de texte (PP-OCRv5\_det), puis reconnaissance caractère par caractère (PP-OCRv5\_rec), disponible en variante mobile (optimisée CPU) et serveur (optimisée GPU).
+L'architecture repose sur un pipeline à deux étages : détection des zones de texte (PP-OCRv5\_det), puis reconnaissance caractère par caractère (PP-OCRv5\_rec), disponible en variante mobile (optimisée CPU) et serveur (optimisée GPU). Le Tableau~\ref{tab:pp-ocr-evolution} compare ses performances aux versions précédentes.
 
 \subsubsection{Performances et évolution par rapport aux versions précédentes}
 
@@ -378,9 +398,11 @@ L'architecture repose sur un pipeline à deux étages : détection des zones de 
     Performance vs VLM & --- & --- & Surpasse GPT-4o, Gemini \\
     \bottomrule
   \end{tabular}
-  \caption{Évolution des performances PP-OCR à travers les versions}
+  \caption{Évolution des performances PP-OCR à travers les versions~\cite{paddlepaddle_hf}}
   \label{tab:pp-ocr-evolution}
 \end{table}
+
+Ces résultats confirment la progression constante de PP-OCRv5 par rapport à ses prédécesseurs. Les quatre critères suivants expliquent pourquoi cette version répond précisément aux contraintes du projet KYC de la BTE.
 
 \subsubsection{Critères de sélection pour le contexte tunisien}
 
