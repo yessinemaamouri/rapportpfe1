@@ -421,7 +421,7 @@ Les deux modèles YOLO déployés dans le pipeline partagent le même cadre de c
   \textcolor{white}{\textbf{Paramètre}} & \textcolor{white}{\textbf{Défaut}} & \textcolor{white}{\textbf{Description}} \\
   \hline
   \endhead
-  \multicolumn{3}{|l|}{\cellcolor{bleu_principal!15}\textit{\textbf{Général}}} \\
+  \multicolumn{3}{|l|}{\cellcolor{gris_fonce}\textcolor{white}{\textbf{Général}}} \\
   \hline
   \texttt{epochs} & 100 & Nombre total de passes sur le dataset. \\
   \hline
@@ -439,7 +439,7 @@ Les deux modèles YOLO déployés dans le pipeline partagent le même cadre de c
   \hline
   \texttt{patience} & 100 & Époques sans amélioration avant arrêt anticipé (early stopping). Évite le surapprentissage. \\
   \hline
-  \multicolumn{3}{|l|}{\cellcolor{bleu_principal!15}\textit{\textbf{Optimiseur \& taux d'apprentissage}}} \\
+  \multicolumn{3}{|l|}{\cellcolor{gris_fonce}\textcolor{white}{\textbf{Optimiseur \& taux d'apprentissage}}} \\
   \hline
   \texttt{optimizer} & auto & Algorithme d'optimisation. \texttt{AdamW} offre une meilleure régularisation qu'Adam standard. \\
   \hline
@@ -453,7 +453,7 @@ Les deux modèles YOLO déployés dans le pipeline partagent le même cadre de c
   \hline
   \texttt{cos\_lr} & False & Planificateur cosinus : le taux décroît de $lr_0$ à $lr_0 \times lrf$ en suivant une courbe cosinus. \\
   \hline
-  \multicolumn{3}{|l|}{\cellcolor{bleu_principal!15}\textit{\textbf{Augmentation des données}}} \\
+  \multicolumn{3}{|l|}{\cellcolor{gris_fonce}\textcolor{white}{\textbf{Augmentation des données}}} \\
   \hline
   \texttt{mosaic} & 1,0 & Combine quatre images en mosaïque, simulant des scènes complexes. \\
   \hline
@@ -483,7 +483,7 @@ Les deux modèles YOLO déployés dans le pipeline partagent le même cadre de c
   \hline
   \texttt{close\_mosaic} & 10 & Désactive la mosaïque sur les $N$ dernières époques pour stabiliser la convergence. \\
   \hline
-  \multicolumn{3}{|l|}{\cellcolor{bleu_principal!15}\textit{\textbf{Pondération des pertes}}} \\
+  \multicolumn{3}{|l|}{\cellcolor{gris_fonce}\textcolor{white}{\textbf{Pondération des pertes}}} \\
   \hline
   \texttt{box} & 7,5 & Poids de la composante de localisation. Augmenter cette valeur améliore la précision des bounding boxes. \\
   \hline
@@ -491,7 +491,7 @@ Les deux modèles YOLO déployés dans le pipeline partagent le même cadre de c
   \hline
   \texttt{dfl} & 1,5 & Poids de la Distribution Focal Loss, responsable de la précision des bords de la bounding box. \\
   \hline
-  \multicolumn{3}{|l|}{\cellcolor{bleu_principal!15}\textit{\textbf{Divers}}} \\
+  \multicolumn{3}{|l|}{\cellcolor{gris_fonce}\textcolor{white}{\textbf{Divers}}} \\
   \hline
   \texttt{seed} & 0 & Graine aléatoire garantissant la reproductibilité des expériences. \\
   \hline
@@ -1233,13 +1233,13 @@ Les modèles YOLOv11m ont été évalués sur le jeu de test indépendant consti
 \setlength{\LTright}{0pt plus 1fill}
 \begin{longtable}{|p{4cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|}
   \hline
-  \rowcolor{bleu_principal!15}
-  \textbf{Classe} & \textbf{Précision} & \textbf{Rappel} & \textbf{F1} & \textbf{mAP50} \\
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Précision}} & \textcolor{white}{\textbf{Rappel}} & \textcolor{white}{\textbf{F1}} & \textcolor{white}{\textbf{mAP50}} \\
   \hline
   \endfirsthead
   \hline
-  \rowcolor{bleu_principal!15}
-  \textbf{Classe} & \textbf{Précision} & \textbf{Rappel} & \textbf{F1} & \textbf{mAP50} \\
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Précision}} & \textcolor{white}{\textbf{Rappel}} & \textcolor{white}{\textbf{F1}} & \textcolor{white}{\textbf{mAP50}} \\
   \hline
   \endhead
   \rowcolor{gris_leger}
@@ -1278,13 +1278,13 @@ Les modèles YOLOv11m ont été évalués sur le jeu de test indépendant consti
 \setlength{\LTright}{0pt plus 1fill}
 \begin{longtable}{|p{4cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|}
   \hline
-  \rowcolor{bleu_principal!15}
-  \textbf{Classe} & \textbf{Précision} & \textbf{Rappel} & \textbf{F1} & \textbf{mAP50} \\
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Précision}} & \textcolor{white}{\textbf{Rappel}} & \textcolor{white}{\textbf{F1}} & \textcolor{white}{\textbf{mAP50}} \\
   \hline
   \endfirsthead
   \hline
-  \rowcolor{bleu_principal!15}
-  \textbf{Classe} & \textbf{Précision} & \textbf{Rappel} & \textbf{F1} & \textbf{mAP50} \\
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Précision}} & \textcolor{white}{\textbf{Rappel}} & \textcolor{white}{\textbf{F1}} & \textcolor{white}{\textbf{mAP50}} \\
   \hline
   \endhead
   \rowcolor{gris_leger}
@@ -1319,13 +1319,13 @@ Les modèles YOLOv11m ont été évalués sur le jeu de test indépendant consti
 \setlength{\LTright}{0pt plus 1fill}
 \begin{longtable}{|p{4cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|}
   \hline
-  \rowcolor{bleu_principal!15}
-  \textbf{Classe} & \textbf{Précision} & \textbf{Rappel} & \textbf{F1} & \textbf{mAP50} \\
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Précision}} & \textcolor{white}{\textbf{Rappel}} & \textcolor{white}{\textbf{F1}} & \textcolor{white}{\textbf{mAP50}} \\
   \hline
   \endfirsthead
   \hline
-  \rowcolor{bleu_principal!15}
-  \textbf{Classe} & \textbf{Précision} & \textbf{Rappel} & \textbf{F1} & \textbf{mAP50} \\
+  \rowcolor{bleu_principal}
+  \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Précision}} & \textcolor{white}{\textbf{Rappel}} & \textcolor{white}{\textbf{F1}} & \textcolor{white}{\textbf{mAP50}} \\
   \hline
   \endhead
   \rowcolor{gris_leger}
@@ -1745,21 +1745,21 @@ Les métriques globales présentées dans les sections précédentes reflètent 
   \textcolor{white}{\textbf{Sortie finale}} \\
   \hline
   \endhead
-  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal!15}\textit{\textbf{Recto 1 --- Qualité haute (conf. globale : 0,928)}}} \\ \hline
+  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal}\textcolor{white}{\textbf{Recto 1 --- Qualité haute (conf. globale : 0,928)}}} \\ \hline
   \texttt{num\_cin}    & 0,890 & 1,000 & 14447754 \\ \hline
   \texttt{last\_name}  & 0,907 & 0,990 & \textarabic{المعموري} \\ \hline
   \texttt{first\_name} & 0,898 & 0,930 & \textarabic{ياسين} \\ \hline
   \texttt{full\_name}  & 0,797 & 0,967 & \textarabic{بن نور الدين بن البشير} \\ \hline
   \texttt{dob}         & 0,856 & 0,906 & \textarabic{29 افريل 2004} \\ \hline
   \texttt{pob}         & 0,913 & 0,954 & \textarabic{نابل} \\ \hline
-  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal!15}\textit{\textbf{Recto 2 --- Flash caméra sur «م» (conf. globale : 0,944)}}} \\ \hline
+  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal}\textcolor{white}{\textbf{Recto 2 --- Flash caméra sur «م» (conf. globale : 0,944)}}} \\ \hline
   \texttt{num\_cin}    & 0,880 & 1,000 & 14447754 \\ \hline
   \texttt{last\_name}  & 0,846 & 0,904 & \textcolor{red}{\textarabic{المع وري}} \textcolor{red}{\small$\leftarrow$ flash brûle le lien, OCR lit deux mots} \\ \hline
   \texttt{first\_name} & 0,904 & 0,934 & \textarabic{ياسين} \\ \hline
   \texttt{full\_name}  & 0,777 & 0,930 & \textarabic{بن نور الدين بن البشير} \\ \hline
   \texttt{dob}         & 0,833 & 0,848 & \textarabic{29 أفريل 2004} \\ \hline
   \texttt{pob}         & 0,912 & 0,952 & \textarabic{نابل} \\ \hline
-  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal!15}\textit{\textbf{Recto 3 --- Mouvement + flou (conf. globale : 0,882)}}} \\ \hline
+  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal}\textcolor{white}{\textbf{Recto 3 --- Mouvement + flou (conf. globale : 0,882)}}} \\ \hline
   \texttt{num\_cin}    & 0,803 & 0,942 & 14447754 \\ \hline
   \texttt{last\_name}  & 0,362 & 0,900 & \textarabic{المعموري} \textcolor{red}{\small$\leftarrow$ YOLO très faible (0,36)} \\ \hline
   \texttt{first\_name} & \multicolumn{3}{p{11.1cm}|}{\textit{non détecté} \textcolor{red}{\small--- flou total, YOLO ne localise pas le champ}} \\ \hline
@@ -1839,19 +1839,19 @@ Le verso de la carte, avec ses champs plus larges et son fond moins texturé, r�
   \textcolor{white}{\textbf{Sortie finale}} \\
   \hline
   \endhead
-  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal!15}\textit{\textbf{Verso 1 --- Qualité haute (conf. globale : 0,928)}}} \\ \hline
+  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal}\textcolor{white}{\textbf{Verso 1 --- Qualité haute (conf. globale : 0,928)}}} \\ \hline
   \texttt{address}      & 0,931 & 0,907 & \textarabic{حي باستور دار شعبان الفهر ي نابل} \\ \hline
   \texttt{profession}   & 0,872 & 0,894 & \textarabic{طالب} \\ \hline
   \texttt{mother\_name} & 0,926 & 0,947 & \textarabic{صوفية مهير} \\ \hline
   \texttt{print\_id}    & 0,940 & 0,907 & 2 2 2 6 1 1 5 1 \\ \hline
   \texttt{issue\_date}  & 0,934 & 0,828 & \textarabic{05 جانفي 2026} \\ \hline
-  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal!15}\textit{\textbf{Verso 2 --- Flash sur adresse (conf. globale : 0,944)}}} \\ \hline
+  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal}\textcolor{white}{\textbf{Verso 2 --- Flash sur adresse (conf. globale : 0,944)}}} \\ \hline
   \texttt{address}      & 0,921 & 0,919 & \textcolor{red}{\textarabic{حى باستور دار شعبان الفهري بل}} \textcolor{red}{\small$\leftarrow$ flash sur fin de champ, tronqué} \\ \hline
   \texttt{profession}   & 0,779 & 0,991 & \textarabic{طالب} \\ \hline
   \texttt{mother\_name} & 0,923 & 0,990 & \textarabic{صوفية مهير} \\ \hline
   \texttt{print\_id}    & 0,946 & 0,999 & 22261151 \\ \hline
   \texttt{issue\_date}  & 0,940 & 0,911 & \textarabic{05 جانفي 2026} \\ \hline
-  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal!15}\textit{\textbf{Verso 3 --- Surexposition sévère (conf. globale : 0,882)}}} \\ \hline
+  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal}\textcolor{white}{\textbf{Verso 3 --- Surexposition sévère (conf. globale : 0,882)}}} \\ \hline
   \texttt{address}      & \multicolumn{3}{p{11.1cm}|}{\textit{non détecté} \textcolor{red}{\small--- surexposition efface le contraste, champ invisible}} \\ \hline
   \texttt{profession}   & \multicolumn{3}{p{11.1cm}|}{\textit{non détecté}} \\ \hline
   \texttt{mother\_name} & 0,909 & 0,902 & \textcolor{red}{\textarabic{صو فية مهير}} \textcolor{red}{\small$\leftarrow$ espace parasite} \\ \hline
@@ -1930,7 +1930,7 @@ Le passeport, avec son fond sécurisé texturé et sa densité de champs supéri
   \textcolor{white}{\textbf{Sortie finale}} \\
   \hline
   \endhead
-  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal!15}\textit{\textbf{Passeport bonne qualité (conf. globale : 0,948)}}} \\ \hline
+  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal}\textcolor{white}{\textbf{Passeport bonne qualité (conf. globale : 0,948)}}} \\ \hline
   \texttt{num\_pass}    & 0,659 & 0,980 & U668123 \\ \hline
   \texttt{last\_name}   & 0,818 & 0,999 & MAAMOURI \\ \hline
   \texttt{first\_name}  & 0,735 & 0,997 & YESSINE \\ \hline
@@ -1942,7 +1942,7 @@ Le passeport, avec son fond sécurisé texturé et sa densité de champs supéri
   \texttt{issue\_date}  & 0,719 & 0,915 & 09/03/2026 \\ \hline
   \texttt{expiry\_date} & 0,674 & 0,826 & 08/03/2031 \\ \hline
   \texttt{profession}   & 0,777 & 0,940 & \textarabic{طالب} \\ \hline
-  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal!15}\textit{\textbf{Passeport reflet (conf. globale : 0,896) --- reflet sur first\_name, dob, expiry\_date, issue\_date}}} \\ \hline
+  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal}\textcolor{white}{\textbf{Passeport reflet (conf. globale : 0,896) --- reflet sur first\_name, dob, expiry\_date, issue\_date}}} \\ \hline
   \texttt{num\_pass}    & 0,740 & 0,991 & H814973 \\ \hline
   \texttt{last\_name}   & 0,434 & 0,985 & EL MAAMOURI \textcolor{red}{\small$\leftarrow$ YOLO faible (0,43)} \\ \hline
   \texttt{first\_name}  & \multicolumn{3}{p{11.1cm}|}{\textit{non détecté} \textcolor{red}{\small--- reflet masque entièrement le champ}} \\ \hline
@@ -1954,7 +1954,7 @@ Le passeport, avec son fond sécurisé texturé et sa densité de champs supéri
   \texttt{issue\_date}  & 0,267 & --- & \textcolor{red}{\textit{lecture échouée}} \textcolor{red}{\small$\leftarrow$ reflet, YOLO 0,27 et OCR null} \\ \hline
   \texttt{expiry\_date} & 0,637 & 0,805 & \textcolor{red}{222/12/2026} \textcolor{red}{\small$\leftarrow$ reflet, chiffre parasite} \\ \hline
   \texttt{profession}   & 0,390 & 0,845 & \textcolor{red}{\textarabic{إبضاء صاحب الجراز}} \textcolor{red}{\small$\leftarrow$ binarisation perturbée} \\ \hline
-  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal!15}\textit{\textbf{Passeport ombre soleil (conf. globale : 0,860) --- ombre motif couvre toute l'image}}} \\ \hline
+  \multicolumn{4}{|p{14.2cm}|}{\cellcolor{bleu_principal}\textcolor{white}{\textbf{Passeport ombre soleil (conf. globale : 0,860) --- ombre motif couvre toute l'image}}} \\ \hline
   \texttt{num\_pass}    & 0,320 & 0,000 & \textcolor{red}{\textit{vide}} \textcolor{red}{\small$\leftarrow$ ombre totale sur la zone passeport} \\ \hline
   \texttt{last\_name}   & 0,591 & 1,000 & EL MAAMOURI \\ \hline
   \texttt{first\_name}  & 0,691 & 1,000 & \textcolor{red}{EL MAAMOUR} \textcolor{red}{\small$\leftarrow$ lettre finale masquée} \\ \hline

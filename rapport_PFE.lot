@@ -1,0 +1,63 @@
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces Normes réglementaires internationales}}{24}{table.1.1}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Réglementations nationales tunisiennes}}{25}{table.1.2}%
+\contentsline {table}{\numberline {1.3}{\ignorespaces \xpg@aux {}{french}\ignorespaces Comparaison des solutions KYC commerciales : uqudo, NEUROPARSER et FACEKI}}{28}{table.caption.9}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Acteurs et périmètres d'action du système eKYC}}{36}{table.2.1}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces UC1 --- S'inscrire}}{44}{table.2.2}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces UC2 --- S'authentifier}}{45}{table.2.3}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces UC3 --- Soumettre une demande d'ouverture de compte bancaire}}{47}{table.2.4}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces UC4 --- Traiter un dossier KYC}}{48}{table.2.5}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces UC5 --- Surveiller les performances des modèles IA}}{50}{table.2.6}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{french}\ignorespaces Benchmark des principaux moteurs OCR open source (mise à jour 2025)~\cite {ocr_benchmark_intuition,ocr_benchmark_acl2024,ocr_benchmark_arxiv2025,ocr_benchmark_koncile2026,ocr_benchmark_cisdem2025,ocr_benchmark_ijraset}}}{61}{table.caption.22}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces \xpg@aux {}{french}\ignorespaces Comparaison des variantes YOLO11 sur COCO val2017~\cite {ultralytics_docs}}}{63}{table.caption.23}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces \xpg@aux {}{french}\ignorespaces YOLO11m vs YOLOv8m : gains en précision et efficacité~\cite {ultralytics_docs}}}{63}{table.caption.24}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces \xpg@aux {}{french}\ignorespaces Évolution des performances PP-OCR à travers les versions~\cite {paddlepaddle_hf}}}{65}{table.caption.25}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Matrice des documents requis par service et pipeline IA associé}}{70}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Analyse comparative des sources de données}}{71}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{french}\ignorespaces Coefficients d'augmentation par pipeline et volumes finaux obtenus}}{75}{table.caption.32}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{french}\ignorespaces Configurations Roboflow par pipeline}}{78}{table.caption.36}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Split final entraînement / validation / test par pipeline}}{79}{table.4.5}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Paramètres d'entraînement YOLO utilisés dans ce projet~\footnotemark }}{83}{table.4.6}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Paramètres d'entraînement des quatre modèles YOLOv8n de détection de présence}}{85}{table.4.7}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Paramètres comparatifs d'entraînement des trois modèles YOLOv11m}}{88}{table.4.8}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces \xpg@aux {}{french}\ignorespaces Traitements de prétraitement appliqués aux crops YOLO}}{89}{table.caption.38}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Configuration matérielle et environnement d'entraînement}}{91}{table.4.10}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces \xpg@aux {}{french}\ignorespaces Métriques de validation par champ --- modèle CIN Recto}}{96}{table.caption.42}%
+\contentsline {table}{\numberline {4.12}{\ignorespaces \xpg@aux {}{french}\ignorespaces Métriques de validation par champ --- modèle CIN Verso}}{98}{table.caption.45}%
+\contentsline {table}{\numberline {4.13}{\ignorespaces \xpg@aux {}{french}\ignorespaces Métriques de validation par champ --- modèle Passeport}}{101}{table.caption.48}%
+\contentsline {table}{\numberline {4.14}{\ignorespaces Résultats YOLOv11m sur le jeu de test --- CIN Recto (mAP50-95 global~: 0,656)}}{102}{table.4.14}%
+\contentsline {table}{\numberline {4.15}{\ignorespaces Résultats YOLOv11m sur le jeu de test --- CIN Verso (mAP50-95 global~: 0,906)}}{103}{table.4.15}%
+\contentsline {table}{\numberline {4.16}{\ignorespaces Résultats YOLOv11m sur le jeu de test --- Passeport (mAP50-95 global~: 0,545)}}{103}{table.4.16}%
+\contentsline {table}{\numberline {4.17}{\ignorespaces Vue globale OCR --- CIN Recto}}{106}{table.4.17}%
+\contentsline {table}{\numberline {4.18}{\ignorespaces Résultats OCR par champ --- CIN Recto}}{106}{table.4.18}%
+\contentsline {table}{\numberline {4.19}{\ignorespaces Vue globale OCR --- CIN Verso}}{106}{table.4.19}%
+\contentsline {table}{\numberline {4.20}{\ignorespaces Résultats OCR par champ --- CIN Verso}}{107}{table.4.20}%
+\contentsline {table}{\numberline {4.21}{\ignorespaces Vue globale OCR --- Passeport}}{107}{table.4.21}%
+\contentsline {table}{\numberline {4.22}{\ignorespaces Résultats OCR par champ --- Passeport}}{108}{table.4.22}%
+\contentsline {table}{\numberline {4.23}{\ignorespaces Synthèse comparative OCR --- trois types de documents}}{108}{table.4.23}%
+\contentsline {table}{\numberline {4.24}{\ignorespaces Analyse par champ --- CIN Recto (trois niveaux de qualité)}}{110}{table.4.24}%
+\contentsline {table}{\numberline {4.25}{\ignorespaces \xpg@aux {}{french}\ignorespaces Récapitulatif des scores globaux --- CIN Recto}}{110}{table.4.25}%
+\contentsline {table}{\numberline {4.26}{\ignorespaces Analyse par champ --- CIN Verso (trois niveaux de qualité)}}{111}{table.4.26}%
+\contentsline {table}{\numberline {4.27}{\ignorespaces \xpg@aux {}{french}\ignorespaces Récapitulatif des scores globaux --- CIN Verso}}{112}{table.4.27}%
+\contentsline {table}{\numberline {4.28}{\ignorespaces Analyse par champ --- Passeport (trois niveaux de qualité)}}{114}{table.4.28}%
+\contentsline {table}{\numberline {4.29}{\ignorespaces \xpg@aux {}{french}\ignorespaces Récapitulatif des scores globaux --- Passeport}}{114}{table.4.29}%
+\contentsline {table}{\numberline {4.30}{\ignorespaces Modules du système IA eKYC}}{116}{table.4.30}%
+\contentsline {table}{\numberline {4.31}{\ignorespaces Indicateurs globaux du tableau de bord de monitoring IA}}{117}{table.4.31}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Description des classes — M1 : Utilisateurs et authentification}}{124}{table.5.1}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Description des classes — M2 : Dossier KYC}}{128}{table.5.2}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Description des classes — M3 : Pipeline OCR}}{131}{table.5.3}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Description des classes — M4 : Screening AML}}{134}{table.5.4}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Configuration matérielle de l'environnement de développement}}{141}{table.6.1}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Outils de développement utilisés}}{142}{table.6.2}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Bibliothèques frontend}}{143}{table.6.3}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Bibliothèques backend}}{143}{table.6.4}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Bibliothèques des services IA}}{144}{table.6.5}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces Outils de gestion du projet}}{144}{table.6.6}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces Vue d'ensemble des groupes de routes --- API REST}}{146}{table.6.7}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces Schéma des tables principales --- PostgreSQL}}{148}{table.6.8}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces Catégories d'images stockées dans MinIO}}{149}{table.6.9}%

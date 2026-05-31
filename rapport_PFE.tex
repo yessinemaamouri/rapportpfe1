@@ -39,10 +39,10 @@
 \definecolor{bleu_principal}{RGB}{31, 78, 121}    % #1F4E79
 \definecolor{niveau1_color}{HTML}{1F4E79}
 \definecolor{niveau2_color}{HTML}{0769C1}
-\definecolor{niveau3_color}{HTML}{007BE9}
+\definecolor{niveau3_color}{HTML}{5B7FA6}
 \definecolor{niveau4_color}{HTML}{000000}
 \definecolor{bleu_clair}{RGB}{46, 117, 182}      % #2E75B6
-\definecolor{gris_fonce}{RGB}{64, 64, 64}        % #404040
+\definecolor{gris_fonce}{RGB}{64, 64, 64}        % #6d6b6b
 \definecolor{gris_leger}{RGB}{245, 245, 245}     % #F5F5F5
 % Couleurs blocs métriques
 \definecolor{yolo_border}{RGB}{23, 42, 69}       % bleu nuit
@@ -57,7 +57,7 @@
 % ============================================================
 
 \setstretch{1.15}
-\graphicspath{{images/}}
+\graphicspath{{images/}{dash_image/}{conceptionImage/}{testImages/}}
 \setlength{\headheight}{15.5pt}
 
 % Configuration hyperref (simplified for speed)
@@ -114,6 +114,34 @@
 % ============================================================
 % STYLE DES CHAPITRES (titlesec)
 % ============================================================
+
+% Commande pour les titres de pages spéciales (sans boîte, sans numéro)
+\newcommand{\titrespecial}[1]{%
+  \noindent{\normalfont\LARGE\bfseries\color{bleu_principal} #1}\\[-0.3em]%
+  \noindent\textcolor{bleu_principal}{\rule{\textwidth}{0.8pt}}%
+  \vspace{1em}%
+}
+
+% Supprimer le titre automatique (chapitre 0) de \listoffigures, \listoftables, \tableofcontents
+\renewcommand{\listfigurename}{}
+\renewcommand{\listtablename}{}
+\renewcommand{\contentsname}{}
+
+% Redéfinir pour supprimer l'espace vide laissé par le titre vide
+\makeatletter
+\renewcommand{\tableofcontents}{%
+  \vspace{-3em}%
+  \@starttoc{toc}%
+}
+\renewcommand{\listoffigures}{%
+  \vspace{-3em}%
+  \@starttoc{lof}%
+}
+\renewcommand{\listoftables}{%
+  \vspace{-3em}%
+  \@starttoc{lot}%
+}
+\makeatother
 
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{2}
@@ -187,89 +215,85 @@
 \newcommand{\couverture}{%
   \begin{titlepage}
     \centering
-    \begin{textblock*}{4.5cm}(17mm,25mm)
-      \includegraphics[width=3cm]{images/FST.png}
-    \end{textblock*}
-    \begin{textblock*}{4cm}(152mm,20mm)
-      \includegraphics[width=2.5cm]{images/UTM.png}
-    \end{textblock*}
-    \vspace{1cm}
+    \setstretch{1.0}
 
-    {République Tunisienne\\
-    Ministère de l'Enseignement Supérieur \\ 
+    % Logos côte à côte
+    \includegraphics[width=2.8cm]{images/FST.png}
+    \hfill
+    \includegraphics[width=2.3cm]{images/UTM.png}
+
+    \vspace{0.25cm}
+
+    {\small République Tunisienne\\
+    Ministère de l'Enseignement Supérieur
     et de la Recherche Scientifique\\
     Université de Tunis El Manar\\
     Faculté des Sciences de Tunis\\
     Département des Sciences de l'Informatique}
 
-    \vspace{0.2cm}
+    \vspace{0.15cm}
     \rule{\textwidth}{0.1pt}
-    \vspace{0.5cm}
+    \vspace{0.25cm}
 
-    {\Large \textbf{RAPPORT DE PROJET DE FIN D'ÉTUDES}}
+    {\large \textbf{RAPPORT DE PROJET DE FIN D'ÉTUDES}}
 
-    \vspace{1cm}
+    \vspace{0.3cm}
 
-    {Présenté en vue de l'obtention du\\
+    {\small Présenté en vue de l'obtention du\\
     Diplôme de Licence en Science de l'Informatique\\
     \og Computer Science \fg{} Spécialité : Génie Logiciel et Système d'Information}
 
-    \vspace{0.5cm}
+    \vspace{0.2cm}
 
-    Par\\
-    \vspace{0.25cm}
-    {\Large Maamouri Yessine}
+    {\small Par}\\
+    \vspace{0.15cm}
+    {\large \textbf{Maamouri Yessine}}
 
-    \vfill
+    \vspace{0.35cm}
 
     \textcolor{bleu_principal}{\rule{\textwidth}{1.6pt}}\vspace*{-\baselineskip}\vspace{2.7pt}
     \textcolor{bleu_principal}{\rule{\textwidth}{0.4pt}}
 
-    \vspace{0.75\baselineskip}
+    \vspace{0.3cm}
 
-    {\Large \textbf{Conception et développement d'une plateforme KYC automatisée basée sur l'intelligence artificielle pour la validation des clients bancaires}}
+    {\large \textbf{Conception et développement d'une plateforme KYC automatisée\\[2pt]
+    basée sur l'intelligence artificielle\\[2pt]
+    pour la validation des clients bancaires}}
+
+    \vspace{0.3cm}
 
     \textcolor{bleu_principal}{\rule{\textwidth}{0.4pt}}\vspace*{-\baselineskip}\vspace{3.6pt}
     \textcolor{bleu_principal}{\rule{\textwidth}{1.6pt}}
 
-    \vspace{0.75\baselineskip}
+    \vspace{0.35cm}
 
-    \begin{minipage}{0.45\textwidth}
-      \raggedright
-      {\large \textbf{Organisme d'accueil :}\\
-      Siège de la Banque de Tunisie\\
-      et des Émirats (BTE)}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\textwidth}
-      \raggedleft
-      \includegraphics[width=3.5cm]{images/image_ch1/logo_bte.png}
-    \end{minipage}
+    % Logo BTE centré
+    \includegraphics[width=3cm]{images/image_ch1/logo_bte.png}\\[0.2cm]
+    {\small \textbf{Organisme d'accueil :}Siège de la Banque de Tunisie et des Émirats (BTE)}
 
-    \vspace{0.5cm}
+    \vspace{0.35cm}
 
     \begin{flushleft}
-      {\normalsize {Soutenu le} : \hspace{0.5em}/06/2026, devant le jury :}\\[4pt]
-      {\normalsize \textbf{Président} : Mme. Naama Amdouni}\\
-      {\normalsize \textbf{Rapporteur} : Mme. Manel Zekri}\\
-      {\normalsize \textbf{Encadrant Académique} : Mme. Anissa Omrane}\\
-      {\normalsize \textbf{Encadrant Professionnel} : M. Ala Eddine Karoui }
+      {\small Soutenu le : \hspace{0.5em}11/06/2026, devant le jury :}\\[3pt]
+      {\small \textbf{Président} : Mme. Naama Amdouni}\\[2pt]
+      {\small \textbf{Rapporteur} : Mme. Manel Zekri}\\[2pt]
+      {\small \textbf{Encadrant Académique} : Mme. Anissa Omrane}\\[2pt]
+      {\small \textbf{Encadrant Professionnel} : M. Ala Eddine Karoui}
     \end{flushleft}
 
     \vfill
 
     \fbox{
-      \begin{minipage}{150pt}
+      \begin{minipage}{180pt}
         \centering
-        \vspace{8pt}
-        {\Large GLSI - 2025/2026}
-        \vspace{8pt}
+        \vspace{6pt}
+        {\large GLSI -- N$^\circ$ 3226109}
+        \vspace{6pt}
       \end{minipage}
     }
 
-    \vspace{1cm}
-
-    {\large Année Universitaire : 2025-2026}
+    \vspace{0.3cm}
+    {\small Année Universitaire : 2025-2026}
 
   \end{titlepage}
   \clearpage
@@ -324,9 +348,122 @@
 % Page de couverture
 \couverture
 
-% Table des matières
-\tableofcontents
+% ============================================================
+% PAGE DE DÉDICACE
+% ============================================================
+
 \clearpage
+\thispagestyle{empty}
+\titrespecial{Dédicace}
+\vspace*{0.5cm}
+
+{\large\textit{À Allah, le Tout-Miséricordieux,\\
+dont la grâce et les bénédictions ont guidé chacun de mes pas.}}
+
+\vspace{1.4em}
+
+{\normalsize\textit{À ma chère mère, \textbf{Soufia Mhir},}}\\[0.3em]
+{\small\textit{Aucun mot ne saurait traduire l'immensité de ce que tu représentes pour moi.
+Ton amour inconditionnel, ta patience sans limites et tes sacrifices silencieux ont été
+la lumière qui a éclairé mon chemin tout au long de ce parcours. Chaque nuit où tu as
+veillé, chaque prière que tu as murmurée pour moi, chaque effort que tu as consenti dans
+l'ombre — tout cela a façonné l'homme que je suis aujourd'hui. Ce travail est avant tout
+un hommage à toi, à ta force, et à tous les rêves que tu as portés pour moi.
+Puisse Allah t'accorder santé, bonheur et une longue vie comblée de Sa miséricorde.}}
+
+\vspace{1.2em}
+
+{\normalsize\textit{À mon cher père, \textbf{Noureddine Mammouri},}}\\[0.3em]
+{\small\textit{Tu m'as appris la valeur du travail, la noblesse de la persévérance et la
+dignité de l'effort. Tes sacrifices inlassables, tes conseils précieux et ta confiance
+indéfectible ont été les fondations sur lesquelles j'ai bâti ce projet. Ce travail est
+autant le tien que le mien — il porte en lui l'empreinte de tout ce que tu m'as transmis.
+Merci pour tout. Puisse Allah te préserver et te récompenser au-delà de ce que tu imagines.}}
+
+\vspace{1.2em}
+
+{\normalsize\textit{À mes frères, \textbf{Seif} et \textbf{Adem}, et à ma s\oe{}ur, \textbf{Feriel},}}\\[0.3em]
+{\small\textit{Votre présence, votre soutien et votre complicité ont rendu chaque moment
+de ce parcours plus léger et plus chaleureux. Vous avez été mon refuge dans les instants
+de doute et ma joie dans les moments de réussite. Ce travail est aussi un peu le vôtre.}}
+
+\vspace{1.2em}
+
+{\normalsize\textit{À mes amis,}}\\[0.3em]
+{\small\textit{Vous avez su transformer les moments difficiles en souvenirs précieux et
+les défis en opportunités. Vos encouragements constants, votre confiance en moi et votre
+présence bienveillante ont été des piliers essentiels tout au long de ce parcours.
+Chaque étape a été plus légère grâce à vous, chaque succès plus savoureux partagé avec vous.}}
+
+\vspace{1.5em}
+
+{\normalsize\textbf{\textit{Je dédie ce travail à vous tous.}}}
+
+% ============================================================
+% PAGE DE REMERCIEMENTS
+% ============================================================
+
+\clearpage
+\thispagestyle{fancy}
+\addcontentsline{toc}{chapter}{Remerciements}
+
+\titrespecial{Remerciements}
+
+{\small\textit{À Madame \textbf{Anissa Omrane}, mon encadrante académique,}}\\[0.2em]
+{\footnotesize Malgré les exigences et les responsabilités qui rythment votre quotidien, vous avez toujours trouvé le temps et l'énergie de m'accompagner, de m'orienter et de me soutenir avec une bienveillance remarquable. Votre disponibilité, votre rigueur méthodologique et votre engagement sincère ont été des repères précieux tout au long de ce projet. Vous avez su guider mes réflexions avec justesse, transformer chaque difficulté en leçon d'apprentissage et m'encourager avec constance dans les moments les plus complexes. Je vous suis profondément reconnaissant pour tout ce que vous avez fait, souvent bien au-delà de ce que l'on pouvait attendre. Puisse ce travail être à la hauteur de la confiance que vous avez placée en moi.}
+
+\vspace{0.6em}
+
+{\small\textit{À Monsieur \textbf{Ala Eddine Karoui}, mon encadrant professionnel,}}\\[0.2em]
+{\footnotesize Votre expertise et vos conseils précieux ont été des piliers essentiels dans la réalisation de ce projet. Travailler sous votre encadrement a été une expérience formatrice dont je garderai longtemps les enseignements. Je vous adresse mes plus sincères remerciements.}
+
+\vspace{0.6em}
+
+{\small\textit{À Madame \textbf{Naama Amdouni}, Présidente du jury,}}\\[0.2em]
+{\footnotesize Vous me faites l'honneur de présider ce jury et d'évaluer ce travail. Votre regard éclairé et vos observations constituent pour moi un apport précieux. Je vous adresse mes plus respectueux remerciements.}
+
+\vspace{0.6em}
+
+{\small\textit{À Madame \textbf{Manel Zekri}, Rapporteur du jury,}}\\[0.2em]
+{\footnotesize Je vous remercie sincèrement d'avoir accepté d'évaluer ce travail. La lecture attentive que vous lui consacrez et la pertinence de vos remarques représentent pour moi une contribution précieuse.}
+
+\vspace{0.6em}
+
+{\small\textit{À moi-même,}}\\[0.2em]
+{\footnotesize Pour chaque nuit passée à chercher, à construire et à persévérer. Pour avoir refusé d'abandonner lorsque les obstacles semblaient insurmontables. Pour avoir cru en ce projet lorsque rien n'était encore certain. Ce travail est la preuve que l'effort finit toujours par porter ses fruits. Tu peux être fier du chemin parcouru.}
+
+\vspace{1.2em}
+
+\begin{center}
+  {\small\textbf{À tous, un immense merci.}}
+\end{center}
+
+% Table des matières
+\clearpage
+\thispagestyle{fancy}
+\titrespecial{Table des Matières}
+\tableofcontents
+
+% ============================================================
+% LISTE DES FIGURES
+% ============================================================
+
+\clearpage
+\thispagestyle{fancy}
+\addcontentsline{toc}{chapter}{Liste des Figures}
+
+\titrespecial{Liste des Figures}
+\listoffigures
+
+% ============================================================
+% LISTE DES TABLEAUX
+% ============================================================
+
+\clearpage
+\thispagestyle{fancy}
+\addcontentsline{toc}{chapter}{Liste des Tableaux}
+\titrespecial{Liste des Tableaux}
+\listoftables
 
 % ============================================================
 % LISTE DES ABRÉVIATIONS
@@ -335,10 +472,7 @@
 \clearpage
 \thispagestyle{fancy}
 \addcontentsline{toc}{chapter}{Liste des Abréviations}
-\begin{center}
-  {\LARGE\bfseries\color{bleu_principal} Liste des Abréviations}
-\end{center}
-\vspace{1em}
+\titrespecial{Liste des Abréviations}
 
 \renewcommand{\arraystretch}{1.4}
 \begin{longtable}{@{}>{\bfseries}p{3.5cm}p{12cm}@{}}
@@ -388,6 +522,44 @@
   WER     & Word Error Rate (Taux d'Erreur Mot) \\
   YOLO    & You Only Look Once \\
 \end{longtable}
+\clearpage
+
+% ============================================================
+% INTRODUCTION GÉNÉRALE
+% ============================================================
+
+\clearpage
+\thispagestyle{fancy}
+\addcontentsline{toc}{chapter}{Introduction Générale}
+
+\titrespecial{Introduction Générale}
+
+La digitalisation du secteur bancaire impose aux établissements financiers une modernisation profonde de leurs processus d'identification client. Dans ce contexte, les exigences de la Banque Centrale de Tunisie (BCT) en matière de lutte contre le blanchiment d'argent et le financement du terrorisme (LCB-FT) rendent incontournable la mise en place d'un dispositif \textit{Know Your Customer} (KYC), ou Connaissance du Client, rigoureux et traçable. Face à la croissance rapide du portefeuille clients de sa plateforme bancaire en ligne NEO BTE, la Banque de Tunisie et des Émirats (BTE) se trouve contrainte de repenser en profondeur un processus de vérification documentaire jusqu'alors entièrement manuel.
+
+En effet, le processus KYC actuel de la BTE repose sur l'examen humain des pièces d'identité soumises par les clients, qu'il s'agisse du parcours en agence ou du canal digital. Cette dépendance à l'intervention humaine engendre des délais de traitement élevés, expose l'établissement aux erreurs de saisie et rend impossible une détection systématique des fraudes documentaires. Par ailleurs, les solutions commerciales disponibles sur le marché s'avèrent inadaptées au contexte tunisien~: leur dépendance à des infrastructures cloud externes, leur prise en charge partielle des documents bilingues arabe/latin, et leurs coûts prohibitifs les rendent incompatibles avec les contraintes de souveraineté des données et les exigences de la BCT.
+
+C'est dans cette perspective que s'inscrit ce projet, qui propose la conception et le développement d'une plateforme \textit{electronic KYC} (eKYC) automatisée pour la BTE, entièrement basée sur l'intelligence artificielle. La solution, déployée sur les serveurs internes de la banque, permet de traiter les documents d'identité, d'en extraire les informations et de calculer un score de risque client, sans intervention humaine dans le traitement initial.
+
+Le présent rapport s'articule autour de six chapitres principaux, chacun détaillant de manière approfondie les étapes de la mise en œuvre du projet :
+
+\begin{enumerate}[leftmargin=2em, label=\textbf{\arabic*.}]
+
+  \item Le \textbf{premier chapitre}, intitulé \og Cadre Général du Projet \fg{}, présente l'organisme d'accueil, la BTE, et sa plateforme NEO BTE, puis introduit le métier KYC et son cadre réglementaire tunisien. Il analyse les limites du processus interne et des solutions commerciales existantes, avant de formuler la problématique centrale et de présenter la méthodologie hybride retenue.
+
+  \item Le \textbf{deuxième chapitre}, intitulé \og Spécification des Besoins et Architecture \fg{}, identifie les acteurs du système et formalise l'ensemble des besoins fonctionnels et non fonctionnels de la plateforme. Il décrit l'architecture logique et physique retenue et présente le diagramme de cas d'utilisation global.
+
+  \item Le \textbf{troisième chapitre}, intitulé \og Fondements Théoriques et Choix Technologiques \fg{}, pose les bases conceptuelles de l'IA, du \textit{deep learning} et de la vision par ordinateur. Il justifie la sélection de YOLOv11m pour la détection de champs et de PP-OCRv5 pour la reconnaissance optique de caractères (OCR) multilingue.
+
+  \item Le \textbf{quatrième chapitre}, intitulé \og Réalisation du Module IA \fg{}, décrit la mise en œuvre complète du pipeline IA selon la méthodologie CRISP-ML(Q)~: collecte et préparation des données, entraînement des trois modèles spécialisés sur la Carte d'Identité Nationale (CIN) Recto, CIN Verso et Passeport, et évaluation des performances sur des jeux de test indépendants.
+
+  \item Le \textbf{cinquième chapitre}, intitulé \og Conception du Système \fg{}, présente la modélisation complète de la plateforme eKYC à travers ses diagrammes de classes, d'activité et de séquence, constituant le référentiel sur lequel s'appuie la phase de réalisation.
+
+  \item Le \textbf{sixième chapitre}, intitulé \og Réalisation et Déploiement \fg{}, décrit la mise en œuvre concrète de la plateforme~: infrastructure applicative, intégration des services IA, interfaces client et administrateur, et évaluation de la conformité aux exigences réglementaires de la BCT.
+
+\end{enumerate}
+
+Le dernier chapitre, \og Conclusion Générale \fg{}, présente une synthèse des réalisations du projet, met en lumière les résultats obtenus, reconnaît les limites identifiées et propose des perspectives concrètes pour faire évoluer la solution vers un déploiement en environnement bancaire réel.
+
 \clearpage
 
 % ============================================================
@@ -444,16 +616,85 @@
 % CONCLUSION GÉNÉRALE
 % ============================================================
 
-\chapter*{Conclusion Générale}
+\clearpage
+\thispagestyle{fancy}
 \addcontentsline{toc}{chapter}{Conclusion Générale}
 
-\section*{Bilan des réalisations}
+\titrespecial{Conclusion Générale}
 
-\section*{Limites du projet}
+Ce projet est né d'un constat simple~: le processus de vérification d'identité des clients de la BTE reposait entièrement sur l'intervention humaine, ce qui générait des délais importants, des erreurs de saisie et une incapacité à détecter les fraudes documentaires de manière fiable. Les solutions disponibles sur le marché n'offraient pas de réponse adaptée au contexte tunisien, en raison de leur dépendance à des serveurs externes et de leur mauvaise gestion des documents d'identité bilingues arabe/français.
 
-\section*{Perspectives}
+Pour répondre à ce problème, nous avons conçu et développé une plateforme eKYC complète, hébergée sur les serveurs de la banque et basée sur l'intelligence artificielle. Le système détecte automatiquement les zones de texte sur les documents d'identité, extrait les informations en arabe et en français, calcule un score de risque client et soumet le dossier à la validation d'un analyste. L'ensemble du projet a été structuré en six chapitres couvrant le cadre réglementaire, la spécification des besoins, les choix technologiques, le développement du module IA, la conception du système et sa réalisation finale.
+
+Les résultats obtenus sont satisfaisants. Le module de détection des champs sur les documents atteint une précision supérieure à 94\,\% sur les trois types de documents traités — la Carte d'Identité Nationale recto, la Carte d'Identité Nationale verso et le Passeport. Le moteur de reconnaissance de texte, après correction automatique, dépasse 93\,\% de correspondance exacte sur l'ensemble des champs, avec un taux d'erreur inférieur à 2,4\,\%. La plateforme livrée offre un parcours client complet et un tableau de bord de gestion pour les analystes et les administrateurs.
+
+Toutefois, certaines limites ont été identifiées. Les images d'entraînement du Passeport manquent de variété, ce qui fragilise les performances du modèle face à des documents photographiés dans des conditions difficiles. De plus, le Taux de Fausses Acceptations (TFA), indicateur imposé par la BCT qui mesure la proportion de documents frauduleux acceptés à tort, n'a pas pu être calculé faute de données frauduleuses disponibles~; son évaluation reste indispensable avant tout déploiement réel.
+
+En perspective, les travaux futurs porteront sur l'enrichissement des données d'entraînement pour le Passeport, la mise en place d'un suivi régulier des performances des modèles en production, le calcul officiel du TFA et l'intégration complète de la plateforme dans le système d'information de la BTE, en conformité avec les circulaires de la BCT.
+
+Ce projet pose une base concrète et opérationnelle pour l'automatisation du processus d'identification client à la BTE, ouvrant la voie à un déploiement réel dans un environnement bancaire sécurisé et conforme.
 
 \bibliographystyle{plain}
 \bibliography{references}
+
+% ============================================================
+% RÉSUMÉ TRILINGUE (fin de rapport)
+% ============================================================
+
+\clearpage
+\thispagestyle{fancy}
+{\setstretch{1.0}
+
+\titrespecial{Résumé}
+
+% --- Arabe ---
+\begin{flushright}
+\begin{minipage}{0.95\textwidth}
+  \raggedleft
+  {\normalsize\bfseries\color{bleu_principal} ملخّص}\\[0.3em]
+  \begin{Arabic}
+  {\small
+  تم إنجاز هذا العمل في البنك التونسي للإمارات (BTE)، في إطار مشروع التخرج للحصول على شهادة الإجازة في علوم الإعلامية، تخصص هندسة البرمجيات، بكلية العلوم بتونس، 2025/2026.
+  يهدف المشروع إلى تصميم منصة KYC إلكترونية مؤتمتة تعتمد على الذكاء الاصطناعي للتحقق من هوية العملاء، باستخدام YOLOv11m لكشف الحقول وPP-OCRv5 لاستخراج النصوص بالعربية والفرنسية، مع نشرها محلياً داخل البنية التحتية للبنك.
+  }
+  \end{Arabic}
+  {\small\bfseries\color{bleu_principal} كلمات مفاتيح :}
+  \begin{Arabic}
+  {\small الذكاء الاصطناعي، التعرف البصري على الحروف، رؤية الحاسوب، التعلم العميق، معرفة العميل، أمن البيانات}
+  \end{Arabic}
+\end{minipage}
+\end{flushright}
+
+\vspace{0.6em}
+\noindent\textcolor{bleu_principal}{\rule{\textwidth}{0.4pt}}
+\vspace{0.5em}
+
+% --- Français ---
+{\normalsize\bfseries\color{bleu_principal} Résumé :}
+
+\vspace{0.3em}
+{\small
+Ce travail a été réalisé à la Banque de Tunisie et des Émirats (BTE), dans le cadre du projet de fin d'études pour le Diplôme de Licence en Sciences de l'Informatique, spécialité Génie Logiciel, à la Faculté des Sciences de Tunis, pour l'année 2025/2026. Le projet consiste à concevoir une plateforme eKYC automatisée basée sur l'IA pour la vérification des clients bancaires. Le système utilise YOLOv11m pour localiser les champs sur les documents d'identité et PP-OCRv5 pour extraire les données en arabe et en français, déployé sur les serveurs de la banque avec un module AML et un tableau de bord pour les analystes.
+}
+
+\vspace{0.2em}
+{\small\textbf{Mots clés :} Intelligence Artificielle, OCR, Vision par Ordinateur, Apprentissage Profond, KYC, Sécurité des Données}
+
+\vspace{0.6em}
+\noindent\textcolor{bleu_principal}{\rule{\textwidth}{0.4pt}}
+\vspace{0.5em}
+
+% --- Anglais ---
+{\normalsize\bfseries\color{bleu_principal} Abstract :}
+
+\vspace{0.3em}
+{\small
+This work was carried out at the Banque de Tunisie et des Émirats (BTE), as part of the end-of-studies project for the Bachelor's Degree in Computer Science, Software Engineering specialization, at the Faculty of Sciences of Tunis, for the 2025/2026 academic year. The project consists in designing an automated eKYC platform based on artificial intelligence for bank customer identity verification. The system uses YOLOv11m to locate fields on identity documents and PP-OCRv5 to extract data in Arabic and French, deployed on the bank's servers with an AML filtering module and an analyst dashboard.
+}
+
+\vspace{0.2em}
+{\small\textbf{Keywords :} Artificial Intelligence, OCR, Computer Vision, Deep Learning, KYC, Data Security}
+
+}
 
 \end{document}

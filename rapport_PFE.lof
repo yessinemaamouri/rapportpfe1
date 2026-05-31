@@ -1,0 +1,83 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Logo officiel de la Banque de Tunisie et des Émirats (BTE)}}}{20}{figure.caption.3}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Organigramme de la Banque de Tunisie et des Émirats}}}{21}{figure.caption.4}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Processus KYC traditionnel hors ligne}}}{22}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Processus KYC traditionnel en ligne}}}{22}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Processus KYC automatisé}}}{23}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {KYC Traditionnel en agence vs Digital via NEO BTE}}}{26}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Les six phases du modèle CRISP-ML(Q)}}}{31}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Planification globale du projet selon l'approche incrémentale hybride}}}{33}{figure.caption.11}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \xpg@aux {}{french}\ignorespaces Architecture logique de la plateforme eKYC}}{41}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \xpg@aux {}{french}\ignorespaces Architecture physique de la plateforme eKYC}}{42}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \xpg@aux {}{french}\ignorespaces Diagramme de cas d'utilisation global du système eKYC}}{43}{figure.caption.12}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{french}\ignorespaces Relation hiérarchique entre Intelligence Artificielle, Machine Learning et Deep Learning}}{53}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \xpg@aux {}{french}\ignorespaces Propagation avant et rétropropagation dans un réseau de neurones}}{55}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Illustration de la détection d'objets}}}{56}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Méthodes de détection d'objets : One-Stage vs Two-Stage}}}{57}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \xpg@aux {}{french}\ignorespaces Logo officiel de l27architecture YOLO~\cite {ultralytics_docs}}}{57}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \xpg@aux {}{french}\ignorespaces Principe de fonctionnement de YOLO~\cite {ultralytics_docs}}}{58}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Chronologie de l'évolution des architectures YOLO (V1 à V11)}}}{59}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \xpg@aux {}{french}\ignorespaces Comparaison mAP50-95 / latence des modèles YOLO sur le dataset COCO~\cite {ultralytics_docs}}}{60}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces \xpg@aux {}{french}\ignorespaces Pipeline OCR en cinq étapes~\cite {microsoft_ocr_pipeline}}}{60}{figure.caption.21}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{french}\ignorespaces Pipeline de traitement --- CIN et Passeport}}{69}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{french}\ignorespaces Pipeline de traitement --- Documents non structurés}}{70}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \xpg@aux {}{french}\ignorespaces Processus de restauration de la CIN Recto}}{72}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \xpg@aux {}{french}\ignorespaces Simulation des contraintes optiques réelles appliquées au dataset}}{72}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \xpg@aux {}{french}\ignorespaces Pipeline de création du template CIN Verso}}{73}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Interface Roboflow illustrant la précision des Tight Bounding Boxes sur une CIN}}}{74}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Illustration de l'augmentation par rotation ($-$10°, 0°, +10°)}}}{76}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Illustration de l'augmentation photométrique : variations de luminosité et niveaux de gris}}}{77}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \xpg@aux {}{french}\ignorespaces \textit {Illustration de la résilience optique : bruit, flou et gain de caméra}}}{77}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces \xpg@aux {}{french}\ignorespaces Pipeline d'extraction pour documents structurés (CIN/Passeport) — YOLOv11m → crops → PaddleOCR PP-OCRv5}}{80}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces \xpg@aux {}{french}\ignorespaces Workflow d'extraction OCR — recadrage, prétraitement et lecture}}{88}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces \xpg@aux {}{french}\ignorespaces Structure JSON retournée par le pipeline OCR}}{90}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces \xpg@aux {}{french}\ignorespaces Évolution des pertes et métriques d'entraînement --- CIN Recto}}{94}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces \xpg@aux {}{french}\ignorespaces Matrice de confusion --- CIN Recto}}{95}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces \xpg@aux {}{french}\ignorespaces Évolution des pertes et métriques d'entraînement --- CIN Verso}}{96}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces \xpg@aux {}{french}\ignorespaces Matrice de confusion --- CIN Verso}}{98}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces \xpg@aux {}{french}\ignorespaces Évolution des pertes et métriques d'entraînement --- Passeport}}{99}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces \xpg@aux {}{french}\ignorespaces Matrice de confusion --- Passeport}}{100}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces \xpg@aux {}{french}\ignorespaces Recto 1 --- Qualité haute}}{109}{figure.4.19}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces \xpg@aux {}{french}\ignorespaces Recto 2 --- Flash caméra sur «م»}}{109}{figure.4.20}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces \xpg@aux {}{french}\ignorespaces Recto 3 --- Mouvement + flou}}{109}{figure.4.21}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces \xpg@aux {}{french}\ignorespaces Verso 1 --- Qualité haute}}{111}{figure.4.22}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces \xpg@aux {}{french}\ignorespaces Verso 2 --- Flash sur adresse «نابل»}}{111}{figure.4.23}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces \xpg@aux {}{french}\ignorespaces Verso 3 --- Surexposition sévère}}{111}{figure.4.24}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces \xpg@aux {}{french}\ignorespaces Passeport --- Qualité haute}}{112}{figure.4.25}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces \xpg@aux {}{french}\ignorespaces Passeport --- Reflet sur champs clés}}{112}{figure.4.26}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces \xpg@aux {}{french}\ignorespaces Passeport --- Ombre motif soleil}}{112}{figure.4.27}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces \xpg@aux {}{french}\ignorespaces Architecture d'intégration du système IA --- 7 modules spécialisés}}{115}{figure.4.28}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \xpg@aux {}{french}\ignorespaces Diagramme de classes — M1 : Utilisateurs et authentification}}{122}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \xpg@aux {}{french}\ignorespaces Diagramme de classes — M2 : Dossier KYC}}{125}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \xpg@aux {}{french}\ignorespaces Diagramme de classes — M3 : Pipeline OCR}}{129}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \xpg@aux {}{french}\ignorespaces Diagramme de classes — M4 : Screening AML}}{132}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \xpg@aux {}{french}\ignorespaces Diagramme d'activité — Workflow client : ouverture de compte}}{135}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \xpg@aux {}{french}\ignorespaces Diagramme de séquence — Workflow analyste KYC : traitement d'un dossier}}{137}{figure.5.6}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \xpg@aux {}{french}\ignorespaces Architecture globale de la plateforme eKYC}}{145}{figure.6.1}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \xpg@aux {}{french}\ignorespaces Contrat d'interface entre le système IA et le système applicatif}}{150}{figure.6.2}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \xpg@aux {}{french}\ignorespaces Point de jonction entre les deux incréments --- soumission finale du dossier KYC}}{151}{figure.6.3}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces \xpg@aux {}{french}\ignorespaces Schéma de communication entre les couches de la plateforme eKYC}}{152}{figure.6.4}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces \xpg@aux {}{french}\ignorespaces Module Authentification --- Connexion et inscription}}{153}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces \xpg@aux {}{french}\ignorespaces Module Accueil et Navigation --- Accueil, suivi des demandes et profil}}{154}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces \xpg@aux {}{french}\ignorespaces Module Ouverture de Compte KYC --- Lancement du parcours}}{155}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces \xpg@aux {}{french}\ignorespaces Module Ouverture de Compte KYC --- Capture du document d'identité}}{155}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces \xpg@aux {}{french}\ignorespaces Module Ouverture de Compte KYC --- Vérification OCR et capture selfie}}{156}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces \xpg@aux {}{french}\ignorespaces Module Ouverture de Compte KYC --- Confirmation finale et soumission}}{156}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces \xpg@aux {}{french}\ignorespaces Module Services Bancaires --- Carte bancaire et chéquier}}{157}{figure.caption.55}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces \xpg@aux {}{french}\ignorespaces Module Demande de Crédit --- Saisie et dépôt de l'attestation}}{157}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces \xpg@aux {}{french}\ignorespaces Module Demande de Crédit --- Vérification OCR et confirmation}}{158}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces \xpg@aux {}{french}\ignorespaces Interface administrateur --- Connexion et création de compte}}{159}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces \xpg@aux {}{french}\ignorespaces Interface administrateur --- Tableau de bord KYC}}{159}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces \xpg@aux {}{french}\ignorespaces Interface administrateur --- File intelligente}}{160}{figure.caption.60}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces \xpg@aux {}{french}\ignorespaces Interface administrateur --- Revue d'un dossier KYC}}{161}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces \xpg@aux {}{french}\ignorespaces Interface administrateur --- Revue d'une demande de crédit}}{161}{figure.caption.62}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces \xpg@aux {}{french}\ignorespaces Interface administrateur --- Alertes de screening AML}}{162}{figure.caption.63}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces \xpg@aux {}{french}\ignorespaces Interface administrateur --- Comparaison de doublon d'identité}}{163}{figure.caption.64}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces \xpg@aux {}{french}\ignorespaces Interface administrateur --- Décision finale et confirmation sécurisée}}{164}{figure.caption.65}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces \xpg@aux {}{french}\ignorespaces Interface administrateur --- Supervision des modèles IA}}{164}{figure.caption.66}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces \xpg@aux {}{french}\ignorespaces Interface administrateur --- Journaux d'audit}}{165}{figure.caption.67}%

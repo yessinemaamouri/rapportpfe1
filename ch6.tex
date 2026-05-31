@@ -384,7 +384,105 @@ Transversalement à toutes ces couches, MinIO constitue le seul point de passage
 \label{sec:interface-client}
 %=============================================================
 
-% [Contenu à rédiger ultérieurement]
+L'interface client est une application web progressive accessible sur mobile et navigateur, développée avec Next.js. Elle guide le client à travers l'ensemble du parcours eKYC en sept modules fonctionnels distincts, présentés dans les sous-sections suivantes.
+
+\subsection{Module Authentification}
+\label{subsec:ui-auth}
+
+La Figure~\ref{fig:ch6-ui-auth} présente les deux interfaces d'accès à la plateforme BTE. À gauche, la page de connexion affiche le logo et le nom de la banque en en-tête sur fond bleu foncé, suivi d'un panneau blanc avec deux champs de saisie (téléphone ou email et mot de passe) et un bouton \og Se connecter \fg{}. À droite, la page d'inscription propose quatre champs de saisie (nom complet, téléphone ou email, mot de passe et confirmation) avec un bouton \og S'inscrire \fg{} pour créer un nouveau compte.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{images/image-ch6/ModuleAuthentification.png}
+  \caption{Module Authentification --- Connexion et inscription}
+  \label{fig:ch6-ui-auth}
+\end{figure}
+
+\subsection{Module Accueil et Navigation}
+\label{subsec:ui-accueil}
+
+La Figure~\ref{fig:ch6-ui-accueil} illustre les trois pages principales accessibles depuis la barre de navigation inférieure. La première page affiche l'accueil personnalisé avec le statut eKYC du client (Identité Validée) et quatre tuiles de services : Nouveau Compte, Carte Bancaire, Crédit Express et Chéquier BTE. La deuxième page présente le suivi des demandes filtrées par statut (Toutes, En cours, Validées, Refusées) avec les dernières demandes et leurs états. La troisième page affiche le profil du client avec ses informations personnelles, la liste de ses documents fournis et leur statut de vérification.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{images/image-ch6/ModuleAccueiletNavigation.png}
+  \caption{Module Accueil et Navigation --- Accueil, suivi des demandes et profil}
+  \label{fig:ch6-ui-accueil}
+\end{figure}
+
+\subsection{Module Ouverture de Compte KYC}
+\label{subsec:ui-kyc}
+
+Ce module couvre l'ensemble du parcours d'ouverture de compte en quatre phases successives, illustrées par les Figures~\ref{fig:ch6-ui-kyc1} à~\ref{fig:ch6-ui-kyc4}.
+
+La Figure~\ref{fig:ch6-ui-kyc1} présente le lancement du parcours. La première interface permet au client de choisir le type de compte souhaité : Compte Courant ou Compte Épargne. La deuxième introduit les quatre étapes du parcours sous forme de liste illustrée avant de commencer. La troisième présente la liste des sous-étapes de vérification d'identité avec la première étape active, invitant le client à scanner sa pièce d'identité.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{images/image-ch6/ModuleOuverturedeCompteKYC1.png}
+  \caption{Module Ouverture de Compte KYC --- Lancement du parcours}
+  \label{fig:ch6-ui-kyc1}
+\end{figure}
+
+La Figure~\ref{fig:ch6-ui-kyc2} illustre les étapes de capture de la CIN. La première interface montre le flux caméra avec la CIN correctement détectée : le cadre est vert et le message \og CIN détectée --- vous pouvez capturer ! \fg{} confirme que le document est lisible. La deuxième montre le cas où le document n'est pas reconnu : le cadre est rouge et le message \og Placez votre CIN dans le cadre \fg{} guide le client. La troisième affiche la page de vérification des captures avec les deux faces de la CIN (recto et verso) marquées \og CAPTURÉ \fg{}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{images/image-ch6/ModuleOuverturedeCompteKYC2.png}
+  \caption{Module Ouverture de Compte KYC --- Capture du document d'identité}
+  \label{fig:ch6-ui-kyc2}
+\end{figure}
+
+La Figure~\ref{fig:ch6-ui-kyc3} présente trois interfaces consécutives. La première affiche les données extraites automatiquement depuis la CIN par le pipeline OCR : numéro CIN, nom, prénom, date et lieu de naissance, chacun modifiable via une icône crayon. La deuxième prépare le client à la prise de selfie avec les instructions de positionnement. La troisième ouvre le flux caméra frontale avec un ovale centré pour guider la capture biométrique.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{images/image-ch6/ModuleOuverturedeCompteKYC3.png}
+  \caption{Module Ouverture de Compte KYC --- Vérification OCR et capture selfie}
+  \label{fig:ch6-ui-kyc3}
+\end{figure}
+
+La Figure~\ref{fig:ch6-ui-kyc4} présente les deux dernières interfaces du parcours. La première affiche la page de confirmation finale récapitulant la photo de profil, le nom, le numéro CIN, le type de compte et les données d'identité, avec deux cases de consentement à cocher avant de soumettre. La deuxième confirme la réception de la demande avec le statut \og Vérification manuelle --- Demande en cours d'examen \fg{} et la référence du dossier.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{images/image-ch6/ModuleOuverturedeCompteKYC4.png}
+  \caption{Module Ouverture de Compte KYC --- Confirmation finale et soumission}
+  \label{fig:ch6-ui-kyc4}
+\end{figure}
+
+\subsection{Module Services Bancaires}
+\label{subsec:ui-services}
+
+La Figure~\ref{fig:ch6-ui-services} présente les deux services bancaires disponibles depuis l'accueil. À gauche, la page de demande de carte bancaire liste les cartes disponibles par réseau (Visa Classic, Visa Gold, Mastercard Platinum, Mastercard Travel) avec un sélecteur de compte à débiter et un bouton de confirmation. À droite, la page de demande de chéquier permet de choisir le compte associé, le type de chéquier (BTE Standard ou BTE Premium), le nombre de feuilles (25 ou 50) et le mode de réception.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{images/image-ch6/ModuleServicesBancaires.png}
+  \caption{Module Services Bancaires --- Carte bancaire et chéquier}
+  \label{fig:ch6-ui-services}
+\end{figure}
+
+\subsection{Module Demande de Crédit}
+\label{subsec:ui-credit}
+
+La Figure~\ref{fig:ch6-ui-credit1} illustre les trois premières étapes de la demande de crédit. La première interface présente le parcours en trois étapes avec un bouton pour commencer. La deuxième permet de choisir le type de crédit parmi six options : Immobilier, Direct, Electro-Tech, Aménagement, Auto et Green. La troisième invite le client à déposer son attestation de salaire, avec déclenchement automatique de l'extraction OCR.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{"images/image-ch6/ModuleDemandedeCrédit1.png"}
+  \caption{Module Demande de Crédit --- Saisie et dépôt de l'attestation}
+  \label{fig:ch6-ui-credit1}
+\end{figure}
+
+La Figure~\ref{fig:ch6-ui-credit2} présente les deux dernières étapes. La première interface affiche les données extraites automatiquement depuis l'attestation de salaire par OCR : société, nom complet, numéro CIN, date de début, salaire brut annuel et prime, chacun modifiable. La deuxième récapitule la confirmation finale avant la soumission définitive.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{"images/image-ch6/ModuleDemandedeCrédit2.png"}
+  \caption{Module Demande de Crédit --- Vérification OCR et confirmation}
+  \label{fig:ch6-ui-credit2}
+\end{figure}
 
 
 %=============================================================
@@ -392,7 +490,122 @@ Transversalement à toutes ces couches, MinIO constitue le seul point de passage
 \label{sec:interface-admin}
 %=============================================================
 
-% [Contenu à rédiger ultérieurement]
+L'interface administrateur est accessible aux agents KYC, superviseurs et administrateurs de la plateforme BTE. Elle est organisée autour d'une barre de navigation latérale fixe donnant accès aux quatre modules principaux : Tableau de bord, File intelligente, Supervision IA et Journaux d'audit.
+
+\subsection{Authentification administrateur}
+\label{subsec:ui-admin-auth}
+
+La Figure~\ref{fig:ch6-admin-auth} présente la page d'authentification du dashboard, distincte de celle du client et réservée exclusivement au personnel de la banque. Elle se présente sur fond de photo de bâtiment en dégradé bleu foncé, avec deux zones côte à côte. La zone gauche identifie la plateforme \og Espace eKYC \fg{} avec la liste des rôles autorisés (Agent KYC, Superviseur, Administrateur). La zone droite affiche le formulaire de connexion intitulé \og Portail administrateur \fg{} avec deux onglets : Connexion (email institutionnel et mot de passe) et Créer un compte (nom complet, email, mot de passe, sélecteur de rôle). Le format d'email imposé (\texttt{prenom.nom@bte.com.tn}) garantit que seuls les membres du personnel peuvent s'inscrire.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{dash_image/login.png}
+  \caption{Interface administrateur --- Connexion et création de compte}
+  \label{fig:ch6-admin-auth}
+\end{figure}
+
+\subsection{Tableau de bord}
+\label{subsec:ui-dashboard}
+
+La Figure~\ref{fig:ch6-dashboard} présente le tableau de bord offrant une vue synthétique de l'activité KYC. Il affiche en en-tête quatre indicateurs clés : le nombre de dossiers reçus dans la journée (Flux du Jour), le nombre de dossiers non traités de la veille (Reliquat J-1), le taux de pré-validation automatique par les modèles IA, et le temps moyen de traitement par dossier. La partie centrale affiche la distribution des statuts sous forme de graphique à barres et un graphique circulaire montrant la répartition des scores de confiance IA en trois niveaux. Le panneau de droite présente la précision des champs OCR les plus critiques (Nom/Prénom, Numéro CIN, Date de naissance, Zone MRZ) sous forme de barres de progression.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{"dash_image/Tableau de bord .png"}
+  \caption{Interface administrateur --- Tableau de bord KYC}
+  \label{fig:ch6-dashboard}
+\end{figure}
+
+\subsection{File intelligente}
+\label{subsec:ui-file}
+
+La Figure~\ref{fig:ch6-file} illustre la file intelligente, interface principale de travail de l'agent KYC. Elle liste l'ensemble des dossiers organisés en quatre onglets : À traiter, Mes dossiers, Alertes et Archives. Trois types de demandes sont accessibles via des onglets supérieurs : Ouverture de compte KYC, Demandes de crédit et Carte \& Chéquier. Pour chaque dossier, la liste affiche l'identifiant unique, le type de document soumis, l'agent assigné, le score IA calculé, le niveau de risque et le statut courant.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{dash_image/File intelligente.png}
+  \caption{Interface administrateur --- File intelligente}
+  \label{fig:ch6-file}
+\end{figure}
+
+\subsection{Interface de revue des dossiers}
+\label{subsec:ui-revue}
+
+La Figure~\ref{fig:ch6-revue-kyc} présente la page de revue d'un dossier KYC organisée en quatre panneaux simultanés : les champs OCR extraits avec leurs scores de confiance, les vérifications automatiques (format CIN, champs obligatoires, âge minimum, validité), l'historique des modifications, et les commentaires internes de l'équipe.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{"dash_image/Interface de revue d'un dossier KYC.png"}
+  \caption{Interface administrateur --- Revue d'un dossier KYC}
+  \label{fig:ch6-revue-kyc}
+\end{figure}
+
+La Figure~\ref{fig:ch6-revue-credit} présente la page de revue crédit. Elle affiche côté gauche les données extraites par OCR depuis l'attestation de salaire (employeur, statut, numéro compte, nom, numéro CIN, date de début) avec leurs scores de confiance. Au centre, l'image de l'attestation est affichée directement pour permettre à l'agent de vérifier visuellement les données.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{"dash_image/Interface de revue d'une demande de crédit.png"}
+  \caption{Interface administrateur --- Revue d'une demande de crédit}
+  \label{fig:ch6-revue-credit}
+\end{figure}
+
+\subsection{Alertes et filtrage AML}
+\label{subsec:ui-aml}
+
+La Figure~\ref{fig:ch6-aml-alertes} présente le panneau de filtrage AML distinguant trois types d'alertes : doublon d'identité client (avec score de similarité), correspondance blacklist (source CTAF, niveau de risque HIGH) et correspondance PPE (titre, obligation de déclaration de soupçon). Chaque alerte propose des actions : Rejeter, Révision manuelle ou Fausse alerte.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{"dash_image/Alertes de filtrage AML — Blacklist et PPE.png"}
+  \caption{Interface administrateur --- Alertes de screening AML}
+  \label{fig:ch6-aml-alertes}
+\end{figure}
+
+
+La Figure~\ref{fig:ch6-doublon} présente l'interface de comparaison de doublon affichant côte à côte les deux documents d'identité impliqués dans l'alerte, avec un badge central indiquant le score de correspondance biométrique (98\,\%). Un tableau compare champ par champ les données des deux dossiers avec un code couleur (rouge pour les champs identiques, vert pour les différences).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{"dash_image/Interface de comparaison de doublon.png"}
+  \caption{Interface administrateur --- Comparaison de doublon d'identité}
+  \label{fig:ch6-doublon}
+\end{figure}
+
+\subsection{Interface de décision finale}
+\label{subsec:ui-decision}
+
+La Figure~\ref{fig:ch6-decision} présente la page de décision finale avec une synthèse du score de risque global sous forme de jauge circulaire. Les quatre composantes sont détaillées : Filtrage AML, Doublon client, Biométrie et Vérification des données, chacune avec son score et son poids. L'agent choisit parmi trois décisions : Accepter, Refuser ou Demander un complément. Une fenêtre modale de confirmation sécurisée s'affiche alors, demandant à l'agent de saisir son mot de passe avant de valider, garantissant qu'aucune décision irréversible ne peut être prise par accident ou par une session non surveillée.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{dash_image/decision.png}
+  \caption{Interface administrateur --- Décision finale et confirmation sécurisée}
+  \label{fig:ch6-decision}
+\end{figure}
+
+\subsection{Supervision IA}
+\label{subsec:ui-supervision}
+
+La Figure~\ref{fig:ch6-supervision} présente la page de supervision IA accessible aux superviseurs. Un sélecteur de type de document (CIN Recto, CIN Verso, Passeport) et un sélecteur de période (Aujourd'hui, 7 jours, 30 jours, Tout) filtrent les données affichées. Trois blocs de métriques sont présentés côte à côte : métriques YOLO (précision, rappel, F1, mAP@50, latence), métriques OCR Système et métriques PaddleOCR (score OCR, EMR, CER, gain EMR, latence). Un graphique d'évolution hebdomadaire trace la confiance YOLO et PaddleOCR pour détecter visuellement une dérive de performance.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{"dash_image/Page de supervision des modèles IA.png"}
+  \caption{Interface administrateur --- Supervision des modèles IA}
+  \label{fig:ch6-supervision}
+\end{figure}
+
+\subsection{Journaux d'audit}
+\label{subsec:ui-audit}
+
+La Figure~\ref{fig:ch6-audit} présente la page des journaux d'audit listant l'historique complet des connexions des agents et administrateurs. Pour chaque entrée, elle affiche le nom de l'agent, son adresse email, son rôle (Agent KYC, Superviseur, Admin) et la date et heure exacte de connexion. Cette page permet aux administrateurs de vérifier qui s'est connecté à la plateforme dans le cadre des exigences de traçabilité réglementaire.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{dash_image/logs.png}
+  \caption{Interface administrateur --- Journaux d'audit}
+  \label{fig:ch6-audit}
+\end{figure}
 
 
 
